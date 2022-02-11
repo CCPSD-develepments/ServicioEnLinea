@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F27D42A-0CF3-47DB-8DA8-B1701E9B3DD9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xcel.Enterprise.FormsManager.Web</RootNamespace>
+    <AssemblyName>CamaraComercio.FormsManager.Website</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Builder.aspx" />
+    <Content Include="Data\Configuration\AddressForm.xml" />
+    <Content Include="Data\Configuration\contactForm.xml" />
+    <Content Include="Data\Configuration\PhoneForm.xml" />
+    <Content Include="Default.aspx" />
+    <Content Include="Process.aspx" />
+    <Content Include="Save.aspx" />
+    <Content Include="UI\Common\ext-all.css" />
+    <Content Include="UI\Common\img\calendar.gif" />
+    <Content Include="UI\Common\img\default\box\corners-blue.gif" />
+    <Content Include="UI\Common\img\default\box\corners.gif" />
+    <Content Include="UI\Common\img\default\box\l-blue.gif" />
+    <Content Include="UI\Common\img\default\box\l.gif" />
+    <Content Include="UI\Common\img\default\box\r-blue.gif" />
+    <Content Include="UI\Common\img\default\box\r.gif" />
+    <Content Include="UI\Common\img\default\box\tb-blue.gif" />
+    <Content Include="UI\Common\img\default\box\tb.gif" />
+    <Content Include="UI\Common\img\default\button\btn-arrow.gif" />
+    <Content Include="UI\Common\img\default\button\btn-sprite.gif" />
+    <Content Include="UI\Common\img\default\dd\drop-add.gif" />
+    <Content Include="UI\Common\img\default\dd\drop-no.gif" />
+    <Content Include="UI\Common\img\default\dd\drop-yes.gif" />
+    <Content Include="UI\Common\img\default\editor\tb-sprite.gif" />
+    <Content Include="UI\Common\img\default\form\clear-trigger.gif" />
+    <Content Include="UI\Common\img\default\form\date-trigger.gif" />
+    <Content Include="UI\Common\img\default\form\error-tip-corners.gif" />
+    <Content Include="UI\Common\img\default\form\exclamation.gif" />
+    <Content Include="UI\Common\img\default\form\search-trigger.gif" />
+    <Content Include="UI\Common\img\default\form\text-bg.gif" />
+    <Content Include="UI\Common\img\default\form\trigger-tpl.gif" />
+    <Content Include="UI\Common\img\default\form\trigger.gif" />
+    <Content Include="UI\Common\img\default\gradient-bg.gif" />
+    <Content Include="UI\Common\img\default\grid\arrow-left-white.gif" />
+    <Content Include="UI\Common\img\default\grid\arrow-right-white.gif" />
+    <Content Include="UI\Common\img\default\grid\col-move-bottom.gif" />
+    <Content Include="UI\Common\img\default\grid\col-move-top.gif" />
+    <Content Include="UI\Common\img\default\grid\columns.gif" />
+    <Content Include="UI\Common\img\default\grid\dirty.gif" />
+    <Content Include="UI\Common\img\default\grid\done.gif" />
+    <Content Include="UI\Common\img\default\grid\drop-no.gif" />
+    <Content Include="UI\Common\img\default\grid\drop-yes.gif" />
+    <Content Include="UI\Common\img\default\grid\footer-bg.gif" />
+    <Content Include="UI\Common\img\default\grid\grid-blue-hd.gif" />
+    <Content Include="UI\Common\img\default\grid\grid-blue-split.gif" />
+    <Content Include="UI\Common\img\default\grid\grid-hrow.gif" />
+    <Content Include="UI\Common\img\default\grid\grid-loading.gif" />
+    <Content Include="UI\Common\img\default\grid\grid-split.gif" />
+    <Content Include="UI\Common\img\default\grid\grid-vista-hd.gif" />
+    <Content Include="UI\Common\img\default\grid\grid3-hd-btn.gif" />
+    <Content Include="UI\Common\img\default\grid\grid3-hrow-over.gif" />
+    <Content Include="UI\Common\img\default\grid\grid3-hrow.gif" />
+    <Content Include="UI\Common\img\default\grid\grid3-special-col-bg.gif" />
+    <Content Include="UI\Common\img\default\grid\grid3-special-col-sel-bg.gif" />
+    <Content Include="UI\Common\img\default\grid\group-by.gif" />
+    <Content Include="UI\Common\img\default\grid\group-expand-sprite.gif" />
+    <Content Include="UI\Common\img\default\grid\hd-pop.gif" />
+    <Content Include="UI\Common\img\default\grid\hmenu-asc.gif" />
+    <Content Include="UI\Common\img\default\grid\hmenu-desc.gif" />
+    <Content Include="UI\Common\img\default\grid\hmenu-lock.gif" />
+    <Content Include="UI\Common\img\default\grid\hmenu-lock.png" />
+    <Content Include="UI\Common\img\default\grid\hmenu-unlock.gif" />
+    <Content Include="UI\Common\img\default\grid\hmenu-unlock.png" />
+    <Content Include="UI\Common\img\default\grid\invalid_line.gif" />
+    <Content Include="UI\Common\img\default\grid\loading.gif" />
+    <Content Include="UI\Common\img\default\grid\mso-hd.gif" />
+    <Content Include="UI\Common\img\default\grid\nowait.gif" />
+    <Content Include="UI\Common\img\default\grid\page-first-disabled.gif" />
+    <Content Include="UI\Common\img\default\grid\page-first.gif" />
+    <Content Include="UI\Common\img\default\grid\page-last-disabled.gif" />
+    <Content Include="UI\Common\img\default\grid\page-last.gif" />
+    <Content Include="UI\Common\img\default\grid\page-next-disabled.gif" />
+    <Content Include="UI\Common\img\default\grid\page-next.gif" />
+    <Content Include="UI\Common\img\default\grid\page-prev-disabled.gif" />
+    <Content Include="UI\Common\img\default\grid\page-prev.gif" />
+    <Content Include="UI\Common\img\default\grid\pick-button.gif" />
+    <Content Include="UI\Common\img\default\grid\refresh.gif" />
+    <Content Include="UI\Common\img\default\grid\row-check-sprite.gif" />
+    <Content Include="UI\Common\img\default\grid\row-expand-sprite.gif" />
+    <Content Include="UI\Common\img\default\grid\row-over.gif" />
+    <Content Include="UI\Common\img\default\grid\row-sel.gif" />
+    <Content Include="UI\Common\img\default\grid\sort_asc.gif" />
+    <Content Include="UI\Common\img\default\grid\sort_desc.gif" />
+    <Content Include="UI\Common\img\default\grid\wait.gif" />
+    <Content Include="UI\Common\img\default\layout\collapse.gif" />
+    <Content Include="UI\Common\img\default\layout\expand.gif" />
+    <Content Include="UI\Common\img\default\layout\gradient-bg.gif" />
+    <Content Include="UI\Common\img\default\layout\mini-bottom.gif" />
+    <Content Include="UI\Common\img\default\layout\mini-left.gif" />
+    <Content Include="UI\Common\img\default\layout\mini-right.gif" />
+    <Content Include="UI\Common\img\default\layout\mini-top.gif" />
+    <Content Include="UI\Common\img\default\layout\ns-collapse.gif" />
+    <Content Include="UI\Common\img\default\layout\ns-expand.gif" />
+    <Content Include="UI\Common\img\default\layout\panel-close.gif" />
+    <Content Include="UI\Common\img\default\layout\panel-title-bg.gif" />
+    <Content Include="UI\Common\img\default\layout\panel-title-light-bg.gif" />
+    <Content Include="UI\Common\img\default\layout\stick.gif" />
+    <Content Include="UI\Common\img\default\layout\stuck.gif" />
+    <Content Include="UI\Common\img\default\layout\tab-close-on.gif" />
+    <Content Include="UI\Common\img\default\layout\tab-close.gif" />
+    <Content Include="UI\Common\img\default\menu\checked.gif" />
+    <Content Include="UI\Common\img\default\menu\group-checked.gif" />
+    <Content Include="UI\Common\img\default\menu\item-over.gif" />
+    <Content Include="UI\Common\img\default\menu\menu-parent.gif" />
+    <Content Include="UI\Common\img\default\menu\menu.gif" />
+    <Content Include="UI\Common\img\default\menu\unchecked.gif" />
+    <Content Include="UI\Common\img\default\panel\corners-sprite.gif" />
+    <Content Include="UI\Common\img\default\panel\left-right.gif" />
+    <Content Include="UI\Common\img\default\panel\light-hd.gif" />
+    <Content Include="UI\Common\img\default\panel\tool-sprite-tpl.gif" />
+    <Content Include="UI\Common\img\default\panel\tool-sprites.gif" />
+    <Content Include="UI\Common\img\default\panel\tools-sprites-trans.gif" />
+    <Content Include="UI\Common\img\default\panel\top-bottom.gif" />
+    <Content Include="UI\Common\img\default\panel\top-bottom.png" />
+    <Content Include="UI\Common\img\default\panel\white-corners-sprite.gif" />
+    <Content Include="UI\Common\img\default\panel\white-left-right.gif" />
+    <Content Include="UI\Common\img\default\panel\white-top-bottom.gif" />
+    <Content Include="UI\Common\img\default\progress\progress-bg.gif" />
+    <Content Include="UI\Common\img\default\qtip\bg.gif" />
+    <Content Include="UI\Common\img\default\qtip\close.gif" />
+    <Content Include="UI\Common\img\default\qtip\tip-sprite.gif" />
+    <Content Include="UI\Common\img\default\s.gif" />
+    <Content Include="UI\Common\img\default\shadow-c.png" />
+    <Content Include="UI\Common\img\default\shadow-lr.png" />
+    <Content Include="UI\Common\img\default\shadow.png" />
+    <Content Include="UI\Common\img\default\shared\blue-loading.gif" />
+    <Content Include="UI\Common\img\default\shared\calendar.gif" />
+    <Content Include="UI\Common\img\default\shared\glass-bg.gif" />
+    <Content Include="UI\Common\img\default\shared\hd-sprite.gif" />
+    <Content Include="UI\Common\img\default\shared\large-loading.gif" />
+    <Content Include="UI\Common\img\default\shared\left-btn.gif" />
+    <Content Include="UI\Common\img\default\shared\loading-balls.gif" />
+    <Content Include="UI\Common\img\default\shared\right-btn.gif" />
+    <Content Include="UI\Common\img\default\shared\warning.gif" />
+    <Content Include="UI\Common\img\default\sizer\e-handle-dark.gif" />
+    <Content Include="UI\Common\img\default\sizer\e-handle.gif" />
+    <Content Include="UI\Common\img\default\sizer\ne-handle-dark.gif" />
+    <Content Include="UI\Common\img\default\sizer\ne-handle.gif" />
+    <Content Include="UI\Common\img\default\sizer\nw-handle-dark.gif" />
+    <Content Include="UI\Common\img\default\sizer\nw-handle.gif" />
+    <Content Include="UI\Common\img\default\sizer\s-handle-dark.gif" />
+    <Content Include="UI\Common\img\default\sizer\s-handle.gif" />
+    <Content Include="UI\Common\img\default\sizer\se-handle-dark.gif" />
+    <Content Include="UI\Common\img\default\sizer\se-handle.gif" />
+    <Content Include="UI\Common\img\default\sizer\square.gif" />
+    <Content Include="UI\Common\img\default\sizer\sw-handle-dark.gif" />
+    <Content Include="UI\Common\img\default\sizer\sw-handle.gif" />
+    <Content Include="UI\Common\img\default\tabs\scroll-left.gif" />
+    <Content Include="UI\Common\img\default\tabs\scroll-right.gif" />
+    <Content Include="UI\Common\img\default\tabs\scroller-bg.gif" />
+    <Content Include="UI\Common\img\default\tabs\tab-btm-inactive-left-bg.gif" />
+    <Content Include="UI\Common\img\default\tabs\tab-btm-inactive-right-bg.gif" />
+    <Content Include="UI\Common\img\default\tabs\tab-btm-left-bg.gif" />
+    <Content Include="UI\Common\img\default\tabs\tab-btm-right-bg.gif" />
+    <Content Include="UI\Common\img\default\tabs\tab-close.gif" />
+    <Content Include="UI\Common\img\default\tabs\tab-strip-bg.gif" />
+    <Content Include="UI\Common\img\default\tabs\tab-strip-bg.png" />
+    <Content Include="UI\Common\img\default\tabs\tab-strip-btm-bg.gif" />
+    <Content Include="UI\Common\img\default\tabs\tabs-sprite.gif" />
+    <Content Include="UI\Common\img\default\toolbar\bg.gif" />
+    <Content Include="UI\Common\img\default\toolbar\btn-arrow-light.gif" />
+    <Content Include="UI\Common\img\default\toolbar\btn-arrow.gif" />
+    <Content Include="UI\Common\img\default\toolbar\btn-over-bg.gif" />
+    <Content Include="UI\Common\img\default\toolbar\gray-bg.gif" />
+    <Content Include="UI\Common\img\default\toolbar\tb-bg.gif" />
+    <Content Include="UI\Common\img\default\toolbar\tb-btn-sprite.gif" />
+    <Content Include="UI\Common\img\default\tree\drop-add.gif" />
+    <Content Include="UI\Common\img\default\tree\drop-between.gif" />
+    <Content Include="UI\Common\img\default\tree\drop-no.gif" />
+    <Content Include="UI\Common\img\default\tree\drop-over.gif" />
+    <Content Include="UI\Common\img\default\tree\drop-under.gif" />
+    <Content Include="UI\Common\img\default\tree\drop-yes.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow-end-minus-nl.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow-end-minus.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow-end-plus-nl.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow-end-plus.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow-end.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow-line.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow-minus-nl.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow-minus.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow-plus-nl.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow-plus.gif" />
+    <Content Include="UI\Common\img\default\tree\elbow.gif" />
+    <Content Include="UI\Common\img\default\tree\folder-open.gif" />
+    <Content Include="UI\Common\img\default\tree\folder.gif" />
+    <Content Include="UI\Common\img\default\tree\leaf.gif" />
+    <Content Include="UI\Common\img\default\tree\loading.gif" />
+    <Content Include="UI\Common\img\default\tree\s.gif" />
+    <Content Include="UI\Common\img\default\window\icon-error.gif" />
+    <Content Include="UI\Common\img\default\window\icon-info.gif" />
+    <Content Include="UI\Common\img\default\window\icon-question.gif" />
+    <Content Include="UI\Common\img\default\window\icon-warning.gif" />
+    <Content Include="UI\Common\img\default\window\left-corners.png" />
+    <Content Include="UI\Common\img\default\window\left-right.png" />
+    <Content Include="UI\Common\img\default\window\right-corners.png" />
+    <Content Include="UI\Common\img\default\window\top-bottom.png" />
+    <Content Include="UI\Common\img\grid3-hrow.gif" />
+    <Content Include="UI\Common\Js\builder.js" />
+    <Content Include="UI\Common\Js\ext-all.js" />
+    <Content Include="UI\Common\Js\ext-base.js" />
+    <Content Include="UI\Common\Js\Ext.js" />
+    <Content Include="UI\Common\Js\form.js" />
+    <Content Include="UI\Common\toolbar.css" />
+    <Content Include="UI\Default\form.css" />
+    <Content Include="UI\Default\img\brGrayLeftTop.gif" />
+    <Content Include="UI\Default\img\brGrayRightTop.gif" />
+    <Content Include="UI\Default\img\brWhiteLeftBottom.gif" />
+    <Content Include="UI\Default\img\brWhiteRightBottom.gif" />
+    <Content Include="UI\Default\img\GrayDotedLine.gif" />
+    <Content Include="UI\Default\img\shwGrayLeft.gif" />
+    <Content Include="UI\Default\img\shwGrayRight.gif" />
+    <Content Include="UI\Default\img\shwGrayTop.gif" />
+    <Content Include="UI\Default\img\shwWhiteBottom.gif" />
+    <Content Include="UI\Default\img\shwWhiteLeft.gif" />
+    <Content Include="UI\Default\img\shwWhiteRight.gif" />
+    <Content Include="UI\Default\Xslt\Field_Checkbox.xslt" />
+    <Content Include="UI\Default\Xslt\Field_MultiSelect.xslt" />
+    <Content Include="UI\Default\Xslt\Field_Text.xslt" />
+    <Content Include="UI\Default\Xslt\Form.xslt" />
+    <Content Include="UI\Default\Xslt\Form_Fields.xslt" />
+    <Content Include="View.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CamaraComercio.FormsManager\CamaraComercio.FormsManager.csproj">
+      <Project>{56BBC488-1B86-4418-B7F5-254CC21C09FA}</Project>
+      <Name>CamaraComercio.FormsManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Common\img\default\form\clear-trigger.psd" />
+    <None Include="UI\Common\img\default\form\date-trigger.psd" />
+    <None Include="UI\Common\img\default\form\search-trigger.psd" />
+    <None Include="UI\Common\img\default\form\trigger.psd" />
+    <None Include="UI\Common\img\default\grid\Thumbs.db" />
+    <None Include="UI\Common\img\default\window\left-corners.psd" />
+    <None Include="UI\Common\img\default\window\left-right.psd" />
+    <None Include="UI\Common\img\default\window\right-corners.psd" />
+    <None Include="UI\Common\img\default\window\top-bottom.psd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Instances\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>48802</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{cc83fe9d-ab79-44e5-a623-a4196c9211bf}</ProjectGuid>
+    <ArchitectureToolsVersion>1.0.0.0</ArchitectureToolsVersion>
+    <Name>ModelingProject1</Name>
+    <RootNamespace>ModelingProject1</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
+  <ItemGroup>
+    <Content Include="UMLClassDiagram1.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLClassDiagram1.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLClassDiagram1.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="Graph1.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\ModelingProject1.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="LayerDiagram1.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="LayerDiagram1.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram1.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="LayerDiagram1.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram1.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.CamaraComun\CamaraComercio.DataAccess.EF.CamaraComun.csproj">
+      <Name>CamaraComercio.DataAccess.EF.CamaraComun</Name>
+      <Project>{b34160c6-4e42-41e6-a5b4-323316a87549}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.Membership\CamaraComercio.DataAccess.EF.Membership.csproj">
+      <Name>CamaraComercio.DataAccess.EF.Membership</Name>
+      <Project>{a8f3ec9e-987c-49e0-9c98-ab39a5630197}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.OficinaVirtual\CamaraComercio.DataAccess.EF.OficinaVirtual.csproj">
+      <Name>CamaraComercio.DataAccess.EF.OficinaVirtual</Name>
+      <Project>{d24fa27a-9d25-4f99-bee7-fe8c03b0c671}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.SRM\CamaraComercio.DataAccess.EF.SRM.csproj">
+      <Name>CamaraComercio.DataAccess.EF.SRM</Name>
+      <Project>{aaa52714-64eb-48ed-b1eb-e580b756926f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF\CamaraComercio.DataAccess.EF.csproj">
+      <Name>CamaraComercio.DataAccess.EF</Name>
+      <Project>{c8389932-adf3-43c1-b18f-0e5757315633}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

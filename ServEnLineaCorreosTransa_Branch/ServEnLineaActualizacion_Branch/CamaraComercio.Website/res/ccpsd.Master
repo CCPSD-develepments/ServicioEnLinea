@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ccpsd.master.cs" Inherits="CamaraComercio.Website.res.vu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <!-- CSS Styles -->
+    <link href="/res/css/interface.css" rel="stylesheet" type="text/css" />
+    <link href="/res/js/jBar/style.css" rel="stylesheet" type="text/css" />
+    <link href="/res/css/jquery.ui/cupertino/jquery-ui-1.8.11.custom.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="~/res/img/favccpsd.ico" type="image/x-icon" />
+   
+    <!-- Javascvript / jQuery -->
+    <script src="/res/js/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="/res/js/jquery.bar.js" type="text/javascript"></script>
+    <script src="/res/js/jquery-ui-1.8.11.custom.min.js" type="text/javascript"></script>
+    <script src="/res/js/jquery-idleTimeout.js" type="text/javascript"></script>
+    
+    <!-- Inline Page Script (master) -->
+    <script type="text/javascript">
+        function ShowMessage(message) {
+            if (message != undefined)
+                $().bar.showMessage(message);
+            else if ($("#lblMessage").text() != "")
+                $().bar.showMessage($("#lblMessage").text());
+
+            $("#lblMessage").text("");
+        }
+
+        $(document).ready(function (event) {
+            //Mensajes en el jBar
+            if ($("#lblMessage").text() != "") {
+                ShowMessage($("#lblMessage").text());
+                $("#lblMessage").text("");
+            }
+
+            if (typeof validateSession == 'undefined')
+            {
+                //Timeout Manager
+                $(document).idleTimeout({
+                    inactivity: 900000,
+                    noconfirm: 10000,
+                    sessionAlive: 10000,
+                    alive_url: '/keepalive.aspx',
+                    redirect_url: '/account/logout.aspx'
+                });
+            }
+        });
+
+        function disableAspNEtValidator(valControlName, state) {
+            var myVal = document.getElementById(valControlName);
+            ValidatorEnable(myVal, state);
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="ccpsdForm" runat="server" clientidmode="Static">
+    <div class="wrap" id="wrap">
+        <div id="header">
+            <div id="logo">
+                <img src="/res/img/logoCCPSD.gif" alt="CCPSD" /></div>
+            <div id="login">
+                <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggedOut="LoginStatus1_LoggedOut" />
+                <asp:LoginName ID="LoginName1" runat="server" />
+            </div>
+            <!-- Menu -->
+            <asp:ContentPlaceHolder ID="MenuContent" runat="server">
+                
+            </asp:ContentPlaceHolder>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" SiteMapProvider="AccountSiteMap" />
+            <asp:Menu ID="mainMenu" runat="server" DataSourceID="SiteMapDataSource2" Orientation="Horizontal"
+                ClientIDMode="Static" RenderingMode="List" IncludeStyleBlock="False" StaticDisplayLevels="2">
+                <StaticMenuStyle CssClass="mainMenu" />
+                <LevelMenuItemStyles>
+                        <asp:MenuItemStyle CssClass="navtab" />
+                        <asp:MenuItemStyle CssClass="navtab" />
+                    </LevelMenuItemStyles>
+            </asp:Menu>
+            <asp:SiteMapDataSource ID="SiteMapDataSource2" runat="server" 
+                SiteMapProvider="HomeSiteMap" />
+        </div>
+        <div id="globalcontent" class="globalcontent">
+            <!-- DIV de mensajería -->
+            <asp:Panel ID="notice" runat="server" Visible="true" EnableViewState="false">
+                <asp:Label ID="lblMessage" runat="server" EnableViewState="false" ClientIDMode="Static"></asp:Label>
+            </asp:Panel>
+            <div id="dialog-confirm" title="" style="display: none">
+                <p>
+                    <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+                    <span id="dialog-content"></span>
+                </p>
+            </div>
+            <!-- Placeholder para Contenido General-->
+            <div id="content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="footer">
+            Camara de Comercio y Producción de Santo Domingo. Todos los derechos Reservados.
+        </div>
+    </div>
+    </form>
+</body>
+</html>

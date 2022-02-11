@@ -1,0 +1,2241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{303B2F44-06B0-4211-ADDE-57C2CC810752}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CamaraComercio.Website</RootNamespace>
+    <AssemblyName>CamaraComercio.Website</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\CamaraComercio.Website.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\CamaraComercio.Website.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\CamaraComercio.Website.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\CamaraComercio.Website.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elmah">
+      <HintPath>..\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorld.UI, Version=2.0.6.2393, Culture=neutral, PublicKeyToken=24d65337282035f2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\eWorld.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Hammock">
+      <HintPath>..\lib\Hammock\Hammock.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPdf, Version=4.4.9.15720, Culture=neutral, PublicKeyToken=94e1c31412563c75, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPdf.4.4.9\lib\net40\IronPdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit">
+      <HintPath>..\lib\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="MSCaptcha">
+      <HintPath>..\lib\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Recaptcha">
+      <HintPath>..\lib\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="Srm.Common, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\lib\Srm.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Srm.Utils, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\lib\Srm.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design">
+      <HintPath>..\lib\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2009.2.701.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ActivacionUsuario.aspx" />
+    <Content Include="Account\ChangeAdmin.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\LoginHansel.aspx" />
+    <Content Include="Account\PendingActivation.aspx" />
+    <Content Include="Account\ForgotPassword.aspx" />
+    <Content Include="Account\ForgotPasswordVerification.aspx" />
+    <Content Include="Account\LoginOld.aspx" />
+    <Content Include="Account\MyProfile.aspx" />
+    <Content Include="Account\RegisterOld.aspx" />
+    <Content Include="Account\RegisterComplete.aspx" />
+    <Content Include="Account\TerminosUso.html" />
+    <Content Include="Account\UsersAdmin.aspx" />
+    <Content Include="Account\UsersAuth.aspx" />
+    <Content Include="Account\ValidateUser.aspx" />
+    <Content Include="Api.aspx" />
+    <Content Include="ConfirmacionCertificadoDigital.html" />
+    <Content Include="ConsultaEstado.aspx" />
+    <Content Include="ConsultaRM.aspx" />
+    <Content Include="ConsultaRM2.aspx" />
+    <Content Include="Consultas\Busqueda.aspx" />
+    <Content Include="Consultas\VerDetalleEmpresa.aspx" />
+    <Content Include="Consultas\VerDetalleSocio.aspx" />
+    <Content Include="ContratoOfv.htm" />
+    <Content Include="ContratoOfv.xml" />
+    <Content Include="ConsultaCERT.aspx" />
+    <Content Include="crossdomain.xml" />
+    <Content Include="DeleteTransaccion.aspx" />
+    <Content Include="Empresas\DatoGenerales.aspx" />
+    <Content Include="Empresas\DatosGenerales.aspx" />
+    <Content Include="Empresas\ActualizarDatosGenerales.aspx" />
+    <Content Include="Empresas\CertificadosFirma.aspx" />
+    <Content Include="Empresas\ComprobarPagoTransaccion.aspx" />
+    <Content Include="Empresas\EmpresasPorGestores.aspx" />
+    <Content Include="Empresas\FirmaContrato.aspx" />
+    <Content Include="Empresas\MatenimientoSolicitudes.aspx" />
+    <Content Include="Empresas\MensajeModificacion.aspx" />
+    <Content Include="Empresas\Optimo.aspx" />
+    <Content Include="Empresas\TerminosDeUso.htm" />
+    <Content Include="Empresas\TextboxList.Autocomplete.js" />
+    <Content Include="Empresas\TextboxList.js" />
+    <Content Include="Empresas\TransaccionesGestor.aspx" />
+    <Content Include="Empresas\VerSolicitudGeneral.aspx" />
+    <Content Include="Empresas\VisorWeb.aspx" />
+    <Content Include="Empresas\WebFormTest.aspx" />
+    <Content Include="Empresas\WebWizard.aspx" />
+    <Content Include="FlashRequerido.htm" />
+    <Content Include="Formularios\Certificacion.aspx" />
+    <Content Include="Formularios\FormViewer.aspx" />
+    <Content Include="Formularios\PersonaFisica.aspx" />
+    <Content Include="Formularios\SociedadCPorAcciones.aspx" />
+    <Content Include="Formularios\SociedadExtranjera.aspx" />
+    <Content Include="Formularios\SociedadCSimple.aspx" />
+    <Content Include="Formularios\SociedadEIRL.aspx" />
+    <Content Include="Formularios\SociedadResponsabilidadLimitada.aspx" />
+    <Content Include="Formularios\SociedadAnonimaSimplificada.aspx" />
+    <Content Include="Formularios\SociedadAnonima.aspx" />
+    <Content Include="Formularios\SociedadNombreColectivo.aspx" />
+    <Content Include="Formularios\SolicitudIinclusionEmpresa.aspx" />
+    <Content Include="IngresoNoAutorizado.htm" />
+    <Content Include="Kofax\Print.css" />
+    <Content Include="Kofax\Site.css" />
+    <Content Include="Kofax\WebDocumentViewer.ascx" />
+    <Content Include="Mantenimiento.html" />
+    <Content Include="Mantenimiento\ReaperturarCaso.aspx" />
+    <Content Include="Mantenimiento\RevisionBHDEmpresa.aspx" />
+    <Content Include="Mobile\buildinternet.png" />
+    <Content Include="Mobile\button-link.png" />
+    <Content Include="Mobile\icon-microphone.png" />
+    <Content Include="Mobile\index.html" />
+    <Content Include="Mobile\logo.jpg" />
+    <Content Include="Mobile\mobile.css" />
+    <Content Include="Navegadores.htm" />
+    <Content Include="Default.aspx" />
+    <Content Include="devenv.html" />
+    <Content Include="Empresas\Adecuacion.aspx" />
+    <Content Include="Empresas\CierreSolicitud.aspx" />
+    <Content Include="Empresas\ImprimirFactura.aspx" />
+    <Content Include="Empresas\Renovacion.aspx" />
+    <Content Include="Empresas\EnvioDatos.aspx" />
+    <Content Include="Empresas\ImprimirSolicitud.aspx" />
+    <Content Include="Empresas\InicioUsuario.aspx" />
+    <Content Include="Empresas\Oficina.aspx" />
+    <Content Include="Empresas\RevisionDocumentos.aspx" />
+    <Content Include="Empresas\SolicitudInclusion.aspx" />
+    <Content Include="Empresas\VerDetalleEmpresa.aspx" />
+    <Content Include="Empresas\VerDetalleTransaccion.aspx" />
+    <Content Include="Empresas\VerFacturas.aspx" />
+    <Content Include="Empresas\VerMensaje.aspx" />
+    <Content Include="Error.htm" />
+    <Content Include="Error404.htm" />
+    <Content Include="KeepAlive.aspx" />
+    <Content Include="Account\Logout.aspx" />
+    <Content Include="Operaciones\Modificaciones\Confirmacion.aspx" />
+    <Content Include="Operaciones\Modificaciones\DatosGenerales.aspx" />
+    <Content Include="Operaciones\Modificaciones\DatosSociedad.aspx" />
+    <Content Include="Operaciones\Modificaciones\SolicitudOperacion.aspx" />
+    <Content Include="Operaciones\Registro\Adecuacion.aspx" />
+    <Content Include="Operaciones\Shared\Certificaciones.aspx" />
+    <Content Include="Operaciones\Shared\CopiasCert.aspx" />
+    <Content Include="Operaciones\Shared\CopiasCertificadas.aspx" />
+    <Content Include="Operaciones\Shared\DescargaCert.aspx" />
+    <Content Include="Operaciones\Shared\DescargaCertificaciones.aspx" />
+    <Content Include="Operaciones\Shared\FormaEntrega.aspx" />
+    <Content Include="Operaciones\Shared\RegDup.aspx" />
+    <Content Include="Operaciones\Shared\Representantes.aspx" />
+    <Content Include="Operaciones\Modificaciones\ModAumentoCapital.aspx" />
+    <Content Include="Operaciones\Modificaciones\ModAumentoCapPagado.aspx" />
+    <Content Include="Operaciones\Modificaciones\ModDomicilioProv.aspx" />
+    <Content Include="Operaciones\Modificaciones\Modificacion.aspx" />
+    <Content Include="Operaciones\Modificaciones\ModReduccionCapPagado.aspx" />
+    <Content Include="Operaciones\Modificaciones\ModReducionCapital.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Operaciones\Modificaciones\SelectModificacion.aspx" />
+    <Content Include="Operaciones\Registro\Confirmacion.aspx" />
+    <Content Include="Operaciones\Registro\DatosGenerales.aspx" />
+    <Content Include="Operaciones\Registro\DatosSociedad.aspx" />
+    <Content Include="Operaciones\Registro\Imprimir.aspx" />
+    <Content Include="Operaciones\Registro\NuevoRegistro.aspx" />
+    <Content Include="ReportesVisor.aspx" />
+    <Content Include="res\css\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="res\css\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="res\css\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="res\css\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="res\css\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="res\css\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="res\css\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="res\css\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="res\css\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="res\css\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="res\css\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="res\css\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="res\css\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="res\css\base\jquery.ui.accordion.css" />
+    <Content Include="res\css\base\jquery.ui.all.css" />
+    <Content Include="res\css\base\jquery.ui.autocomplete.css" />
+    <Content Include="res\css\base\jquery.ui.base.css" />
+    <Content Include="res\css\base\jquery.ui.button.css" />
+    <Content Include="res\css\base\jquery.ui.core.css" />
+    <Content Include="res\css\base\jquery.ui.datepicker.css" />
+    <Content Include="res\css\base\jquery.ui.dialog.css" />
+    <Content Include="res\css\base\jquery.ui.progressbar.css" />
+    <Content Include="res\css\base\jquery.ui.resizable.css" />
+    <Content Include="res\css\base\jquery.ui.selectable.css" />
+    <Content Include="res\css\base\jquery.ui.slider.css" />
+    <Content Include="res\css\base\jquery.ui.tabs.css" />
+    <Content Include="res\css\base\jquery.ui.theme.css" />
+    <Content Include="res\css\bootstrap.css" />
+    <Content Include="res\css\border-radius.htc" />
+    <Content Include="res\css\buttons.css" />
+    <Content Include="res\css\Calendar.Ccpsd.css" />
+    <Content Include="res\css\ConfirmationPrint.css" />
+    <Content Include="res\css\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="res\css\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="res\css\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="res\css\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="res\css\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="res\css\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="res\css\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="res\css\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="res\css\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="res\css\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="res\css\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="res\css\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="res\css\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="res\css\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="res\css\cupertino\jquery-ui-1.8.11.custom.css" />
+    <Content Include="res\css\dirty-style.css" />
+    <Content Include="res\css\ellipsis-xbl.xml" />
+    <Content Include="res\css\errorPage.css" />
+    <Content Include="res\css\Grid.Ccpsd.css" />
+    <Content Include="res\css\grid\AddRecord.gif" />
+    <Content Include="res\css\grid\Cancel.gif" />
+    <Content Include="res\css\grid\Default.gif" />
+    <Content Include="res\css\grid\Delete.gif" />
+    <Content Include="res\css\grid\Edit.gif" />
+    <Content Include="res\css\grid\Filter.gif" />
+    <Content Include="res\css\grid\MoveDown.gif" />
+    <Content Include="res\css\grid\MoveUp.gif" />
+    <Content Include="res\css\grid\PagingFirst.gif" />
+    <Content Include="res\css\grid\PagingLast.gif" />
+    <Content Include="res\css\grid\PagingNext.gif" />
+    <Content Include="res\css\grid\PagingPrev.gif" />
+    <Content Include="res\css\grid\Refresh.gif" />
+    <Content Include="res\css\grid\SelectedRow.gif" />
+    <Content Include="res\css\grid\SingleMinus.gif" />
+    <Content Include="res\css\grid\SinglePlus.gif" />
+    <Content Include="res\css\grid\SortAsc.gif" />
+    <Content Include="res\css\grid\SortDesc.gif" />
+    <Content Include="res\css\grid\sprite.gif" />
+    <Content Include="res\css\grid\Update.gif" />
+    <Content Include="res\css\Header_content.css" />
+    <Content Include="res\css\interface.css" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="res\css\jquery.ui\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="res\css\jquery.ui\cupertino\jquery-ui-1.8.11.custom.css" />
+    <Content Include="res\css\jquery.ui\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="res\css\jquery.ui\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="res\css\jquery.ui\start\jquery-ui-1.8.11.custom.css" />
+    <Content Include="res\css\login.css" />
+    <Content Include="res\css\Mensajes.css" />
+    <Content Include="res\css\noboxCopia.css" />
+    <Content Include="res\css\nobox.css" />
+    <Content Include="res\css\Oficina.css" />
+    <Content Include="res\css\stylesPrint.css" />
+    <Content Include="res\css\tableStyles.css" />
+    <Content Include="res\css\ui.jqgrid.css" />
+    <Content Include="res\img\1920X1080.png" />
+    <Content Include="res\img\2160X1080.png" />
+    <Content Include="res\img\accept.png" />
+    <Content Include="res\img\account.png" />
+    <Content Include="res\img\add.png" />
+    <Content Include="res\img\adown.gif" />
+    <Content Include="res\img\anadir.png" />
+    <Content Include="res\img\aright.gif" />
+    <Content Include="res\img\arrow_left.png" />
+    <Content Include="res\img\arrow_rotate_clockwise.png" />
+    <Content Include="res\img\bg-btn.gif" />
+    <Content Include="res\img\bg_error.png" />
+    <Content Include="res\img\bg_error_s.png" />
+    <Content Include="res\img\bg_pics_tn.png" />
+    <Content Include="res\img\black_arrow.png" />
+    <Content Include="res\img\bullet-azul.gif" />
+    <Content Include="res\img\busqueda.png" />
+    <Content Include="res\img\calendar.png" />
+    <Content Include="res\img\cancel.png" />
+    <Content Include="res\img\creacion.png" />
+    <Content Include="res\img\cto_accionistas.jpg" />
+    <Content Include="res\img\cto_accionistasPost.jpg" />
+    <Content Include="res\img\del.gif" />
+    <Content Include="res\img\denied.gif" />
+    <Content Include="res\img\detalles.png" />
+    <Content Include="res\img\documentos.png" />
+    <Content Include="res\img\edit.gif" />
+    <Content Include="res\img\empresa.png" />
+    <Content Include="res\img\error_icon.gif" />
+    <Content Include="res\img\ex_icon.gif" />
+    <Content Include="res\img\favccpsd.ico" />
+    <Content Include="res\img\Favicon Logo Source.gif" />
+    <Content Include="res\img\flecha.gif" />
+    <Content Include="res\img\fondo.jpg" />
+    <Content Include="res\img\footer-logo.png" />
+    <Content Include="res\img\formedit.gif" />
+    <Content Include="res\img\help.gif" />
+    <Content Include="res\img\icons\add.png" />
+    <Content Include="res\img\icons\bullet_add.png" />
+    <Content Include="res\img\icons\bullet_arrow_bottom.png" />
+    <Content Include="res\img\icons\bullet_arrow_down.png" />
+    <Content Include="res\img\icons\bullet_arrow_top.png" />
+    <Content Include="res\img\icons\bullet_arrow_up.png" />
+    <Content Include="res\img\icons\bullet_black.png" />
+    <Content Include="res\img\icons\bullet_blue.png" />
+    <Content Include="res\img\icons\bullet_delete.png" />
+    <Content Include="res\img\icons\bullet_disk.png" />
+    <Content Include="res\img\icons\bullet_error.png" />
+    <Content Include="res\img\icons\bullet_feed.png" />
+    <Content Include="res\img\icons\bullet_go.png" />
+    <Content Include="res\img\icons\bullet_green.png" />
+    <Content Include="res\img\icons\bullet_key.png" />
+    <Content Include="res\img\icons\bullet_orange.png" />
+    <Content Include="res\img\icons\bullet_picture.png" />
+    <Content Include="res\img\icons\bullet_pink.png" />
+    <Content Include="res\img\icons\bullet_purple.png" />
+    <Content Include="res\img\icons\bullet_red.png" />
+    <Content Include="res\img\icons\bullet_star.png" />
+    <Content Include="res\img\icons\bullet_toggle_minus.png" />
+    <Content Include="res\img\icons\bullet_toggle_plus.png" />
+    <Content Include="res\img\icons\bullet_white.png" />
+    <Content Include="res\img\icons\bullet_wrench.png" />
+    <Content Include="res\img\icons\bullet_yellow.png" />
+    <Content Include="res\img\icons\cross.png" />
+    <Content Include="res\img\icons\del.gif" />
+    <Content Include="res\img\icons\edit.gif" />
+    <Content Include="res\img\icons\error_icon.gif" />
+    <Content Include="res\img\icons\help.png" />
+    <Content Include="res\img\icons\magnifier.png" />
+    <Content Include="res\img\icons\page.png" />
+    <Content Include="res\img\icons\page_attach.png" />
+    <Content Include="res\img\icons\page_go.png" />
+    <Content Include="res\img\icons\page_green.png" />
+    <Content Include="res\img\icons\printer.png" />
+    <Content Include="res\img\icons\Progress.gif" />
+    <Content Include="res\img\icons\tick.png" />
+    <Content Include="res\img\information.gif" />
+    <Content Include="res\img\loading.gif" />
+    <Content Include="res\img\loginho.png" />
+    <Content Include="res\img\logo-horizontal-CCPSD.png" />
+    <Content Include="res\img\logo.gif" />
+    <Content Include="res\img\logo.jpg" />
+    <Content Include="res\img\logo.png" />
+    <Content Include="res\img\logoCCPSD.gif" />
+    <Content Include="res\img\LogoOnapi.jpg" />
+    <Content Include="res\img\logoVisanet2.png" />
+    <Content Include="res\img\logo_camara.png" />
+    <Content Include="res\img\logo_white.png" />
+    <Content Include="res\img\map.gif" />
+    <Content Include="res\img\modificacion.png" />
+    <Content Include="res\img\oficina.png" />
+    <Content Include="res\img\pdfMini.gif" />
+    <Content Include="res\img\pencil.gif" />
+    <Content Include="res\img\playIcon.gif" />
+    <Content Include="res\img\preloader.gif" />
+    <Content Include="res\img\printer.gif" />
+    <Content Include="res\img\Progress.gif" />
+    <Content Include="res\img\registro.png" />
+    <Content Include="res\img\socio.png" />
+    <Content Include="res\img\stepDone.png" />
+    <Content Include="res\img\stepLast.gif" />
+    <Content Include="res\img\stepNobox.png" />
+    <Content Include="res\img\stepNxt.gif" />
+    <Content Include="res\img\tick.png" />
+    <Content Include="res\img\tranparentwhite.png" />
+    <Content Include="res\img\transac.png" />
+    <Content Include="res\img\warning-icon.gif" />
+    <Content Include="res\img\watermark.gif" />
+    <Content Include="res\img\w_pointer.png" />
+    <Content Include="res\js\button.png" />
+    <Content Include="res\js\DetectError404-GC.js" />
+    <Content Include="res\js\DetectError404.js" />
+    <Content Include="res\js\fancybox\blank.gif" />
+    <Content Include="res\js\fancybox\fancybox-x.png" />
+    <Content Include="res\js\fancybox\fancybox-y.png" />
+    <Content Include="res\js\fancybox\fancybox.png" />
+    <Content Include="res\js\fancybox\fancy_close.png" />
+    <Content Include="res\js\fancybox\fancy_loading.png" />
+    <Content Include="res\js\fancybox\fancy_nav_left.png" />
+    <Content Include="res\js\fancybox\fancy_nav_right.png" />
+    <Content Include="res\js\fancybox\fancy_shadow_e.png" />
+    <Content Include="res\js\fancybox\fancy_shadow_n.png" />
+    <Content Include="res\js\fancybox\fancy_shadow_ne.png" />
+    <Content Include="res\js\fancybox\fancy_shadow_nw.png" />
+    <Content Include="res\js\fancybox\fancy_shadow_s.png" />
+    <Content Include="res\js\fancybox\fancy_shadow_se.png" />
+    <Content Include="res\js\fancybox\fancy_shadow_sw.png" />
+    <Content Include="res\js\fancybox\fancy_shadow_w.png" />
+    <Content Include="res\js\fancybox\fancy_title_left.png" />
+    <Content Include="res\js\fancybox\fancy_title_main.png" />
+    <Content Include="res\js\fancybox\fancy_title_over.png" />
+    <Content Include="res\js\fancybox\fancy_title_right.png" />
+    <Content Include="res\js\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="res\js\fancybox\jquery.fancybox-1.3.1.css" />
+    <Content Include="res\js\fancybox\jquery.fancybox-1.3.1.js" />
+    <Content Include="res\js\fancybox\jquery.fancybox-1.3.1.pack.js" />
+    <Content Include="res\js\fancybox\jquery.mousewheel-3.0.2.pack.js" />
+    <Content Include="res\js\fbTextbox\close.gif" />
+    <Content Include="res\js\fbTextbox\GrowingInput.js" />
+    <Content Include="res\js\fbTextbox\TextboxList.Autocomplete.Binary.js" />
+    <Content Include="res\js\fbTextbox\TextboxList.Autocomplete.css" />
+    <Content Include="res\js\fbTextbox\TextboxList.Autocomplete.js" />
+    <Content Include="res\js\fbTextbox\TextboxList.css" />
+    <Content Include="res\js\fbTextbox\TextboxList.js" />
+    <Content Include="res\js\fgMenu\theme\custom.css" />
+    <Content Include="res\js\fgMenu\fg.menu.css" />
+    <Content Include="res\js\fgMenu\fg.menu.js" />
+    <Content Include="res\js\fgMenu\index.html" />
+    <Content Include="res\js\fgMenu\menuContent.html" />
+    <Content Include="res\js\fgMenu\spinner_bar.gif" />
+    <Content Include="res\js\fgMenu\theme\images\ui-bg_diagonals-small_100_f0efea_40x40.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-bg_flat_35_f0f0f0_40x100.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-bg_glass_55_fcf0ba_1x400.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-bg_glow-ball_25_2e2e28_600x600.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-bg_highlight-soft_100_f0efea_1x100.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-bg_highlight-soft_25_327E04_1x100.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-bg_highlight-soft_25_5A9D1A_1x100.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-bg_highlight-soft_95_ffedad_1x100.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-bg_inset-soft_22_3b3b35_1x100.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-icons_808080_256x240.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-icons_8DC262_256x240.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-icons_e7e6e4_256x240.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-icons_eeeeee_256x240.png" />
+    <Content Include="res\js\fgMenu\theme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="res\js\fgMenu\theme\ui.accordion.css" />
+    <Content Include="res\js\fgMenu\theme\ui.all.css" />
+    <Content Include="res\js\fgMenu\theme\ui.base.css" />
+    <Content Include="res\js\fgMenu\theme\ui.core.css" />
+    <Content Include="res\js\fgMenu\theme\ui.datepicker.css" />
+    <Content Include="res\js\fgMenu\theme\ui.dialog.css" />
+    <Content Include="res\js\fgMenu\theme\ui.progressbar.css" />
+    <Content Include="res\js\fgMenu\theme\ui.resizable.css" />
+    <Content Include="res\js\fgMenu\theme\ui.slider.css" />
+    <Content Include="res\js\fgMenu\theme\ui.tabs.css" />
+    <Content Include="res\js\fgMenu\theme\ui.theme.css" />
+    <Content Include="res\js\FlashDetect.js" />
+    <Content Include="res\js\i18n\grid.locale-en.js" />
+    <Content Include="res\js\i18n\grid.locale-es.js" />
+    <Content Include="res\js\images\bg.png" />
+    <Content Include="res\js\images\cross.png" />
+    <Content Include="res\js\images\cross_hover.png" />
+    <Content Include="res\js\jBar\style.css" />
+    <Content Include="res\js\jquery-1.4.1-vsdoc.js" />
+    <Content Include="res\js\jquery-1.4.1.js" />
+    <Content Include="res\js\jquery-1.4.1.min-GC.js" />
+    <Content Include="res\js\jquery-1.4.1.min.js" />
+    <Content Include="res\js\jquery-idleTimeout.js" />
+    <Content Include="res\js\jquery-tooltip\jquery.tooltip-GC.css" />
+    <Content Include="res\js\jquery-tooltip\jquery.tooltip-GC.js" />
+    <Content Include="res\js\jquery-tooltip\jquery.tooltip.css" />
+    <Content Include="res\js\jquery-tooltip\jquery.tooltip.js" />
+    <Content Include="res\js\jquery-tooltip\jquery.tooltip.min-GC.js" />
+    <Content Include="res\js\jquery-tooltip\jquery.tooltip.min.js" />
+    <Content Include="res\js\jquery-tooltip\jquery.tooltip.pack-GC.js" />
+    <Content Include="res\js\jquery-tooltip\jquery.tooltip.pack.js" />
+    <Content Include="res\js\jquery-tooltip\lib\jquery.bgiframe-GC.js" />
+    <Content Include="res\js\jquery-tooltip\lib\jquery.bgiframe.js" />
+    <Content Include="res\js\jquery-tooltip\lib\jquery.delegate-GC.js" />
+    <Content Include="res\js\jquery-tooltip\lib\jquery.delegate.js" />
+    <Content Include="res\js\jquery-tooltip\lib\jquery.dimensions-GC.js" />
+    <Content Include="res\js\jquery-tooltip\lib\jquery.dimensions.js" />
+    <Content Include="res\js\jquery-tooltip\shadow.png" />
+    <Content Include="res\js\jquery-tooltip\tooltippersonalized-GC.css" />
+    <Content Include="res\js\jquery-tooltip\tooltippersonalized.css" />
+    <Content Include="res\js\jquery-ui-1.8.11.custom.min.js" />
+    <Content Include="res\js\jquery.alphanumeric.js" />
+    <Content Include="res\js\jquery.bar.js" />
+    <Content Include="res\js\jquery.changeWatch.js" />
+    <Content Include="res\js\jquery.DateFormat.js" />
+    <Content Include="res\js\jquery.dirtyform.js" />
+    <Content Include="res\js\jquery.fieldtag.js" />
+    <Content Include="res\js\jquery.formatCurrency-1.4.0.min.js" />
+    <Content Include="res\js\jquery.jqGrid.min.js" />
+    <Content Include="res\js\jquery.maskedinput.js" />
+    <Content Include="res\js\jquery.tools.min.js" />
+    <Content Include="res\js\jquery.treeview\changelog.txt" />
+    <Content Include="res\js\jquery.treeview\images\file.gif" />
+    <Content Include="res\js\jquery.treeview\images\folder-closed.gif" />
+    <Content Include="res\js\jquery.treeview\images\folder.gif" />
+    <Content Include="res\js\jquery.treeview\images\minus.gif" />
+    <Content Include="res\js\jquery.treeview\images\plus.gif" />
+    <Content Include="res\js\jquery.treeview\images\treeview-black-line.gif" />
+    <Content Include="res\js\jquery.treeview\images\treeview-black.gif" />
+    <Content Include="res\js\jquery.treeview\images\treeview-default-line.gif" />
+    <Content Include="res\js\jquery.treeview\images\treeview-default.gif" />
+    <Content Include="res\js\jquery.treeview\images\treeview-famfamfam-line.gif" />
+    <Content Include="res\js\jquery.treeview\images\treeview-famfamfam.gif" />
+    <Content Include="res\js\jquery.treeview\images\treeview-gray-line.gif" />
+    <Content Include="res\js\jquery.treeview\images\treeview-gray.gif" />
+    <Content Include="res\js\jquery.treeview\images\treeview-red-line.gif" />
+    <Content Include="res\js\jquery.treeview\images\treeview-red.gif" />
+    <Content Include="res\js\jquery.treeview\jquery.treeview.async.js" />
+    <Content Include="res\js\jquery.treeview\jquery.treeview.css" />
+    <Content Include="res\js\jquery.treeview\jquery.treeview.js" />
+    <Content Include="res\js\jquery.treeview\jquery.treeview.min.js" />
+    <Content Include="res\js\jquery.treeview\jquery.treeview.pack.js" />
+    <Content Include="res\js\jquery.treeview\lib\jquery.cookie.js" />
+    <Content Include="res\js\jquery.validate.js" />
+    <Content Include="res\js\jquery.validate.min.js" />
+    <Content Include="res\js\jquery.validate.pack.js" />
+    <Content Include="res\js\jquery.watermark.min.js" />
+    <Content Include="res\js\json2.js" />
+    <Content Include="res\js\messageController.js" />
+    <Content Include="res\js\showMensajeWindow.js" />
+    <Content Include="res\js\swfobject-GC.js" />
+    <Content Include="res\js\swfobject.js" />
+    <Content Include="res\js\tipsy\jquery.tipsy.js" />
+    <Content Include="res\js\tipsy\tipsy-docs.css" />
+    <Content Include="res\js\tipsy\tipsy.css" />
+    <Content Include="res\js\tipsy\tipsy.gif" />
+    <Content Include="res\js\ui.adecuacion.js" />
+    <Content Include="res\js\ui.adecuacionInicio.js" />
+    <Content Include="res\js\ui.datosgenerales.js" />
+    <Content Include="res\js\ui.datossociedad.js" />
+    <Content Include="res\js\ui.enviodatos.js" />
+    <Content Include="res\js\ui.formaentrega.js" />
+    <Content Include="res\js\ui.pagostarjeta.js" />
+    <Content Include="res\js\ui.revisiondocumentos.js" />
+    <Content Include="res\js\ui.spinner.js" />
+    <Content Include="res\js\ui.spinner.min.js" />
+    <Content Include="res\js\uploadify\cancel.png" />
+    <Content Include="res\js\uploadify\expressInstall.swf" />
+    <Content Include="res\js\uploadify\jquery-1.4.2.min.js" />
+    <Content Include="res\js\uploadify\jquery.uploadify.v2.1.1.js" />
+    <Content Include="res\js\uploadify\jquery.uploadify.v2.1.1.min.js" />
+    <Content Include="res\js\uploadify\swfobject.js" />
+    <Content Include="res\js\uploadify\uploadify-GC.css" />
+    <Content Include="res\js\uploadify\uploadify.allglyphs.swf" />
+    <Content Include="res\js\uploadify\uploadify.css" />
+    <Content Include="res\js\uploadify\uploadify.swf" />
+    <Content Include="res\lib\chosen\chosen-sprite%402x.png" />
+    <Content Include="res\lib\chosen\chosen-sprite.png" />
+    <Content Include="res\lib\chosen\chosen.css" />
+    <Content Include="res\lib\chosen\chosen.jquery.js" />
+    <Content Include="res\lib\chosen\chosen.jquery.min.js" />
+    <Content Include="res\lib\chosen\chosen.min.css" />
+    <Content Include="res\lib\chosen\chosen.proto.js" />
+    <Content Include="res\lib\chosen\chosen.proto.min.js" />
+    <Content Include="res\lib\chosen\docsupport\chosen.png" />
+    <Content Include="res\lib\chosen\docsupport\init.js" />
+    <Content Include="res\lib\chosen\docsupport\init.proto.js" />
+    <Content Include="res\lib\chosen\docsupport\jquery-1.12.4.min.js" />
+    <Content Include="res\lib\chosen\docsupport\jquery-3.2.1.min.js" />
+    <Content Include="res\lib\chosen\docsupport\oss-credit.png" />
+    <Content Include="res\lib\chosen\docsupport\prism.css" />
+    <Content Include="res\lib\chosen\docsupport\prism.js" />
+    <Content Include="res\lib\chosen\docsupport\prototype-1.7.0.0.js" />
+    <Content Include="res\lib\chosen\docsupport\style.css" />
+    <Content Include="res\lib\chosen\index.html" />
+    <Content Include="res\lib\chosen\index.proto.html" />
+    <Content Include="res\lib\chosen\options.html" />
+    <Content Include="res\lib\jquery\jquery.min.js" />
+    <Content Include="res\lib\uikit\css\components\accordion.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\accordion.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\accordion.css" />
+    <Content Include="res\lib\uikit\css\components\accordion.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\accordion.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\accordion.min.css" />
+    <Content Include="res\lib\uikit\css\components\autocomplete.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\autocomplete.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\autocomplete.css" />
+    <Content Include="res\lib\uikit\css\components\autocomplete.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\autocomplete.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\autocomplete.min.css" />
+    <Content Include="res\lib\uikit\css\components\datepicker.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\datepicker.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\datepicker.css" />
+    <Content Include="res\lib\uikit\css\components\datepicker.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\datepicker.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\datepicker.min.css" />
+    <Content Include="res\lib\uikit\css\components\dotnav.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\dotnav.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\dotnav.css" />
+    <Content Include="res\lib\uikit\css\components\dotnav.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\dotnav.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\dotnav.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-advanced.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\form-advanced.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-advanced.css" />
+    <Content Include="res\lib\uikit\css\components\form-advanced.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\form-advanced.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-advanced.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-file.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\form-file.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-file.css" />
+    <Content Include="res\lib\uikit\css\components\form-file.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\form-file.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-file.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-password.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\form-password.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-password.css" />
+    <Content Include="res\lib\uikit\css\components\form-password.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\form-password.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-password.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-select.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\form-select.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-select.css" />
+    <Content Include="res\lib\uikit\css\components\form-select.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\form-select.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\form-select.min.css" />
+    <Content Include="res\lib\uikit\css\components\htmleditor.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\htmleditor.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\htmleditor.css" />
+    <Content Include="res\lib\uikit\css\components\htmleditor.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\htmleditor.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\htmleditor.min.css" />
+    <Content Include="res\lib\uikit\css\components\nestable.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\nestable.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\nestable.css" />
+    <Content Include="res\lib\uikit\css\components\nestable.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\nestable.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\nestable.min.css" />
+    <Content Include="res\lib\uikit\css\components\notify.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\notify.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\notify.css" />
+    <Content Include="res\lib\uikit\css\components\notify.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\notify.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\notify.min.css" />
+    <Content Include="res\lib\uikit\css\components\placeholder.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\placeholder.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\placeholder.css" />
+    <Content Include="res\lib\uikit\css\components\placeholder.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\placeholder.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\placeholder.min.css" />
+    <Content Include="res\lib\uikit\css\components\progress.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\progress.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\progress.css" />
+    <Content Include="res\lib\uikit\css\components\progress.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\progress.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\progress.min.css" />
+    <Content Include="res\lib\uikit\css\components\search.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\search.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\search.css" />
+    <Content Include="res\lib\uikit\css\components\search.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\search.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\search.min.css" />
+    <Content Include="res\lib\uikit\css\components\slidenav.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\slidenav.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\slidenav.css" />
+    <Content Include="res\lib\uikit\css\components\slidenav.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\slidenav.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\slidenav.min.css" />
+    <Content Include="res\lib\uikit\css\components\slider.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\slider.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\slider.css" />
+    <Content Include="res\lib\uikit\css\components\slider.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\slider.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\slider.min.css" />
+    <Content Include="res\lib\uikit\css\components\slideshow.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\slideshow.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\slideshow.css" />
+    <Content Include="res\lib\uikit\css\components\slideshow.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\slideshow.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\slideshow.min.css" />
+    <Content Include="res\lib\uikit\css\components\sortable.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\sortable.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\sortable.css" />
+    <Content Include="res\lib\uikit\css\components\sortable.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\sortable.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\sortable.min.css" />
+    <Content Include="res\lib\uikit\css\components\sticky.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\sticky.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\sticky.css" />
+    <Content Include="res\lib\uikit\css\components\sticky.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\sticky.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\sticky.min.css" />
+    <Content Include="res\lib\uikit\css\components\tooltip.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\tooltip.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\tooltip.css" />
+    <Content Include="res\lib\uikit\css\components\tooltip.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\tooltip.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\tooltip.min.css" />
+    <Content Include="res\lib\uikit\css\components\upload.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\components\upload.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\components\upload.css" />
+    <Content Include="res\lib\uikit\css\components\upload.gradient.css" />
+    <Content Include="res\lib\uikit\css\components\upload.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\components\upload.min.css" />
+    <Content Include="res\lib\uikit\css\uikit.almost-flat.css" />
+    <Content Include="res\lib\uikit\css\uikit.almost-flat.min.css" />
+    <Content Include="res\lib\uikit\css\uikit.css" />
+    <Content Include="res\lib\uikit\css\uikit.gradient.css" />
+    <Content Include="res\lib\uikit\css\uikit.gradient.min.css" />
+    <Content Include="res\lib\uikit\css\uikit.min.css" />
+    <Content Include="res\lib\uikit\js\components\accordion.js" />
+    <Content Include="res\lib\uikit\js\components\accordion.min.js" />
+    <Content Include="res\lib\uikit\js\components\autocomplete.js" />
+    <Content Include="res\lib\uikit\js\components\autocomplete.min.js" />
+    <Content Include="res\lib\uikit\js\components\datepicker.js" />
+    <Content Include="res\lib\uikit\js\components\datepicker.min.js" />
+    <Content Include="res\lib\uikit\js\components\form-password.js" />
+    <Content Include="res\lib\uikit\js\components\form-password.min.js" />
+    <Content Include="res\lib\uikit\js\components\form-select.js" />
+    <Content Include="res\lib\uikit\js\components\form-select.min.js" />
+    <Content Include="res\lib\uikit\js\components\grid-parallax.js" />
+    <Content Include="res\lib\uikit\js\components\grid-parallax.min.js" />
+    <Content Include="res\lib\uikit\js\components\grid.js" />
+    <Content Include="res\lib\uikit\js\components\grid.min.js" />
+    <Content Include="res\lib\uikit\js\components\htmleditor.js" />
+    <Content Include="res\lib\uikit\js\components\htmleditor.min.js" />
+    <Content Include="res\lib\uikit\js\components\lightbox.js" />
+    <Content Include="res\lib\uikit\js\components\lightbox.min.js" />
+    <Content Include="res\lib\uikit\js\components\nestable.js" />
+    <Content Include="res\lib\uikit\js\components\nestable.min.js" />
+    <Content Include="res\lib\uikit\js\components\notify.js" />
+    <Content Include="res\lib\uikit\js\components\notify.min.js" />
+    <Content Include="res\lib\uikit\js\components\pagination.js" />
+    <Content Include="res\lib\uikit\js\components\pagination.min.js" />
+    <Content Include="res\lib\uikit\js\components\parallax.js" />
+    <Content Include="res\lib\uikit\js\components\parallax.min.js" />
+    <Content Include="res\lib\uikit\js\components\scrollspy.min.js" />
+    <Content Include="res\lib\uikit\js\components\search.js" />
+    <Content Include="res\lib\uikit\js\components\search.min.js" />
+    <Content Include="res\lib\uikit\js\components\slider.js" />
+    <Content Include="res\lib\uikit\js\components\slider.min.js" />
+    <Content Include="res\lib\uikit\js\components\slideset.js" />
+    <Content Include="res\lib\uikit\js\components\slideset.min.js" />
+    <Content Include="res\lib\uikit\js\components\slideshow-fx.js" />
+    <Content Include="res\lib\uikit\js\components\slideshow-fx.min.js" />
+    <Content Include="res\lib\uikit\js\components\slideshow.js" />
+    <Content Include="res\lib\uikit\js\components\slideshow.min.js" />
+    <Content Include="res\lib\uikit\js\components\sortable.js" />
+    <Content Include="res\lib\uikit\js\components\sortable.min.js" />
+    <Content Include="res\lib\uikit\js\components\sticky.js" />
+    <Content Include="res\lib\uikit\js\components\sticky.min.js" />
+    <Content Include="res\lib\uikit\js\components\timepicker.js" />
+    <Content Include="res\lib\uikit\js\components\timepicker.min.js" />
+    <Content Include="res\lib\uikit\js\components\tooltip.js" />
+    <Content Include="res\lib\uikit\js\components\tooltip.min.js" />
+    <Content Include="res\lib\uikit\js\components\upload.js" />
+    <Content Include="res\lib\uikit\js\components\upload.min.js" />
+    <Content Include="res\lib\uikit\js\core\alert.js" />
+    <Content Include="res\lib\uikit\js\core\alert.min.js" />
+    <Content Include="res\lib\uikit\js\core\button.js" />
+    <Content Include="res\lib\uikit\js\core\button.min.js" />
+    <Content Include="res\lib\uikit\js\core\core.js" />
+    <Content Include="res\lib\uikit\js\core\core.min.js" />
+    <Content Include="res\lib\uikit\js\core\cover.js" />
+    <Content Include="res\lib\uikit\js\core\cover.min.js" />
+    <Content Include="res\lib\uikit\js\core\dropdown.js" />
+    <Content Include="res\lib\uikit\js\core\dropdown.min.js" />
+    <Content Include="res\lib\uikit\js\core\grid.js" />
+    <Content Include="res\lib\uikit\js\core\grid.min.js" />
+    <Content Include="res\lib\uikit\js\core\modal.js" />
+    <Content Include="res\lib\uikit\js\core\modal.min.js" />
+    <Content Include="res\lib\uikit\js\core\nav.js" />
+    <Content Include="res\lib\uikit\js\core\nav.min.js" />
+    <Content Include="res\lib\uikit\js\core\offcanvas.js" />
+    <Content Include="res\lib\uikit\js\core\offcanvas.min.js" />
+    <Content Include="res\lib\uikit\js\core\scrollspy.js" />
+    <Content Include="res\lib\uikit\js\core\scrollspy.min.js" />
+    <Content Include="res\lib\uikit\js\core\smooth-scroll.js" />
+    <Content Include="res\lib\uikit\js\core\smooth-scroll.min.js" />
+    <Content Include="res\lib\uikit\js\core\switcher.js" />
+    <Content Include="res\lib\uikit\js\core\switcher.min.js" />
+    <Content Include="res\lib\uikit\js\core\tab.js" />
+    <Content Include="res\lib\uikit\js\core\tab.min.js" />
+    <Content Include="res\lib\uikit\js\core\toggle.js" />
+    <Content Include="res\lib\uikit\js\core\toggle.min.js" />
+    <Content Include="res\lib\uikit\js\core\touch.js" />
+    <Content Include="res\lib\uikit\js\core\touch.min.js" />
+    <Content Include="res\lib\uikit\js\core\utility.js" />
+    <Content Include="res\lib\uikit\js\core\utility.min.js" />
+    <Content Include="res\lib\uikit\js\uikit.js" />
+    <Content Include="res\lib\uikit\js\uikit.min.js" />
+    <Content Include="Service References\WSMondorRates\CamaraComercio.Website.WSMondorRates.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WSMondorRates\CamaraComercio.Website.WSMondorRates.Currency.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include=".editorconfig" />
+    <None Include="Service References\WSMondorRates\configuration91.svcinfo" />
+    <None Include="Service References\WSMondorRates\configuration.svcinfo" />
+    <None Include="Service References\WSMondorRates\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\WSMovilDGII\CamaraComercio.Website.WSMovilDGII.GetPlacaResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="libman.json" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="res\lib\chosen\composer.json" />
+    <Content Include="res\lib\chosen\LICENSE.md" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="res\noboxForm.Master" />
+    <None Include="Service References\WSMondorRates\rates.wsdl" />
+    <None Include="Service References\WSMovilDGII\configuration91.svcinfo" />
+    <None Include="Service References\WSMovilDGII\configuration.svcinfo" />
+    <None Include="Service References\WSMovilDGII\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\WSShareBase\CamaraComercio.Website.WSShareBase.BasicOperationResultOfDocumentValidationResponsev8czTo8Q.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WSShareBase\CamaraComercio.Website.WSShareBase.BasicOperationResultOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\WSShareBase\OnlineChamberService.disco" />
+    <None Include="Service References\WSShareBase\configuration91.svcinfo" />
+    <None Include="Service References\WSShareBase\configuration.svcinfo" />
+    <None Include="Service References\WSShareBase\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Services\EnvioDatos.asmx" />
+    <Content Include="TarjetaCredito\PagosTarjeta.aspx" />
+    <Content Include="Operaciones\Registro\Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Operaciones\Shared\Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Account\Account.sitemap" />
+    <Content Include="Consultas\Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Themes\Default\RadGridMessage.skin" />
+    <Content Include="Operaciones\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Mobile\.DS_Store" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="TarjetaCredito\PagoTransaccion.aspx" />
+    <Content Include="TarjetaCredito\RedireccionPago.aspx" />
+    <Content Include="TarjetaCredito\TransInvalida.aspx" />
+    <Content Include="TerminosUso.html" />
+    <Content Include="TerminosUso.xml" />
+    <Content Include="UserControls\ucPagosTarjeta.ascx" />
+    <Content Include="UserControls\ucEnvioDatos.ascx" />
+    <Content Include="UserControls\ManejoSocios.ascx" />
+    <Content Include="UserControls\ManejoSucursales.ascx" />
+    <Content Include="UserControls\RepresentanteDetails.ascx" />
+    <Content Include="UserControls\ucFormularioDeSolicitud.ascx" />
+    <Content Include="UserControls\ucRevisionDocumentos.ascx" />
+    <Content Include="UserControls\SocioDetails.ascx" />
+    <Content Include="UserControls\SocioIndividualDetails.ascx" />
+    <Content Include="UserControls\Submenu.ascx" />
+    <Content Include="UserControls\SucursalesDetails.ascx" />
+    <Content Include="UserControls\UcCapitalAutorizado.ascx" />
+    <Content Include="VentanillaUnica.aspx" />
+    <Content Include="TarjetaCredito\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="res\ccpsd.Master" />
+    <Content Include="res\Consulta_header.Master" />
+    <None Include="res\js\fgMenu\theme\.DS_Store" />
+    <None Include="res\js\uploadify\uploadify.fla" />
+    <Content Include="res\nobox.Master" />
+    <Content Include="res\lib\uikit\fonts\fontawesome-webfont.ttf" />
+    <Content Include="res\lib\uikit\fonts\fontawesome-webfont.woff" />
+    <Content Include="res\lib\uikit\fonts\fontawesome-webfont.woff2" />
+    <Content Include="res\lib\uikit\fonts\FontAwesome.otf" />
+    <Content Include="res\pdf\Poder Autorizacion Form FD.pdf" />
+    <Content Include="res\pdf\Poder Autorizacion Form.pdf" />
+    <None Include="Service References\WSMovilDGII\WSMovilDGII.wsdl" />
+    <None Include="Service References\WSShareBase\OnlineChamberService.wsdl" />
+    <None Include="Service References\WSShareBase\OnlineChamberService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSShareBase\OnlineChamberService1.wsdl" />
+    <None Include="Service References\WSShareBase\OnlineChamberService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSShareBase\OnlineChamberService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSShareBase\OnlineChamberService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSShareBase\OnlineChamberService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSShareBase\OnlineChamberService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\kofaxVisorWeb\DocumentWebService.wsdl" />
+    <None Include="Web References\kofaxVisorWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\svrkofax\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\svrkofax\wscsi.wsdl" />
+    <None Include="Web References\wsDgii3\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsDgii3\rGeneraAutorizacionPago.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsDgii3\WSdgii.wsdl" />
+    <None Include="Web References\svrkofax\wscsi.disco" />
+    <None Include="Web References\kofaxVisorWeb\DocumentWebService.disco" />
+    <Content Include="Web References\wsFacturacion\Factura.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\wsFacturacion\FormaPagosSRM.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wsFacturacion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsFacturacion\ServicioFacturacion.disco" />
+    <Content Include="Web References\wsReporteRM\Accionista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\wsReporteRM\Camara.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wsFacturacion\ServicioFacturacion.wsdl" />
+    <Content Include="Web References\wsFacturacion\VigenciaNotaCreditoSRM.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wsReporteRM\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\wsReporteRM\Registro.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wsReporteRM\wsRegistroMercantil.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web References\wsOnapi2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsOnapi2\ResultadoBusquedaNombre.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsOnapi2\serviciocc.wsdl" />
+    <None Include="Web References\wsReporteRM\wsRegistroMercantil.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ActivacionUsuario.aspx.cs">
+      <DependentUpon>ActivacionUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ActivacionUsuario.aspx.designer.cs">
+      <DependentUpon>ActivacionUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangeAdmin.aspx.cs">
+      <DependentUpon>ChangeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangeAdmin.aspx.designer.cs">
+      <DependentUpon>ChangeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\LoginHansel.aspx.cs">
+      <DependentUpon>LoginHansel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\LoginHansel.aspx.designer.cs">
+      <DependentUpon>LoginHansel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\PendingActivation.aspx.cs">
+      <DependentUpon>PendingActivation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\PendingActivation.aspx.designer.cs">
+      <DependentUpon>PendingActivation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ForgotPasswordVerification.aspx.cs">
+      <DependentUpon>ForgotPasswordVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ForgotPasswordVerification.aspx.designer.cs">
+      <DependentUpon>ForgotPasswordVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\LoginOld.aspx.cs">
+      <DependentUpon>LoginOld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\LoginOld.aspx.designer.cs">
+      <DependentUpon>LoginOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterOld.aspx.cs">
+      <DependentUpon>RegisterOld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterOld.aspx.designer.cs">
+      <DependentUpon>RegisterOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterComplete.aspx.cs">
+      <DependentUpon>RegisterComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterComplete.aspx.designer.cs">
+      <DependentUpon>RegisterComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UsersAdmin.aspx.cs">
+      <DependentUpon>UsersAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UsersAdmin.aspx.designer.cs">
+      <DependentUpon>UsersAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UsersAuth.aspx.cs">
+      <DependentUpon>UsersAuth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UsersAuth.aspx.designer.cs">
+      <DependentUpon>UsersAuth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ValidateUser.aspx.cs">
+      <DependentUpon>ValidateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ValidateUser.aspx.designer.cs">
+      <DependentUpon>ValidateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Api.aspx.cs">
+      <DependentUpon>Api.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Api.aspx.designer.cs">
+      <DependentUpon>Api.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaEstado.aspx.cs">
+      <DependentUpon>ConsultaEstado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaEstado.aspx.designer.cs">
+      <DependentUpon>ConsultaEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaRM.aspx.cs">
+      <DependentUpon>ConsultaRM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaRM.aspx.designer.cs">
+      <DependentUpon>ConsultaRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaRM2.aspx.cs">
+      <DependentUpon>ConsultaRM2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaRM2.aspx.designer.cs">
+      <DependentUpon>ConsultaRM2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Busqueda.aspx.cs">
+      <DependentUpon>Busqueda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\Busqueda.aspx.designer.cs">
+      <DependentUpon>Busqueda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\VerDetalleEmpresa.aspx.cs">
+      <DependentUpon>VerDetalleEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\VerDetalleEmpresa.aspx.designer.cs">
+      <DependentUpon>VerDetalleEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\VerDetalleSocio.aspx.cs">
+      <DependentUpon>VerDetalleSocio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\VerDetalleSocio.aspx.designer.cs">
+      <DependentUpon>VerDetalleSocio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaCERT.aspx.cs">
+      <DependentUpon>ConsultaCERT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaCERT.aspx.designer.cs">
+      <DependentUpon>ConsultaCERT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTransaccion.aspx.cs">
+      <DependentUpon>DeleteTransaccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteTransaccion.aspx.designer.cs">
+      <DependentUpon>DeleteTransaccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ActividadDTO.cs" />
+    <Compile Include="DTO\DetalleServicioDTO.cs" />
+    <Compile Include="DTO\DGIIRecibo.cs" />
+    <Compile Include="DTO\NcfUI.cs" />
+    <Compile Include="DTO\PersonaDTO.cs" />
+    <Compile Include="DTO\RepresentanteUI.cs" />
+    <Compile Include="DTO\ServicioDocumentoRequeridoUI.cs" />
+    <Compile Include="DTO\ServicioDTO.cs" />
+    <Compile Include="DTO\SolicitudONAPI.cs" />
+    <Compile Include="DTO\SolicitudRnc.cs" />
+    <Compile Include="DTO\Transaccionesbhdempresariales.cs" />
+    <Compile Include="DTO\VisanetDTO.cs" />
+    <Compile Include="DTO\XmlContracts.cs" />
+    <Compile Include="Empresas\DatoGenerales.aspx.cs">
+      <DependentUpon>DatoGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\DatoGenerales.aspx.designer.cs">
+      <DependentUpon>DatoGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\DatosGenerales.aspx.cs">
+      <DependentUpon>DatosGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\DatosGenerales.aspx.designer.cs">
+      <DependentUpon>DatosGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\ActualizarDatosGenerales.aspx.cs">
+      <DependentUpon>ActualizarDatosGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\ActualizarDatosGenerales.aspx.designer.cs">
+      <DependentUpon>ActualizarDatosGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\Adecuacion.aspx.cs">
+      <DependentUpon>Adecuacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\Adecuacion.aspx.designer.cs">
+      <DependentUpon>Adecuacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\CertificadosFirma.aspx.cs">
+      <DependentUpon>CertificadosFirma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\CertificadosFirma.aspx.designer.cs">
+      <DependentUpon>CertificadosFirma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\CierreSolicitud.aspx.cs">
+      <DependentUpon>CierreSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\CierreSolicitud.aspx.designer.cs">
+      <DependentUpon>CierreSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\ComprobarPagoTransaccion.aspx.cs">
+      <DependentUpon>ComprobarPagoTransaccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\ComprobarPagoTransaccion.aspx.designer.cs">
+      <DependentUpon>ComprobarPagoTransaccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\EmpresasPorGestores.aspx.cs">
+      <DependentUpon>EmpresasPorGestores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\EmpresasPorGestores.aspx.designer.cs">
+      <DependentUpon>EmpresasPorGestores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\FirmaContrato.aspx.cs">
+      <DependentUpon>FirmaContrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\FirmaContrato.aspx.designer.cs">
+      <DependentUpon>FirmaContrato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\ImprimirFactura.aspx.cs">
+      <DependentUpon>ImprimirFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\ImprimirFactura.aspx.designer.cs">
+      <DependentUpon>ImprimirFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\MatenimientoSolicitudes.aspx.cs">
+      <DependentUpon>MatenimientoSolicitudes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\MatenimientoSolicitudes.aspx.designer.cs">
+      <DependentUpon>MatenimientoSolicitudes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\MensajeModificacion.aspx.cs">
+      <DependentUpon>MensajeModificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\MensajeModificacion.aspx.designer.cs">
+      <DependentUpon>MensajeModificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\Optimo.aspx.cs">
+      <DependentUpon>Optimo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\Optimo.aspx.designer.cs">
+      <DependentUpon>Optimo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\Renovacion.aspx.cs">
+      <DependentUpon>Renovacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\Renovacion.aspx.designer.cs">
+      <DependentUpon>Renovacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\EnvioDatos.aspx.cs">
+      <DependentUpon>EnvioDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\EnvioDatos.aspx.designer.cs">
+      <DependentUpon>EnvioDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\ImprimirSolicitud.aspx.cs">
+      <DependentUpon>ImprimirSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\ImprimirSolicitud.aspx.designer.cs">
+      <DependentUpon>ImprimirSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\InicioUsuario.aspx.cs">
+      <DependentUpon>InicioUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\InicioUsuario.aspx.designer.cs">
+      <DependentUpon>InicioUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\RevisionDocumentos.aspx.cs">
+      <DependentUpon>RevisionDocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\RevisionDocumentos.aspx.designer.cs">
+      <DependentUpon>RevisionDocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\TransaccionesGestor.aspx.cs">
+      <DependentUpon>TransaccionesGestor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\TransaccionesGestor.aspx.designer.cs">
+      <DependentUpon>TransaccionesGestor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\VerDetalleTransaccion.aspx.cs">
+      <DependentUpon>VerDetalleTransaccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\VerDetalleTransaccion.aspx.designer.cs">
+      <DependentUpon>VerDetalleTransaccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\VerFacturas.aspx.cs">
+      <DependentUpon>VerFacturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\VerFacturas.aspx.designer.cs">
+      <DependentUpon>VerFacturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\VerSolicitudGeneral.aspx.cs">
+      <DependentUpon>VerSolicitudGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\VerSolicitudGeneral.aspx.designer.cs">
+      <DependentUpon>VerSolicitudGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\VisorWeb.aspx.cs">
+      <DependentUpon>VisorWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\VisorWeb.aspx.designer.cs">
+      <DependentUpon>VisorWeb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\WebFormTest.aspx.cs">
+      <DependentUpon>WebFormTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\WebFormTest.aspx.designer.cs">
+      <DependentUpon>WebFormTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\WebWizard.aspx.cs">
+      <DependentUpon>WebWizard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\WebWizard.aspx.designer.cs">
+      <DependentUpon>WebWizard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Certificacion.aspx.cs">
+      <DependentUpon>Certificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Certificacion.aspx.designer.cs">
+      <DependentUpon>Certificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormularioData.cs" />
+    <Compile Include="Formularios\FormularioModelView.cs" />
+    <Compile Include="Formularios\FormularioPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormViewer.aspx.cs">
+      <DependentUpon>FormViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormViewer.aspx.designer.cs">
+      <DependentUpon>FormViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PersonaFisica.aspx.cs">
+      <DependentUpon>PersonaFisica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\PersonaFisica.aspx.designer.cs">
+      <DependentUpon>PersonaFisica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociedadCPorAcciones.aspx.cs">
+      <DependentUpon>SociedadCPorAcciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociedadCPorAcciones.aspx.designer.cs">
+      <DependentUpon>SociedadCPorAcciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociedadExtranjera.aspx.cs">
+      <DependentUpon>SociedadExtranjera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociedadExtranjera.aspx.designer.cs">
+      <DependentUpon>SociedadExtranjera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociedadCSimple.aspx.cs">
+      <DependentUpon>SociedadCSimple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociedadCSimple.aspx.designer.cs">
+      <DependentUpon>SociedadCSimple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociedadEIRL.aspx.cs">
+      <DependentUpon>SociedadEIRL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociedadEIRL.aspx.designer.cs">
+      <DependentUpon>SociedadEIRL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociedadResponsabilidadLimitada.aspx.cs">
+      <DependentUpon>SociedadResponsabilidadLimitada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociedadResponsabilidadLimitada.aspx.designer.cs">
+      <DependentUpon>SociedadResponsabilidadLimitada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociedadAnonimaSimplificada.aspx.cs">
+      <DependentUpon>SociedadAnonimaSimplificada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociedadAnonimaSimplificada.aspx.designer.cs">
+      <DependentUpon>SociedadAnonimaSimplificada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociedadAnonima.aspx.cs">
+      <DependentUpon>SociedadAnonima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociedadAnonima.aspx.designer.cs">
+      <DependentUpon>SociedadAnonima.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociedadNombreColectivo.aspx.cs">
+      <DependentUpon>SociedadNombreColectivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociedadNombreColectivo.aspx.designer.cs">
+      <DependentUpon>SociedadNombreColectivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SolicitudIinclusionEmpresa.aspx.cs">
+      <DependentUpon>SolicitudIinclusionEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\SolicitudIinclusionEmpresa.aspx.designer.cs">
+      <DependentUpon>SolicitudIinclusionEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ExtendedControls\ButtonOfv.cs" />
+    <Compile Include="Helpers\ExtendedControls\CalendarOfv.cs" />
+    <Compile Include="Helpers\ExtendedControls\DropdownListOfv.cs" />
+    <Compile Include="Helpers\ExtendedControls\IExtendedControlOfv.cs" />
+    <Compile Include="Helpers\ExtendedControls\LabelOfv.cs" />
+    <Compile Include="Helpers\ExtendedControls\SelectorsOfv.cs" />
+    <Compile Include="Helpers\ExtendedControls\ValidatorsOfv.cs" />
+    <Compile Include="Helpers\ExtendedControls\TextboxOfv.cs" />
+    <Compile Include="Helpers\ExtendedPages\EnvioDatosPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpers\ExtendedPages\ModificationPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpers\ExtendedPages\SecurePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpers\LogTransaccionesMethods.cs" />
+    <Compile Include="Helpers\Membership.cs" />
+    <Compile Include="Helpers\ModificacionCompanias.cs" />
+    <Compile Include="Helpers\NoboxHelper.cs" />
+    <Compile Include="Helpers\SerializerHelper.cs" />
+    <Compile Include="Helpers\TransaccionDevueltaHelper.cs" />
+    <Compile Include="Helpers\TransGatewayHelper.cs" />
+    <Compile Include="Helpers\VisanetHelper.cs" />
+    <Compile Include="Helpers\XmlCustomSerializer.cs" />
+    <Compile Include="HttpHelpers.cs" />
+    <Compile Include="KeepAlive.aspx.cs">
+      <DependentUpon>KeepAlive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KeepAlive.aspx.designer.cs">
+      <DependentUpon>KeepAlive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kofax\WebDocumentViewer.ascx.cs">
+      <DependentUpon>WebDocumentViewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kofax\WebDocumentViewer.ascx.designer.cs">
+      <DependentUpon>WebDocumentViewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\ReaperturarCaso.aspx.cs">
+      <DependentUpon>ReaperturarCaso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\ReaperturarCaso.aspx.designer.cs">
+      <DependentUpon>ReaperturarCaso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\RevisionBHDEmpresa.aspx.cs">
+      <DependentUpon>RevisionBHDEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\RevisionBHDEmpresa.aspx.designer.cs">
+      <DependentUpon>RevisionBHDEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\Confirmacion.aspx.cs">
+      <DependentUpon>Confirmacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\Confirmacion.aspx.designer.cs">
+      <DependentUpon>Confirmacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\DatosGenerales.aspx.cs">
+      <DependentUpon>DatosGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\DatosGenerales.aspx.designer.cs">
+      <DependentUpon>DatosGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\DatosSociedad.aspx.cs">
+      <DependentUpon>DatosSociedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\DatosSociedad.aspx.designer.cs">
+      <DependentUpon>DatosSociedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\ModAumentoCapital.aspx.cs">
+      <DependentUpon>ModAumentoCapital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\ModAumentoCapital.aspx.designer.cs">
+      <DependentUpon>ModAumentoCapital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\ModAumentoCapPagado.aspx.cs">
+      <DependentUpon>ModAumentoCapPagado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\ModAumentoCapPagado.aspx.designer.cs">
+      <DependentUpon>ModAumentoCapPagado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\ModDomicilioProv.aspx.cs">
+      <DependentUpon>ModDomicilioProv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\ModDomicilioProv.aspx.designer.cs">
+      <DependentUpon>ModDomicilioProv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\Modificacion.aspx.cs">
+      <DependentUpon>Modificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\Modificacion.aspx.designer.cs">
+      <DependentUpon>Modificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\ModReduccionCapPagado.aspx.cs">
+      <DependentUpon>ModReduccionCapPagado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\ModReduccionCapPagado.aspx.designer.cs">
+      <DependentUpon>ModReduccionCapPagado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\ModReducionCapital.aspx.cs">
+      <DependentUpon>ModReducionCapital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\ModReducionCapital.aspx.designer.cs">
+      <DependentUpon>ModReducionCapital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyUpload.ashx.cs">
+      <DependentUpon>MyUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\Oficina.aspx.cs">
+      <DependentUpon>Oficina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\Oficina.aspx.designer.cs">
+      <DependentUpon>Oficina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\SolicitudInclusion.aspx.cs">
+      <DependentUpon>SolicitudInclusion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\SolicitudInclusion.aspx.designer.cs">
+      <DependentUpon>SolicitudInclusion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\VerDetalleEmpresa.aspx.cs">
+      <DependentUpon>VerDetalleEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\VerDetalleEmpresa.aspx.designer.cs">
+      <DependentUpon>VerDetalleEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas\VerMensaje.aspx.cs">
+      <DependentUpon>VerMensaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas\VerMensaje.aspx.designer.cs">
+      <DependentUpon>VerMensaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Bootstrapper.cs" />
+    <Compile Include="Helpers\CodigoBarras.cs" />
+    <Compile Include="Helpers\ExtensionMethods.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Helpers\PasswordHandler.cs" />
+    <Compile Include="Helpers\ServicioSection.cs" />
+    <Compile Include="DTO\SocioUI.cs" />
+    <Compile Include="Helpers\UIHelper.cs" />
+    <Compile Include="Operaciones\Modificaciones\SelectModificacion.aspx.cs">
+      <DependentUpon>SelectModificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\SelectModificacion.aspx.designer.cs">
+      <DependentUpon>SelectModificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\SolicitudOperacion.aspx.cs">
+      <DependentUpon>SolicitudOperacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Modificaciones\SolicitudOperacion.aspx.designer.cs">
+      <DependentUpon>SolicitudOperacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Registro\Adecuacion.aspx.cs">
+      <DependentUpon>Adecuacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Registro\Adecuacion.aspx.designer.cs">
+      <DependentUpon>Adecuacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Registro\Confirmacion.aspx.cs">
+      <DependentUpon>Confirmacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Registro\Confirmacion.aspx.designer.cs">
+      <DependentUpon>Confirmacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Registro\DatosGenerales.aspx.cs">
+      <DependentUpon>DatosGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Registro\DatosGenerales.aspx.designer.cs">
+      <DependentUpon>DatosGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Registro\DatosSociedad.aspx.cs">
+      <DependentUpon>DatosSociedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Registro\DatosSociedad.aspx.designer.cs">
+      <DependentUpon>DatosSociedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ExtendedPages\FormularioPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Registro\Imprimir.aspx.cs">
+      <DependentUpon>Imprimir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Registro\Imprimir.aspx.designer.cs">
+      <DependentUpon>Imprimir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Registro\NuevoRegistro.aspx.cs">
+      <DependentUpon>NuevoRegistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Registro\NuevoRegistro.aspx.designer.cs">
+      <DependentUpon>NuevoRegistro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Shared\Certificaciones.aspx.cs">
+      <DependentUpon>Certificaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Shared\Certificaciones.aspx.designer.cs">
+      <DependentUpon>Certificaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Shared\CopiasCert.aspx.cs">
+      <DependentUpon>CopiasCert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Shared\CopiasCert.aspx.designer.cs">
+      <DependentUpon>CopiasCert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Shared\CopiasCertificadas.aspx.cs">
+      <DependentUpon>CopiasCertificadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Shared\CopiasCertificadas.aspx.designer.cs">
+      <DependentUpon>CopiasCertificadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Shared\DescargaCert.aspx.cs">
+      <DependentUpon>DescargaCert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Shared\DescargaCert.aspx.designer.cs">
+      <DependentUpon>DescargaCert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Shared\DescargaCertificaciones.aspx.cs">
+      <DependentUpon>DescargaCertificaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Shared\DescargaCertificaciones.aspx.designer.cs">
+      <DependentUpon>DescargaCertificaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Shared\FormaEntrega.aspx.cs">
+      <DependentUpon>FormaEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Shared\FormaEntrega.aspx.designer.cs">
+      <DependentUpon>FormaEntrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Shared\RegDup.aspx.cs">
+      <DependentUpon>RegDup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Shared\RegDup.aspx.designer.cs">
+      <DependentUpon>RegDup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Shared\Representantes.aspx.cs">
+      <DependentUpon>Representantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Shared\Representantes.aspx.designer.cs">
+      <DependentUpon>Representantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ExtendedPages\OperationPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\SolutionInfo.cs" />
+    <Compile Include="ReportesVisor.aspx.cs">
+      <DependentUpon>ReportesVisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesVisor.aspx.designer.cs">
+      <DependentUpon>ReportesVisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="res\ccpsd.Master.cs">
+      <DependentUpon>ccpsd.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="res\ccpsd.Master.designer.cs">
+      <DependentUpon>ccpsd.Master</DependentUpon>
+    </Compile>
+    <Compile Include="res\Consulta_header.Master.cs">
+      <DependentUpon>Consulta_header.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="res\Consulta_header.Master.designer.cs">
+      <DependentUpon>Consulta_header.Master</DependentUpon>
+    </Compile>
+    <Compile Include="res\noboxForm.Master.cs">
+      <DependentUpon>noboxForm.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="res\noboxForm.Master.designer.cs">
+      <DependentUpon>noboxForm.Master</DependentUpon>
+    </Compile>
+    <Compile Include="res\nobox.Master.cs">
+      <DependentUpon>nobox.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="res\nobox.Master.designer.cs">
+      <DependentUpon>nobox.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSMondorRates\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSMovilDGII\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSShareBase\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services\EnvioDatos.asmx.cs">
+      <DependentUpon>EnvioDatos.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TarjetaCredito\PagosTarjeta.aspx.cs">
+      <DependentUpon>PagosTarjeta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TarjetaCredito\PagosTarjeta.aspx.designer.cs">
+      <DependentUpon>PagosTarjeta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TarjetaCredito\PagoTransaccion.aspx.cs">
+      <DependentUpon>PagoTransaccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TarjetaCredito\PagoTransaccion.aspx.designer.cs">
+      <DependentUpon>PagoTransaccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TarjetaCredito\RedireccionPago.aspx.cs">
+      <DependentUpon>RedireccionPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TarjetaCredito\RedireccionPago.aspx.designer.cs">
+      <DependentUpon>RedireccionPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TarjetaCredito\TransInvalida.aspx.cs">
+      <DependentUpon>TransInvalida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TarjetaCredito\TransInvalida.aspx.designer.cs">
+      <DependentUpon>TransInvalida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucPagosTarjeta.ascx.cs">
+      <DependentUpon>ucPagosTarjeta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucPagosTarjeta.ascx.designer.cs">
+      <DependentUpon>ucPagosTarjeta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucEnvioDatos.ascx.cs">
+      <DependentUpon>ucEnvioDatos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucEnvioDatos.ascx.designer.cs">
+      <DependentUpon>ucEnvioDatos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ManejoSocios.ascx.cs">
+      <DependentUpon>ManejoSocios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManejoSocios.ascx.designer.cs">
+      <DependentUpon>ManejoSocios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ManejoSucursales.ascx.cs">
+      <DependentUpon>ManejoSucursales.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManejoSucursales.ascx.designer.cs">
+      <DependentUpon>ManejoSucursales.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OfvUserControl.cs" />
+    <Compile Include="UserControls\RepresentanteDetails.ascx.cs">
+      <DependentUpon>RepresentanteDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RepresentanteDetails.ascx.designer.cs">
+      <DependentUpon>RepresentanteDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucFormularioDeSolicitud.ascx.cs">
+      <DependentUpon>ucFormularioDeSolicitud.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucFormularioDeSolicitud.ascx.designer.cs">
+      <DependentUpon>ucFormularioDeSolicitud.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucRevisionDocumentos.ascx.cs">
+      <DependentUpon>ucRevisionDocumentos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucRevisionDocumentos.ascx.designer.cs">
+      <DependentUpon>ucRevisionDocumentos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SocioDetails.ascx.cs">
+      <DependentUpon>SocioDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SocioDetails.ascx.designer.cs">
+      <DependentUpon>SocioDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SocioIndividualDetails.ascx.cs">
+      <DependentUpon>SocioIndividualDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SocioIndividualDetails.ascx.designer.cs">
+      <DependentUpon>SocioIndividualDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Submenu.ascx.cs">
+      <DependentUpon>Submenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Submenu.ascx.designer.cs">
+      <DependentUpon>Submenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SucursalesDetails.ascx.cs">
+      <DependentUpon>SucursalesDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SucursalesDetails.ascx.designer.cs">
+      <DependentUpon>SucursalesDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcCapitalAutorizado.ascx.cs">
+      <DependentUpon>UcCapitalAutorizado.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcCapitalAutorizado.ascx.designer.cs">
+      <DependentUpon>UcCapitalAutorizado.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="VentanillaUnica.aspx.cs">
+      <DependentUpon>VentanillaUnica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VentanillaUnica.aspx.designer.cs">
+      <DependentUpon>VentanillaUnica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\kofaxVisorWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\svrkofax\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsDgii3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsFacturacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsOnapi2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsReporteRM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MyUpload.ashx" />
+    <Content Include="Empresas\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Empresas\Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.CamaraComun\CamaraComercio.DataAccess.EF.CamaraComun.csproj">
+      <Project>{b34160c6-4e42-41e6-a5b4-323316a87549}</Project>
+      <Name>CamaraComercio.DataAccess.EF.CamaraComun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.Membership\CamaraComercio.DataAccess.EF.Membership.csproj">
+      <Project>{a8f3ec9e-987c-49e0-9c98-ab39a5630197}</Project>
+      <Name>CamaraComercio.DataAccess.EF.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.OficinaVirtual\CamaraComercio.DataAccess.EF.OficinaVirtual.csproj">
+      <Project>{d24fa27a-9d25-4f99-bee7-fe8c03b0c671}</Project>
+      <Name>CamaraComercio.DataAccess.EF.OficinaVirtual</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.SRM\CamaraComercio.DataAccess.EF.SRM.csproj">
+      <Project>{aaa52714-64eb-48ed-b1eb-e580b756926f}</Project>
+      <Name>CamaraComercio.DataAccess.EF.SRM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF\CamaraComercio.DataAccess.EF.csproj">
+      <Project>{c8389932-adf3-43c1-b18f-0e5757315633}</Project>
+      <Name>CamaraComercio.DataAccess.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.MailBot\CamaraComercio.MailBot.csproj">
+      <Project>{5fe284cb-0849-4360-963b-a54d13752a6c}</Project>
+      <Name>CamaraComercio.MailBot</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Encryption\Encryption.csproj">
+      <Project>{016B63E0-D2F3-4646-AC03-9F01CBD90112}</Project>
+      <Name>Encryption</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModuloPago\ModuloPago.csproj">
+      <Project>{36cc8c08-1bdb-40e7-b0bc-a5c1a28946b8}</Project>
+      <Name>ModuloPago</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://content/VisorWeb/DocumentWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\kofaxVisorWeb\</RelPath>
+      <UpdateFromURL>http://content/VisorWeb/DocumentWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CamaraComercio_Website_kofaxVisorWeb_DocumentWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://content/wsdeploy/wscsi.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\svrkofax\</RelPath>
+      <UpdateFromURL>http://content/wsdeploy/wscsi.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CamaraComercio_Website_svrkofax_wsCSI</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:37245/Facturacion/ServicioFacturacion.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsFacturacion\</RelPath>
+      <UpdateFromURL>http://localhost:37245/Facturacion/ServicioFacturacion.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CamaraComercio_Website_wsFacturacion_ServicioFacturacion</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://websrm24:1042/wsRegistroMercantil.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsReporteRM\</RelPath>
+      <UpdateFromURL>http://websrm24:1042/wsRegistroMercantil.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CamaraComercio_Website_wsReporteRM_wsRegistroMercantil</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.onapi.gob.do:9990/cte/serviciocc.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsOnapi2\</RelPath>
+      <UpdateFromURL>http://www.onapi.gob.do:9990/cte/serviciocc.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CamaraComercio_Website_wsOnapi2_ServicioCC</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.dgii.gov.do/wsCamaraComercioTest/WSdgii.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsDgii3\</RelPath>
+      <UpdateFromURL>https://www.dgii.gov.do/wsCamaraComercioTest/WSdgii.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CamaraComercio_Website_wsDgii3_wsDGII</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Browsers\" />
+    <Folder Include="res\js\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WSMondorRates\" />
+    <WCFMetadataStorage Include="Service References\WSMovilDGII\" />
+    <WCFMetadataStorage Include="Service References\WSShareBase\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>2899</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2898/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:2898/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

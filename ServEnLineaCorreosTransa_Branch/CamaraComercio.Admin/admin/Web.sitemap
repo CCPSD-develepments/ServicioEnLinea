@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+    <siteMapNode url="#" title="View Site" description="Welcome" target="_blank">
+
+        <siteMapNode url="http://localhost:2899/" title="Ver el Site" description="Ir al portal principal" target="_blank" roles="*">
+            
+        </siteMapNode>
+
+        <siteMapNode url="~/Admin/admin.aspx" title="Admin">
+            <!--<siteMapNode url="~/Admin/encrypt-connection-string.aspx" title="Connection String"/>
+            <siteMapNode url="~/Admin/admin-edit-help.aspx" title="Editar Hints"/>
+            <siteMapNode url="~/Admin/admin-themes.aspx" title="Temas">
+                <siteMapNode url="~/Admin/admin-edit-themes.aspx" title="Agregar / Editar"/>
+                <siteMapNode url="~/Admin/admin-edit-css.aspx" title="Editar CSS"/>
+            </siteMapNode>-->
+            <siteMapNode url="~/Admin/admin-camaras.aspx" title="Editar Cámaras"/>
+            <siteMapNode url="~/Admin/admin-actividades.aspx" title="Ver ultimas actividades"/>
+        </siteMapNode>
+
+        <siteMapNode url="~/Admin/Default.aspx" title="Cuentas de Usuario">
+          <siteMapNode url="~/Admin/dashboard.aspx" title="Dashboard"/>
+          <!--<siteMapNode url="~/Admin/access-rules.aspx" title="Reglas de Acceso"/>-->
+            <siteMapNode url="~/Admin/add-user.aspx" title="Agregar Nuevo Usuario"/>
+            <siteMapNode url="~/Admin/users-by-role.aspx" title="Por Rol"/>
+            <siteMapNode url="~/Admin/email-broadcast.aspx" title="E-mail Broadcast"/>
+            <siteMapNode url="~/Admin/locked-users.aspx" title="Bloqueados"/>
+            <siteMapNode url="~/Admin/online-users.aspx" title="Conectados"/>
+            <siteMapNode url="~/Admin/roles.aspx" title="Roles"/>
+            <siteMapNode url="~/Admin/search-user.aspx" title="Buscar Usuarios"/>
+            <siteMapNode url="~/Admin/unapproved-users.aspx" title="No Aprobados"/>
+            <siteMapNode url="~/Admin/users-a-z.aspx" title="Usuarios de A-Z"/>
+            
+        </siteMapNode>
+
+    </siteMapNode>
+</siteMap>

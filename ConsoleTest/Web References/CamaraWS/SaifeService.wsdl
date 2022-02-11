@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://registromercantil.org.do/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://registromercantil.org.do/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://registromercantil.org.do/">
+      <s:element name="IngresarNuevaEmpresa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoRegistro" type="tns:RegistroDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="camaraID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RegistroDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CapitalSocial" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CapitalAutorizado" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Activos" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BienesRaices" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaInicioOperacion" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmpleadosMasculinos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmpleadosFemeninos" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreComercial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroRegistroNombreComercial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MarcaFabrica" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroRegistroMarcaFabrica" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatenteInvencion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroRegistroPatenteInvencion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActividadNegocio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroSocios" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAcciones" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreSolicitante" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="tns:DireccionDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="InfoSociedad" type="tns:SociedadDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="InfoRecibo" type="tns:ReciboDGII" />
+          <s:element minOccurs="0" maxOccurs="1" name="Socios" type="tns:ArrayOfSociosEnRegistroDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DireccionDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Calle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CiudadId" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ciudad" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SectorId" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApartadoPostal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TelefonoCasa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TelefonoOficina" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Extension" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SitioWeb" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SociedadDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TipoSociedadId" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreSocial" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaConstitucion" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DuracionSociedad" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaAsamblea" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DuraccionDirectiva" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReciboDGII">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NoReciboDGII" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaReciboDGII" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoDGII" nillable="true" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSociosEnRegistroDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SociosEnRegistroDTO" nillable="true" type="tns:SociosEnRegistroDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SociosEnRegistroDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TipoSocio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoRelacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CargoID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EstadoCivil" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nacionalidad" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrimerNombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SegundoNombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrimerApellido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SegundoApellido" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CantidadAcciones" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="tns:DireccionDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IngresarNuevaEmpresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IngresarNuevaEmpresaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEstadoExpediente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transaccionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEstadoExpedienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerEstadoExpedienteResult" type="tns:EstadoExpedienteDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EstadoExpedienteDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EstatusID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EstatusDescripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtenerListadoCamaras">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerListadoCamarasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListadoCamarasResult" type="tns:ArrayOfCamaraComercioDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCamaraComercioDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CamaraComercioDTO" nillable="true" type="tns:CamaraComercioDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CamaraComercioDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RNC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtenerListadoTiposEmpresas">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerListadoTiposEmpresasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListadoTiposEmpresasResult" type="tns:ArrayOfTipoSociedadDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTipoSociedadDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TipoSociedadDTO" nillable="true" type="tns:TipoSociedadDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TipoSociedadDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TipoSociedadID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Siglas" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtenerListadoCiudades">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerListadoCiudadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListadoCiudadesResult" type="tns:ArrayOfCiudadDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCiudadDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CiudadDTO" nillable="true" type="tns:CiudadDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CiudadDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CiudadID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaisID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreCiudad" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtenerListadoSectores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ciudadId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListadoSectoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListadoSectoresResult" type="tns:ArrayOfSectorDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSectorDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SectorDTO" nillable="true" type="tns:SectorDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SectorDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SectorID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CiudadID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreSector" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtenerListadoCargos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerListadoCargosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListadoCargosResult" type="tns:ArrayOfCargoDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCargoDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CargoDTO" nillable="true" type="tns:CargoDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CargoDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CargoID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IngresarNuevaEmpresaSoapIn">
+    <wsdl:part name="parameters" element="tns:IngresarNuevaEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IngresarNuevaEmpresaSoapOut">
+    <wsdl:part name="parameters" element="tns:IngresarNuevaEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEstadoExpedienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadoExpediente" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEstadoExpedienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadoExpedienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListadoCamarasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoCamaras" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListadoCamarasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoCamarasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListadoTiposEmpresasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoTiposEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListadoTiposEmpresasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoTiposEmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListadoCiudadesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoCiudades" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListadoCiudadesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoCiudadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListadoSectoresSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoSectores" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListadoSectoresSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoSectoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListadoCargosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoCargos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListadoCargosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoCargosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SaifeServiceSoap">
+    <wsdl:operation name="IngresarNuevaEmpresa">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ingresa una nueva transacción de solicitud de creación de empresas</wsdl:documentation>
+      <wsdl:input message="tns:IngresarNuevaEmpresaSoapIn" />
+      <wsdl:output message="tns:IngresarNuevaEmpresaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoExpediente">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el estao actual de una transaccion previa</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerEstadoExpedienteSoapIn" />
+      <wsdl:output message="tns:ObtenerEstadoExpedienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoCamaras">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene un listado de todas las cámaras en el sistema</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerListadoCamarasSoapIn" />
+      <wsdl:output message="tns:ObtenerListadoCamarasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoTiposEmpresas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene un listado de todos los posibles tipos de empresas</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerListadoTiposEmpresasSoapIn" />
+      <wsdl:output message="tns:ObtenerListadoTiposEmpresasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoCiudades">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene un listado de todas las ciudades en Rep. Dominicana</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerListadoCiudadesSoapIn" />
+      <wsdl:output message="tns:ObtenerListadoCiudadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoSectores">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene un listado de todos los sectores en la ciudad especificadas</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerListadoSectoresSoapIn" />
+      <wsdl:output message="tns:ObtenerListadoSectoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoCargos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene un lsitado de todos los cargos que puede tener un socio/accionista</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerListadoCargosSoapIn" />
+      <wsdl:output message="tns:ObtenerListadoCargosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SaifeServiceSoap" type="tns:SaifeServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IngresarNuevaEmpresa">
+      <soap:operation soapAction="http://registromercantil.org.do/IngresarNuevaEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoExpediente">
+      <soap:operation soapAction="http://registromercantil.org.do/ObtenerEstadoExpediente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoCamaras">
+      <soap:operation soapAction="http://registromercantil.org.do/ObtenerListadoCamaras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoTiposEmpresas">
+      <soap:operation soapAction="http://registromercantil.org.do/ObtenerListadoTiposEmpresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoCiudades">
+      <soap:operation soapAction="http://registromercantil.org.do/ObtenerListadoCiudades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoSectores">
+      <soap:operation soapAction="http://registromercantil.org.do/ObtenerListadoSectores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoCargos">
+      <soap:operation soapAction="http://registromercantil.org.do/ObtenerListadoCargos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SaifeServiceSoap12" type="tns:SaifeServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IngresarNuevaEmpresa">
+      <soap12:operation soapAction="http://registromercantil.org.do/IngresarNuevaEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoExpediente">
+      <soap12:operation soapAction="http://registromercantil.org.do/ObtenerEstadoExpediente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoCamaras">
+      <soap12:operation soapAction="http://registromercantil.org.do/ObtenerListadoCamaras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoTiposEmpresas">
+      <soap12:operation soapAction="http://registromercantil.org.do/ObtenerListadoTiposEmpresas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoCiudades">
+      <soap12:operation soapAction="http://registromercantil.org.do/ObtenerListadoCiudades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoSectores">
+      <soap12:operation soapAction="http://registromercantil.org.do/ObtenerListadoSectores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoCargos">
+      <soap12:operation soapAction="http://registromercantil.org.do/ObtenerListadoCargos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SaifeService">
+    <wsdl:port name="SaifeServiceSoap" binding="tns:SaifeServiceSoap">
+      <soap:address location="http://localhost:37249/SaifeService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SaifeServiceSoap12" binding="tns:SaifeServiceSoap12">
+      <soap12:address location="http://localhost:37249/SaifeService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,94 @@
+c:\users\mbautista\documents\visual studio 2012\Projects\ModuloPago\ModuloPago\bin\ModuloPago.dll
+c:\users\mbautista\documents\visual studio 2012\Projects\ModuloPago\ModuloPago\bin\ModuloPago.pdb
+c:\users\mbautista\documents\visual studio 2012\Projects\ModuloPago\ModuloPago\obj\Debug\ModuloPago.dll
+c:\users\mbautista\documents\visual studio 2012\Projects\ModuloPago\ModuloPago\obj\Debug\ModuloPago.pdb
+C:\Users\mbautista\Documents\Visual Studio 2012\Projects\ModuloPago\ModuloPago\bin\EntityFramework.dll
+C:\Users\mbautista\Documents\Visual Studio 2012\Projects\ModuloPago\ModuloPago\bin\EntityFramework.xml
+C:\Users\mbautista\Documents\Visual Studio 2012\Projects\ModuloPago\ModuloPago\obj\Debug\ModuloPago.csprojResolveAssemblyReference.cache
+C:\Users\mbautista.CC\Documents\Visual Studio 2012\Projects\ModuloPago\ModuloPago\bin\ModuloPago.dll
+C:\Users\mbautista.CC\Documents\Visual Studio 2012\Projects\ModuloPago\ModuloPago\bin\ModuloPago.pdb
+C:\Users\mbautista.CC\Documents\Visual Studio 2012\Projects\ModuloPago\ModuloPago\bin\EntityFramework.dll
+C:\Users\mbautista.CC\Documents\Visual Studio 2012\Projects\ModuloPago\ModuloPago\bin\EntityFramework.xml
+C:\Users\mbautista.CC\Documents\Visual Studio 2012\Projects\ModuloPago\ModuloPago\obj\Debug\ModuloPago.dll
+C:\Users\mbautista.CC\Documents\Visual Studio 2012\Projects\ModuloPago\ModuloPago\obj\Debug\ModuloPago.pdb
+C:\Desarrollo\ventanilla 2do repositorio\ModuloPago\bin\ModuloPago.dll
+C:\Desarrollo\ventanilla 2do repositorio\ModuloPago\bin\ModuloPago.pdb
+C:\Desarrollo\ventanilla 2do repositorio\ModuloPago\obj\Debug\ModuloPago.dll
+C:\Desarrollo\ventanilla 2do repositorio\ModuloPago\obj\Debug\ModuloPago.pdb
+C:\Desarrollo\ventanilla 2do repositorio\ModuloPago\bin\EntityFramework.xml
+C:\Desarrollo\ventanilla 2do repositorio\ModuloPago\obj\Debug\ModuloPago.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Modulo pago\ModuloPago\bin\ModuloPago.dll
+C:\Desarrollo\Modulo pago\ModuloPago\bin\ModuloPago.pdb
+C:\Desarrollo\Modulo pago\ModuloPago\bin\CreditCardUtility.dll
+C:\Desarrollo\Modulo pago\ModuloPago\obj\Debug\ModuloPago.dll
+C:\Desarrollo\Modulo pago\ModuloPago\obj\Debug\ModuloPago.pdb
+C:\Desarrollo\ModuloPagosVisualizar\Modulo pago\ModuloPago\bin\ModuloPago.dll
+C:\Desarrollo\ModuloPagosVisualizar\Modulo pago\ModuloPago\bin\ModuloPago.pdb
+C:\Desarrollo\ModuloPagosVisualizar\Modulo pago\ModuloPago\bin\CreditCardUtility.dll
+C:\Desarrollo\ModuloPagosVisualizar\Modulo pago\ModuloPago\obj\Debug\ModuloPago.csprojResolveAssemblyReference.cache
+C:\Desarrollo\ModuloPagosVisualizar\Modulo pago\ModuloPago\obj\Debug\ModuloPago.dll
+C:\Desarrollo\ModuloPagosVisualizar\Modulo pago\ModuloPago\obj\Debug\ModuloPago.pdb
+C:\Users\Miguel\Downloads\Modulo pago\ModuloPago\bin\ModuloPago.dll.config
+C:\Users\Miguel\Downloads\Modulo pago\ModuloPago\bin\ModuloPago.dll
+C:\Users\Miguel\Downloads\Modulo pago\ModuloPago\bin\ModuloPago.pdb
+C:\Users\Miguel\Downloads\Modulo pago\ModuloPago\obj\Debug\ModuloPago.csprojAssemblyReference.cache
+C:\Users\Miguel\Downloads\Modulo pago\ModuloPago\obj\Debug\ModuloPago.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Downloads\Modulo pago\ModuloPago\obj\Debug\ModuloPago.csproj.CopyComplete
+C:\Users\Miguel\Downloads\Modulo pago\ModuloPago\obj\Debug\ModuloPago.dll
+C:\Users\Miguel\Downloads\Modulo pago\ModuloPago\obj\Debug\ModuloPago.pdb
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.dll.config
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.dll
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.pdb
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.dll
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.SqlServer.dll
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.xml
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.SqlServer.xml
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.csprojResolveAssemblyReference.cache
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.csproj.CoreCompileInputs.cache
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.dll
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.pdb
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.dll.config
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.dll
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.pdb
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.dll
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.SqlServer.dll
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.xml
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.SqlServer.xml
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.csproj.CopyComplete
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.dll
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.pdb
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.csprojAssemblyReference.cache
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.dll.config
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.dll
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.pdb
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.dll
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.SqlServer.dll
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.xml
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.SqlServer.xml
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.csprojAssemblyReference.cache
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.csproj.CopyComplete
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.dll
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.pdb
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.dll
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.dll.config
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\ModuloPago.pdb
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.dll
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.SqlServer.dll
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.xml
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\bin\EntityFramework.SqlServer.xml
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.csprojAssemblyReference.cache
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.csproj.CopyComplete
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.dll
+C:\Desarrollo\PortalesWEB\CamaraOnlineLasted\trunk\oficinavirtual\ModuloPago\obj\Debug\ModuloPago.pdb
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\bin\ModuloPago.dll.config
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\bin\ModuloPago.dll
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\bin\ModuloPago.pdb
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\bin\EntityFramework.dll
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\bin\EntityFramework.SqlServer.dll
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\bin\EntityFramework.xml
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\bin\EntityFramework.SqlServer.xml
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\obj\Debug\ModuloPago.csprojAssemblyReference.cache
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\obj\Debug\ModuloPago.csproj.CoreCompileInputs.cache
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\obj\Debug\ModuloPago.csproj.CopyComplete
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\obj\Debug\ModuloPago.dll
+C:\Desarrollo\PortalesWEB\ServEnLineaCorreosTransa_Branch\ModuloPago\obj\Debug\ModuloPago.pdb

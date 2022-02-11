@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{36F82B47-A5E8-4EB7-9E1A-83C9B51D9724}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CamaraComercio.DataAccess</RootNamespace>
+    <AssemblyName>CamaraComercio.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SubSonic, Version=2.1.1.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="CamaraWebsiteAccounts\Generated\AllStructs.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetApplication.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetApplicationController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetMembership.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetMembershipController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetPath.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetPathController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetPersonalizationAllUser.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetPersonalizationAllUserController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetPersonalizationPerUser.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetPersonalizationPerUserController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetProfile.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetProfileController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetRole.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetRoleController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetSchemaVersion.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetSchemaVersionController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetUser.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetUserController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetUsersInRole.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetUsersInRoleController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetWebEventEvent.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\AspnetWebEventEventController.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\StoredProcedures.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\VwAspnetApplication.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\VwAspnetMembershipUser.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\VwAspnetProfile.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\VwAspnetProfilesProperty.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\VwAspnetRole.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\VwAspnetUser.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\VwAspnetUsersInRole.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\VwAspnetWebPartStatePath.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\VwAspnetWebPartStateShared.cs" />
+    <Compile Include="CamaraWebsiteAccounts\Generated\VwAspnetWebPartStateUser.cs" />
+    <Compile Include="Comun\Extended\TipoDocumentoController.cs" />
+    <Compile Include="Comun\Extended\TiposSociedad.cs" />
+    <Compile Include="Comun\Generated\AllStructs.cs" />
+    <Compile Include="Comun\Generated\EstadoRegistro.cs" />
+    <Compile Include="Comun\Generated\EstadoRegistroController.cs" />
+    <Compile Include="Comun\Generated\Servicio.cs" />
+    <Compile Include="Comun\Generated\ServicioController.cs" />
+    <Compile Include="Comun\Generated\ServicioDocumentoRequerido.cs" />
+    <Compile Include="Comun\Generated\ServicioDocumentoRequeridoController.cs" />
+    <Compile Include="Comun\Generated\StoredProcedures.cs" />
+    <Compile Include="Comun\Generated\TipoDocumento.cs" />
+    <Compile Include="Comun\Generated\TipoDocumentoController.cs" />
+    <Compile Include="Comun\Generated\TipoDocumentoRegla.cs" />
+    <Compile Include="Comun\Generated\TipoDocumentoReglaController.cs" />
+    <Compile Include="Comun\Generated\TipoMoneda.cs" />
+    <Compile Include="Comun\Generated\TipoMonedaController.cs" />
+    <Compile Include="Comun\Generated\TipoRegla.cs" />
+    <Compile Include="Comun\Generated\TipoReglaController.cs" />
+    <Compile Include="Comun\Generated\TipoReglaDocumento.cs" />
+    <Compile Include="Comun\Generated\TipoReglaDocumentoController.cs" />
+    <Compile Include="Comun\Generated\TipoServicio.cs" />
+    <Compile Include="Comun\Generated\TipoServicioController.cs" />
+    <Compile Include="Comun\Generated\TipoSociedad.cs" />
+    <Compile Include="Comun\Generated\TipoSociedadController.cs" />
+    <Compile Include="Comun\Generated\TipoSociedadSufijo.cs" />
+    <Compile Include="Comun\Generated\TipoSociedadSufijoController.cs" />
+    <Compile Include="Comun\Generated\ViewServicioDocumentoRequerido.cs" />
+    <Compile Include="Comun\Generated\ViewTipoDocumentoRegla.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="OficinaVirtual\EnumeracionesOFV.cs" />
+    <Compile Include="OficinaVirtual\Extended\CamarasController.cs" />
+    <Compile Include="OficinaVirtual\Extended\TipoServicioDetalles.cs" />
+    <Compile Include="OficinaVirtual\Extended\TransaccionDocumentosControler.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\CharEnum.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\CiudadController.cs" />
+    <Compile Include="OficinaVirtual\Extended\EmpresasPorUsuarioController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\EstadoCivil.cs" />
+    <Compile Include="OficinaVirtual\Extended\MensajesController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\PaisController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\ProductoController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\ReferenciaBancaria.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\ReferenciaBancariaController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\ReferenciaComercial.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\RegistroActividadesController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\RegistroActualController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\RegistroController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\RequisitosController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\SectorController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\SociedadController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\SucursalController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\Suscripcion.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\TarifaController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\TipoActividadController.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\TipoDocumento.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\TipoRelacionSocio.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\TipoSocio.cs" />
+    <Compile Include="OficinaVirtual\Extended\WebSRM\TiposSociedadController.cs" />
+    <Compile Include="OficinaVirtual\Generated\AllStructs.cs" />
+    <Compile Include="OficinaVirtual\Generated\Banco.cs" />
+    <Compile Include="OficinaVirtual\Generated\BancoController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Camaras.cs" />
+    <Compile Include="OficinaVirtual\Generated\CamarasController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Cargo.cs" />
+    <Compile Include="OficinaVirtual\Generated\CargoController.cs" />
+    <Compile Include="OficinaVirtual\Generated\CategoriaSocio.cs" />
+    <Compile Include="OficinaVirtual\Generated\CategoriaSocioController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Ciudad.cs" />
+    <Compile Include="OficinaVirtual\Generated\CiudadController.cs" />
+    <Compile Include="OficinaVirtual\Generated\DataFormDefinition.cs" />
+    <Compile Include="OficinaVirtual\Generated\DataFormDefinitionController.cs" />
+    <Compile Include="OficinaVirtual\Generated\DataFormInstance.cs" />
+    <Compile Include="OficinaVirtual\Generated\DataFormInstanceController.cs" />
+    <Compile Include="OficinaVirtual\Generated\DiasFeriados.cs" />
+    <Compile Include="OficinaVirtual\Generated\DiasFeriadosController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Direccion.cs" />
+    <Compile Include="OficinaVirtual\Generated\DireccionController.cs" />
+    <Compile Include="OficinaVirtual\Generated\EmpresasPorUsuario.cs" />
+    <Compile Include="OficinaVirtual\Generated\EmpresasPorUsuarioController.cs" />
+    <Compile Include="OficinaVirtual\Generated\MatrizConversionTipoSociedad.cs" />
+    <Compile Include="OficinaVirtual\Generated\MatrizConversionTipoSociedadController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Mensajes.cs" />
+    <Compile Include="OficinaVirtual\Generated\MensajesController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Pais.cs" />
+    <Compile Include="OficinaVirtual\Generated\PaisController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Persona.cs" />
+    <Compile Include="OficinaVirtual\Generated\PersonaController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Producto.cs" />
+    <Compile Include="OficinaVirtual\Generated\ProductoController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Profesion.cs" />
+    <Compile Include="OficinaVirtual\Generated\ProfesionController.cs" />
+    <Compile Include="OficinaVirtual\Generated\ReferenciaBancaria.cs" />
+    <Compile Include="OficinaVirtual\Generated\ReferenciaBancariaController.cs" />
+    <Compile Include="OficinaVirtual\Generated\ReferenciaComercial.cs" />
+    <Compile Include="OficinaVirtual\Generated\ReferenciaComercialController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Registro.cs" />
+    <Compile Include="OficinaVirtual\Generated\RegistroActividades.cs" />
+    <Compile Include="OficinaVirtual\Generated\RegistroActividadesController.cs" />
+    <Compile Include="OficinaVirtual\Generated\RegistroActividadesEspecificas.cs" />
+    <Compile Include="OficinaVirtual\Generated\RegistroActividadesEspecificasController.cs" />
+    <Compile Include="OficinaVirtual\Generated\RegistroActual.cs" />
+    <Compile Include="OficinaVirtual\Generated\RegistroActualController.cs" />
+    <Compile Include="OficinaVirtual\Generated\RegistroController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Requisito.cs" />
+    <Compile Include="OficinaVirtual\Generated\RequisitoController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Sector.cs" />
+    <Compile Include="OficinaVirtual\Generated\SectorController.cs" />
+    <Compile Include="OficinaVirtual\Generated\ServicioDetalles.cs" />
+    <Compile Include="OficinaVirtual\Generated\ServicioDetallesController.cs" />
+    <Compile Include="OficinaVirtual\Generated\ServiciosEnCamara.cs" />
+    <Compile Include="OficinaVirtual\Generated\ServiciosEnCamaraController.cs" />
+    <Compile Include="OficinaVirtual\Generated\SistemaArmonizado.cs" />
+    <Compile Include="OficinaVirtual\Generated\SistemaArmonizadoController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Sociedad.cs" />
+    <Compile Include="OficinaVirtual\Generated\SociedadController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Socio.cs" />
+    <Compile Include="OficinaVirtual\Generated\SocioController.cs" />
+    <Compile Include="OficinaVirtual\Generated\StoredProcedures.cs" />
+    <Compile Include="OficinaVirtual\Generated\Sucursal.cs" />
+    <Compile Include="OficinaVirtual\Generated\SucursalController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Tarifa.cs" />
+    <Compile Include="OficinaVirtual\Generated\TarifaController.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoActividad.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoActividadController.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoActividadEspecificas.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoActividadEspecificasController.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoEnteRegulado.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoEnteReguladoController.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoServicio.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoServicioController.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoServicioDetalles.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoServicioDetallesController.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoSociedadActual.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoSociedadActualController.cs" />
+    <Compile Include="OficinaVirtual\Generated\TiposSociedad.cs" />
+    <Compile Include="OficinaVirtual\Generated\TiposSociedadController.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoTransaccion.cs" />
+    <Compile Include="OficinaVirtual\Generated\TipoTransaccionController.cs" />
+    <Compile Include="OficinaVirtual\Generated\Transaccion.cs" />
+    <Compile Include="OficinaVirtual\Generated\TransaccionController.cs" />
+    <Compile Include="OficinaVirtual\Generated\TransaccionDocumentos.cs" />
+    <Compile Include="OficinaVirtual\Generated\TransaccionDocumentosController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SRM\EnumeracionesSRM.cs" />
+    <Compile Include="SRM\Extended\DireccionesController.cs" />
+    <Compile Include="SRM\Extended\ReferenciasBancariasController.cs" />
+    <Compile Include="SRM\Extended\ReferenciasComercialesController.cs" />
+    <Compile Include="SRM\Extended\RegistrosController.cs" />
+    <Compile Include="SRM\Extended\SociedadesController.cs" />
+    <Compile Include="SRM\Extended\RegistrosSociosController.cs" />
+    <Compile Include="SRM\Extended\SuscursalesController.cs" />
+    <Compile Include="SRM\Extended\ViewProductosRegistros.cs" />
+    <Compile Include="SRM\Extended\ViewSociedadesRegistros.cs" />
+    <Compile Include="SRM\Extended\ViewSumarioSociedades.cs" />
+    <Compile Include="SRM\Generated\Agenda.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\AgendaController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\AngendaTransacciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\AngendaTransaccionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Asignaciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\AsignacionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Bancos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\BancosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Cargos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\CargosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\CategoriasSocios.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\CategoriasSociosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Ciudades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\CiudadesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Columnas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ConsultaActividades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ConsultaActividadesEspecificas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ConsultaProductos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ConsultaSociedades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ConsultaSocios.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ConsultasReferenciasBancarias.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ConsultasReferenciasComerciales.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ConsultaSucurales.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ContadorRegistro.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ContadorRegistroController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\DefinicionColumnas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\DefinicionColumnasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Direcciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\DireccionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Documentos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\DocumentosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\DocumentosReglas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\DocumentosReglasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\DocumentosTransacciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\DocumentosTransaccionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\EstadosRegistros.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\EstadosRegistrosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\EstatusTransacciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\EstatusTransaccionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\FormasPagos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\FormasPagosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\HistoricosDocumentos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\HistoricosDocumentosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ModelosCertificaciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ModelosCertificacionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Modulos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ModulosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ModulosRoles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ModulosRolesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\NotificacionesTransacciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\NotificacionesTransaccionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Oposiciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\OposicionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Paises.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\PaisesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Personas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\PersonasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\PersonasDirecciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\PersonasDireccionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\PersonasRegistros.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\PersonasRegistrosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Productos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ProductosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Profesiones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ProfesionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ReferenciasBancarias.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ReferenciasBancariasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ReferenciasComerciales.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ReferenciasComercialesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Registros.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosActividades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosActividadesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosActividadesEspecificas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosActividadesEspecificasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosOposiciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosOposicionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosSocios.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosSociosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosSociosPersonas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosSociosPersonasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosSociosSociedades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RegistrosSociosSociedadesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Roles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\RolesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Sectores.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SectoresController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SeguimientoTransacciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SeguimientoTransaccionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SistemasArmonizados.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SistemasArmonizadosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Sociedades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SociedadesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SociedadesNoRegistrosGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SociedadesNoRegistrosGenController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SociedadesRegistros.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SociedadesRegistrosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\StoredProcedures.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SubTransacciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SubTransaccionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Suscursales.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\SuscursalesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Tablas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Tarifas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TarifasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposActividades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposActividadesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposActividadesEspecificas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposActividadesEspecificasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposContadores.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposContadoresController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposEnteRegulado.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposEnteReguladoController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposMonedas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposMonedasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposNCF.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposNCFController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposPagos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposPagosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposReglasDocumentos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposReglasDocumentosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposSentencias.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposSentenciasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposServicios.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposServiciosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposSociedades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposSociedadesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposSocios.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposSociosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposTareas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposTareasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposTransacciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TiposTransaccionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionDetalle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionDetalleController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionDocumentosRequisitos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionDocumentosRequisitosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Transacciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionesDocumentosReglas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionesDocumentosReglasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionesPersonas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionesPersonasController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionesSociedades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionesSociedadesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\TransaccionLogController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\UbicacionesExpedientes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\UbicacionesExpedientesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Usuarios.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\UsuariosContadores.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\UsuariosContadoresController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\UsuariosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\UsuariosEstatus.cs" />
+    <Compile Include="SRM\Generated\UsuariosEstatusController.cs" />
+    <Compile Include="SRM\Generated\UsuariosRoles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\UsuariosRolesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Validacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\Variables.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\VariablesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SRM\Generated\ViewAllHistoricosDocumentos.cs" />
+    <Compile Include="SRM\Generated\ViewCiudades.cs" />
+    <Compile Include="SRM\Generated\ViewCurrentUser.cs" />
+    <Compile Include="SRM\Generated\ViewDefinicionPermisos.cs" />
+    <Compile Include="SRM\Generated\ViewDirecciones.cs" />
+    <Compile Include="SRM\Generated\ViewDocumentosReglas.cs" />
+    <Compile Include="SRM\Generated\ViewDocumentosRequisitos.cs" />
+    <Compile Include="SRM\Generated\ViewDocumentosTrans.cs" />
+    <Compile Include="SRM\Generated\ViewDocumentosTransacciones.cs" />
+    <Compile Include="SRM\Generated\ViewEtiquetasDocumentos.cs" />
+    <Compile Include="SRM\Generated\ViewFactura.cs" />
+    <Compile Include="SRM\Generated\ViewFormasPagos.cs" />
+    <Compile Include="SRM\Generated\ViewHistoricosDocumentos.cs" />
+    <Compile Include="SRM\Generated\ViewHistoricoTransacciones.cs" />
+    <Compile Include="SRM\Generated\ViewHistoricoTransaccionesPersonasFisicas.cs" />
+    <Compile Include="SRM\Generated\ViewHistoricoTransaccionesSociedades.cs" />
+    <Compile Include="SRM\Generated\ViewModuleDefinitions.cs" />
+    <Compile Include="SRM\Generated\ViewModulePermits.cs" />
+    <Compile Include="SRM\Generated\ViewModulosRoles.cs" />
+    <Compile Include="SRM\Generated\ViewMovimientosTransaccionesByAnalisis.cs" />
+    <Compile Include="SRM\Generated\ViewMovimientosTransaccionesByAnalisisExpress.cs" />
+    <Compile Include="SRM\Generated\ViewMovimientosTransaccionesByAnalizado.cs" />
+    <Compile Include="SRM\Generated\ViewMovimientosTransaccionesByAnalizadoProblema.cs" />
+    <Compile Include="SRM\Generated\ViewMovimientosTransaccionesByCertificacion.cs" />
+    <Compile Include="SRM\Generated\ViewMovimientosTransaccionesByEntrega.cs" />
+    <Compile Include="SRM\Generated\ViewMovimientosTransaccionesByProblema.cs" />
+    <Compile Include="SRM\Generated\ViewMovimientosTransaccionesByReceptor.cs" />
+    <Compile Include="SRM\Generated\ViewNotificaciones.cs" />
+    <Compile Include="SRM\Generated\ViewOposiciones.cs" />
+    <Compile Include="SRM\Generated\ViewPersonas.cs" />
+    <Compile Include="SRM\Generated\ViewPersonasDirecciones.cs" />
+    <Compile Include="SRM\Generated\ViewPersonasEnSociedades.cs" />
+    <Compile Include="SRM\Generated\ViewPersonasRegistros.cs" />
+    <Compile Include="SRM\Generated\ViewPersonasTransacciones.cs" />
+    <Compile Include="SRM\Generated\ViewReferenciasBancarias.cs" />
+    <Compile Include="SRM\Generated\ViewRegistrosActividades.cs" />
+    <Compile Include="SRM\Generated\ViewRegistrosOposiciones.cs" />
+    <Compile Include="SRM\Generated\ViewRegistrosProductos.cs" />
+    <Compile Include="SRM\Generated\ViewRegistrosSocios.cs" />
+    <Compile Include="SRM\Generated\ViewSectores.cs" />
+    <Compile Include="SRM\Generated\ViewSeguimiento.cs" />
+    <Compile Include="SRM\Generated\ViewSociedades.cs" />
+    <Compile Include="SRM\Generated\ViewSociedadesRegistros.cs" />
+    <Compile Include="SRM\Generated\ViewSociedadesTransacciones.cs" />
+    <Compile Include="SRM\Generated\ViewSociosRegistrosSocios.cs" />
+    <Compile Include="SRM\Generated\ViewSubTransacciones.cs" />
+    <Compile Include="SRM\Generated\ViewSumarioSociedades.cs" />
+    <Compile Include="SRM\Generated\ViewTiposServicios.cs" />
+    <Compile Include="SRM\Generated\ViewTransaccionDocumentosRequisitos.cs" />
+    <Compile Include="SRM\Generated\ViewTransacciones.cs" />
+    <Compile Include="SRM\Generated\ViewTransaccionesAsignadas.cs" />
+    <Compile Include="SRM\Generated\ViewTransaccionesList.cs" />
+    <Compile Include="SRM\Generated\ViewTransacionesPersonas.cs" />
+    <Compile Include="SRM\Generated\ViewTransacionesSociedades.cs" />
+    <Compile Include="SRM\Generated\ViewUltimosMovimientosTransacciones.cs" />
+    <Compile Include="SRM\Generated\ViewUsuarios.cs" />
+    <Compile Include="SRM\Generated\ViewUsuariosContadores.cs" />
+    <Compile Include="SRM\Generated\ViewUsuariosEstatus.cs" />
+    <Compile Include="SRM\Generated\VwSociedadesRegistros.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

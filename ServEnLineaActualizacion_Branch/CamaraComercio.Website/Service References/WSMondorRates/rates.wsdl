@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://mondor.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://mondor.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://mondor.org/">
+      <s:element name="GetCurrencyList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCurrencyListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrencyListResult" type="tns:ArrayOfCurrency" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCurrency">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Currency" nillable="true" type="tns:Currency" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Currency">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCurrencyCodes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCurrencyCodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrencyCodesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Convert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyTo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValueFrom" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConvertResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckBalanceResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckExpirationDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckExpirationDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckExpirationDateResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpgradeAccessCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OriginalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UpgradeCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpgradeAccessCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpgradeAccessCodeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyTo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateOfRate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValueFrom" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConvertByDateResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMinimalDate">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMinimalDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMinimalDateResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCurrencyListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrencyList" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrencyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyCodesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrencyCodes" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyCodesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrencyCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertSoapIn">
+    <wsdl:part name="parameters" element="tns:Convert" />
+  </wsdl:message>
+  <wsdl:message name="ConvertSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckBalance" />
+  </wsdl:message>
+  <wsdl:message name="CheckBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckExpirationDateSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckExpirationDate" />
+  </wsdl:message>
+  <wsdl:message name="CheckExpirationDateSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckExpirationDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpgradeAccessCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpgradeAccessCode" />
+  </wsdl:message>
+  <wsdl:message name="UpgradeAccessCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpgradeAccessCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertByDate" />
+  </wsdl:message>
+  <wsdl:message name="ConvertByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMinimalDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMinimalDate" />
+  </wsdl:message>
+  <wsdl:message name="GetMinimalDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMinimalDateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="iRates">
+    <wsdl:operation name="GetCurrencyList">
+      <wsdl:input message="tns:GetCurrencyListSoapIn" />
+      <wsdl:output message="tns:GetCurrencyListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodes">
+      <wsdl:input message="tns:GetCurrencyCodesSoapIn" />
+      <wsdl:output message="tns:GetCurrencyCodesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Convert">
+      <wsdl:input message="tns:ConvertSoapIn" />
+      <wsdl:output message="tns:ConvertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBalance">
+      <wsdl:input message="tns:CheckBalanceSoapIn" />
+      <wsdl:output message="tns:CheckBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckExpirationDate">
+      <wsdl:input message="tns:CheckExpirationDateSoapIn" />
+      <wsdl:output message="tns:CheckExpirationDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeAccessCode">
+      <wsdl:input message="tns:UpgradeAccessCodeSoapIn" />
+      <wsdl:output message="tns:UpgradeAccessCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertByDate">
+      <wsdl:input message="tns:ConvertByDateSoapIn" />
+      <wsdl:output message="tns:ConvertByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMinimalDate">
+      <wsdl:input message="tns:GetMinimalDateSoapIn" />
+      <wsdl:output message="tns:GetMinimalDateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ratesSoap" />
+  <wsdl:portType name="ratesSoap12" />
+  <wsdl:binding name="iRates" type="tns:iRates">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCurrencyList">
+      <soap:operation soapAction="http://mondor.org/GetCurrencyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodes">
+      <soap:operation soapAction="http://mondor.org/GetCurrencyCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Convert">
+      <soap:operation soapAction="http://mondor.org/Convert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBalance">
+      <soap:operation soapAction="http://mondor.org/CheckBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckExpirationDate">
+      <soap:operation soapAction="http://mondor.org/CheckExpirationDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeAccessCode">
+      <soap:operation soapAction="http://mondor.org/UpgradeAccessCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertByDate">
+      <soap:operation soapAction="http://mondor.org/ConvertByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinimalDate">
+      <soap:operation soapAction="http://mondor.org/GetMinimalDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ratesSoap" type="tns:ratesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+  </wsdl:binding>
+  <wsdl:binding name="iRates1" type="tns:iRates">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCurrencyList">
+      <soap12:operation soapAction="http://mondor.org/GetCurrencyList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodes">
+      <soap12:operation soapAction="http://mondor.org/GetCurrencyCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Convert">
+      <soap12:operation soapAction="http://mondor.org/Convert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBalance">
+      <soap12:operation soapAction="http://mondor.org/CheckBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckExpirationDate">
+      <soap12:operation soapAction="http://mondor.org/CheckExpirationDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeAccessCode">
+      <soap12:operation soapAction="http://mondor.org/UpgradeAccessCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertByDate">
+      <soap12:operation soapAction="http://mondor.org/ConvertByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinimalDate">
+      <soap12:operation soapAction="http://mondor.org/GetMinimalDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ratesSoap12" type="tns:ratesSoap12">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+  </wsdl:binding>
+  <wsdl:service name="rates">
+    <wsdl:port name="iRates" binding="tns:iRates">
+      <soap:address location="http://www.mondor.org/ces/rates.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ratesSoap" binding="tns:ratesSoap">
+      <soap:address location="http://www.mondor.org/ces/rates.asmx" />
+    </wsdl:port>
+    <wsdl:port name="iRates1" binding="tns:iRates1">
+      <soap12:address location="http://www.mondor.org/ces/rates.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ratesSoap12" binding="tns:ratesSoap12">
+      <soap12:address location="http://www.mondor.org/ces/rates.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

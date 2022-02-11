@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D24FA27A-9D25-4F99-BEE7-FE8C03B0C671}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CamaraComercio.DataAccess.EF.OficinaVirtual</RootNamespace>
+    <AssemblyName>CamaraComercio.DataAccess.EF.OficinaVirtual</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bancos.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cargos.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriasSocios.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ciudades.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatosGenerales.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiasFeriados.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Direcciones.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresasPorUsuario.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstatusTransacciones.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extended\Camaras.cs" />
+    <Compile Include="Extended\CharEnum.cs" />
+    <Compile Include="Extended\EmpresaPorUsuario.cs" />
+    <Compile Include="Extended\EstadoCivil.cs" />
+    <Compile Include="Extended\EstatusTransacciones.cs" />
+    <Compile Include="Extended\Personas.cs" />
+    <Compile Include="Extended\ReferenciaBancaria.cs" />
+    <Compile Include="Extended\Sociedades.cs" />
+    <Compile Include="Extended\Socio.cs" />
+    <Compile Include="Extended\Suscripcion.cs" />
+    <Compile Include="Extended\TipoRelacionSocio.cs" />
+    <Compile Include="Extended\TipoSociedades.cs" />
+    <Compile Include="Enumeraciones.cs" />
+    <Compile Include="Extended\TipoSocio.cs" />
+    <Compile Include="Extended\Transacciones.cs" />
+    <Compile Include="Extended\Servicio.cs" />
+    <Compile Include="Extended\TipoServicioDetalles.cs" />
+    <Compile Include="Extended\TransaccionesDocumentos.cs" />
+    <Compile Include="Extended\TransaccionHistoria.cs" />
+    <Compile Include="Facturas.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormaEntregaCertificadoOnapi.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormasPagos.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllTransaccionesVU_Result.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetDatosTSS_Result.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HistoricoTransacciones.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImpresionTransacciones.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Institucion.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InstitucionSeguimiento.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InstitucionSeguimientoTSS.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogRegistroOnapi_VU.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogTransacciones.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mensajes.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NombresComerciales.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NotasCredito.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OficinaVirtualModel.Context.cs">
+      <DependentUpon>OficinaVirtualModel.Context.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="OficinaVirtualModel.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="OficinaVirtualModel.Designer.cs">
+      <DependentUpon>OficinaVirtualModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Paises.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Personas.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Profesiones.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropiedadesModificacionUI.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropiedadesPorSociedad.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropiedadesUI.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenciasBancarias.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenciasComerciales.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroActual.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Registros.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrosActividades.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sectores.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioDetalles.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SistemasArmonizados.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sociedades.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Socios.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursales.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tarifas.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempActividadesTransaccion.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempDatosSociedad.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tempPersonas.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempProductos.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempReferenciasBancarias.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempReferenciasComerciales.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempSocios.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempSucursales.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiposEnteRegulado.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoServicioDetalles.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TokenMIT.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionCopiasCertificadas.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionDetalle.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionDocSeleccionado.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionesCanceladas.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionesDocDescargas.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionesDocumentos.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionesDocumentosOnapi.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionesEmpBHD.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionesTarjeta.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionHistorico.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionInfo.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionOnapi.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionOnapiTss.cs">
+      <DependentUpon>OficinaVirtualModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="OficinaVirtualModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OficinaVirtualModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="OficinaVirtualModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>OficinaVirtualModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="OficinaVirtualModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>OficinaVirtualModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.CamaraComun\CamaraComercio.DataAccess.EF.CamaraComun.csproj">
+      <Project>{b34160c6-4e42-41e6-a5b4-323316a87549}</Project>
+      <Name>CamaraComercio.DataAccess.EF.CamaraComun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.SRM\CamaraComercio.DataAccess.EF.SRM.csproj">
+      <Project>{AAA52714-64EB-48ED-B1EB-E580B756926F}</Project>
+      <Name>CamaraComercio.DataAccess.EF.SRM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

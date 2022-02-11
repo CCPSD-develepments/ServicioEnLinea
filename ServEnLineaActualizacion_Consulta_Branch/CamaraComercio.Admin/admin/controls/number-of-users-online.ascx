@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="admin_controls_number_of_users_online" Codebehind="number-of-users-online.ascx.cs" %>
+<a href="#" title="The number of users currently visiting the site">Online:<asp:Literal runat="server" ID="lblOnlineUsers" /></a> 

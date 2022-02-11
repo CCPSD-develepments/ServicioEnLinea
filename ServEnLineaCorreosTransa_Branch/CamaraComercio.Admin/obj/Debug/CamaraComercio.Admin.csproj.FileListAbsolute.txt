@@ -1,0 +1,16 @@
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\obj\Debug\ResolveAssemblyReference.cache
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\bin\CamaraComercio.Admin.dll
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\bin\CamaraComercio.Admin.pdb
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\obj\Debug\CamaraComercio.Admin.dll
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\obj\Debug\CamaraComercio.Admin.pdb
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\bin\AjaxControlToolkit.dll
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\bin\CSSFriendly.dll
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\bin\FredCK.FCKeditorV2.dll
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\bin\WebControlCaptcha.dll
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\bin\CamaraComercio.DataAccess.EF.CamaraComun.dll
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\bin\Telerik.Web.UI.dll
+C:\CCPSD Sources\OficinaVirtual\Src\CamaraComercio.Admin\bin\CamaraComercio.DataAccess.EF.CamaraComun.pdb
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\CamaraComercio.Admin\obj\Debug\CamaraComercio.Admin.csprojResolveAssemblyReference.cache
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\CamaraComercio.Admin\obj\Debug\CamaraComercio.Admin.csproj.CoreCompileInputs.cache
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\CamaraComercio.Admin\obj\Debug\CamaraComercio.Admin.dll
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\CamaraComercio.Admin\obj\Debug\CamaraComercio.Admin.pdb

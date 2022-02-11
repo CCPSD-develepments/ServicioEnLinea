@@ -1,0 +1,20 @@
+﻿*
+{
+	display: none;
+}
+
+html, body, #aspnetForm, #aspnetForm .page, #aspnetForm .page .main, #viewer, #page, #page img
+{
+	display: block;
+}
+
+#page
+{
+	overflow: visible;
+}
+
+#page img
+{
+	max-height: 10.5in;
+	max-width: 8in;
+}

@@ -1,0 +1,2993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CamaraSRMModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CamaraSRMModelStoreContainer">
+    <EntitySet Name="Modulos" EntityType="CamaraSRMModel.Store.Modulos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ModulosRoles" EntityType="CamaraSRMModel.Store.ModulosRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NotasCredito" EntityType="CamaraSRMModel.Store.NotasCredito" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="CamaraSRMModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tarifas" EntityType="CamaraSRMModel.Store.Tarifas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TiposContadores" EntityType="CamaraSRMModel.Store.TiposContadores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="CamaraSRMModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuariosContadores" EntityType="CamaraSRMModel.Store.UsuariosContadores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuariosEstatus" EntityType="CamaraSRMModel.Store.UsuariosEstatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuariosRoles" EntityType="CamaraSRMModel.Store.UsuariosRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HistoricosDocumentos" EntityType="CamaraSRMModel.Store.HistoricosDocumentos" store:Type="Tables" Schema="Historico" />
+    <EntitySet Name="TransaccionLog" EntityType="CamaraSRMModel.Store.TransaccionLog" store:Type="Tables" Schema="Historico" />
+    <EntitySet Name="Direcciones" EntityType="CamaraSRMModel.Store.Direcciones" store:Type="Tables" Schema="Persona" />
+    <EntitySet Name="Personas" EntityType="CamaraSRMModel.Store.Personas" store:Type="Tables" Schema="Persona" />
+    <EntitySet Name="PersonasDirecciones" EntityType="CamaraSRMModel.Store.PersonasDirecciones" store:Type="Tables" Schema="Persona" />
+    <EntitySet Name="PersonasRegistros" EntityType="CamaraSRMModel.Store.PersonasRegistros" store:Type="Tables" Schema="Persona" />
+    <EntitySet Name="Agenda" EntityType="CamaraSRMModel.Store.Agenda" store:Type="Tables" Schema="Scheduler" />
+    <EntitySet Name="AngendaTransacciones" EntityType="CamaraSRMModel.Store.AngendaTransacciones" store:Type="Tables" Schema="Scheduler" />
+    <EntitySet Name="TiposTareas" EntityType="CamaraSRMModel.Store.TiposTareas" store:Type="Tables" Schema="Scheduler" />
+    <EntitySet Name="CategoriasSocios" EntityType="CamaraSRMModel.Store.CategoriasSocios" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="ContadorRegistro" EntityType="CamaraSRMModel.Store.ContadorRegistro" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="LibroDigital" EntityType="CamaraSRMModel.Store.LibroDigital" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="ModelosCertificaciones" EntityType="CamaraSRMModel.Store.ModelosCertificaciones" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="Oposiciones" EntityType="CamaraSRMModel.Store.Oposiciones" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="Productos" EntityType="CamaraSRMModel.Store.Productos" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="ReferenciasBancarias" EntityType="CamaraSRMModel.Store.ReferenciasBancarias" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="ReferenciasComerciales" EntityType="CamaraSRMModel.Store.ReferenciasComerciales" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="Registros" EntityType="CamaraSRMModel.Store.Registros" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="RegistrosActividades" EntityType="CamaraSRMModel.Store.RegistrosActividades" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="RegistrosActividadesEspecificas" EntityType="CamaraSRMModel.Store.RegistrosActividadesEspecificas" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="RegistrosOposiciones" EntityType="CamaraSRMModel.Store.RegistrosOposiciones" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="RegistrosSocios" EntityType="CamaraSRMModel.Store.RegistrosSocios" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="SeguimientoOposiciones" EntityType="CamaraSRMModel.Store.SeguimientoOposiciones" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="SistemasArmonizados" EntityType="CamaraSRMModel.Store.SistemasArmonizados" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="TiposSentencias" EntityType="CamaraSRMModel.Store.TiposSentencias" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="Variables" EntityType="CamaraSRMModel.Store.Variables" store:Type="Tables" Schema="Sistema" />
+    <EntitySet Name="Sociedades" EntityType="CamaraSRMModel.Store.Sociedades" store:Type="Tables" Schema="Sociedad" />
+    <EntitySet Name="SociedadesLogos" EntityType="CamaraSRMModel.Store.SociedadesLogos" store:Type="Tables" Schema="Sociedad" />
+    <EntitySet Name="SociedadesRegistros" EntityType="CamaraSRMModel.Store.SociedadesRegistros" store:Type="Tables" Schema="Sociedad" />
+    <EntitySet Name="Suscursales" EntityType="CamaraSRMModel.Store.Suscursales" store:Type="Tables" Schema="Sociedad" />
+    <EntitySet Name="DEFINICION_COLUMNAS" EntityType="CamaraSRMModel.Store.DEFINICION_COLUMNAS" store:Type="Tables" Schema="SRM_INFORMATION_SCHEMA" />
+    <EntitySet Name="Asignaciones" EntityType="CamaraSRMModel.Store.Asignaciones" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="DocumentosTransacciones" EntityType="CamaraSRMModel.Store.DocumentosTransacciones" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="EstatusTransacciones" EntityType="CamaraSRMModel.Store.EstatusTransacciones" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="Facturas" EntityType="CamaraSRMModel.Store.Facturas" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="FormasPagos" EntityType="CamaraSRMModel.Store.FormasPagos" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="NotificacionesTransacciones" EntityType="CamaraSRMModel.Store.NotificacionesTransacciones" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="SeguimientoTransacciones" EntityType="CamaraSRMModel.Store.SeguimientoTransacciones" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="SubTransacciones" EntityType="CamaraSRMModel.Store.SubTransacciones" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="TiposPagos" EntityType="CamaraSRMModel.Store.TiposPagos" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="TransaccionDetalle" EntityType="CamaraSRMModel.Store.TransaccionDetalle" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="Transacciones" EntityType="CamaraSRMModel.Store.Transacciones" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="TransaccionesPersonas" EntityType="CamaraSRMModel.Store.TransaccionesPersonas" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="TransaccionesSociedades" EntityType="CamaraSRMModel.Store.TransaccionesSociedades" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="UbicacionesExpedientes" EntityType="CamaraSRMModel.Store.UbicacionesExpedientes" store:Type="Tables" Schema="Transaccion" />
+    <EntitySet Name="cvw_Direcciones" EntityType="CamaraSRMModel.Store.cvw_Direcciones" store:Type="Views" store:Schema="Persona" store:Name="cvw_Direcciones">
+      <DefiningQuery>SELECT 
+      [cvw_Direcciones].[DireccionId] AS [DireccionId], 
+      [cvw_Direcciones].[Calle] AS [Calle], 
+      [cvw_Direcciones].[Numero] AS [Numero], 
+      [cvw_Direcciones].[CiudadId] AS [CiudadId], 
+      [cvw_Direcciones].[SectorId] AS [SectorId], 
+      [cvw_Direcciones].[ApartadoPostal] AS [ApartadoPostal], 
+      [cvw_Direcciones].[TelefonoCasa] AS [TelefonoCasa], 
+      [cvw_Direcciones].[TelefonoOficina] AS [TelefonoOficina], 
+      [cvw_Direcciones].[Extension] AS [Extension], 
+      [cvw_Direcciones].[Fax] AS [Fax], 
+      [cvw_Direcciones].[Email] AS [Email], 
+      [cvw_Direcciones].[SitioWeb] AS [SitioWeb], 
+      [cvw_Direcciones].[Ciudad] AS [Ciudad], 
+      [cvw_Direcciones].[Sector] AS [Sector], 
+      [cvw_Direcciones].[Pais] AS [Pais], 
+      [cvw_Direcciones].[PaisId] AS [PaisId], 
+      [cvw_Direcciones].[SectorDgii] AS [SectorDgii], 
+      [cvw_Direcciones].[SectorDgiiId] AS [SectorDgiiId]
+      FROM [Persona].[cvw_Direcciones] AS [cvw_Direcciones]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cvw_ReferenciasBancarias" EntityType="CamaraSRMModel.Store.cvw_ReferenciasBancarias" store:Type="Views" store:Schema="Sistema" store:Name="cvw_ReferenciasBancarias">
+      <DefiningQuery>SELECT 
+      [cvw_ReferenciasBancarias].[ReferenciaBancariaId] AS [ReferenciaBancariaId], 
+      [cvw_ReferenciasBancarias].[RegistroId] AS [RegistroId], 
+      [cvw_ReferenciasBancarias].[BancoId] AS [BancoId], 
+      [cvw_ReferenciasBancarias].[FechaModificacion] AS [FechaModificacion], 
+      [cvw_ReferenciasBancarias].[rowguid] AS [rowguid], 
+      [cvw_ReferenciasBancarias].[Banco] AS [Banco]
+      FROM [Sistema].[cvw_ReferenciasBancarias] AS [cvw_ReferenciasBancarias]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cvw_RegistrosActividades" EntityType="CamaraSRMModel.Store.cvw_RegistrosActividades" store:Type="Views" store:Schema="Sistema" store:Name="cvw_RegistrosActividades">
+      <DefiningQuery>SELECT 
+      [cvw_RegistrosActividades].[AtividadId] AS [AtividadId], 
+      [cvw_RegistrosActividades].[RegistroId] AS [RegistroId], 
+      [cvw_RegistrosActividades].[TipoActividadId] AS [TipoActividadId], 
+      [cvw_RegistrosActividades].[Actividad] AS [Actividad]
+      FROM [Sistema].[cvw_RegistrosActividades] AS [cvw_RegistrosActividades]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cvw_RegistrosOposiciones" EntityType="CamaraSRMModel.Store.cvw_RegistrosOposiciones" store:Type="Views" store:Schema="Sistema" store:Name="cvw_RegistrosOposiciones">
+      <DefiningQuery>SELECT 
+      [cvw_RegistrosOposiciones].[RegistroOposicionId] AS [RegistroOposicionId], 
+      [cvw_RegistrosOposiciones].[OposicionId] AS [OposicionId], 
+      [cvw_RegistrosOposiciones].[RegistroId] AS [RegistroId], 
+      [cvw_RegistrosOposiciones].[Requirientes] AS [Requirientes], 
+      [cvw_RegistrosOposiciones].[Prioridad] AS [Prioridad], 
+      [cvw_RegistrosOposiciones].[Cerrada] AS [Cerrada], 
+      [cvw_RegistrosOposiciones].[FechaCierre] AS [FechaCierre], 
+      [cvw_RegistrosOposiciones].[Apoderado] AS [Apoderado], 
+      [cvw_RegistrosOposiciones].[Fecha] AS [Fecha], 
+      [cvw_RegistrosOposiciones].[NumeroActo] AS [NumeroActo], 
+      [cvw_RegistrosOposiciones].[TipoSentenciaId] AS [TipoSentenciaId], 
+      [cvw_RegistrosOposiciones].[Sentencia] AS [Sentencia], 
+      [cvw_RegistrosOposiciones].[Sintesis] AS [Sintesis], 
+      [cvw_RegistrosOposiciones].[Demandado] AS [Demandado], 
+      [cvw_RegistrosOposiciones].[NumeroRegistro] AS [NumeroRegistro], 
+      [cvw_RegistrosOposiciones].[Justificacion] AS [Justificacion], 
+      [cvw_RegistrosOposiciones].[Fecha_Modificacion] AS [Fecha_Modificacion], 
+      [cvw_RegistrosOposiciones].[Usuario] AS [Usuario], 
+      [cvw_RegistrosOposiciones].[TipoRectificacionId] AS [TipoRectificacionId], 
+      [cvw_RegistrosOposiciones].[PersonaId] AS [PersonaId], 
+      [cvw_RegistrosOposiciones].[PersonaDescripcion] AS [PersonaDescripcion], 
+      [cvw_RegistrosOposiciones].[TipoRectificacion] AS [TipoRectificacion]
+      FROM [Sistema].[cvw_RegistrosOposiciones] AS [cvw_RegistrosOposiciones]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cvw_RegistrosProductos" EntityType="CamaraSRMModel.Store.cvw_RegistrosProductos" store:Type="Views" store:Schema="Sistema" store:Name="cvw_RegistrosProductos">
+      <DefiningQuery>SELECT 
+      [cvw_RegistrosProductos].[ProductoId] AS [ProductoId], 
+      [cvw_RegistrosProductos].[RegistroId] AS [RegistroId], 
+      [cvw_RegistrosProductos].[Descripcion] AS [Descripcion], 
+      [cvw_RegistrosProductos].[FechaModificacion] AS [FechaModificacion], 
+      [cvw_RegistrosProductos].[rowguid] AS [rowguid], 
+      [cvw_RegistrosProductos].[SistemaArmonizadoId] AS [SistemaArmonizadoId], 
+      [cvw_RegistrosProductos].[SistemaAmortizado] AS [SistemaAmortizado]
+      FROM [Sistema].[cvw_RegistrosProductos] AS [cvw_RegistrosProductos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cvw_RegistrosSocios" EntityType="CamaraSRMModel.Store.cvw_RegistrosSocios" store:Type="Views" store:Schema="Sistema" store:Name="cvw_RegistrosSocios">
+      <DefiningQuery>SELECT 
+      [cvw_RegistrosSocios].[ID] AS [ID], 
+      [cvw_RegistrosSocios].[RegistroId] AS [RegistroId], 
+      [cvw_RegistrosSocios].[SocioId] AS [SocioId], 
+      [cvw_RegistrosSocios].[TipoSocio] AS [TipoSocio], 
+      [cvw_RegistrosSocios].[TipoRelacion] AS [TipoRelacion], 
+      [cvw_RegistrosSocios].[DireccionId] AS [DireccionId], 
+      [cvw_RegistrosSocios].[RalacionSocio] AS [RalacionSocio], 
+      [cvw_RegistrosSocios].[RepresentanteId] AS [RepresentanteId], 
+      [cvw_RegistrosSocios].[CargoId] AS [CargoId], 
+      [cvw_RegistrosSocios].[NumeroRM] AS [NumeroRM], 
+      [cvw_RegistrosSocios].[Orden] AS [Orden], 
+      [cvw_RegistrosSocios].[FechaModificacion] AS [FechaModificacion], 
+      [cvw_RegistrosSocios].[rowguid] AS [rowguid], 
+      [cvw_RegistrosSocios].[Documento] AS [Documento], 
+      [cvw_RegistrosSocios].[Accionista] AS [Accionista], 
+      [cvw_RegistrosSocios].[Representante] AS [Representante], 
+      [cvw_RegistrosSocios].[Calle] AS [Calle], 
+      [cvw_RegistrosSocios].[Numero] AS [Numero], 
+      [cvw_RegistrosSocios].[CiudadId] AS [CiudadId], 
+      [cvw_RegistrosSocios].[SectorId] AS [SectorId], 
+      [cvw_RegistrosSocios].[ApartadoPostal] AS [ApartadoPostal], 
+      [cvw_RegistrosSocios].[TelefonoCasa] AS [TelefonoCasa], 
+      [cvw_RegistrosSocios].[TelefonoOficina] AS [TelefonoOficina], 
+      [cvw_RegistrosSocios].[Extension] AS [Extension], 
+      [cvw_RegistrosSocios].[Fax] AS [Fax], 
+      [cvw_RegistrosSocios].[Email] AS [Email], 
+      [cvw_RegistrosSocios].[SitioWeb] AS [SitioWeb], 
+      [cvw_RegistrosSocios].[Ciudad] AS [Ciudad], 
+      [cvw_RegistrosSocios].[Sector] AS [Sector], 
+      [cvw_RegistrosSocios].[Pais] AS [Pais], 
+      [cvw_RegistrosSocios].[Cargo] AS [Cargo], 
+      [cvw_RegistrosSocios].[Nacionalidad] AS [Nacionalidad], 
+      [cvw_RegistrosSocios].[Profesion] AS [Profesion], 
+      [cvw_RegistrosSocios].[EstadoCivil] AS [EstadoCivil], 
+      [cvw_RegistrosSocios].[CantidaCuotasAcciones] AS [CantidaCuotasAcciones], 
+      [cvw_RegistrosSocios].[CargoDescripcion] AS [CargoDescripcion], 
+      [cvw_RegistrosSocios].[SectorDgiiId] AS [SectorDgiiId], 
+      [cvw_RegistrosSocios].[SectorDgii] AS [SectorDgii], 
+      [cvw_RegistrosSocios].[PaisId] AS [PaisId]
+      FROM [Sistema].[cvw_RegistrosSocios] AS [cvw_RegistrosSocios]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cvw_SociedadesRegistros" EntityType="CamaraSRMModel.Store.cvw_SociedadesRegistros" store:Type="Views" store:Schema="Sociedad" store:Name="cvw_SociedadesRegistros">
+      <DefiningQuery>SELECT 
+      [cvw_SociedadesRegistros].[SociedadId] AS [SociedadId], 
+      [cvw_SociedadesRegistros].[TipoSociedadId] AS [TipoSociedadId], 
+      [cvw_SociedadesRegistros].[NombreSocial] AS [NombreSocial], 
+      [cvw_SociedadesRegistros].[NombreEmpresa] AS [NombreEmpresa], 
+      [cvw_SociedadesRegistros].[NombreSiglas] AS [NombreSiglas], 
+      [cvw_SociedadesRegistros].[Rnc] AS [Rnc], 
+      [cvw_SociedadesRegistros].[EsNacional] AS [EsNacional], 
+      [cvw_SociedadesRegistros].[Nacionalidad] AS [Nacionalidad], 
+      [cvw_SociedadesRegistros].[NacionalidadId] AS [NacionalidadId], 
+      [cvw_SociedadesRegistros].[FechaConstitucion] AS [FechaConstitucion], 
+      [cvw_SociedadesRegistros].[DuracionSociedad] AS [DuracionSociedad], 
+      [cvw_SociedadesRegistros].[FechaAsamblea] AS [FechaAsamblea], 
+      [cvw_SociedadesRegistros].[DuraccionDirectiva] AS [DuraccionDirectiva], 
+      [cvw_SociedadesRegistros].[EstatusId] AS [EstatusId], 
+      [cvw_SociedadesRegistros].[EsEnteRegulado] AS [EsEnteRegulado], 
+      [cvw_SociedadesRegistros].[TipoEnteReguladoId] AS [TipoEnteReguladoId], 
+      [cvw_SociedadesRegistros].[NoResolucion] AS [NoResolucion], 
+      [cvw_SociedadesRegistros].[NumeroNaveIndustrial] AS [NumeroNaveIndustrial], 
+      [cvw_SociedadesRegistros].[NumeroRegistro] AS [NumeroRegistro], 
+      [cvw_SociedadesRegistros].[RegistroId] AS [RegistroId], 
+      [cvw_SociedadesRegistros].[FechaEmision] AS [FechaEmision], 
+      [cvw_SociedadesRegistros].[FechaVencimiento] AS [FechaVencimiento], 
+      [cvw_SociedadesRegistros].[NombreEstablecimiento] AS [NombreEstablecimiento], 
+      [cvw_SociedadesRegistros].[CapitalSocial] AS [CapitalSocial], 
+      [cvw_SociedadesRegistros].[TipoMonedaCapitalSocial] AS [TipoMonedaCapitalSocial], 
+      [cvw_SociedadesRegistros].[CapitalAutorizado] AS [CapitalAutorizado], 
+      [cvw_SociedadesRegistros].[TipoMonedaCapitalAutorizado] AS [TipoMonedaCapitalAutorizado], 
+      [cvw_SociedadesRegistros].[CapitalPagado] AS [CapitalPagado], 
+      [cvw_SociedadesRegistros].[TipoMonedaCapitalPagado] AS [TipoMonedaCapitalPagado], 
+      [cvw_SociedadesRegistros].[Activos] AS [Activos], 
+      [cvw_SociedadesRegistros].[TipoMonedaActivos] AS [TipoMonedaActivos], 
+      [cvw_SociedadesRegistros].[BienesRaices] AS [BienesRaices], 
+      [cvw_SociedadesRegistros].[TipoMonedaBienesRaices] AS [TipoMonedaBienesRaices], 
+      [cvw_SociedadesRegistros].[FechaInicioOperacion] AS [FechaInicioOperacion], 
+      [cvw_SociedadesRegistros].[EmpleadosMasculinos] AS [EmpleadosMasculinos], 
+      [cvw_SociedadesRegistros].[EmpleadosFemeninos] AS [EmpleadosFemeninos], 
+      [cvw_SociedadesRegistros].[EmpleadosTotal] AS [EmpleadosTotal], 
+      [cvw_SociedadesRegistros].[DireccionId] AS [DireccionId], 
+      [cvw_SociedadesRegistros].[NombreComercial] AS [NombreComercial], 
+      [cvw_SociedadesRegistros].[RegistroNombreComercial] AS [RegistroNombreComercial], 
+      [cvw_SociedadesRegistros].[MarcaFabrica] AS [MarcaFabrica], 
+      [cvw_SociedadesRegistros].[RegistroMarcaFabrica] AS [RegistroMarcaFabrica], 
+      [cvw_SociedadesRegistros].[PatenteInversion] AS [PatenteInversion], 
+      [cvw_SociedadesRegistros].[RegistroPatenteInversion] AS [RegistroPatenteInversion], 
+      [cvw_SociedadesRegistros].[EsProvicional] AS [EsProvicional], 
+      [cvw_SociedadesRegistros].[Comentario1] AS [Comentario1], 
+      [cvw_SociedadesRegistros].[Comentario2] AS [Comentario2], 
+      [cvw_SociedadesRegistros].[NombreOperador] AS [NombreOperador], 
+      [cvw_SociedadesRegistros].[NombreSociedad] AS [NombreSociedad], 
+      [cvw_SociedadesRegistros].[TipoRegistro] AS [TipoRegistro], 
+      [cvw_SociedadesRegistros].[Estado] AS [Estado], 
+      [cvw_SociedadesRegistros].[ActividadNegocio] AS [ActividadNegocio], 
+      [cvw_SociedadesRegistros].[NumeroSocios] AS [NumeroSocios], 
+      [cvw_SociedadesRegistros].[EsSocioInterno] AS [EsSocioInterno], 
+      [cvw_SociedadesRegistros].[TipoSocioInterno] AS [TipoSocioInterno], 
+      [cvw_SociedadesRegistros].[FechaCreacion] AS [FechaCreacion], 
+      [cvw_SociedadesRegistros].[FechaModificacion] AS [FechaModificacion], 
+      [cvw_SociedadesRegistros].[TotalAcciones] AS [TotalAcciones], 
+      [cvw_SociedadesRegistros].[AbreviaturaTipoMonedaActivos] AS [AbreviaturaTipoMonedaActivos], 
+      [cvw_SociedadesRegistros].[AbreviaturaTipoMonedaBienesRaices] AS [AbreviaturaTipoMonedaBienesRaices], 
+      [cvw_SociedadesRegistros].[AbreviaturaTIpoMonedaCapitalAutorizado] AS [AbreviaturaTIpoMonedaCapitalAutorizado], 
+      [cvw_SociedadesRegistros].[AbreviaturaTipoMonedaCapitalPagado] AS [AbreviaturaTipoMonedaCapitalPagado], 
+      [cvw_SociedadesRegistros].[AbreviaturaTipoMonedaCapitalSocial] AS [AbreviaturaTipoMonedaCapitalSocial], 
+      [cvw_SociedadesRegistros].[Sociedad] AS [Sociedad], 
+      [cvw_SociedadesRegistros].[SufijoSociedad] AS [SufijoSociedad], 
+      [cvw_SociedadesRegistros].[TipoEnteRegulado] AS [TipoEnteRegulado], 
+      [cvw_SociedadesRegistros].[SiglasConfig] AS [SiglasConfig], 
+      [cvw_SociedadesRegistros].[Suscripcion] AS [Suscripcion], 
+      [cvw_SociedadesRegistros].[bAdecuada] AS [bAdecuada], 
+      [cvw_SociedadesRegistros].[Id_Cierre_Fiscal] AS [Id_Cierre_Fiscal], 
+      [cvw_SociedadesRegistros].[ActividadCIUU2] AS [ActividadCIUU2], 
+      [cvw_SociedadesRegistros].[ActividadIdCIUU2] AS [ActividadIdCIUU2], 
+      [cvw_SociedadesRegistros].[ActividadCIUU] AS [ActividadCIUU], 
+      [cvw_SociedadesRegistros].[VersionRegistro] AS [VersionRegistro], 
+      [cvw_SociedadesRegistros].[EsValida] AS [EsValida], 
+      [cvw_SociedadesRegistros].[bActoAlguacil] AS [bActoAlguacil], 
+      [cvw_SociedadesRegistros].[FechaAsamblea1] AS [FechaAsamblea1], 
+      [cvw_SociedadesRegistros].[FechaAsamblea2] AS [FechaAsamblea2], 
+      [cvw_SociedadesRegistros].[isRncValido] AS [isRncValido], 
+      [cvw_SociedadesRegistros].[FechaEnteRegulado] AS [FechaEnteRegulado], 
+      [cvw_SociedadesRegistros].[bActividadCIUU] AS [bActividadCIUU], 
+      [cvw_SociedadesRegistros].[ActividadIdCIUU] AS [ActividadIdCIUU], 
+      [cvw_SociedadesRegistros].[SocioValido] AS [SocioValido]
+      FROM [Sociedad].[cvw_SociedadesRegistros] AS [cvw_SociedadesRegistros]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cvw_PersonasEnSociedades" EntityType="CamaraSRMModel.Store.cvw_PersonasEnSociedades" store:Type="Views" store:Schema="Website" store:Name="cvw_PersonasEnSociedades">
+      <DefiningQuery>SELECT 
+      [cvw_PersonasEnSociedades].[ID] AS [ID], 
+      [cvw_PersonasEnSociedades].[RegistroId] AS [RegistroId], 
+      [cvw_PersonasEnSociedades].[NumeroRegistro] AS [NumeroRegistro], 
+      [cvw_PersonasEnSociedades].[SocioId] AS [SocioId], 
+      [cvw_PersonasEnSociedades].[FechaConstitucion] AS [FechaConstitucion], 
+      [cvw_PersonasEnSociedades].[TipoSocio] AS [TipoSocio], 
+      [cvw_PersonasEnSociedades].[TipoRelacion] AS [TipoRelacion], 
+      [cvw_PersonasEnSociedades].[RegistroRelacion] AS [RegistroRelacion], 
+      [cvw_PersonasEnSociedades].[Documento] AS [Documento], 
+      [cvw_PersonasEnSociedades].[Accionista] AS [Accionista], 
+      [cvw_PersonasEnSociedades].[NombreSocial] AS [NombreSocial], 
+      [cvw_PersonasEnSociedades].[Rnc] AS [Rnc], 
+      [cvw_PersonasEnSociedades].[TipoSociedadId] AS [TipoSociedadId],
+	   [cvw_PersonasEnSociedades].[EstatusId] AS [EstatusId]
+      FROM [Website].[cvw_PersonasEnSociedades] AS [cvw_PersonasEnSociedades]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cvw_SumarioSociedades" EntityType="CamaraSRMModel.Store.cvw_SumarioSociedades" store:Type="Views" store:Schema="Website" store:Name="cvw_SumarioSociedades">
+      <DefiningQuery>
+              SELECT
+              [cvw_SumarioSociedades].[SociedadId] AS [SociedadId],
+              [cvw_SumarioSociedades].[RegistroId] AS [RegistroId],
+              [cvw_SumarioSociedades].[NumeroRegistro] AS [NumeroRegistro],
+              [cvw_SumarioSociedades].[NombreSocial] AS [NombreSocial],
+              [cvw_SumarioSociedades].[Rnc] AS [Rnc],
+              [cvw_SumarioSociedades].[FechaConstitucion] AS [FechaConstitucion],
+              [cvw_SumarioSociedades].[Sufijo] AS [Sufijo],
+              [cvw_SumarioSociedades].[NombreTipoSociedad] AS [NombreTipoSociedad],
+              [cvw_SumarioSociedades].[EstatusId] AS [EstatusId],
+              [cvw_SumarioSociedades].[TipoSociedadId] AS [TipoSociedadId],
+              [cvw_SumarioSociedades].[bAdecuada] AS [bAdecuada],
+              [cvw_SumarioSociedades].[Estatus_fecha] AS [Estatus_fecha]
+              FROM [Website].[cvw_SumarioSociedades] AS [cvw_SumarioSociedades]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Agenda_TiposTareas" Association="CamaraSRMModel.Store.FK_Agenda_TiposTareas">
+      <End Role="TiposTareas" EntitySet="TiposTareas" />
+      <End Role="Agenda" EntitySet="Agenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AngendaTransacciones_Agenda" Association="CamaraSRMModel.Store.FK_AngendaTransacciones_Agenda">
+      <End Role="Agenda" EntitySet="Agenda" />
+      <End Role="AngendaTransacciones" EntitySet="AngendaTransacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AngendaTransacciones_Transacciones" Association="CamaraSRMModel.Store.FK_AngendaTransacciones_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="AngendaTransacciones" EntitySet="AngendaTransacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asignaciones_Transacciones" Association="CamaraSRMModel.Store.FK_Asignaciones_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="Asignaciones" EntitySet="Asignaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentosTransacciones_SubTransacciones" Association="CamaraSRMModel.Store.FK_DocumentosTransacciones_SubTransacciones">
+      <End Role="SubTransacciones" EntitySet="SubTransacciones" />
+      <End Role="DocumentosTransacciones" EntitySet="DocumentosTransacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentosTransacciones_Transacciones" Association="CamaraSRMModel.Store.FK_DocumentosTransacciones_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="DocumentosTransacciones" EntitySet="DocumentosTransacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Facturas_Transacciones" Association="CamaraSRMModel.Store.FK_Facturas_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="Facturas" EntitySet="Facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormasPagos_Facturas" Association="CamaraSRMModel.Store.FK_FormasPagos_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="FormasPagos" EntitySet="FormasPagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistoricosDocumentos_Registros" Association="CamaraSRMModel.Store.FK_HistoricosDocumentos_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="HistoricosDocumentos" EntitySet="HistoricosDocumentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModulosRoles_Modules" Association="CamaraSRMModel.Store.FK_ModulosRoles_Modules">
+      <End Role="Modulos" EntitySet="Modulos" />
+      <End Role="ModulosRoles" EntitySet="ModulosRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModulosRoles_Roles" Association="CamaraSRMModel.Store.FK_ModulosRoles_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="ModulosRoles" EntitySet="ModulosRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotasCredito_Facturas" Association="CamaraSRMModel.Store.FK_NotasCredito_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="NotasCredito" EntitySet="NotasCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotificacionesTransacciones_Transacciones" Association="CamaraSRMModel.Store.FK_NotificacionesTransacciones_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="NotificacionesTransacciones" EntitySet="NotificacionesTransacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Oposiciones_TiposSentencias" Association="CamaraSRMModel.Store.FK_Oposiciones_TiposSentencias">
+      <End Role="TiposSentencias" EntitySet="TiposSentencias" />
+      <End Role="Oposiciones" EntitySet="Oposiciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonasDirecciones_Direciones" Association="CamaraSRMModel.Store.FK_PersonasDirecciones_Direciones">
+      <End Role="Direcciones" EntitySet="Direcciones" />
+      <End Role="PersonasDirecciones" EntitySet="PersonasDirecciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonasDirecciones_Personas" Association="CamaraSRMModel.Store.FK_PersonasDirecciones_Personas">
+      <End Role="Personas" EntitySet="Personas" />
+      <End Role="PersonasDirecciones" EntitySet="PersonasDirecciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonasRegistros_Personas" Association="CamaraSRMModel.Store.FK_PersonasRegistros_Personas">
+      <End Role="Personas" EntitySet="Personas" />
+      <End Role="PersonasRegistros" EntitySet="PersonasRegistros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonasRegistros_Registros" Association="CamaraSRMModel.Store.FK_PersonasRegistros_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="PersonasRegistros" EntitySet="PersonasRegistros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Registros" Association="CamaraSRMModel.Store.FK_Productos_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_SistemasArmonizados" Association="CamaraSRMModel.Store.FK_Productos_SistemasArmonizados">
+      <End Role="SistemasArmonizados" EntitySet="SistemasArmonizados" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenciasBancarias_Registros" Association="CamaraSRMModel.Store.FK_ReferenciasBancarias_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="ReferenciasBancarias" EntitySet="ReferenciasBancarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenciasComerciales_Registros" Association="CamaraSRMModel.Store.FK_ReferenciasComerciales_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="ReferenciasComerciales" EntitySet="ReferenciasComerciales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Registros_Direcciones" Association="CamaraSRMModel.Store.FK_Registros_Direcciones">
+      <End Role="Direcciones" EntitySet="Direcciones" />
+      <End Role="Registros" EntitySet="Registros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrosActividades_Registros" Association="CamaraSRMModel.Store.FK_RegistrosActividades_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="RegistrosActividades" EntitySet="RegistrosActividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrosActividadesEspecificas_Registros" Association="CamaraSRMModel.Store.FK_RegistrosActividadesEspecificas_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="RegistrosActividadesEspecificas" EntitySet="RegistrosActividadesEspecificas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrosOposiciones_Oposiciones" Association="CamaraSRMModel.Store.FK_RegistrosOposiciones_Oposiciones">
+      <End Role="Oposiciones" EntitySet="Oposiciones" />
+      <End Role="RegistrosOposiciones" EntitySet="RegistrosOposiciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrosOposiciones_Registros" Association="CamaraSRMModel.Store.FK_RegistrosOposiciones_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="RegistrosOposiciones" EntitySet="RegistrosOposiciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SeguimientoTransacciones_Transacciones" Association="CamaraSRMModel.Store.FK_SeguimientoTransacciones_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="SeguimientoTransacciones" EntitySet="SeguimientoTransacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SociedadesLogos_Sociedades" Association="CamaraSRMModel.Store.FK_SociedadesLogos_Sociedades">
+      <End Role="Sociedades" EntitySet="Sociedades" />
+      <End Role="SociedadesLogos" EntitySet="SociedadesLogos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SociedadesRegistros_Registros" Association="CamaraSRMModel.Store.FK_SociedadesRegistros_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="SociedadesRegistros" EntitySet="SociedadesRegistros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SociedadesRegistros_Sociedades" Association="CamaraSRMModel.Store.FK_SociedadesRegistros_Sociedades">
+      <End Role="Sociedades" EntitySet="Sociedades" />
+      <End Role="SociedadesRegistros" EntitySet="SociedadesRegistros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubTransacciones_SubTransacciones" Association="CamaraSRMModel.Store.FK_SubTransacciones_SubTransacciones">
+      <End Role="SubTransacciones" EntitySet="SubTransacciones" />
+      <End Role="SubTransacciones1" EntitySet="SubTransacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubTransacciones_Transacciones" Association="CamaraSRMModel.Store.FK_SubTransacciones_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="SubTransacciones" EntitySet="SubTransacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Suscursales_Sociedades" Association="CamaraSRMModel.Store.FK_Suscursales_Sociedades">
+      <End Role="Sociedades" EntitySet="Sociedades" />
+      <End Role="Suscursales" EntitySet="Suscursales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionDetalle_Facturas" Association="CamaraSRMModel.Store.FK_TransaccionDetalle_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="TransaccionDetalle" EntitySet="TransaccionDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transacciones_UbicacionesExpedientes" Association="CamaraSRMModel.Store.FK_Transacciones_UbicacionesExpedientes">
+      <End Role="UbicacionesExpedientes" EntitySet="UbicacionesExpedientes" />
+      <End Role="Transacciones" EntitySet="Transacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionesPersonas_Transacciones" Association="CamaraSRMModel.Store.FK_TransaccionesPersonas_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="TransaccionesPersonas" EntitySet="TransaccionesPersonas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionesSociedades_Transacciones" Association="CamaraSRMModel.Store.FK_TransaccionesSociedades_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="TransaccionesSociedades" EntitySet="TransaccionesSociedades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosContadores_Usuarios" Association="CamaraSRMModel.Store.FK_UsuariosContadores_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuariosContadores" EntitySet="UsuariosContadores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosRoles_Roles" Association="CamaraSRMModel.Store.FK_UsuariosRoles_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UsuariosRoles" EntitySet="UsuariosRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosRoles_Usuarios" Association="CamaraSRMModel.Store.FK_UsuariosRoles_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuariosRoles" EntitySet="UsuariosRoles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Modulos">
+    <Key>
+      <PropertyRef Name="ModuloId" />
+    </Key>
+    <Property Name="ModuloId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModuloPadreId" Type="int" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="75" />
+    <Property Name="NombreEtiqueta" Type="nvarchar" Nullable="false" MaxLength="75" />
+    <Property Name="Tag" Type="varchar" MaxLength="50" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="CreateSerparator" Type="bit" />
+    <Property Name="Icon" Type="varbinary(max)" />
+    <Property Name="ShowInNavBar" Type="bit" />
+    <Property Name="ShowInTreeNavBar" Type="bit" />
+    <Property Name="SoloAdministrador" Type="bit" />
+    <Property Name="HeredaPadre" Type="bit" />
+    <Property Name="HiddenOption" Type="bit" />
+  </EntityType>
+  <EntityType Name="ModulosRoles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModuloId" Type="int" Nullable="false" />
+    <Property Name="RolId" Type="int" Nullable="false" />
+    <Property Name="TipoAcceso" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="NotasCredito">
+    <Key>
+      <PropertyRef Name="NotaCreditoID" />
+    </Key>
+    <Property Name="NotaCreditoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="FacturaID" Type="int" />
+    <Property Name="Monto" Type="decimal" Scale="2" />
+    <Property Name="NCF" Type="nvarchar" MaxLength="25" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="GestionNotaId" Type="int" />
+    <Property Name="Activa" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RolId" />
+    </Key>
+    <Property Name="RolId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="Comentario" Type="text" />
+    <Property Name="FechaModicifacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tarifas">
+    <Key>
+      <PropertyRef Name="TarifaId" />
+    </Key>
+    <Property Name="TarifaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="MontoInicial" Type="decimal" Precision="38" Scale="2" />
+    <Property Name="MontoFinal" Type="decimal" Precision="38" Scale="2" />
+    <Property Name="CostoContitucion" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="CostoModificacion" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="CostoModificacionNeto" Type="decimal" Precision="38" Scale="6" StoreGeneratedPattern="Computed" />
+    <Property Name="CostoRenovacion" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="CostoRenovacionNeto" Type="decimal" Precision="38" Scale="6" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TiposContadores">
+    <Key>
+      <PropertyRef Name="TipoContadorId" />
+    </Key>
+    <Property Name="TipoContadorId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreContado" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ContadorTag" Type="char" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="UsuarioId" />
+    </Key>
+    <Property Name="UsuarioId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreUsuario" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="NombreCompleto" Type="nvarchar" MaxLength="100" />
+    <Property Name="Dominio" Type="nvarchar" MaxLength="100" />
+    <Property Name="Administrador" Type="bit" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="UsuarioActivo" Type="bit" Nullable="false" />
+    <Property Name="AutentificacionId" Type="binary" MaxLength="20" />
+    <Property Name="ContadorAsignaciones" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NombreUsuarioReferencia" Type="nvarchar" MaxLength="30" />
+    <Property Name="ContadorRecibo" Type="int" />
+    <Property Name="Receptor" Type="bit" />
+    <Property Name="Firma" Type="bit" />
+    <Property Name="EnCalidadDe" Type="varchar" MaxLength="150" />
+    <Property Name="Iniciales" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="Documento" Type="varchar" MaxLength="15" />
+    <Property Name="UsuarioEliminado" Type="bit" />
+    <Property Name="TipoAsignacionId" Type="int" />
+    <Property Name="RolId" Type="int" />
+  </EntityType>
+  <EntityType Name="UsuariosContadores">
+    <Key>
+      <PropertyRef Name="UsuarioContadorId" />
+    </Key>
+    <Property Name="UsuarioContadorId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="TipoTransacion" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="Prioridad" Type="int" Nullable="false" />
+    <Property Name="Contador" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuariosEstatus">
+    <Key>
+      <PropertyRef Name="EstatusUsuarioId" />
+    </Key>
+    <Property Name="EstatusUsuarioId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="EstatusTransId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuariosRoles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="RolId" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HistoricosDocumentos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="DocumentoId" Type="int" Nullable="false" />
+    <Property Name="Documento" Type="varchar" MaxLength="150" />
+    <Property Name="FechaDocumento" Type="datetime" />
+    <Property Name="NoDocumento" Type="int" />
+    <Property Name="Libro" Type="int" />
+    <Property Name="Folio" Type="int" />
+    <Property Name="NoExpediente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransaccionLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NumeroRegistro" Type="int" Nullable="false" />
+    <Property Name="EmpresaId" Type="int" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="Usuario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Maquina" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="time" Nullable="false" />
+    <Property Name="Cambios" Type="xml" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Direcciones">
+    <Key>
+      <PropertyRef Name="DireccionId" />
+    </Key>
+    <Property Name="DireccionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Calle" Type="nvarchar" MaxLength="256" />
+    <Property Name="Numero" Type="nvarchar" MaxLength="6" />
+    <Property Name="CiudadId" Type="int" />
+    <Property Name="CiudadDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="SectorId" Type="int" />
+    <Property Name="SectorDescripcion" Type="varchar" MaxLength="100" />
+    <Property Name="ApartadoPostal" Type="nvarchar" MaxLength="20" />
+    <Property Name="TelefonoCasa" Type="nvarchar" MaxLength="15" />
+    <Property Name="TelefonoOficina" Type="nvarchar" MaxLength="15" />
+    <Property Name="Extension" Type="int" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="SitioWeb" Type="nvarchar" MaxLength="256" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PaisId" Type="int" />
+    <Property Name="PaisDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="SectorDgiiId" Type="int" />
+    <Property Name="SectorDgii" Type="varchar" Nullable="false" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Personas">
+    <Key>
+      <PropertyRef Name="PersonaId" />
+    </Key>
+    <Property Name="PersonaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipoDocumento" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="Documento" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="PrimerNombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SegundoNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrimerApellido" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SegundoApellido" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rnc" Type="nvarchar" MaxLength="15" />
+    <Property Name="NacionalidadId" Type="int" />
+    <Property Name="NacionalidadDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="EstadoCivil" Type="nchar" MaxLength="1" />
+    <Property Name="ProfesionId" Type="int" />
+    <Property Name="ProfecionDescripcion" Type="nvarchar" MaxLength="50" />
+    <Property Name="DireccionId" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonasDirecciones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonaId" Type="int" Nullable="false" />
+    <Property Name="DireccionId" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonasRegistros">
+    <Key>
+      <PropertyRef Name="NumeroRegistro" />
+    </Key>
+    <Property Name="NumeroRegistro" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="PersonaId" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EsValido" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Agenda">
+    <Key>
+      <PropertyRef Name="AgendaId" />
+    </Key>
+    <Property Name="AgendaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipoTareaId" Type="int" Nullable="false" />
+    <Property Name="FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="FechaOcuInicial" Type="datetime" />
+    <Property Name="FechaOcuFinal" Type="datetime" />
+    <Property Name="Estatus" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="UltimaAlaarma" Type="datetime" />
+    <Property Name="TipoTarea" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AngendaTransacciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AgendaId" Type="int" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TiposTareas">
+    <Key>
+      <PropertyRef Name="TipoTareaId" />
+    </Key>
+    <Property Name="TipoTareaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CategoriasSocios">
+    <Key>
+      <PropertyRef Name="TipoCategoriaId" />
+    </Key>
+    <Property Name="TipoCategoriaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipoCategoria" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Descripcion" Type="text" />
+  </EntityType>
+  <EntityType Name="ContadorRegistro">
+    <Key>
+      <PropertyRef Name="ProvinciaId" />
+      <PropertyRef Name="Tag" />
+    </Key>
+    <Property Name="ProvinciaId" Type="int" Nullable="false" />
+    <Property Name="Tag" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="NoRegistro" Type="int" Nullable="false" />
+    <Property Name="LimiteContador" Type="int" />
+  </EntityType>
+  <EntityType Name="LibroDigital">
+    <Key>
+      <PropertyRef Name="LibroId" />
+    </Key>
+    <Property Name="LibroId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NumeroLibro" Type="int" Nullable="false" />
+    <Property Name="Folio" Type="int" Nullable="false" />
+    <Property Name="NumeroDocumento" Type="int" Nullable="false" />
+    <Property Name="Sufijo" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="ModelosCertificaciones">
+    <Key>
+      <PropertyRef Name="ModeloId" />
+    </Key>
+    <Property Name="ModeloId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreModelo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DefinicionModelo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TipoModelo" Type="int" />
+    <Property Name="EsEmpresa" Type="bit" />
+    <Property Name="ServicioId" Type="int" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="EsPersona" Type="bit" />
+  </EntityType>
+  <EntityType Name="Oposiciones">
+    <Key>
+      <PropertyRef Name="OposicionId" />
+    </Key>
+    <Property Name="OposicionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="NumeroActo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Apoderado" Type="varchar" MaxLength="50" />
+    <Property Name="TipoSentenciaId" Type="int" Nullable="false" />
+    <Property Name="Comentario" Type="varchar(max)" Nullable="false" />
+    <Property Name="TipoRectificacionId" Type="int" />
+    <Property Name="PersonaId" Type="int" />
+    <Property Name="PersonaDescripcion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="ProductoId" />
+    </Key>
+    <Property Name="ProductoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="SistemaArmonizadoId" Type="nvarchar" MaxLength="10" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReferenciasBancarias">
+    <Key>
+      <PropertyRef Name="ReferenciaBancariaId" />
+    </Key>
+    <Property Name="ReferenciaBancariaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="BancoId" Type="int" Nullable="false" />
+    <Property Name="BancoDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReferenciasComerciales">
+    <Key>
+      <PropertyRef Name="ReferenciaComercialId" />
+    </Key>
+    <Property Name="ReferenciaComercialId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="TipoReferencia" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registros">
+    <Key>
+      <PropertyRef Name="RegistroId" />
+    </Key>
+    <Property Name="RegistroId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaEmision" Type="datetime" />
+    <Property Name="FechaVencimiento" Type="datetime" />
+    <Property Name="NombreEstablecimiento" Type="nvarchar" MaxLength="150" />
+    <Property Name="CapitalSocial" Type="money" />
+    <Property Name="TipoMonedaCapitalSocial" Type="int" />
+    <Property Name="CapitalAutorizado" Type="money" />
+    <Property Name="TipoMonedaCapitalAutorizado" Type="int" />
+    <Property Name="CapitalPagado" Type="money" />
+    <Property Name="TipoMonedaCapitalPagado" Type="int" />
+    <Property Name="Activos" Type="money" />
+    <Property Name="TipoMonedaActivos" Type="int" />
+    <Property Name="BienesRaices" Type="money" />
+    <Property Name="TipoMonedaBienesRaices" Type="int" />
+    <Property Name="FechaInicioOperacion" Type="datetime" />
+    <Property Name="EmpleadosMasculinos" Type="int" />
+    <Property Name="EmpleadosFemeninos" Type="int" />
+    <Property Name="EmpleadosTotal" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="DireccionId" Type="int" />
+    <Property Name="NombreComercial" Type="nvarchar" MaxLength="150" />
+    <Property Name="RegistroNombreComercial" Type="nvarchar" MaxLength="15" />
+    <Property Name="MarcaFabrica" Type="nvarchar" MaxLength="150" />
+    <Property Name="RegistroMarcaFabrica" Type="nvarchar" MaxLength="15" />
+    <Property Name="PatenteInversion" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegistroPatenteInversion" Type="nvarchar" MaxLength="15" />
+    <Property Name="EsProvicional" Type="bit" Nullable="false" />
+    <Property Name="Comentario1" Type="nvarchar(max)" />
+    <Property Name="Comentario2" Type="nvarchar(max)" />
+    <Property Name="NombreOperador" Type="nvarchar" MaxLength="50" />
+    <Property Name="NombreSociedad" Type="nvarchar" MaxLength="150" />
+    <Property Name="TipoRegistro" Type="nchar" MaxLength="1" />
+    <Property Name="Estado" Type="nchar" MaxLength="1" />
+    <Property Name="ActividadNegocio" Type="nvarchar(max)" />
+    <Property Name="NumeroSocios" Type="int" />
+    <Property Name="TotalAcciones" Type="int" />
+    <Property Name="EsSocioInterno" Type="bit" Nullable="false" />
+    <Property Name="TipoSocioInterno" Type="nchar" MaxLength="1" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MonedaActivos" Type="varchar" MaxLength="5" />
+    <Property Name="MonedaBienesRaices" Type="varchar" MaxLength="5" />
+    <Property Name="MonedaCapitalAutorizado" Type="varchar" MaxLength="5" />
+    <Property Name="MonedaCapitalPagado" Type="varchar" MaxLength="5" />
+    <Property Name="MonedaCapitalSocial" Type="varchar" MaxLength="5" />
+    <Property Name="SocioValido" Type="bit" />
+    <Property Name="ActividadIdCIUU" Type="varchar" MaxLength="10" />
+    <Property Name="ActividadNegocioOld" Type="nvarchar(max)" />
+    <Property Name="bActividadCIUU" Type="bit" />
+    <Property Name="isRncValido" Type="bit" Nullable="false" />
+    <Property Name="bActoAlguacil" Type="bit" />
+    <Property Name="ActividadCIUU" Type="nvarchar(max)" />
+    <Property Name="ActividadIdCIUU2" Type="varchar" MaxLength="10" />
+    <Property Name="ActividadCIUU2" Type="nvarchar(max)" />
+    <Property Name="Id_Cierre_Fiscal" Type="int" />
+    <Property Name="FechaAsamblea1" Type="datetime" />
+    <Property Name="FechaAsamblea2" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RegistrosActividades">
+    <Key>
+      <PropertyRef Name="AtividadId" />
+    </Key>
+    <Property Name="AtividadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="TipoActividadId" Type="int" Nullable="false" />
+    <Property Name="TipoActividadDescripcion" Type="varchar" MaxLength="200" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistrosActividadesEspecificas">
+    <Key>
+      <PropertyRef Name="AtividadId" />
+    </Key>
+    <Property Name="AtividadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="TipoActividadEspecificaId" Type="int" Nullable="false" />
+    <Property Name="ActividadEspecificaDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistrosOposiciones">
+    <Key>
+      <PropertyRef Name="RegistroOposicionId" />
+    </Key>
+    <Property Name="RegistroOposicionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OposicionId" Type="int" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="Requirientes" Type="varchar(max)" Nullable="false" />
+    <Property Name="Prioridad" Type="bit" Nullable="false" />
+    <Property Name="Cerrada" Type="bit" Nullable="false" />
+    <Property Name="FechaCierre" Type="datetime" />
+    <Property Name="Justificacion" Type="varchar(max)" />
+    <Property Name="Fecha_Modificacion" Type="datetime" />
+    <Property Name="Usuario" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="RegistrosSocios">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="SocioId" Type="int" Nullable="false" />
+    <Property Name="TipoSocio" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="TipoRelacion" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="DireccionId" Type="int" />
+    <Property Name="RepresentanteId" Type="int" />
+    <Property Name="CargoId" Type="int" />
+    <Property Name="CargoDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="NumeroRM" Type="nvarchar" MaxLength="10" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="TipoRelacionDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="CantidaCuotasAcciones" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="SeguimientoOposiciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Accion" Type="varchar" MaxLength="100" />
+    <Property Name="Fecha_Modificacion" Type="datetime" />
+    <Property Name="Usuario_Modificacion" Type="varchar" MaxLength="100" />
+    <Property Name="OposicionId" Type="int" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="NumeroActo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Apoderado" Type="varchar" MaxLength="50" />
+    <Property Name="TipoSentenciaId" Type="int" Nullable="false" />
+    <Property Name="Comentario" Type="varchar(max)" Nullable="false" />
+    <Property Name="RegistroOposicionId" Type="int" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="Requirientes" Type="varchar(max)" Nullable="false" />
+    <Property Name="Prioridad" Type="bit" Nullable="false" />
+    <Property Name="Cerrada" Type="bit" Nullable="false" />
+    <Property Name="FechaCierre" Type="datetime" />
+    <Property Name="Justificacion" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="SistemasArmonizados">
+    <Key>
+      <PropertyRef Name="SistemaArmonizadoId" />
+    </Key>
+    <Property Name="SistemaArmonizadoId" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TiposSentencias">
+    <Key>
+      <PropertyRef Name="TipoSentenciaId" />
+    </Key>
+    <Property Name="TipoSentenciaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Variables">
+    <Key>
+      <PropertyRef Name="VariableId" />
+    </Key>
+    <Property Name="VariableId" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TablaVariable" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CampoVariable" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ValorPredeterminado" Type="nvarchar" MaxLength="150" />
+    <Property Name="TipoFormato" Type="int" Nullable="false" />
+    <Property Name="Formato" Type="varchar" MaxLength="50" />
+    <Property Name="TipoDespliegue" Type="int" Nullable="false" />
+    <Property Name="Filtro" Type="nvarchar(max)" />
+    <Property Name="CaseFormat" Type="int" Nullable="false" />
+    <Property Name="TipoVariable" Type="int" Nullable="false" />
+    <Property Name="MultiCampoVariable" Type="bit" Nullable="false" />
+    <Property Name="MultiCampoDespiegue" Type="int" Nullable="false" />
+    <Property Name="MultiRow" Type="bit" Nullable="false" />
+    <Property Name="AutoReplace" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sociedades">
+    <Key>
+      <PropertyRef Name="SociedadId" />
+    </Key>
+    <Property Name="SociedadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="NombreSocial" Type="nvarchar" MaxLength="150" />
+    <Property Name="Rnc" Type="nvarchar" MaxLength="15" />
+    <Property Name="EsNacional" Type="bit" Nullable="false" />
+    <Property Name="NacionalidadId" Type="int" />
+    <Property Name="NacionalidadDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="FechaConstitucion" Type="datetime" />
+    <Property Name="DuracionSociedad" Type="varchar" MaxLength="30" />
+    <Property Name="FechaAsamblea" Type="datetime" />
+    <Property Name="DuraccionDirectiva" Type="int" />
+    <Property Name="EstatusId" Type="int" />
+    <Property Name="EsEnteRegulado" Type="bit" Nullable="false" />
+    <Property Name="TipoEnteReguladoId" Type="int" />
+    <Property Name="EnteReguladoDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="NoResolucion" Type="nvarchar" MaxLength="15" />
+    <Property Name="NumeroNaveIndustrial" Type="nvarchar" MaxLength="20" />
+    <Property Name="NombreSiglas" Type="nvarchar" MaxLength="255" />
+    <Property Name="SiglasConfig" Type="nvarchar" MaxLength="5" />
+    <Property Name="Suscripcion" Type="nchar" MaxLength="2" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DireccionId" Type="int" />
+    <Property Name="TipoSociedad" Type="varchar" MaxLength="100" />
+    <Property Name="Sufijo" Type="varchar" MaxLength="20" />
+    <Property Name="EstatusDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="FechaEnteRegulado" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SociedadesLogos">
+    <Key>
+      <PropertyRef Name="SociedadLogoId" />
+    </Key>
+    <Property Name="SociedadLogoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SociedadId" Type="int" Nullable="false" />
+    <Property Name="Logo" Type="varbinary(max)" />
+    <Property Name="LogoSmall" Type="varbinary(max)" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="Extension" Type="nchar" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="SociedadesRegistros">
+    <Key>
+      <PropertyRef Name="NumeroRegistro" />
+    </Key>
+    <Property Name="NumeroRegistro" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SociedadId" Type="int" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="bAdecuada" Type="bit" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EsValida" Type="bit" Nullable="false" />
+    <Property Name="bTransformada" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Suscursales">
+    <Key>
+      <PropertyRef Name="SucursalId" />
+    </Key>
+    <Property Name="SucursalId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SociedadId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="DireccionId" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DEFINICION_COLUMNAS">
+    <Key>
+      <PropertyRef Name="COLUMNA_ID" />
+    </Key>
+    <Property Name="COLUMNA_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE_TABLA" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NOMBRE_ESQUEMA" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NOMBRE_TABLA_CORTO" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="NOMBRE_COLUMNA" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ACEPTA_NULO" Type="bit" Nullable="false" />
+    <Property Name="TIPO_DATOS" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="LONGITUD" Type="int" />
+    <Property Name="VISIBLE" Type="bit" Nullable="false" />
+    <Property Name="TABLA_ENLACE" Type="nvarchar(max)" />
+    <Property Name="COLUMNA_ENLACE" Type="nvarchar(max)" />
+    <Property Name="TIPO_ENLACE" Type="int" />
+    <Property Name="CONSULTA" Type="nvarchar(max)" />
+    <Property Name="DESCRIPCION" Type="nvarchar(max)" />
+    <Property Name="TABLA_DEFAULT" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Asignaciones">
+    <Key>
+      <PropertyRef Name="AsignacionId" />
+    </Key>
+    <Property Name="AsignacionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="UltimoUsuarioId" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Comentario" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DocumentosTransacciones">
+    <Key>
+      <PropertyRef Name="DocumentoTransaccionId" />
+    </Key>
+    <Property Name="DocumentoTransaccionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="SubTransaccionId" Type="int" />
+    <Property Name="DocumentoId" Type="int" Nullable="false" />
+    <Property Name="FechaDocumento" Type="datetime" />
+    <Property Name="NoDocumento" Type="int" />
+    <Property Name="NoOriginales" Type="int" Nullable="false" />
+    <Property Name="NoCopias" Type="int" Nullable="false" />
+    <Property Name="Libro" Type="int" />
+    <Property Name="Folio" Type="int" />
+    <Property Name="Comentario" Type="nvarchar" MaxLength="1000" />
+    <Property Name="AlertaPago" Type="bit" />
+    <Property Name="CheckValidated" Type="bit" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="NumeroPaginas" Type="int" />
+    <Property Name="Digitalizado" Type="bit" />
+    <Property Name="FechaDigitalizacion" Type="datetime" />
+    <Property Name="Analizado" Type="bit" />
+    <Property Name="Sufijo" Type="varchar" MaxLength="7" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Documento" Type="nvarchar" MaxLength="150" />
+    <Property Name="Registrable" Type="bit" />
+    <Property Name="CostoOriginal" Type="money" />
+    <Property Name="CostoCopia" Type="money" />
+    <Property Name="Grupo" Type="int" />
+    <Property Name="WebDocumentoId" Type="int" />
+    <Property Name="FacturaId" Type="int" />
+    <Property Name="Invalido" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstatusTransacciones">
+    <Key>
+      <PropertyRef Name="EstatusTransId" />
+    </Key>
+    <Property Name="EstatusTransId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EstatusTransaccion" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="FlowStatus" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="FacturaId" />
+    </Key>
+    <Property Name="FacturaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Ncf" Type="varchar" MaxLength="25" />
+    <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Complementaria" Type="bit" Nullable="false" />
+    <Property Name="TipoNcf" Type="varchar" MaxLength="150" />
+    <Property Name="TotalFactura" Type="decimal" Precision="36" Scale="7" Nullable="false" />
+    <Property Name="UsuarioId" Type="int" />
+    <Property Name="Cajero" Type="varchar" MaxLength="15" />
+    <Property Name="RNC" Type="varchar" MaxLength="20" />
+    <Property Name="NombreCliente" Type="varchar" MaxLength="512" />
+    <Property Name="TipoComprobanteId" Type="int" />
+  </EntityType>
+  <EntityType Name="FormasPagos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FacturaId" Type="int" Nullable="false" />
+    <Property Name="FechaCuadre" Type="date" Nullable="false" />
+    <Property Name="FormaPago" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Valor" Type="money" Nullable="false" />
+    <Property Name="Tasa" Type="money" Nullable="false" />
+    <Property Name="Referencia" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="NoTarjeta" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Divisa" Type="money" Nullable="false" />
+    <Property Name="ValorEntregado" Type="money" Nullable="false" />
+    <Property Name="ValorDevuelto" Type="money" Nullable="false" />
+    <Property Name="Nota" Type="nvarchar(max)" />
+    <Property Name="BancoId" Type="int" />
+    <Property Name="BancoDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="ConfirmacionPagoTarjeta" Type="varchar" MaxLength="50" />
+    <Property Name="NumeroNotaCredito" Type="int" />
+  </EntityType>
+  <EntityType Name="NotificacionesTransacciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="Contacto" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ClienteContactado" Type="bit" Nullable="false" />
+    <Property Name="Comentario" Type="nvarchar" MaxLength="255" />
+    <Property Name="UsuarioId" Type="int" />
+  </EntityType>
+  <EntityType Name="SeguimientoTransacciones">
+    <Key>
+      <PropertyRef Name="SeguimientoId" />
+    </Key>
+    <Property Name="SeguimientoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Comentario" Type="text" Nullable="false" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UsuarioAsignadoId" Type="int" />
+    <Property Name="TipoComentario" Type="int" />
+    <Property Name="IsDefault" Type="bit" />
+  </EntityType>
+  <EntityType Name="SubTransacciones">
+    <Key>
+      <PropertyRef Name="SubTransaccionId" />
+    </Key>
+    <Property Name="SubTransaccionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="TipoTransaccionId" Type="int" Nullable="false" />
+    <Property Name="TipoServicio" Type="varchar" MaxLength="50" />
+    <Property Name="TipoServicioSufijo" Type="varchar" MaxLength="2" />
+    <Property Name="TipoServicioId" Type="int" Nullable="false" />
+    <Property Name="Servicio" Type="varchar" MaxLength="250" />
+    <Property Name="DestinoTraslado" Type="varchar" MaxLength="150" />
+    <Property Name="FlowId" Type="uniqueidentifier" />
+    <Property Name="Estatus" Type="int" Nullable="false" />
+    <Property Name="Estatus2" Type="int" />
+    <Property Name="CustomString1" Type="nvarchar" MaxLength="250" />
+    <Property Name="CustomString2" Type="nvarchar" MaxLength="250" />
+    <Property Name="CustomString3" Type="nvarchar" MaxLength="250" />
+    <Property Name="CustomInt1" Type="int" />
+    <Property Name="CustomInt2" Type="int" />
+    <Property Name="CustomInt3" Type="int" />
+    <Property Name="CustomDateTime1" Type="datetime" />
+    <Property Name="CustomDateTime2" Type="datetime" />
+    <Property Name="CustomDecimal1" Type="decimal" />
+    <Property Name="CustomDecimal2" Type="decimal" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Invalida" Type="bit" Nullable="false" />
+    <Property Name="SubTransaccionPadreId" Type="int" />
+    <Property Name="Fecha" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TiposPagos">
+    <Key>
+      <PropertyRef Name="TipoPagoId" />
+    </Key>
+    <Property Name="TipoPagoId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TransaccionDetalle">
+    <Key>
+      <PropertyRef Name="TransaccionDetalles" />
+    </Key>
+    <Property Name="TransaccionDetalles" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FacturaId" Type="int" Nullable="false" />
+    <Property Name="Cuenta" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="Detalle" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="PrecioUnitario" Type="money" Nullable="false" />
+    <Property Name="Descuento" Type="money" Nullable="false" />
+    <Property Name="Total" Type="money" StoreGeneratedPattern="Computed" />
+    <Property Name="TotalBruto" Type="money" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Transacciones">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Name="TransaccionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="TipoTransaccionId" Type="int" Nullable="false" />
+    <Property Name="TipoServicioId" Type="int" Nullable="false" />
+    <Property Name="Salicitante" Type="varchar" MaxLength="255" />
+    <Property Name="RNCSolicitante" Type="varchar" MaxLength="15" />
+    <Property Name="NombreContacto" Type="varchar" MaxLength="255" />
+    <Property Name="TelefonoContacto" Type="varchar" MaxLength="15" />
+    <Property Name="FaxContacto" Type="varchar" MaxLength="15" />
+    <Property Name="NoReciboDGII" Type="varchar" MaxLength="15" />
+    <Property Name="FechaReciboDGII" Type="datetime" />
+    <Property Name="MontoDGII" Type="money" />
+    <Property Name="DestinoTraslado" Type="varchar" MaxLength="150" />
+    <Property Name="Comentario" Type="nvarchar(max)" />
+    <Property Name="ComentarioHtml" Type="nvarchar(max)" />
+    <Property Name="FlowId" Type="uniqueidentifier" />
+    <Property Name="Estatus" Type="int" Nullable="false" />
+    <Property Name="Estatus2" Type="int" />
+    <Property Name="Prioridad" Type="nchar" MaxLength="1" />
+    <Property Name="CustomString1" Type="nvarchar" MaxLength="250" />
+    <Property Name="CustomString2" Type="nvarchar" MaxLength="250" />
+    <Property Name="CustomString3" Type="nvarchar" MaxLength="250" />
+    <Property Name="CustomInt1" Type="int" />
+    <Property Name="CustomInt2" Type="int" />
+    <Property Name="CustomInt3" Type="int" />
+    <Property Name="CustomDateTime1" Type="datetime" />
+    <Property Name="CustomDateTime2" Type="datetime" />
+    <Property Name="CustomDecimal1" Type="decimal" />
+    <Property Name="CustomDecimal2" Type="decimal" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="rowguid" Type="uniqueidentifier" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="NCF" Type="varchar" MaxLength="20" />
+    <Property Name="UsuarioId" Type="int" />
+    <Property Name="HoraInicio" Type="datetime" />
+    <Property Name="HoraFinal" Type="datetime" />
+    <Property Name="Receptor" Type="varchar" MaxLength="15" />
+    <Property Name="TipoNcf" Type="nvarchar" MaxLength="150" />
+    <Property Name="UbicacionExpedienteId" Type="int" />
+    <Property Name="UbicacionExterna" Type="varchar" MaxLength="100" />
+    <Property Name="TipoServicio" Type="varchar" MaxLength="50" />
+    <Property Name="TipoServicioSufijo" Type="varchar" MaxLength="2" />
+    <Property Name="Servicio" Type="varchar" MaxLength="250" />
+    <Property Name="TransaccionIdAnterior" Type="int" />
+    <Property Name="DesdeOfv" Type="bit" Nullable="false" />
+    <Property Name="VieneProblemas" Type="bit" Nullable="false" />
+    <Property Name="EsDigital" Type="bit" />
+    <Property Name="TipoDocumento" Type="varchar" MaxLength="20" />
+    <Property Name="CorreoContacto" Type="varchar" MaxLength="250" />
+    <Property Name="NumeroReciboOnapi" Type="varchar" MaxLength="50" />
+    <Property Name="MontoReciboOnapi" Type="money" />
+    <Property Name="FecharReciboOnapi" Type="date" />
+    <Property Name="ServicioVentanillaUnica" Type="bit" />
+    <Property Name="bEnviadoDGII" Type="bit" />
+    <Property Name="bConfirmacionDGII" Type="bit" />
+    <Property Name="numeroSolicitudDGII" Type="int" />
+    <Property Name="OrigenTransaccion" Type="varchar" MaxLength="3" />
+    <Property Name="RNCSolicitanteWeb" Type="varchar" MaxLength="15" />
+    <Property Name="SolicitanteWeb" Type="varchar" MaxLength="250" />
+    <Property Name="ImprimirCopias" Type="bit" />
+    <Property Name="CorreoEmpresa" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="TransaccionesPersonas">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="PersonaId" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransaccionesSociedades">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="SociedadId" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UbicacionesExpedientes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraSDQ.Persona.cvw_Direcciones' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_Direcciones">
+    <Key>
+      <PropertyRef Name="DireccionId" />
+      <PropertyRef Name="SectorDgii" />
+    </Key>
+    <Property Name="DireccionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Calle" Type="nvarchar" MaxLength="256" />
+    <Property Name="Numero" Type="nvarchar" MaxLength="6" />
+    <Property Name="CiudadId" Type="int" />
+    <Property Name="SectorId" Type="int" />
+    <Property Name="ApartadoPostal" Type="nvarchar" MaxLength="20" />
+    <Property Name="TelefonoCasa" Type="nvarchar" MaxLength="15" />
+    <Property Name="TelefonoOficina" Type="nvarchar" MaxLength="15" />
+    <Property Name="Extension" Type="int" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="SitioWeb" Type="nvarchar" MaxLength="256" />
+    <Property Name="Ciudad" Type="varchar" MaxLength="50" />
+    <Property Name="Sector" Type="varchar" MaxLength="100" />
+    <Property Name="Pais" Type="varchar" MaxLength="50" />
+    <Property Name="PaisId" Type="int" />
+    <Property Name="SectorDgii" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="SectorDgiiId" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraSDQ.Sistema.cvw_ReferenciasBancarias' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_ReferenciasBancarias">
+    <Key>
+      <PropertyRef Name="ReferenciaBancariaId" />
+      <PropertyRef Name="RegistroId" />
+      <PropertyRef Name="BancoId" />
+      <PropertyRef Name="FechaModificacion" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="ReferenciaBancariaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="BancoId" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Banco" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraSDQ.Sistema.cvw_RegistrosActividades' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_RegistrosActividades">
+    <Key>
+      <PropertyRef Name="AtividadId" />
+      <PropertyRef Name="RegistroId" />
+      <PropertyRef Name="TipoActividadId" />
+    </Key>
+    <Property Name="AtividadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="TipoActividadId" Type="int" Nullable="false" />
+    <Property Name="Actividad" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraSDQ.Sistema.cvw_RegistrosOposiciones' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_RegistrosOposiciones">
+    <Key>
+      <PropertyRef Name="RegistroOposicionId" />
+      <PropertyRef Name="OposicionId" />
+      <PropertyRef Name="RegistroId" />
+      <PropertyRef Name="Requirientes" />
+      <PropertyRef Name="Prioridad" />
+      <PropertyRef Name="Cerrada" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="TipoSentenciaId" />
+      <PropertyRef Name="Sintesis" />
+    </Key>
+    <Property Name="RegistroOposicionId" Type="int" Nullable="false" />
+    <Property Name="OposicionId" Type="int" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="Requirientes" Type="varchar(max)" Nullable="false" />
+    <Property Name="Prioridad" Type="bit" Nullable="false" />
+    <Property Name="Cerrada" Type="bit" Nullable="false" />
+    <Property Name="FechaCierre" Type="datetime" />
+    <Property Name="Apoderado" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="NumeroActo" Type="nvarchar" MaxLength="20" />
+    <Property Name="TipoSentenciaId" Type="int" Nullable="false" />
+    <Property Name="Sentencia" Type="nvarchar" MaxLength="100" />
+    <Property Name="Sintesis" Type="varchar(max)" Nullable="false" />
+    <Property Name="Demandado" Type="nvarchar" MaxLength="430" />
+    <Property Name="NumeroRegistro" Type="int" />
+    <Property Name="Justificacion" Type="varchar(max)" />
+    <Property Name="Fecha_Modificacion" Type="datetime" />
+    <Property Name="Usuario" Type="varchar" MaxLength="100" />
+    <Property Name="TipoRectificacionId" Type="int" />
+    <Property Name="PersonaId" Type="int" />
+    <Property Name="PersonaDescripcion" Type="varchar" MaxLength="200" />
+    <Property Name="TipoRectificacion" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraSDQ.Sistema.cvw_RegistrosProductos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_RegistrosProductos">
+    <Key>
+      <PropertyRef Name="ProductoId" />
+      <PropertyRef Name="RegistroId" />
+    </Key>
+    <Property Name="ProductoId" Type="int" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SistemaArmonizadoId" Type="nvarchar" MaxLength="10" />
+    <Property Name="SistemaAmortizado" Type="nvarchar" Nullable="false" MaxLength="300" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraSDQ.Sistema.cvw_RegistrosSocios' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_RegistrosSocios">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="CantidaCuotasAcciones" />
+      <PropertyRef Name="SectorDgii" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="SocioId" Type="int" Nullable="false" />
+    <Property Name="TipoSocio" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="TipoRelacion" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="DireccionId" Type="int" />
+    <Property Name="RalacionSocio" Type="varchar" MaxLength="50" />
+    <Property Name="RepresentanteId" Type="int" />
+    <Property Name="CargoId" Type="int" />
+    <Property Name="NumeroRM" Type="nvarchar" MaxLength="10" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Documento" Type="nvarchar" MaxLength="30" />
+    <Property Name="Accionista" Type="nvarchar" MaxLength="417" />
+    <Property Name="Representante" Type="nvarchar" MaxLength="203" />
+    <Property Name="Calle" Type="nvarchar" MaxLength="256" />
+    <Property Name="Numero" Type="nvarchar" MaxLength="6" />
+    <Property Name="CiudadId" Type="int" />
+    <Property Name="SectorId" Type="int" />
+    <Property Name="ApartadoPostal" Type="nvarchar" MaxLength="20" />
+    <Property Name="TelefonoCasa" Type="nvarchar" MaxLength="15" />
+    <Property Name="TelefonoOficina" Type="nvarchar" MaxLength="15" />
+    <Property Name="Extension" Type="int" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="SitioWeb" Type="nvarchar" MaxLength="256" />
+    <Property Name="Ciudad" Type="varchar" MaxLength="50" />
+    <Property Name="Sector" Type="varchar" MaxLength="100" />
+    <Property Name="Pais" Type="varchar" MaxLength="50" />
+    <Property Name="Cargo" Type="varchar" MaxLength="50" />
+    <Property Name="Nacionalidad" Type="varchar" MaxLength="50" />
+    <Property Name="Profesion" Type="nvarchar" MaxLength="50" />
+    <Property Name="EstadoCivil" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="CantidaCuotasAcciones" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="CargoDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="SectorDgiiId" Type="int" />
+    <Property Name="SectorDgii" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="PaisId" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraSDQ.Sociedad.cvw_SociedadesRegistros' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_SociedadesRegistros">
+    <Key>
+      <PropertyRef Name="SociedadId" />
+      <PropertyRef Name="EsNacional" />
+      <PropertyRef Name="EsEnteRegulado" />
+      <PropertyRef Name="NumeroRegistro" />
+      <PropertyRef Name="RegistroId" />
+      <PropertyRef Name="EsProvicional" />
+      <PropertyRef Name="Estado" />
+      <PropertyRef Name="EsSocioInterno" />
+      <PropertyRef Name="VersionRegistro" />
+      <PropertyRef Name="EsValida" />
+      <PropertyRef Name="isRncValido" />
+    </Key>
+    <Property Name="SociedadId" Type="int" Nullable="false" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="NombreSocial" Type="nvarchar" MaxLength="150" />
+    <Property Name="NombreEmpresa" Type="nvarchar" MaxLength="430" />
+    <Property Name="NombreSiglas" Type="nvarchar" MaxLength="255" />
+    <Property Name="Rnc" Type="nvarchar" MaxLength="15" />
+    <Property Name="EsNacional" Type="bit" Nullable="false" />
+    <Property Name="Nacionalidad" Type="varchar" MaxLength="50" />
+    <Property Name="NacionalidadId" Type="int" />
+    <Property Name="FechaConstitucion" Type="datetime" />
+    <Property Name="DuracionSociedad" Type="varchar" MaxLength="30" />
+    <Property Name="FechaAsamblea" Type="datetime" />
+    <Property Name="DuraccionDirectiva" Type="int" />
+    <Property Name="EstatusId" Type="int" />
+    <Property Name="EsEnteRegulado" Type="bit" Nullable="false" />
+    <Property Name="TipoEnteReguladoId" Type="int" />
+    <Property Name="NoResolucion" Type="nvarchar" MaxLength="15" />
+    <Property Name="NumeroNaveIndustrial" Type="nvarchar" MaxLength="20" />
+    <Property Name="NumeroRegistro" Type="int" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="FechaEmision" Type="datetime" />
+    <Property Name="FechaVencimiento" Type="datetime" />
+    <Property Name="NombreEstablecimiento" Type="nvarchar" MaxLength="150" />
+    <Property Name="CapitalSocial" Type="money" />
+    <Property Name="TipoMonedaCapitalSocial" Type="int" />
+    <Property Name="CapitalAutorizado" Type="money" />
+    <Property Name="TipoMonedaCapitalAutorizado" Type="int" />
+    <Property Name="CapitalPagado" Type="money" />
+    <Property Name="TipoMonedaCapitalPagado" Type="int" />
+    <Property Name="Activos" Type="money" />
+    <Property Name="TipoMonedaActivos" Type="int" />
+    <Property Name="BienesRaices" Type="money" />
+    <Property Name="TipoMonedaBienesRaices" Type="int" />
+    <Property Name="FechaInicioOperacion" Type="datetime" />
+    <Property Name="EmpleadosMasculinos" Type="int" />
+    <Property Name="EmpleadosFemeninos" Type="int" />
+    <Property Name="EmpleadosTotal" Type="int" />
+    <Property Name="DireccionId" Type="int" />
+    <Property Name="NombreComercial" Type="nvarchar" MaxLength="150" />
+    <Property Name="RegistroNombreComercial" Type="nvarchar" MaxLength="15" />
+    <Property Name="MarcaFabrica" Type="nvarchar" MaxLength="150" />
+    <Property Name="RegistroMarcaFabrica" Type="nvarchar" MaxLength="15" />
+    <Property Name="PatenteInversion" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegistroPatenteInversion" Type="nvarchar" MaxLength="15" />
+    <Property Name="EsProvicional" Type="bit" Nullable="false" />
+    <Property Name="Comentario1" Type="nvarchar(max)" />
+    <Property Name="Comentario2" Type="nvarchar(max)" />
+    <Property Name="NombreOperador" Type="nvarchar" MaxLength="50" />
+    <Property Name="NombreSociedad" Type="nvarchar" MaxLength="150" />
+    <Property Name="TipoRegistro" Type="nchar" MaxLength="1" />
+    <Property Name="Estado" Type="nvarchar" Nullable="false" MaxLength="14" />
+    <Property Name="ActividadNegocio" Type="nvarchar(max)" />
+    <Property Name="NumeroSocios" Type="int" />
+    <Property Name="EsSocioInterno" Type="bit" Nullable="false" />
+    <Property Name="TipoSocioInterno" Type="nchar" MaxLength="1" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="TotalAcciones" Type="int" />
+    <Property Name="AbreviaturaTipoMonedaActivos" Type="varchar" MaxLength="5" />
+    <Property Name="AbreviaturaTipoMonedaBienesRaices" Type="varchar" MaxLength="5" />
+    <Property Name="AbreviaturaTIpoMonedaCapitalAutorizado" Type="varchar" MaxLength="5" />
+    <Property Name="AbreviaturaTipoMonedaCapitalPagado" Type="varchar" MaxLength="5" />
+    <Property Name="AbreviaturaTipoMonedaCapitalSocial" Type="varchar" MaxLength="5" />
+    <Property Name="Sociedad" Type="varchar" MaxLength="100" />
+    <Property Name="SufijoSociedad" Type="varchar" MaxLength="20" />
+    <Property Name="TipoEnteRegulado" Type="varchar" MaxLength="50" />
+    <Property Name="SiglasConfig" Type="nvarchar" MaxLength="5" />
+    <Property Name="Suscripcion" Type="varchar" MaxLength="7" />
+    <Property Name="bAdecuada" Type="bit" />
+    <Property Name="Id_Cierre_Fiscal" Type="int" />
+    <Property Name="ActividadCIUU2" Type="nvarchar(max)" />
+    <Property Name="ActividadIdCIUU2" Type="varchar" MaxLength="10" />
+    <Property Name="ActividadCIUU" Type="nvarchar(max)" />
+    <Property Name="VersionRegistro" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EsValida" Type="bit" Nullable="false" />
+    <Property Name="bActoAlguacil" Type="bit" />
+    <Property Name="FechaAsamblea1" Type="datetime" />
+    <Property Name="FechaAsamblea2" Type="datetime" />
+    <Property Name="isRncValido" Type="bit" Nullable="false" />
+    <Property Name="FechaEnteRegulado" Type="datetime" />
+    <Property Name="bActividadCIUU" Type="bit" />
+    <Property Name="ActividadIdCIUU" Type="varchar" MaxLength="10" />
+    <Property Name="SocioValido" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraSDQ.Website.cvw_PersonasEnSociedades' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_PersonasEnSociedades">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="RegistroId" />
+      <PropertyRef Name="NumeroRegistro" />
+      <PropertyRef Name="SocioId" />
+      <PropertyRef Name="TipoSocio" />
+      <PropertyRef Name="TipoRelacion" />
+      <PropertyRef Name="Rnc" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="NumeroRegistro" Type="int" Nullable="false" />
+    <Property Name="SocioId" Type="int" Nullable="false" />
+    <Property Name="FechaConstitucion" Type="datetime" />
+    <Property Name="TipoSocio" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="TipoRelacion" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="RegistroRelacion" Type="varchar" MaxLength="50" />
+    <Property Name="Documento" Type="nvarchar" MaxLength="30" />
+    <Property Name="Accionista" Type="nvarchar" MaxLength="417" />
+    <Property Name="NombreSocial" Type="nvarchar" MaxLength="150" />
+    <Property Name="Rnc" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="EstatusId" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraSDQ.Website.cvw_SumarioSociedades' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_SumarioSociedades">
+    <Key>
+      <PropertyRef Name="SociedadId" />
+      <PropertyRef Name="RegistroId" />
+      <PropertyRef Name="NumeroRegistro" />
+    </Key>
+    <Property Name="SociedadId" Type="int" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="NumeroRegistro" Type="int" Nullable="false" />
+    <Property Name="NombreSocial" Type="nvarchar" MaxLength="150" />
+    <Property Name="Rnc" Type="nvarchar" MaxLength="15" />
+    <Property Name="FechaConstitucion" Type="datetime" />
+    <Property Name="Sufijo" Type="varchar" MaxLength="20" />
+    <Property Name="NombreTipoSociedad" Type="varchar" MaxLength="100" />
+    <Property Name="EstatusId" Type="int" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="bAdecuada" Type="bit" />
+    <Property Name="Estatus_fecha" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_Agenda_TiposTareas">
+    <End Role="TiposTareas" Type="CamaraSRMModel.Store.TiposTareas" Multiplicity="1" />
+    <End Role="Agenda" Type="CamaraSRMModel.Store.Agenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposTareas">
+        <PropertyRef Name="TipoTareaId" />
+      </Principal>
+      <Dependent Role="Agenda">
+        <PropertyRef Name="TipoTareaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AngendaTransacciones_Agenda">
+    <End Role="Agenda" Type="CamaraSRMModel.Store.Agenda" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AngendaTransacciones" Type="CamaraSRMModel.Store.AngendaTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agenda">
+        <PropertyRef Name="AgendaId" />
+      </Principal>
+      <Dependent Role="AngendaTransacciones">
+        <PropertyRef Name="AgendaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AngendaTransacciones_Transacciones">
+    <End Role="Transacciones" Type="CamaraSRMModel.Store.Transacciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AngendaTransacciones" Type="CamaraSRMModel.Store.AngendaTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="AngendaTransacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asignaciones_Transacciones">
+    <End Role="Transacciones" Type="CamaraSRMModel.Store.Transacciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Asignaciones" Type="CamaraSRMModel.Store.Asignaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="Asignaciones">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentosTransacciones_SubTransacciones">
+    <End Role="SubTransacciones" Type="CamaraSRMModel.Store.SubTransacciones" Multiplicity="0..1" />
+    <End Role="DocumentosTransacciones" Type="CamaraSRMModel.Store.DocumentosTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubTransacciones">
+        <PropertyRef Name="SubTransaccionId" />
+      </Principal>
+      <Dependent Role="DocumentosTransacciones">
+        <PropertyRef Name="SubTransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentosTransacciones_Transacciones">
+    <End Role="Transacciones" Type="CamaraSRMModel.Store.Transacciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DocumentosTransacciones" Type="CamaraSRMModel.Store.DocumentosTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="DocumentosTransacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Facturas_Transacciones">
+    <End Role="Transacciones" Type="CamaraSRMModel.Store.Transacciones" Multiplicity="1" />
+    <End Role="Facturas" Type="CamaraSRMModel.Store.Facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="Facturas">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormasPagos_Facturas">
+    <End Role="Facturas" Type="CamaraSRMModel.Store.Facturas" Multiplicity="1" />
+    <End Role="FormasPagos" Type="CamaraSRMModel.Store.FormasPagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="FormasPagos">
+        <PropertyRef Name="FacturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HistoricosDocumentos_Registros">
+    <End Role="Registros" Type="CamaraSRMModel.Store.Registros" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HistoricosDocumentos" Type="CamaraSRMModel.Store.HistoricosDocumentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="HistoricosDocumentos">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModulosRoles_Modules">
+    <End Role="Modulos" Type="CamaraSRMModel.Store.Modulos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ModulosRoles" Type="CamaraSRMModel.Store.ModulosRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulos">
+        <PropertyRef Name="ModuloId" />
+      </Principal>
+      <Dependent Role="ModulosRoles">
+        <PropertyRef Name="ModuloId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModulosRoles_Roles">
+    <End Role="Roles" Type="CamaraSRMModel.Store.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ModulosRoles" Type="CamaraSRMModel.Store.ModulosRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RolId" />
+      </Principal>
+      <Dependent Role="ModulosRoles">
+        <PropertyRef Name="RolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotasCredito_Facturas">
+    <End Role="Facturas" Type="CamaraSRMModel.Store.Facturas" Multiplicity="0..1" />
+    <End Role="NotasCredito" Type="CamaraSRMModel.Store.NotasCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="NotasCredito">
+        <PropertyRef Name="FacturaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotificacionesTransacciones_Transacciones">
+    <End Role="Transacciones" Type="CamaraSRMModel.Store.Transacciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NotificacionesTransacciones" Type="CamaraSRMModel.Store.NotificacionesTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="NotificacionesTransacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Oposiciones_TiposSentencias">
+    <End Role="TiposSentencias" Type="CamaraSRMModel.Store.TiposSentencias" Multiplicity="1" />
+    <End Role="Oposiciones" Type="CamaraSRMModel.Store.Oposiciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposSentencias">
+        <PropertyRef Name="TipoSentenciaId" />
+      </Principal>
+      <Dependent Role="Oposiciones">
+        <PropertyRef Name="TipoSentenciaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonasDirecciones_Direciones">
+    <End Role="Direcciones" Type="CamaraSRMModel.Store.Direcciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PersonasDirecciones" Type="CamaraSRMModel.Store.PersonasDirecciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Direcciones">
+        <PropertyRef Name="DireccionId" />
+      </Principal>
+      <Dependent Role="PersonasDirecciones">
+        <PropertyRef Name="DireccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonasDirecciones_Personas">
+    <End Role="Personas" Type="CamaraSRMModel.Store.Personas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PersonasDirecciones" Type="CamaraSRMModel.Store.PersonasDirecciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personas">
+        <PropertyRef Name="PersonaId" />
+      </Principal>
+      <Dependent Role="PersonasDirecciones">
+        <PropertyRef Name="PersonaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonasRegistros_Personas">
+    <End Role="Personas" Type="CamaraSRMModel.Store.Personas" Multiplicity="1" />
+    <End Role="PersonasRegistros" Type="CamaraSRMModel.Store.PersonasRegistros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personas">
+        <PropertyRef Name="PersonaId" />
+      </Principal>
+      <Dependent Role="PersonasRegistros">
+        <PropertyRef Name="PersonaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonasRegistros_Registros">
+    <End Role="Registros" Type="CamaraSRMModel.Store.Registros" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PersonasRegistros" Type="CamaraSRMModel.Store.PersonasRegistros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="PersonasRegistros">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Registros">
+    <End Role="Registros" Type="CamaraSRMModel.Store.Registros" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Productos" Type="CamaraSRMModel.Store.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_SistemasArmonizados">
+    <End Role="SistemasArmonizados" Type="CamaraSRMModel.Store.SistemasArmonizados" Multiplicity="0..1" />
+    <End Role="Productos" Type="CamaraSRMModel.Store.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SistemasArmonizados">
+        <PropertyRef Name="SistemaArmonizadoId" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="SistemaArmonizadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenciasBancarias_Registros">
+    <End Role="Registros" Type="CamaraSRMModel.Store.Registros" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ReferenciasBancarias" Type="CamaraSRMModel.Store.ReferenciasBancarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="ReferenciasBancarias">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenciasComerciales_Registros">
+    <End Role="Registros" Type="CamaraSRMModel.Store.Registros" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ReferenciasComerciales" Type="CamaraSRMModel.Store.ReferenciasComerciales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="ReferenciasComerciales">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Registros_Direcciones">
+    <End Role="Direcciones" Type="CamaraSRMModel.Store.Direcciones" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Registros" Type="CamaraSRMModel.Store.Registros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Direcciones">
+        <PropertyRef Name="DireccionId" />
+      </Principal>
+      <Dependent Role="Registros">
+        <PropertyRef Name="DireccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrosActividades_Registros">
+    <End Role="Registros" Type="CamaraSRMModel.Store.Registros" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RegistrosActividades" Type="CamaraSRMModel.Store.RegistrosActividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="RegistrosActividades">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrosActividadesEspecificas_Registros">
+    <End Role="Registros" Type="CamaraSRMModel.Store.Registros" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RegistrosActividadesEspecificas" Type="CamaraSRMModel.Store.RegistrosActividadesEspecificas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="RegistrosActividadesEspecificas">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrosOposiciones_Oposiciones">
+    <End Role="Oposiciones" Type="CamaraSRMModel.Store.Oposiciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RegistrosOposiciones" Type="CamaraSRMModel.Store.RegistrosOposiciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Oposiciones">
+        <PropertyRef Name="OposicionId" />
+      </Principal>
+      <Dependent Role="RegistrosOposiciones">
+        <PropertyRef Name="OposicionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrosOposiciones_Registros">
+    <End Role="Registros" Type="CamaraSRMModel.Store.Registros" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RegistrosOposiciones" Type="CamaraSRMModel.Store.RegistrosOposiciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="RegistrosOposiciones">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SeguimientoTransacciones_Transacciones">
+    <End Role="Transacciones" Type="CamaraSRMModel.Store.Transacciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SeguimientoTransacciones" Type="CamaraSRMModel.Store.SeguimientoTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="SeguimientoTransacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SociedadesLogos_Sociedades">
+    <End Role="Sociedades" Type="CamaraSRMModel.Store.Sociedades" Multiplicity="1" />
+    <End Role="SociedadesLogos" Type="CamaraSRMModel.Store.SociedadesLogos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sociedades">
+        <PropertyRef Name="SociedadId" />
+      </Principal>
+      <Dependent Role="SociedadesLogos">
+        <PropertyRef Name="SociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SociedadesRegistros_Registros">
+    <End Role="Registros" Type="CamaraSRMModel.Store.Registros" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SociedadesRegistros" Type="CamaraSRMModel.Store.SociedadesRegistros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="SociedadesRegistros">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SociedadesRegistros_Sociedades">
+    <End Role="Sociedades" Type="CamaraSRMModel.Store.Sociedades" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SociedadesRegistros" Type="CamaraSRMModel.Store.SociedadesRegistros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sociedades">
+        <PropertyRef Name="SociedadId" />
+      </Principal>
+      <Dependent Role="SociedadesRegistros">
+        <PropertyRef Name="SociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubTransacciones_SubTransacciones">
+    <End Role="SubTransacciones" Type="CamaraSRMModel.Store.SubTransacciones" Multiplicity="0..1" />
+    <End Role="SubTransacciones1" Type="CamaraSRMModel.Store.SubTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubTransacciones">
+        <PropertyRef Name="SubTransaccionId" />
+      </Principal>
+      <Dependent Role="SubTransacciones1">
+        <PropertyRef Name="SubTransaccionPadreId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubTransacciones_Transacciones">
+    <End Role="Transacciones" Type="CamaraSRMModel.Store.Transacciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SubTransacciones" Type="CamaraSRMModel.Store.SubTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="SubTransacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Suscursales_Sociedades">
+    <End Role="Sociedades" Type="CamaraSRMModel.Store.Sociedades" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Suscursales" Type="CamaraSRMModel.Store.Suscursales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sociedades">
+        <PropertyRef Name="SociedadId" />
+      </Principal>
+      <Dependent Role="Suscursales">
+        <PropertyRef Name="SociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionDetalle_Facturas">
+    <End Role="Facturas" Type="CamaraSRMModel.Store.Facturas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TransaccionDetalle" Type="CamaraSRMModel.Store.TransaccionDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="TransaccionDetalle">
+        <PropertyRef Name="FacturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transacciones_UbicacionesExpedientes">
+    <End Role="UbicacionesExpedientes" Type="CamaraSRMModel.Store.UbicacionesExpedientes" Multiplicity="0..1" />
+    <End Role="Transacciones" Type="CamaraSRMModel.Store.Transacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UbicacionesExpedientes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transacciones">
+        <PropertyRef Name="UbicacionExpedienteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionesPersonas_Transacciones">
+    <End Role="Transacciones" Type="CamaraSRMModel.Store.Transacciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TransaccionesPersonas" Type="CamaraSRMModel.Store.TransaccionesPersonas" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="TransaccionesPersonas">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionesSociedades_Transacciones">
+    <End Role="Transacciones" Type="CamaraSRMModel.Store.Transacciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TransaccionesSociedades" Type="CamaraSRMModel.Store.TransaccionesSociedades" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="TransaccionesSociedades">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosContadores_Usuarios">
+    <End Role="Usuarios" Type="CamaraSRMModel.Store.Usuarios" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UsuariosContadores" Type="CamaraSRMModel.Store.UsuariosContadores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="UsuariosContadores">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosRoles_Roles">
+    <End Role="Roles" Type="CamaraSRMModel.Store.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UsuariosRoles" Type="CamaraSRMModel.Store.UsuariosRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RolId" />
+      </Principal>
+      <Dependent Role="UsuariosRoles">
+        <PropertyRef Name="RolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosRoles_Usuarios">
+    <End Role="Usuarios" Type="CamaraSRMModel.Store.Usuarios" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UsuariosRoles" Type="CamaraSRMModel.Store.UsuariosRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="UsuariosRoles">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="csp_CompaniaRecibidasPorCuatrimestres" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IsLoadFechaFinal" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="csp_CompaniaRecibidasPorDiasMeses" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IsLoadFechaFinal" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="csp_CompaniaRecibidasPorMeses" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IsLoadFechaFinal" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="csp_CompaniaRecibidasPorSemestres" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IsLoadFechaFinal" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="csp_CompaniaRecibidasPorTrimestres" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IsLoadFechaFinal" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="csp_CompaniasPorEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="EstadoId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_CompaniasPorEstadoList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="EstadoId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_DetallesTransaccionesInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="Estatus" Type="varchar" Mode="In" />
+    <Parameter Name="TipoTransaccion" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_MovimientoTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaMovimientoInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaMovimientoFinal" Type="date" Mode="In" />
+    <Parameter Name="Estatus" Type="varchar" Mode="In" />
+    <Parameter Name="TipoTransaccion" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicio" Type="varchar" Mode="In" />
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+  </Function>
+  <Function Name="csp_Oposiciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="RegistroId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_OposicionesByPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+  </Function>
+  <Function Name="csp_OposicionesInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="NumeroRegistroInicial" Type="int" Mode="In" />
+    <Parameter Name="NumeroRegistroFinal" Type="int" Mode="In" />
+    <Parameter Name="FechaCierreInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaCierreFinal" Type="date" Mode="In" />
+    <Parameter Name="Rnc" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroActo" Type="varchar" Mode="In" />
+    <Parameter Name="Demendado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_ResumenTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="Estatus" Type="varchar" Mode="In" />
+    <Parameter Name="TipoTransaccion" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_SociedadesByActividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="Actividad" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroRegistroInicial" Type="int" Mode="In" />
+    <Parameter Name="NumeroRegistroFinal" Type="int" Mode="In" />
+    <Parameter Name="FechaConstitucionInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaConstitucionFinal" Type="date" Mode="In" />
+    <Parameter Name="FechaEmisionInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaEmisionFinal" Type="date" Mode="In" />
+    <Parameter Name="FechaVencimientoInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaVencimientoFinal" Type="date" Mode="In" />
+  </Function>
+  <Function Name="csp_SociedadesByEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroRegistroInicial" Type="int" Mode="In" />
+    <Parameter Name="NumeroRegistroFinal" Type="int" Mode="In" />
+    <Parameter Name="FechaConstitucionInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaConstitucionFinal" Type="date" Mode="In" />
+    <Parameter Name="FechaEmisionInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaEmisionFinal" Type="date" Mode="In" />
+    <Parameter Name="FechaVencimientoInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaVencimientoFinal" Type="date" Mode="In" />
+  </Function>
+  <Function Name="csp_TransaccionesByActividades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="TipoTransaccion" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_TransaccionesByProvincia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="TipoTransaccion" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_TransaccionesFlujo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="TipoTransaccion" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_TransaccionesInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="Estatus" Type="varchar" Mode="In" />
+    <Parameter Name="TipoTransaccion" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_TransaccionesPorEstatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="Filto_Estatus" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_TransaccionesTrabajadas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="UsuarioId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_TransaccionesTrabajadasByActividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaMovimientoInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaMovimientoFinal" Type="date" Mode="In" />
+    <Parameter Name="TipoTransaccion" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_TransaccionesTrabajadasByAnalisis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaMovimientoInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaMovimientoFinal" Type="date" Mode="In" />
+  </Function>
+  <Function Name="csp_TrasaccionesPorServiciosRecibidas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consulta">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="TiposTransacciones" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="cfn_ValidarValor" ReturnType="money" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Valor" Type="money" Mode="In" />
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="cfn_ValorAumentoCapital" ReturnType="decimal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CapitalAutorizado" Type="decimal" Mode="In" />
+    <Parameter Name="CapitalModificado" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="cfn_ValorDevuelto" ReturnType="money" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TotalEntregado" Type="money" Mode="In" />
+    <Parameter Name="TotalPagar" Type="money" Mode="In" />
+  </Function>
+  <Function Name="cfn_ValorReduccionCapital" ReturnType="decimal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CapitalAutorizado" Type="decimal" Mode="In" />
+    <Parameter Name="CapitalModificado" Type="decimal" Mode="In" />
+    <Parameter Name="Tipo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_InsertUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NombreUsuario" Type="nvarchar" Mode="In" />
+    <Parameter Name="NombreCompleto" Type="nvarchar" Mode="In" />
+    <Parameter Name="Dominio" Type="nvarchar" Mode="In" />
+    <Parameter Name="Administrador" Type="bit" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="UsuarioActivo" Type="bit" Mode="In" />
+    <Parameter Name="ContadorAsignaciones" Type="int" Mode="In" />
+    <Parameter Name="AutentificacionId" Type="binary" Mode="In" />
+    <Parameter Name="RolId" Type="int" Mode="In" />
+    <Parameter Name="NombreUsuarioReferencia" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContadorRecibo" Type="int" Mode="In" />
+    <Parameter Name="Receptor" Type="bit" Mode="In" />
+    <Parameter Name="Iniciales" Type="varchar" Mode="In" />
+    <Parameter Name="Documento" Type="varchar" Mode="In" />
+    <Parameter Name="UsuarioEliminado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="csp_SelectRegistros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="csp_UpdateUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NombreUsuario" Type="nvarchar" Mode="In" />
+    <Parameter Name="NombreCompleto" Type="nvarchar" Mode="In" />
+    <Parameter Name="Dominio" Type="nvarchar" Mode="In" />
+    <Parameter Name="Administrador" Type="bit" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="AutentificacionId" Type="binary" Mode="In" />
+    <Parameter Name="UsuarioActivo" Type="bit" Mode="In" />
+    <Parameter Name="ContadorAsignaciones" Type="int" Mode="In" />
+    <Parameter Name="Original_UsuarioId" Type="int" Mode="In" />
+    <Parameter Name="RolId" Type="int" Mode="In" />
+    <Parameter Name="NombreUsuarioReferencia" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContadorRecibo" Type="int" Mode="In" />
+    <Parameter Name="Receptor" Type="bit" Mode="In" />
+    <Parameter Name="Iniciales" Type="varchar" Mode="In" />
+    <Parameter Name="Documento" Type="varchar" Mode="In" />
+    <Parameter Name="UsuarioEliminado" Type="bit" Mode="In" />
+    <Parameter Name="Original_UsuariosRolesId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_UsuariosContadoresUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UsuarioId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_ValidaRegistroVencido" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroRegistro" Type="int" Mode="In" />
+    <Parameter Name="IsSociedad" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="GetAllTransations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TransacionId" Type="int" Mode="In" />
+    <Parameter Name="Compania" Type="varchar" Mode="In" />
+    <Parameter Name="TipoTransaccionId" Type="int" Mode="In" />
+    <Parameter Name="EstatusTransId" Type="int" Mode="In" />
+    <Parameter Name="FechaDesde" Type="varchar" Mode="In" />
+    <Parameter Name="FechaHasta" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_DeleteDireciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Persona">
+    <Parameter Name="Original_DireccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_InsertDireciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Persona">
+    <Parameter Name="Calle" Type="nvarchar" Mode="In" />
+    <Parameter Name="Numero" Type="nvarchar" Mode="In" />
+    <Parameter Name="CiudadId" Type="int" Mode="In" />
+    <Parameter Name="SectorId" Type="int" Mode="In" />
+    <Parameter Name="ApartadoPostal" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoCasa" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoOficina" Type="nvarchar" Mode="In" />
+    <Parameter Name="Extension" Type="int" Mode="In" />
+    <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="SitioWeb" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="csp_SelectDireciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Persona" />
+  <Function Name="csp_UpdateDireciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Persona">
+    <Parameter Name="Calle" Type="nvarchar" Mode="In" />
+    <Parameter Name="Numero" Type="nvarchar" Mode="In" />
+    <Parameter Name="CiudadId" Type="int" Mode="In" />
+    <Parameter Name="SectorId" Type="int" Mode="In" />
+    <Parameter Name="ApartadoPostal" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoCasa" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoOficina" Type="nvarchar" Mode="In" />
+    <Parameter Name="Extension" Type="int" Mode="In" />
+    <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="SitioWeb" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_DireccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_ContadorRecibo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="UsuarioId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_DeleteSociedadesRegistros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="Original_SociedadRegistroId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_GetAllSociedadesRegistros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema" />
+  <Function Name="csp_GetCounterValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="Tag" Type="varchar" Mode="In" />
+    <Parameter Name="CounterValue" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="csp_GetNcfSecuencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="Codigo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_InsertRegistros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="FechaEmision" Type="datetime" Mode="In" />
+    <Parameter Name="FechaVencimiento" Type="datetime" Mode="In" />
+    <Parameter Name="NombreEstablecimiento" Type="nvarchar" Mode="In" />
+    <Parameter Name="CapitalSocial" Type="money" Mode="In" />
+    <Parameter Name="CapitalAutorizado" Type="money" Mode="In" />
+    <Parameter Name="CapitalPagado" Type="money" Mode="In" />
+    <Parameter Name="Activos" Type="money" Mode="In" />
+    <Parameter Name="BienesRaices" Type="money" Mode="In" />
+    <Parameter Name="FechaInicioOperacion" Type="datetime" Mode="In" />
+    <Parameter Name="EmpleadosMasculinos" Type="int" Mode="In" />
+    <Parameter Name="EmpleadosFemeninos" Type="int" Mode="In" />
+    <Parameter Name="DireccionId" Type="int" Mode="In" />
+    <Parameter Name="NombreComercial" Type="nvarchar" Mode="In" />
+    <Parameter Name="RegistroNombreComercial" Type="nvarchar" Mode="In" />
+    <Parameter Name="MarcaFabrica" Type="nvarchar" Mode="In" />
+    <Parameter Name="RegistroMarcaFabrica" Type="nvarchar" Mode="In" />
+    <Parameter Name="PatenteInversion" Type="nvarchar" Mode="In" />
+    <Parameter Name="RegistroPatenteInversion" Type="nvarchar" Mode="In" />
+    <Parameter Name="EsProvicional" Type="bit" Mode="In" />
+    <Parameter Name="Comentario1" Type="text" Mode="In" />
+    <Parameter Name="Comentario2" Type="text" Mode="In" />
+    <Parameter Name="NombreOperador" Type="nvarchar" Mode="In" />
+    <Parameter Name="NombreSociedad" Type="nvarchar" Mode="In" />
+    <Parameter Name="TipoRegistro" Type="nchar" Mode="In" />
+    <Parameter Name="Estado" Type="nchar" Mode="In" />
+    <Parameter Name="ActividadNegocio" Type="text" Mode="In" />
+    <Parameter Name="NumeroSocios" Type="int" Mode="In" />
+    <Parameter Name="EsSocioInterno" Type="bit" Mode="In" />
+    <Parameter Name="TipoSocioInterno" Type="nchar" Mode="In" />
+    <Parameter Name="FechaCreacion" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="csp_OposiocionesList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="wheres" Type="nvarchar" Mode="In" />
+    <Parameter Name="top" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="csp_RegistrosSocios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="RegistroId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_SeguimientoOposicionesList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="OposicionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_UpdateRegistros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="FechaEmision" Type="datetime" Mode="In" />
+    <Parameter Name="FechaVencimiento" Type="datetime" Mode="In" />
+    <Parameter Name="NombreEstablecimiento" Type="nvarchar" Mode="In" />
+    <Parameter Name="CapitalSocial" Type="money" Mode="In" />
+    <Parameter Name="CapitalAutorizado" Type="money" Mode="In" />
+    <Parameter Name="CapitalPagado" Type="money" Mode="In" />
+    <Parameter Name="Activos" Type="money" Mode="In" />
+    <Parameter Name="BienesRaices" Type="money" Mode="In" />
+    <Parameter Name="FechaInicioOperacion" Type="datetime" Mode="In" />
+    <Parameter Name="EmpleadosMasculinos" Type="int" Mode="In" />
+    <Parameter Name="EmpleadosFemeninos" Type="int" Mode="In" />
+    <Parameter Name="DireccionId" Type="int" Mode="In" />
+    <Parameter Name="NombreComercial" Type="nvarchar" Mode="In" />
+    <Parameter Name="RegistroNombreComercial" Type="nvarchar" Mode="In" />
+    <Parameter Name="MarcaFabrica" Type="nvarchar" Mode="In" />
+    <Parameter Name="RegistroMarcaFabrica" Type="nvarchar" Mode="In" />
+    <Parameter Name="PatenteInversion" Type="nvarchar" Mode="In" />
+    <Parameter Name="RegistroPatenteInversion" Type="nvarchar" Mode="In" />
+    <Parameter Name="EsProvicional" Type="bit" Mode="In" />
+    <Parameter Name="Comentario1" Type="text" Mode="In" />
+    <Parameter Name="Comentario2" Type="text" Mode="In" />
+    <Parameter Name="NombreOperador" Type="nvarchar" Mode="In" />
+    <Parameter Name="NombreSociedad" Type="nvarchar" Mode="In" />
+    <Parameter Name="TipoRegistro" Type="nchar" Mode="In" />
+    <Parameter Name="Estado" Type="nchar" Mode="In" />
+    <Parameter Name="ActividadNegocio" Type="text" Mode="In" />
+    <Parameter Name="NumeroSocios" Type="int" Mode="In" />
+    <Parameter Name="EsSocioInterno" Type="bit" Mode="In" />
+    <Parameter Name="TipoSocioInterno" Type="nchar" Mode="In" />
+    <Parameter Name="FechaCreacion" Type="datetime" Mode="In" />
+    <Parameter Name="Original_RegistroId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_Variables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="TipoVariable" Type="int" Mode="In" />
+    <Parameter Name="TipoVariablesComunes" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteActividades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="RegistroID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetNextNoRegistro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="Tag" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InsertarLogOposiciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sistema">
+    <Parameter Name="RegistroOposicionId" Type="int" Mode="In" />
+    <Parameter Name="Accion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="csp_DeleteSocidades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sociedad">
+    <Parameter Name="Original_SociedadId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_InsertSociedades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sociedad">
+    <Parameter Name="TipoSociedadId" Type="int" Mode="In" />
+    <Parameter Name="NombreSocial" Type="nvarchar" Mode="In" />
+    <Parameter Name="Rnc" Type="nvarchar" Mode="In" />
+    <Parameter Name="EsNacional" Type="bit" Mode="In" />
+    <Parameter Name="NacionalidadId" Type="int" Mode="In" />
+    <Parameter Name="FechaConstitucion" Type="datetime" Mode="In" />
+    <Parameter Name="DuracionSociedad" Type="varchar" Mode="In" />
+    <Parameter Name="FechaAsamblea" Type="datetime" Mode="In" />
+    <Parameter Name="DuraccionDirectiva" Type="int" Mode="In" />
+    <Parameter Name="EstatusId" Type="int" Mode="In" />
+    <Parameter Name="EsEnteRegulado" Type="bit" Mode="In" />
+    <Parameter Name="TipoEnteReguladoId" Type="int" Mode="In" />
+    <Parameter Name="NoResolucion" Type="int" Mode="In" />
+    <Parameter Name="NumeroNaveIndustrial" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="csp_SelectSociedades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sociedad" />
+  <Function Name="csp_UpdateSociedades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sociedad">
+    <Parameter Name="TipoSociedadId" Type="int" Mode="In" />
+    <Parameter Name="NombreSocial" Type="nvarchar" Mode="In" />
+    <Parameter Name="Rnc" Type="nvarchar" Mode="In" />
+    <Parameter Name="EsNacional" Type="bit" Mode="In" />
+    <Parameter Name="NacionalidadId" Type="int" Mode="In" />
+    <Parameter Name="FechaConstitucion" Type="datetime" Mode="In" />
+    <Parameter Name="DuracionSociedad" Type="varchar" Mode="In" />
+    <Parameter Name="FechaAsamblea" Type="datetime" Mode="In" />
+    <Parameter Name="DuraccionDirectiva" Type="int" Mode="In" />
+    <Parameter Name="EstatusId" Type="int" Mode="In" />
+    <Parameter Name="EsEnteRegulado" Type="bit" Mode="In" />
+    <Parameter Name="TipoEnteReguladoId" Type="int" Mode="In" />
+    <Parameter Name="NoResolucion" Type="int" Mode="In" />
+    <Parameter Name="NumeroNaveIndustrial" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_SociedadId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="cps_GetUser_AnalizaTransaccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_AddDocumentosTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="SubTransaccionId" Type="int" Mode="In" />
+    <Parameter Name="DocumentoId" Type="int" Mode="In" />
+    <Parameter Name="Documento" Type="varchar" Mode="In" />
+    <Parameter Name="FechaDocumento" Type="datetime" Mode="In" />
+    <Parameter Name="NoDocumento" Type="int" Mode="In" />
+    <Parameter Name="NoOriginales" Type="int" Mode="In" />
+    <Parameter Name="NoCopias" Type="int" Mode="In" />
+    <Parameter Name="Comentario" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="AlertaPago" Type="bit" Mode="In" />
+    <Parameter Name="CheckValidated" Type="bit" Mode="In" />
+    <Parameter Name="Deleted" Type="bit" Mode="In" />
+    <Parameter Name="NumeroPaginas" Type="int" Mode="In" />
+    <Parameter Name="Digitalizado" Type="bit" Mode="In" />
+    <Parameter Name="FechaDigitalizacion" Type="datetime" Mode="In" />
+    <Parameter Name="Analizado" Type="bit" Mode="In" />
+    <Parameter Name="Sufijo" Type="varchar" Mode="In" />
+    <Parameter Name="Registrable" Type="bit" Mode="In" />
+    <Parameter Name="CostoOriginal" Type="money" Mode="In" />
+    <Parameter Name="CostoCopia" Type="money" Mode="In" />
+  </Function>
+  <Function Name="csp_AddSubTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="TipoTransaccionId" Type="int" Mode="In" />
+    <Parameter Name="TipoServicio" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicioSufijo" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicioId" Type="int" Mode="In" />
+    <Parameter Name="Servicio" Type="varchar" Mode="In" />
+    <Parameter Name="DestinoTraslado" Type="varchar" Mode="In" />
+    <Parameter Name="FlowId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Estatus" Type="int" Mode="In" />
+    <Parameter Name="Estatus2" Type="int" Mode="In" />
+    <Parameter Name="CustomString1" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomString2" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomString3" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomInt1" Type="int" Mode="In" />
+    <Parameter Name="CustomInt2" Type="int" Mode="In" />
+    <Parameter Name="CustomInt3" Type="int" Mode="In" />
+    <Parameter Name="CustomDateTime1" Type="datetime" Mode="In" />
+    <Parameter Name="CustomDateTime2" Type="datetime" Mode="In" />
+    <Parameter Name="CustomDecimal1" Type="decimal" Mode="In" />
+    <Parameter Name="CustomDecimal2" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="csp_AddTransaccionDetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="Cuenta" Type="varchar" Mode="In" />
+    <Parameter Name="Detalle" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="int" Mode="In" />
+    <Parameter Name="PrecioUnitario" Type="money" Mode="In" />
+    <Parameter Name="Descuento" Type="money" Mode="In" />
+    <Parameter Name="FacturaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_AddTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="Transaccion_TipoTransaccionId" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_TipoServicio" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_TipoServicioSufijo" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_TipoServicioId" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_Servicio" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_Salicitante" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_RNCSolicitante" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_NombreContacto" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_TelefonoContacto" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_FaxContacto" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_NoReciboDGII" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_FechaReciboDGII" Type="datetime" Mode="In" />
+    <Parameter Name="Transaccion_MontoDGII" Type="money" Mode="In" />
+    <Parameter Name="Transaccion_DestinoTraslado" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_Comentario" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Transaccion_ComentarioHtml" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Transaccion_Estatus" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_Estatus2" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_Prioridad" Type="nchar" Mode="In" />
+    <Parameter Name="Transaccion_CustomString1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Transaccion_CustomString2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Transaccion_CustomString3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Transaccion_CustomInt1" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_CustomInt2" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_CustomInt3" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_CustomDateTime1" Type="datetime" Mode="In" />
+    <Parameter Name="Transaccion_CustomDateTime2" Type="datetime" Mode="In" />
+    <Parameter Name="Transaccion_CustomDecimal1" Type="decimal" Mode="In" />
+    <Parameter Name="Transaccion_CustomDecimal2" Type="decimal" Mode="In" />
+    <Parameter Name="Transaccion_Tipo" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_NCF" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_UsuarioId" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_HoraInicio" Type="datetime" Mode="In" />
+    <Parameter Name="Transaccion_HoraFinal" Type="datetime" Mode="In" />
+    <Parameter Name="Transaccion_Receptor" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_TipoNcf" Type="nvarchar" Mode="In" />
+    <Parameter Name="Transaccion_ClienteId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_AsignacionesAvanzadas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="TipoTransaccion" Type="char" Mode="In" />
+    <Parameter Name="Prioridad" Type="nchar" Mode="In" />
+    <Parameter Name="Comentario" Type="text" Mode="In" />
+    <Parameter Name="LastUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_AsignacionTransaccionVU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="Comentario" Type="text" Mode="In" />
+    <Parameter Name="LastUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_CambiarTransAExpress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="Comentario" Type="text" Mode="In" />
+    <Parameter Name="UsuarioAsignadoId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_CreateBook" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_CuadreCaja" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="UsuarioId" Type="int" Mode="In" />
+    <Parameter Name="IsLoadFechaFinal" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="csp_CuadreCajaDetalles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="FechaInicial" Type="date" Mode="In" />
+    <Parameter Name="FechaFinal" Type="date" Mode="In" />
+    <Parameter Name="UsuarioId" Type="int" Mode="In" />
+    <Parameter Name="IsLoadFechaFinal" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="csp_CuadreCajaFormaPago" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="UsuarioId" Type="int" Mode="In" />
+    <Parameter Name="IsLoadFechaFinal" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="csp_DeleteAllReglasDocumentos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="DocumentoId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_DeleteDocumentosTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="DocumentoTransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_DeleteSubTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="SubTransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_DeleteTransaccionDetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionDetalleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_DocuemtosTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_GetAllDocumentosTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="DocumentoTransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_GetAllSubTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_GetAllTransaccionDetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionDetalleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_GetAllTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion" />
+  <Function Name="csp_GetCostoBaseCapital" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TipoCosto" Type="int" Mode="In" />
+    <Parameter Name="CapitalAutorizado" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="csp_GetCostoBaseModificacionCapital" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="CapitalAutorizado" Type="decimal" Mode="In" />
+    <Parameter Name="CapitalModificado" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="csp_GetCostoBaseReduccionCapital" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="CapitalAutorizado" Type="decimal" Mode="In" />
+    <Parameter Name="CapitalModificado" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="csp_GetCostoServicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="ServicioId" Type="int" Mode="In" />
+    <Parameter Name="CapitalAutorizado" Type="decimal" Mode="In" />
+    <Parameter Name="CapitalModificado" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="csp_GetEstadoRegistro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="RegistroId" Type="int" Mode="In" />
+    <Parameter Name="Condicion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_GetInvoiceDetailInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="FacturaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_GetInvoiceHeaderDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="FacturaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_GetInvoiceHeaderInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="FacturaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_GetPaymentMethods" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="FacturaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_InsertTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="Fecha" Type="datetime" Mode="In" />
+    <Parameter Name="TipoTransaccionId" Type="int" Mode="In" />
+    <Parameter Name="TipoServicioId" Type="int" Mode="In" />
+    <Parameter Name="Salicitante" Type="varchar" Mode="In" />
+    <Parameter Name="RNCSolicitante" Type="varchar" Mode="In" />
+    <Parameter Name="NombreContacto" Type="varchar" Mode="In" />
+    <Parameter Name="TelefonoContacto" Type="varchar" Mode="In" />
+    <Parameter Name="FaxContacto" Type="varchar" Mode="In" />
+    <Parameter Name="NoReciboDGII" Type="varchar" Mode="In" />
+    <Parameter Name="FechaReciboDGII" Type="datetime" Mode="In" />
+    <Parameter Name="MontoDGII" Type="money" Mode="In" />
+    <Parameter Name="DestinoTraslado" Type="varchar" Mode="In" />
+    <Parameter Name="Comentario" Type="text" Mode="In" />
+    <Parameter Name="FlowId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Estatus" Type="int" Mode="In" />
+    <Parameter Name="CustomString1" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomString2" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomString3" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomInt1" Type="int" Mode="In" />
+    <Parameter Name="CustomInt2" Type="int" Mode="In" />
+    <Parameter Name="CustomInt3" Type="int" Mode="In" />
+    <Parameter Name="CustomDateTime1" Type="datetime" Mode="In" />
+    <Parameter Name="CustomDateTime2" Type="datetime" Mode="In" />
+    <Parameter Name="CustomDecimal1" Type="decimal" Mode="In" />
+    <Parameter Name="CustomDecimal2" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="csp_PeriodosVencidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="NumeroRegistro" Type="int" Mode="In" />
+    <Parameter Name="Tipo" Type="int" Mode="In" />
+    <Parameter Name="FechaVencimiento" Type="date" Mode="InOut" />
+  </Function>
+  <Function Name="csp_Reasignacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="NuevoEstatus" Type="int" Mode="In" />
+    <Parameter Name="NuevoUsuario" Type="int" Mode="In" />
+    <Parameter Name="Comentario" Type="text" Mode="In" />
+  </Function>
+  <Function Name="csp_SeguimientoTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="Estado" Type="int" Mode="In" />
+    <Parameter Name="Comentario" Type="varchar(max)" Mode="In" />
+    <Parameter Name="UsuarioId" Type="int" Mode="In" />
+    <Parameter Name="UsuarioAsignadoId" Type="int" Mode="In" />
+    <Parameter Name="CommentType" Type="int" Mode="In" />
+    <Parameter Name="EstadoIncompatible" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_SentInvoiceDetailToAccounting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="Fecha" Type="datetime" Mode="In" />
+    <Parameter Name="NombreUsuarioReferencia" Type="nvarchar" Mode="In" />
+    <Parameter Name="Cuenta" Type="varchar" Mode="In" />
+    <Parameter Name="Detalle" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="money" Mode="In" />
+    <Parameter Name="PrecioUnitario" Type="money" Mode="In" />
+    <Parameter Name="DescuentoDetalle" Type="money" Mode="In" />
+    <Parameter Name="TotalDetalle" Type="money" Mode="In" />
+    <Parameter Name="TotalBrutoDetalle" Type="money" Mode="In" />
+    <Parameter Name="FlowId" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="csp_SentInvoiceHeaderToAccounting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="Fecha" Type="date" Mode="In" />
+    <Parameter Name="RNCSolicitante" Type="varchar" Mode="In" />
+    <Parameter Name="FlowId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Cliente" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="rowguid" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="NCF" Type="varchar" Mode="In" />
+    <Parameter Name="Estatus" Type="int" Mode="In" />
+    <Parameter Name="NombreUsuarioReferencia" Type="nvarchar" Mode="In" />
+    <Parameter Name="TotalBruto" Type="money" Mode="In" />
+  </Function>
+  <Function Name="csp_SentPaymentMethodsToAccounting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="FechaCuadre" Type="date" Mode="In" />
+    <Parameter Name="FormaPago" Type="char" Mode="In" />
+    <Parameter Name="Valor" Type="money" Mode="In" />
+    <Parameter Name="Tasa" Type="money" Mode="In" />
+    <Parameter Name="Referencia" Type="varchar" Mode="In" />
+    <Parameter Name="NoTarjeta" Type="varchar" Mode="In" />
+    <Parameter Name="Divisa" Type="money" Mode="In" />
+    <Parameter Name="ValorEntregado" Type="money" Mode="In" />
+    <Parameter Name="ValorDevuelto" Type="money" Mode="In" />
+    <Parameter Name="Nota" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="NombreUsuarioReferencia" Type="nvarchar" Mode="In" />
+    <Parameter Name="TotalBruto" Type="money" Mode="In" />
+    <Parameter Name="FlowId" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="csp_SetAsignaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="RolId" Type="int" Mode="In" />
+    <Parameter Name="Comentario" Type="text" Mode="In" />
+    <Parameter Name="LastUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_SetAsignacionesLastUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="Comentario" Type="text" Mode="In" />
+    <Parameter Name="LastUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_SetReAsignaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="UsuarioId" Type="int" Mode="In" />
+    <Parameter Name="LastUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_SubTransaccionesDeleteCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="Original_SubTransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_TransaccionesList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="usuarioId" Type="int" Mode="In" />
+    <Parameter Name="top" Type="nvarchar" Mode="In" />
+    <Parameter Name="wheres" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="csp_TransaccionFlowInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_UpdateBigFlex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransId" Type="int" Mode="In" />
+    <Parameter Name="ResultValue" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="csp_UpdateDocumentosTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="SubTransaccionId" Type="int" Mode="In" />
+    <Parameter Name="DocumentoId" Type="int" Mode="In" />
+    <Parameter Name="FechaDocumento" Type="datetime" Mode="In" />
+    <Parameter Name="NoDocumento" Type="int" Mode="In" />
+    <Parameter Name="NoOriginales" Type="int" Mode="In" />
+    <Parameter Name="NoCopias" Type="int" Mode="In" />
+    <Parameter Name="Comentario" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="AlertaPago" Type="bit" Mode="In" />
+    <Parameter Name="CheckValidated" Type="bit" Mode="In" />
+    <Parameter Name="Deleted" Type="bit" Mode="In" />
+    <Parameter Name="NumeroPaginas" Type="int" Mode="In" />
+    <Parameter Name="Digitalizado" Type="bit" Mode="In" />
+    <Parameter Name="FechaDigitalizacion" Type="datetime" Mode="In" />
+    <Parameter Name="Analizado" Type="bit" Mode="In" />
+    <Parameter Name="Sufijo" Type="varchar" Mode="In" />
+    <Parameter Name="DocumentoTransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_UpdateSubTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="SubTransaccionId" Type="int" Mode="In" />
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+    <Parameter Name="TipoTransaccionId" Type="int" Mode="In" />
+    <Parameter Name="TipoServicio" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicioSufijo" Type="varchar" Mode="In" />
+    <Parameter Name="TipoServicioId" Type="int" Mode="In" />
+    <Parameter Name="Servicio" Type="varchar" Mode="In" />
+    <Parameter Name="DestinoTraslado" Type="varchar" Mode="In" />
+    <Parameter Name="FlowId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Estatus" Type="int" Mode="In" />
+    <Parameter Name="Estatus2" Type="int" Mode="In" />
+    <Parameter Name="CustomString1" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomString2" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomString3" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomInt1" Type="int" Mode="In" />
+    <Parameter Name="CustomInt2" Type="int" Mode="In" />
+    <Parameter Name="CustomInt3" Type="int" Mode="In" />
+    <Parameter Name="CustomDateTime1" Type="datetime" Mode="In" />
+    <Parameter Name="CustomDateTime2" Type="datetime" Mode="In" />
+    <Parameter Name="CustomDecimal1" Type="decimal" Mode="In" />
+    <Parameter Name="CustomDecimal2" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="csp_UpdateTransaccionDetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionDetalleId" Type="int" Mode="In" />
+    <Parameter Name="Cuenta" Type="varchar" Mode="In" />
+    <Parameter Name="Detalle" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="int" Mode="In" />
+    <Parameter Name="PrecioUnitario" Type="money" Mode="In" />
+    <Parameter Name="Descuento" Type="money" Mode="In" />
+    <Parameter Name="FacturaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_UpdateTransacciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="Transaccion_TipoTransaccionId" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_TipoServicio" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_TipoServicioSufijo" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_TipoServicioId" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_Servicio" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_Salicitante" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_RNCSolicitante" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_NombreContacto" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_TelefonoContacto" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_FaxContacto" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_NoReciboDGII" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_FechaReciboDGII" Type="datetime" Mode="In" />
+    <Parameter Name="Transaccion_MontoDGII" Type="money" Mode="In" />
+    <Parameter Name="Transaccion_DestinoTraslado" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_Comentario" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Transaccion_ComentarioHtml" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Transaccion_Estatus" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_Estatus2" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_Prioridad" Type="nchar" Mode="In" />
+    <Parameter Name="Transaccion_CustomString1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Transaccion_CustomString2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Transaccion_CustomString3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Transaccion_CustomInt1" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_CustomInt2" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_CustomInt3" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_CustomDateTime1" Type="datetime" Mode="In" />
+    <Parameter Name="Transaccion_CustomDateTime2" Type="datetime" Mode="In" />
+    <Parameter Name="Transaccion_CustomDecimal1" Type="decimal" Mode="In" />
+    <Parameter Name="Transaccion_CustomDecimal2" Type="decimal" Mode="In" />
+    <Parameter Name="Transaccion_Tipo" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_NCF" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_UsuarioId" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_HoraInicio" Type="datetime" Mode="In" />
+    <Parameter Name="Transaccion_HoraFinal" Type="datetime" Mode="In" />
+    <Parameter Name="Transaccion_Receptor" Type="varchar" Mode="In" />
+    <Parameter Name="Transaccion_TipoNcf" Type="nvarchar" Mode="In" />
+    <Parameter Name="Transaccion_ClienteId" Type="int" Mode="In" />
+    <Parameter Name="Transaccion_TransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="csp_ValidateTransaccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Transaccion">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pGetTransaccionesHistorico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Website">
+    <Parameter Name="TransaccionId" Type="int" Mode="In" />
+  </Function>
+</Schema>

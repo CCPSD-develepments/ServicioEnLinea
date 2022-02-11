@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Boundaries.DigitalSignatureVerification" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Boundaries.DigitalSignatureVerification" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.10.80.12:8083/OnlineChamberService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Boundaries.DigitalSignatureVerification.Enums" />
+  <xs:complexType name="DocumentValidationResponse">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Boundaries.DigitalSignatureVerification.Enums" minOccurs="0" name="DocumentStatus" type="q1:DocumentStatus" />
+      <xs:element minOccurs="0" name="SignaturesInfo" nillable="true" type="tns:ArrayOfSignatureData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentValidationResponse" nillable="true" type="tns:DocumentValidationResponse" />
+  <xs:complexType name="ArrayOfSignatureData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SignatureData" nillable="true" type="tns:SignatureData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSignatureData" nillable="true" type="tns:ArrayOfSignatureData" />
+  <xs:complexType name="SignatureData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Issuer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Boundaries.DigitalSignatureVerification.Enums" minOccurs="0" name="Status" type="q2:DigitalSignatureStatus" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValidFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidTo" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SignatureData" nillable="true" type="tns:SignatureData" />
+</xs:schema>

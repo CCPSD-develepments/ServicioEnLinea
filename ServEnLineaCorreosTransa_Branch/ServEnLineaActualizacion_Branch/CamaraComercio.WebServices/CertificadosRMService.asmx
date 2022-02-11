@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="CertificadosRMService.asmx.cs" Class="CamaraComercio.WebServices.CertificadosRMService" %>

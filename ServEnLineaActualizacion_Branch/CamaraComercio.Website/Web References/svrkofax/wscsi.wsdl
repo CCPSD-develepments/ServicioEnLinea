@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getPath">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="paramTipoBusqueda" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPathResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPathFulltextSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="paramTipoBusqueda" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fulltextSearch" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPathFulltextSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPathFulltextSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPathCamaraOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="paramTipoBusqueda" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPathCamaraOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPathCamaraOnlineResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getPathSoapIn">
+    <wsdl:part name="parameters" element="tns:getPath" />
+  </wsdl:message>
+  <wsdl:message name="getPathSoapOut">
+    <wsdl:part name="parameters" element="tns:getPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPathFulltextSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:getPathFulltextSearch" />
+  </wsdl:message>
+  <wsdl:message name="getPathFulltextSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:getPathFulltextSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPathCamaraOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:getPathCamaraOnline" />
+  </wsdl:message>
+  <wsdl:message name="getPathCamaraOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:getPathCamaraOnlineResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsCSISoap">
+    <wsdl:operation name="getPath">
+      <wsdl:input message="tns:getPathSoapIn" />
+      <wsdl:output message="tns:getPathSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPathFulltextSearch">
+      <wsdl:input message="tns:getPathFulltextSearchSoapIn" />
+      <wsdl:output message="tns:getPathFulltextSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPathCamaraOnline">
+      <wsdl:input message="tns:getPathCamaraOnlineSoapIn" />
+      <wsdl:output message="tns:getPathCamaraOnlineSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsCSISoap" type="tns:wsCSISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPath">
+      <soap:operation soapAction="http://tempuri.org/getPath" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPathFulltextSearch">
+      <soap:operation soapAction="http://tempuri.org/getPathFulltextSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPathCamaraOnline">
+      <soap:operation soapAction="http://tempuri.org/getPathCamaraOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsCSISoap12" type="tns:wsCSISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPath">
+      <soap12:operation soapAction="http://tempuri.org/getPath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPathFulltextSearch">
+      <soap12:operation soapAction="http://tempuri.org/getPathFulltextSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPathCamaraOnline">
+      <soap12:operation soapAction="http://tempuri.org/getPathCamaraOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsCSI">
+    <wsdl:port name="wsCSISoap" binding="tns:wsCSISoap">
+      <soap:address location="http://content/wsdeploy/wscsi.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsCSISoap12" binding="tns:wsCSISoap12">
+      <soap12:address location="http://content/wsdeploy/wscsi.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

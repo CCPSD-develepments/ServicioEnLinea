@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CamaraComercio.DataAccess.EF.SRM</name>
+    </assembly>
+    <members>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.SociedadesEstatudId">
+            <summary>
+            Definicion de Estatus en los que puede estar una sociedad/empresa
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.SociedadesEstatudId.Activa">
+            <summary>
+            Sociedad Activa
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.SociedadesEstatudId.Disuelta">
+            <summary>
+            Sociedad Disuelta
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.SociedadesEstatudId.CeseTemporal">
+            <summary>
+            Sociedad en Cese Temporal
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.SociedadesEstatudId.Fusionada">
+            <summary>
+            Sociedad Fusionada con otra
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.SociedadesEstatudId.Trasladada">
+            <summary>
+            Sociedad Trasladada
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.TipoBusquedaSociedades">
+            <summary>
+            Tipos de búsqueda por los que se pueden realizar búsquedas contra el repositorio de empresas
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.TipoBusquedaSociedades.PorNombre">
+            <summary>
+            Búsqueda de sociedades por nombre
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.TipoBusquedaSociedades.PorRnc">
+            <summary>
+            Búsqueda de sociedades por RNC o Cédula
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.TipoBusquedaSociedades.PorNoRegistro">
+            <summary>
+            Búsqueda de sociedades por No. de Registro Mercantil
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.RangosCantidadEmpresas">
+            <summary>
+            Rangos de cantida de empleados de una empresa
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.RangosCantidadEmpresas.Diccionario">
+            <summary>
+            Diccionario de rangos para la cantidad de empleados
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.BaseCobro">
+             <summary>
+            Define las formas de cobros en base al capital.
+             </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.BaseCobro.Constitucion">
+            <summary>
+            Cobra las transacciones en base a la tarifa de constituciones.
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.BaseCobro.Modificacion">
+            <summary>
+            Cobra las transacciones en base a la tarifa de modificaciones.
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.BaseCobro.Renovacion">
+            <summary>
+            Cobra las transacciones en base a la tarifa de renovaciones.
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.BaseCobro.ModificacionAumentoCapital">
+            <summary>
+            Cobra las transacciones en base a la tarifa de modificaciones del nuevo aumento de capital.
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.BaseCobro.RenovacionAumentoCapital">
+            <summary>
+            Cobra las transacciones en base a la tarifa de renovaciones del aumento de nuevo capital.
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.BaseCobro.ModificacionReduccionCapital">
+            <summary>
+            Cobra las transacciones en base a la tarifa de modificaciones de la reducción de capital.
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.SRM.BaseCobro.RenovacionReduccionCapital">
+            <summary>
+            Cobra las transacciones en base a la tarifa de renovaciones de la redución de capital.
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.CamaraSRMEntitiesFactory.CreateSrmEntitiesContext(System.String)">
+            <summary>
+            Genera un context para CamaraSrmEntities a partir del CanaraID Epecificado
+            </summary>
+            <param name="camaraId">ID de tres caracteres que identifica la base de datos para la camara</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.SubTransacciones">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.SubTransacciones.DocumentosTransacciones">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.ViewSumarioSociedades.Estatus">
+            <summary>
+            Estado de la sociedad o empresa
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.ViewSumarioSociedades.TransaccionId">
+            <summary>
+            TransaccionId de la empresa.
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.Helpers">
+            <summary>
+            Asistentes y shortcuts para acceso a datos
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Helpers.GetCamaraConnString(System.String)">
+            <summary>
+            Define el string de conexion para subsonic en runtime
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.EnumHelper`1">
+            <summary>
+            Clase que asiste con el manejo de enumeraciones
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.EnumHelper`1.ObtenerDescripcion(System.Int32)">
+            <summary>
+            Obtiene la descripción del objeto seleccionado en una enumeración 
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.EnumHelper`1.ObtenerEnumeracion(System.Int32)">
+            <summary>
+            Obtiene la Enumaracion a partir de la descripcion.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

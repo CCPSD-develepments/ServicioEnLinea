@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CamaraComercio.DataAccess.EF.OficinaVirtual</name>
+    </assembly>
+    <members>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoServicioDetalles.Descripcion">
+            <summary>
+            Propiedad Extendida: Descripción de un detalle de tipo de servicio
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesDocumentos.TipoDocumento">
+            <summary>
+            Propiedad Extendida: Tipo de documento de una transacción
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.CharEnum">
+            <summary>
+            Clase para representar enumeraciones como chars
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.CharEnum.#ctor(System.Char,System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="value">Valor</param>
+            <param name="text">Texto</param>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.CharEnum.Value">
+            <summary>
+            Valor de la enumeración
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.CharEnum.Text">
+            <summary>
+            Texto (descripción) de la enumeración
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoRelacionSocio.#ctor(System.Char,System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="value"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoRelacionSocio.FetchAll">
+            <summary>
+            Retorna todos los tipos de relación para un socio
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoSociedades.TipoSociedadId">
+            <summary>
+            Propiedad Extendida: Tipo Sociedad ID
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoSociedades.Nombre">
+            <summary>
+            Propiedad Extendida: Nombre de un tipo de sociedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.Personas.NombreCompleto">
+            <summary>
+            Propiedad Extendida: Nombre completo de una persona
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.ReferenciasBancarias.NombreBanco">
+            <summary>
+            Propiedad Extendida: Nombre del banco
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.Transacciones">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.Transacciones.GetCostoServicio">
+            <summary>
+            Obtiene el costo de un servicio
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.Transacciones.NombreServicio">
+            <summary>
+            Propiedad Extendida - Nombre del servicio relacionado a la transaccion
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesExtensions">
+            <summary>
+            Extensiones para transacciones
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesExtensions.GetServicioTransacciones(CamaraComercio.DataAccess.EF.OficinaVirtual.Transacciones)">
+            <summary>
+            Obtiene los ids de servicios relacionados a una transacción 
+            </summary>
+            <param name="tnx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesExtensions.GetTransaccionByServicioId(CamaraComercio.DataAccess.EF.OficinaVirtual.Transacciones,System.Int32)">
+            <summary>
+            Obtiene el servicio relacionado a esta transacción 
+            </summary>
+            <param name="tnx"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresasPorUsuario.NombreEmpresa">
+            <summary>
+            Propiedad Extendida: Nombre de la Empresa
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.EstadoCivil">
+            <summary>
+            Enumeración tipo Char
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.EstadoCivil.#ctor(System.Char,System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="value"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.EstadoCivil.FetchAll">
+            <summary>
+            Posibles Estados Civiles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.ServicioComun">
+            <summary>
+            Servicio Comun. Usado para la integración con el sistema de gestión. 
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.ServicioComun.ServicioId">
+            <summary>
+            ID del Servicio
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.ServicioComun.Nombre">
+            <summary>
+            Nombre del servicio
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.ServicioComun.TipoServicioId">
+            <summary>
+            ID del tipo de servicio
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.ServicioComun.Cuenta">
+            <summary>
+            Numero de cuenta
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.ServicioComun.PrecioUnitario">
+            <summary>
+            Costo unitario
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.Suscripcion">
+            <summary>
+            Define los tipos de suscripción para las empresas anónimas (públicas o privadas). 
+            Esta denominación no es utilizada en la nueva ley de sociedades
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.OficinaVirtual.Suscripcion.Publica">
+            <summary>
+            Identificador para empresas públicas
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.OficinaVirtual.Suscripcion.Privada">
+            <summary>
+            Identificador para empresas privadas
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.Suscripcion.#ctor(System.String,System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="value"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.Suscripcion.FetchAll">
+            <summary>
+            Retorna un listado con todos los tipos de suscripción
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.Suscripcion.Value">
+            <summary>
+            Valor de la propiedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.Suscripcion.Text">
+            <summary>
+            Texto de la propiedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.Sociedades.TieneCapitalSocial">
+            <summary>
+            Propiedad Extendida: Indica si la empresa se registra sin capital social
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionHistorico">
+            <summary>
+            Transacciones Históricas
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionHistorico.Servicio">
+            <summary>
+            Servicio de una transacción histórica
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionHistorico.TipoSociedades">
+            <summary>
+            Tipo de sociedad de una transacción histórica
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionHistorico.EstatusTransacciones">
+            <summary>
+            Estatus de una transacción histórica
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionHistorico.Comentario">
+            <summary>
+            El comentario de la transaccion.
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.EstatusTransacciones">
+            <summary>
+            Estatus de las transacciones
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoSocio">
+            <summary>
+            Enumeración, tipo de personas
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoSocio.#ctor(System.Char,System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="value"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoSocio.FetchAll">
+            <summary>
+            Obtiene un listado de los tipos de personas
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado">
+            <summary>
+            Enumeración de estados para usuarios autorizados para manejar empresas en el website
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado.Solicitado">
+            <summary>
+             Acceso Solicitado
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado.Activo">
+            <summary>
+            Acceso Activo
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado.DesactivadoPorCambioDeUsuario">
+            <summary>
+            Usuario desactivado por cambio de usuario padre
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado.DesactivadoPorCierre">
+            <summary>
+            Usuario desactivo por cierre/disoluicón de Empresa
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado.Denegado">
+            <summary>
+            Acceso denegado
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoMensaje">
+            <summary>
+            Enumeración de tipos de mensajes para usuarios en el website
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoMensaje.Empresa">
+            <summary>
+            Mensaje para empresa
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoMensaje.Trámite">
+            <summary>
+            Mensaje relacionada a un trámite/transacción
+            </summary>
+        </member>
+        <member name="F:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoMensaje.Usuario">
+            <summary>
+            Mensaje para un usuario
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.Socios.DireccionNombreCiudad">
+            <summary>
+             Nombre de la ciudad en la dirección registrada
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.Socios.DireccionNombreSector">
+            <summary>
+            Nombre del sector en la dirección registrada
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.Socios.Modificado">
+            <summary>
+            Indica que la información del socio fue modificada a nivel de UI
+            </summary>
+        </member>
+    </members>
+</doc>

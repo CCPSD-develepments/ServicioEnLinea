@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8389932-ADF3-43C1-B18F-0E5757315633}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CamaraComercio.DataAccess.EF</RootNamespace>
+    <AssemblyName>CamaraComercio.DataAccess.EF</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\CamaraComercio.DataAccess.EF.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinqKit">
+      <HintPath>..\lib\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comun\ActividadesRepository.cs" />
+    <Compile Include="Comun\CamarasRepository.cs" />
+    <Compile Include="Comun\CargosRepository.cs" />
+    <Compile Include="Comun\NomenclaturasRepository.cs" />
+    <Compile Include="Comun\SectoresRepository.cs" />
+    <Compile Include="Comun\ServicioDocumentoRequeridoRepository.cs" />
+    <Compile Include="Comun\ServicioRepository.cs" />
+    <Compile Include="Comun\TipoDocumentoRepository.cs" />
+    <Compile Include="Comun\TipoMonedaRepository.cs" />
+    <Compile Include="Comun\TipoSociedadSocioRepository.cs" />
+    <Compile Include="Comun\TipoSociedadServicioCargoRepository.cs" />
+    <Compile Include="DataExtensions.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Comun\CiudadesRepository.cs" />
+    <Compile Include="Membership\MembershipController.cs" />
+    <Compile Include="Membership\UsuarioController.cs" />
+    <Compile Include="OFV\Repository\FacturaRepository.cs" />
+    <Compile Include="OFV\Repository\PropiedadesModUIRepository.cs" />
+    <Compile Include="OFV\Repository\PropiedadesUIRepository.cs" />
+    <Compile Include="OFV\Repository\SociedadRepository.cs" />
+    <Compile Include="OFV\Controllers\EmpresasPorUsuarioController.cs" />
+    <Compile Include="OFV\Controllers\MensajesController.cs" />
+    <Compile Include="OFV\Controllers\TipoServicioDetallesController.cs" />
+    <Compile Include="OFV\Controllers\TransaccionDocumentosController.cs" />
+    <Compile Include="OFV\Controllers\TransaccionesController.cs" />
+    <Compile Include="OFV\Repository\SucursalRepository.cs" />
+    <Compile Include="OFV\Repository\TransaccionesDocDescargasRepository.cs" />
+    <Compile Include="PredicateBuilder.cs" />
+    <Compile Include="Queries\SqlTransaction.cs" />
+    <Compile Include="SRM\Controllers\PersonaFisicaController.cs" />
+    <Compile Include="SRM\Controllers\RegistroController.cs" />
+    <Compile Include="SRM\Repository\NotasCreditosRepository.cs" />
+    <Compile Include="SRM\Repository\FormaPagoRepository.cs" />
+    <Compile Include="SRM\Repository\ModelosCertifacionesRepository.cs" />
+    <Compile Include="SRM\Repository\NotaCreditoRepository.cs" />
+    <Compile Include="SRM\Repository\PersonaEnSociedadRepository.cs" />
+    <Compile Include="SRM\Repository\PersonaRepository.cs" />
+    <Compile Include="SRM\Repository\SearchRepository.cs" />
+    <Compile Include="OFV\Repository\ServicioDetallesRepository.cs" />
+    <Compile Include="OFV\Repository\TransaccionesRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="Comun\TiposNCFRepository.cs" />
+    <Compile Include="SRM\Repository\DocumentosTransaccionesRepository.cs" />
+    <Compile Include="SRM\Repository\FacturasRepository.cs" />
+    <Compile Include="SRM\Repository\SumarioRepository.cs" />
+    <Compile Include="SRM\Repository\TransaccionesPersonasRepository.cs" />
+    <Compile Include="SRM\Repository\TransaccionesRepository.cs" />
+    <Compile Include="SRM\Controllers\ReferenciasBancariasController.cs" />
+    <Compile Include="SRM\Controllers\ReferenciasComercialesController.cs" />
+    <Compile Include="SRM\Controllers\RegistrosSociosController.cs" />
+    <Compile Include="SRM\Controllers\SociedadesController.cs" />
+    <Compile Include="SRM\Controllers\SuscursalesController.cs" />
+    <Compile Include="SRM\Controllers\ViewProductosRegistrosController.cs" />
+    <Compile Include="SRM\Repository\TransaccionesSociedadesRepository.cs" />
+    <Compile Include="SRM\Repository\UsuarioRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Diagrama de Clases.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.CamaraComun\CamaraComercio.DataAccess.EF.CamaraComun.csproj">
+      <Project>{B34160C6-4E42-41E6-A5B4-323316A87549}</Project>
+      <Name>CamaraComercio.DataAccess.EF.CamaraComun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.Membership\CamaraComercio.DataAccess.EF.Membership.csproj">
+      <Project>{A8F3EC9E-987C-49E0-9C98-AB39A5630197}</Project>
+      <Name>CamaraComercio.DataAccess.EF.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.OficinaVirtual\CamaraComercio.DataAccess.EF.OficinaVirtual.csproj">
+      <Project>{D24FA27A-9D25-4F99-BEE7-FE8C03B0C671}</Project>
+      <Name>CamaraComercio.DataAccess.EF.OficinaVirtual</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamaraComercio.DataAccess.EF.SRM\CamaraComercio.DataAccess.EF.SRM.csproj">
+      <Project>{AAA52714-64EB-48ED-B1EB-E580B756926F}</Project>
+      <Name>CamaraComercio.DataAccess.EF.SRM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

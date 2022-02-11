@@ -1,0 +1,36 @@
+﻿body {
+}
+
+
+#stepsTl,#btnSearch,#header,#pnlNavigation,.footer_go,#navi
+{
+    visibility:hidden;
+    display: none;    
+}
+
+#skip-to-nav,
+#navigation,
+#toolbar,
+.region-sidebar-first,
+.region-sidebar-second,
+.footer-region,
+.breadcrumb,
+div.tabs,
+.action-links,
+.links,
+.book-navigation,
+.forum-topic-navigation,
+.pager,
+.feed-icons {
+  visibility: hidden;
+  display: none;
+  page-break-inside:avoid
+}
+
+    div, #confirmacionDiv {page-break-inside:avoid}
+    table { page-break-inside:avoid  }
+    tr    { page-break-inside:avoid; page-break-after:auto }
+    thead { display:table-header-group }
+    tfoot { display:table-footer-group }
+    
+

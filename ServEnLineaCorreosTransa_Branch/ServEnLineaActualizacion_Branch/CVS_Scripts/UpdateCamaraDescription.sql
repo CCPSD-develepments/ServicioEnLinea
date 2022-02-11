@@ -1,0 +1,3 @@
+ update [CamaraComun].[dbo].[Camaras]
+  set Direccion = '<p style="text-align: center;"><span style="font-family: Arial; font-size: 10pt;">Torre Friusa, Ave. 27 de Febrero No. 228, La Esperilla, Santo Domingo, República Dominicana</span></p><p style="text-align: center;"><span style="font-family: Arial; font-size: 10pt;">T (809) 682-2688&nbsp;&nbsp; RNC 401023687&nbsp;&nbsp; </span><br/><span style="color: rgb(65, 105, 225); font-family: Arial; font-size: small;">www.camarasantodomingo.do</span></p>'
+  where id = 'SDQ'

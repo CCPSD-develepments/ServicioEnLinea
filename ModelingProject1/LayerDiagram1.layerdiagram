@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c8de173a-e2bb-47a6-bae8-6f70b9b1e0b0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="b2881733-faab-4902-a50d-9657a451559a" name="CamaraComercio.DataAccess.EF.SRM">
+      <references>
+        <reference Id="6e6686c4-fd06-41ca-99be-98e30a74e5c5" name="CamaraComercio.DataAccess.EF.SRM">
+          <ArtifactNode Label="CamaraComercio.DataAccess.EF.SRM" Category="CodeSchema_Project" Id="(Assembly=../CamaraComercio.DataAccess.EF.SRM/CamaraComercio.DataAccess.EF.SRM.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=CamaraComercio.DataAccess.EF.SRM)" Label="CamaraComercio.DataAccess.EF.SRM.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="b8954a40-20c3-4424-9607-490f4bf01b3d" name="Layer1">
+      <references>
+        <reference Id="3e3b82d8-fe60-4fc8-b95d-7e6ddd993b1b" name="CamaraComercio.DataAccess.EF.OficinaVirtual">
+          <ArtifactNode Label="CamaraComercio.DataAccess.EF.OficinaVirtual" Category="CodeSchema_Project" Id="(Assembly=../CamaraComercio.DataAccess.EF.OficinaVirtual/CamaraComercio.DataAccess.EF.OficinaVirtual.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=CamaraComercio.DataAccess.EF.OficinaVirtual)" Label="CamaraComercio.DataAccess.EF.OficinaVirtual.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="03833a6d-b8d3-4090-b820-351166ebaf67" name="CamaraComercio.DataAccess.EF">
+          <ArtifactNode Label="CamaraComercio.DataAccess.EF" Category="CodeSchema_Project" Id="(Assembly=../CamaraComercio.DataAccess.EF/CamaraComercio.DataAccess.EF.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=CamaraComercio.DataAccess.EF)" Label="CamaraComercio.DataAccess.EF.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="845723f1-f23d-4c3b-b5f8-cf5f04fad368" name="CamaraComercio.DataAccess.EF.CamaraComun">
+          <ArtifactNode Label="CamaraComercio.DataAccess.EF.CamaraComun" Category="CodeSchema_Project" Id="(Assembly=../CamaraComercio.DataAccess.EF.CamaraComun/CamaraComercio.DataAccess.EF.CamaraComun.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=CamaraComercio.DataAccess.EF.CamaraComun)" Label="CamaraComercio.DataAccess.EF.CamaraComun.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="2132ba91-9ffd-4f36-884d-1f3ce6563b67" name="CamaraComercio.DataAccess.EF.Membership">
+          <ArtifactNode Label="CamaraComercio.DataAccess.EF.Membership" Category="CodeSchema_Project" Id="(Assembly=../CamaraComercio.DataAccess.EF.Membership/CamaraComercio.DataAccess.EF.Membership.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=CamaraComercio.DataAccess.EF.Membership)" Label="CamaraComercio.DataAccess.EF.Membership.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

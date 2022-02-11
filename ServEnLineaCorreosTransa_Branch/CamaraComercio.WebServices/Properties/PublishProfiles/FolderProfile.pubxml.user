@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\epuente.CC\Desktop\Intermediario ws</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AccesoUsuariosOfv.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="bin/App_Code.compiled">
+      <publishTime>05/11/2021 17:05:35</publishTime>
+    </File>
+    <File Include="bin/App_Code.dll">
+      <publishTime>05/11/2021 17:05:35</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>05/11/2021 17:05:35</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>05/11/2021 17:05:35</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.CamaraComun.dll">
+      <publishTime>05/14/2021 18:42:07</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.CamaraComun.dll.config">
+      <publishTime>04/26/2021 17:25:01</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.CamaraComun.pdb">
+      <publishTime>05/14/2021 18:42:07</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.dll">
+      <publishTime>05/14/2021 18:42:08</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.dll.config">
+      <publishTime>04/26/2021 17:24:32</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.Membership.dll">
+      <publishTime>05/14/2021 18:42:07</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.Membership.dll.config">
+      <publishTime>04/26/2021 17:24:26</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.Membership.pdb">
+      <publishTime>05/14/2021 18:42:07</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.OficinaVirtual.dll">
+      <publishTime>05/14/2021 18:42:08</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.OficinaVirtual.dll.config">
+      <publishTime>04/26/2021 17:25:56</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.OficinaVirtual.pdb">
+      <publishTime>05/14/2021 18:42:08</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.pdb">
+      <publishTime>05/14/2021 18:42:08</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.SRM.dll">
+      <publishTime>05/14/2021 18:42:07</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.SRM.dll.config">
+      <publishTime>04/26/2021 17:25:03</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.DataAccess.EF.SRM.pdb">
+      <publishTime>05/14/2021 18:42:07</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.MailBot.dll">
+      <publishTime>05/14/2021 18:42:07</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.MailBot.dll.config">
+      <publishTime>04/26/2021 17:25:03</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.MailBot.pdb">
+      <publishTime>05/14/2021 18:42:07</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.WebServices.dll">
+      <publishTime>05/14/2021 18:42:11</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.WebServices.pdb">
+      <publishTime>05/14/2021 18:42:11</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.WebServices.XmlSerializers.dll">
+      <publishTime>05/14/2021 18:42:11</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.Website.dll">
+      <publishTime>05/14/2021 18:42:09</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.Website.dll.config">
+      <publishTime>04/28/2021 18:26:15</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.Website.pdb">
+      <publishTime>05/14/2021 18:42:09</publishTime>
+    </File>
+    <File Include="bin/CamaraComercio.Website.XmlSerializers.dll">
+      <publishTime>05/14/2021 18:42:10</publishTime>
+    </File>
+    <File Include="bin/eWorld.UI.dll">
+      <publishTime>04/26/2021 17:24:57</publishTime>
+    </File>
+    <File Include="bin/Hammock.dll">
+      <publishTime>04/26/2021 17:24:56</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>04/26/2021 17:24:58</publishTime>
+    </File>
+    <File Include="bin/LinqKit.dll">
+      <publishTime>04/26/2021 17:24:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.Common.dll">
+      <publishTime>02/20/2011 04:40:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.dll">
+      <publishTime>02/20/2011 04:40:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WinForms.dll">
+      <publishTime>02/20/2011 04:40:08</publishTime>
+    </File>
+    <File Include="bin/ModuloPago.dll">
+      <publishTime>04/26/2021 17:24:56</publishTime>
+    </File>
+    <File Include="bin/MSCaptcha.dll">
+      <publishTime>04/26/2021 17:24:58</publishTime>
+    </File>
+    <File Include="bin/Neodynamic.WinControls.BarcodeProfessional.dll">
+      <publishTime>04/26/2021 17:24:56</publishTime>
+    </File>
+    <File Include="bin/Srm.Common.dll">
+      <publishTime>04/26/2021 17:24:56</publishTime>
+    </File>
+    <File Include="bin/Srm.Utils.dll">
+      <publishTime>04/26/2021 17:24:56</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.dll">
+      <publishTime>04/26/2021 17:24:57</publishTime>
+    </File>
+    <File Include="CertificadosRMService.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="Facturacion/ServicioFacturacion.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="GeneracionReportes.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="MembershipJsonApi.aspx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="MembershipJsonService.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="MembershipService.asmx">
+      <publishTime>04/26/2021 17:25:01</publishTime>
+    </File>
+    <File Include="Mensajeria.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="NewsFeed.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="NewsFeedJson.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="post.htm">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>05/11/2021 17:05:30</publishTime>
+    </File>
+    <File Include="SaifeService.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="Servicios/ServiciosEnGestion.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="Servicios/ServiciosSrm.asmx">
+      <publishTime>04/26/2021 17:25:02</publishTime>
+    </File>
+    <File Include="TransaccionesWebService.asmx">
+      <publishTime>04/26/2021 17:25:01</publishTime>
+    </File>
+    <File Include="Web References/GestionWs/NCValidator.datasource">
+      <publishTime>04/28/2021 19:09:38</publishTime>
+    </File>
+    <File Include="Web References/GestionWs/WSFacturasResultOfEstadoFatura.datasource">
+      <publishTime>04/28/2021 19:09:38</publishTime>
+    </File>
+    <File Include="Web References/GestionWs/WSFacturasResultOfWSFactura.datasource">
+      <publishTime>04/28/2021 19:09:39</publishTime>
+    </File>
+    <File Include="Web References/WebSrmWS/FormasPagoViewModel.datasource">
+      <publishTime>05/05/2021 19:12:12</publishTime>
+    </File>
+    <File Include="Web References/WebSrmWS/TipoRespuestaNotaCredito.datasource">
+      <publishTime>05/05/2021 19:12:11</publishTime>
+    </File>
+    <File Include="Web References/WebSrmWS/VigenciaNotaCreditoViewModel.datasource">
+      <publishTime>05/05/2021 19:12:12</publishTime>
+    </File>
+    <File Include="Web References/WSIntegrationDynamics365/Reference.map">
+      <publishTime>04/26/2021 17:37:21</publishTime>
+    </File>
+    <File Include="Web References/WSIntegrationDynamics365/WSError.datasource">
+      <publishTime>05/11/2021 17:49:18</publishTime>
+    </File>
+    <File Include="Web References/WSIntegrationDynamics365/WSFacturasResultOfWSFactura.datasource">
+      <publishTime>05/11/2021 17:49:18</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/14/2021 18:42:48</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

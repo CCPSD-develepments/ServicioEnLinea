@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode  url="/Empresas/Oficina.aspx" title="Oficina"  description="Oficina Virtual de la Camara">
+    <siteMapNode url="/Operaciones/Registro/NuevoRegistro.aspx" title="Registrar Nueva Empresa"  description="Constitución y Registro de una nueva Empresa" />
+    <siteMapNode url="/Empresas/SolicitudInclusion.aspx" title="Autorizar Empresa Existente"  description="Solicitud de inclusión de una empresa que ya existe" />  
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7a348042-c498-489c-8623-14e30031fb11" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.10.80.12:8083/OnlineChamberService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OnlineChamberService.xsd" MetadataType="Schema" ID="8b745abd-35cb-48b5-9e6f-bb87a37cc298" SourceId="1" SourceUrl="http://10.10.80.12:8083/OnlineChamberService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OnlineChamberService1.xsd" MetadataType="Schema" ID="a23bbeb5-15fb-4d41-9f44-6688955698ad" SourceId="1" SourceUrl="http://10.10.80.12:8083/OnlineChamberService.svc?xsd=xsd5" />
+    <MetadataFile FileName="OnlineChamberService2.xsd" MetadataType="Schema" ID="2ef5b855-7c85-48c8-912c-6182367205fd" SourceId="1" SourceUrl="http://10.10.80.12:8083/OnlineChamberService.svc?xsd=xsd4" />
+    <MetadataFile FileName="OnlineChamberService.wsdl" MetadataType="Wsdl" ID="a940a1d8-3e6b-4457-9fc2-334ef997513a" SourceId="1" SourceUrl="http://10.10.80.12:8083/OnlineChamberService.svc?wsdl" />
+    <MetadataFile FileName="OnlineChamberService3.xsd" MetadataType="Schema" ID="175f20ea-8f33-4552-9cfa-1a629adedf01" SourceId="1" SourceUrl="http://10.10.80.12:8083/OnlineChamberService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OnlineChamberService1.wsdl" MetadataType="Wsdl" ID="16632679-a2fd-421a-a320-d43f3099152a" SourceId="1" SourceUrl="http://10.10.80.12:8083/OnlineChamberService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="OnlineChamberService4.xsd" MetadataType="Schema" ID="03374158-cf87-4be8-bae5-155143f4799b" SourceId="1" SourceUrl="http://10.10.80.12:8083/OnlineChamberService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OnlineChamberService5.xsd" MetadataType="Schema" ID="a3ad2fff-2ba3-43e4-8398-72a27dc2f36b" SourceId="1" SourceUrl="http://10.10.80.12:8083/OnlineChamberService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OnlineChamberService.disco" MetadataType="Disco" ID="6fe35d18-5513-44bb-b5c1-fa96aa323e93" SourceId="1" SourceUrl="http://10.10.80.12:8083/OnlineChamberService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

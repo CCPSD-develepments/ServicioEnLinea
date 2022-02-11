@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.registromercantil.org.do/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.registromercantil.org.do/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.registromercantil.org.do/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GenerarNcf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="camaraId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoNcf" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerarNcfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerarNcfResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotaCreditoMonto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TransaccionSRMId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="camaraId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotaCreditoMontoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNotaCreditoMontoResult" type="tns:FormaPagosSRM" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FormaPagosSRM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BancoDescripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BancoId" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConfirmacionPagoTarjeta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Divisa" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FacturaId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaCuadre" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormaPago" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormaPagoDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nota" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoTarjeta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroNotaCredito" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tasa" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorDevuelto" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorEntregado" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotaCreditoValida" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaCreacionNota" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Voucher" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GenerarFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rnc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoComprobante" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="camaraId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviciosFacturados" type="tns:ArrayOfServicio" />
+            <s:element minOccurs="0" maxOccurs="1" name="registroPagos" type="tns:ArrayOfRegistroPago" />
+            <s:element minOccurs="1" maxOccurs="1" name="reclamaSaldoPendiente" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfServicio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Servicio" nillable="true" type="tns:Servicio" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Servicio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CgControl" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdReg" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contacto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cantidad" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrecioUnitario" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Descuento" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalBruto" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFactura" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalDescuento" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalPagar" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransaccionId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRegistroPago">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RegistroPago" nillable="true" type="tns:RegistroPago" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RegistroPago">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MetodoPago" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorEntregado" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorDevuelto" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nota" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Refenrencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TarjetaCredito" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BancoID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NotaCreditoId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="VoucherNotaCredito" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GenerarFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerarFacturaResult" type="tns:Factura" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Factura">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroFactura" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NCF" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Estado" type="tns:EstadoFactura" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EstadoFactura">
+        <s:restriction base="s:string">
+          <s:enumeration value="Emitida" />
+          <s:enumeration value="Cancelada" />
+          <s:enumeration value="NotaDeCredito" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ValidacionVigenciaNotaCredito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TransaccionSRMId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="camaraId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidacionVigenciaNotaCreditoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidacionVigenciaNotaCreditoResult" type="tns:VigenciaNotaCreditoSRM" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VigenciaNotaCreditoSRM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NotaCreditoValida" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaCreacionNota" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiasTranscurridos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdNotaCredito" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GenerarNcfSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerarNcf" />
+  </wsdl:message>
+  <wsdl:message name="GenerarNcfSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerarNcfResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNotaCreditoMontoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNotaCreditoMonto" />
+  </wsdl:message>
+  <wsdl:message name="GetNotaCreditoMontoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNotaCreditoMontoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerarFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerarFactura" />
+  </wsdl:message>
+  <wsdl:message name="GenerarFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidacionVigenciaNotaCreditoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidacionVigenciaNotaCredito" />
+  </wsdl:message>
+  <wsdl:message name="ValidacionVigenciaNotaCreditoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidacionVigenciaNotaCreditoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioFacturacionSoap">
+    <wsdl:operation name="GenerarNcf">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Genera un Ncf dependiendo el tipo en el Sistema de Gestión</wsdl:documentation>
+      <wsdl:input message="tns:GenerarNcfSoapIn" />
+      <wsdl:output message="tns:GenerarNcfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotaCreditoMonto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el detalle de una nota de creditos existente</wsdl:documentation>
+      <wsdl:input message="tns:GetNotaCreditoMontoSoapIn" />
+      <wsdl:output message="tns:GetNotaCreditoMontoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarFactura">
+      <wsdl:input message="tns:GenerarFacturaSoapIn" />
+      <wsdl:output message="tns:GenerarFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionVigenciaNotaCredito">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el detalle de una nota de creditos existente</wsdl:documentation>
+      <wsdl:input message="tns:ValidacionVigenciaNotaCreditoSoapIn" />
+      <wsdl:output message="tns:ValidacionVigenciaNotaCreditoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioFacturacionSoap" type="tns:ServicioFacturacionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GenerarNcf">
+      <soap:operation soapAction="http://www.registromercantil.org.do/GenerarNcf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotaCreditoMonto">
+      <soap:operation soapAction="http://www.registromercantil.org.do/GetNotaCreditoMonto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarFactura">
+      <soap:operation soapAction="http://www.registromercantil.org.do/GenerarFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionVigenciaNotaCredito">
+      <soap:operation soapAction="http://www.registromercantil.org.do/ValidacionVigenciaNotaCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioFacturacionSoap12" type="tns:ServicioFacturacionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GenerarNcf">
+      <soap12:operation soapAction="http://www.registromercantil.org.do/GenerarNcf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotaCreditoMonto">
+      <soap12:operation soapAction="http://www.registromercantil.org.do/GetNotaCreditoMonto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarFactura">
+      <soap12:operation soapAction="http://www.registromercantil.org.do/GenerarFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionVigenciaNotaCredito">
+      <soap12:operation soapAction="http://www.registromercantil.org.do/ValidacionVigenciaNotaCredito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioFacturacion">
+    <wsdl:port name="ServicioFacturacionSoap" binding="tns:ServicioFacturacionSoap">
+      <soap:address location="http://localhost:37245/Facturacion/ServicioFacturacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioFacturacionSoap12" binding="tns:ServicioFacturacionSoap12">
+      <soap12:address location="http://localhost:37245/Facturacion/ServicioFacturacion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

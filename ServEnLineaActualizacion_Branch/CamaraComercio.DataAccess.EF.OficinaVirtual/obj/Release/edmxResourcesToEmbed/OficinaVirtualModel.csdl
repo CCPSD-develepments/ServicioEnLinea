@@ -1,0 +1,1757 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CamaraWebsiteModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="CamaraWebsiteEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="EmpresasPorUsuario" EntityType="CamaraWebsiteModel.EmpresasPorUsuario" />
+    <EntitySet Name="Mensajes" EntityType="CamaraWebsiteModel.Mensajes" />
+    <EntitySet Name="TipoServicioDetalles" EntityType="CamaraWebsiteModel.TipoServicioDetalles" />
+    <EntitySet Name="Cargos" EntityType="CamaraWebsiteModel.Cargos" />
+    <EntitySet Name="CategoriasSocios" EntityType="CamaraWebsiteModel.CategoriasSocios" />
+    <EntitySet Name="Ciudades" EntityType="CamaraWebsiteModel.Ciudades" />
+    <EntitySet Name="DiasFeriados" EntityType="CamaraWebsiteModel.DiasFeriados" />
+    <EntitySet Name="Direcciones" EntityType="CamaraWebsiteModel.Direcciones" />
+    <EntitySet Name="Paises" EntityType="CamaraWebsiteModel.Paises" />
+    <EntitySet Name="Personas" EntityType="CamaraWebsiteModel.Personas" />
+    <EntitySet Name="Productos" EntityType="CamaraWebsiteModel.Productos" />
+    <EntitySet Name="Profesiones" EntityType="CamaraWebsiteModel.Profesiones" />
+    <EntitySet Name="ReferenciasBancarias" EntityType="CamaraWebsiteModel.ReferenciasBancarias" />
+    <EntitySet Name="ReferenciasComerciales" EntityType="CamaraWebsiteModel.ReferenciasComerciales" />
+    <EntitySet Name="RegistroActual" EntityType="CamaraWebsiteModel.RegistroActual" />
+    <EntitySet Name="RegistrosActividades" EntityType="CamaraWebsiteModel.RegistrosActividades" />
+    <EntitySet Name="Sectores" EntityType="CamaraWebsiteModel.Sectores" />
+    <EntitySet Name="SistemasArmonizados" EntityType="CamaraWebsiteModel.SistemasArmonizados" />
+    <EntitySet Name="Sociedades" EntityType="CamaraWebsiteModel.Sociedades" />
+    <EntitySet Name="Socios" EntityType="CamaraWebsiteModel.Socios" />
+    <EntitySet Name="Sucursales" EntityType="CamaraWebsiteModel.Sucursales" />
+    <EntitySet Name="Tarifas" EntityType="CamaraWebsiteModel.Tarifas" />
+    <EntitySet Name="TiposEnteRegulado" EntityType="CamaraWebsiteModel.TiposEnteRegulado" />
+    <AssociationSet Name="FK_Ciudades_Paises" Association="CamaraWebsiteModel.FK_Ciudades_Paises">
+      <End Role="Paises" EntitySet="Paises" />
+      <End Role="Ciudades" EntitySet="Ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personas_Direcciones__Persona_" Association="CamaraWebsiteModel.FK_Personas_Direcciones__Persona_">
+      <End Role="Direcciones" EntitySet="Direcciones" />
+      <End Role="Personas" EntitySet="Personas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_SistemasArmonizados" Association="CamaraWebsiteModel.FK_Productos_SistemasArmonizados">
+      <End Role="SistemasArmonizados" EntitySet="SistemasArmonizados" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Suscursales_Sociedades" Association="CamaraWebsiteModel.FK_Suscursales_Sociedades">
+      <End Role="Sociedades" EntitySet="Sociedades" />
+      <End Role="Sucursales" EntitySet="Sucursales" />
+    </AssociationSet>
+    <EntitySet Name="TransaccionesDocumentos" EntityType="CamaraWebsiteModel.TransaccionesDocumentos" />
+    <EntitySet Name="EstatusTransacciones" EntityType="CamaraWebsiteModel.EstatusTransacciones" />
+    <EntitySet Name="ServicioDetalles" EntityType="CamaraWebsiteModel.ServicioDetalles" />
+    <EntitySet Name="TransaccionDetalle" EntityType="CamaraWebsiteModel.TransaccionDetalle" />
+    <EntitySet Name="TransaccionesTarjeta" EntityType="CamaraWebsiteModel.TransaccionesTarjeta" />
+    <AssociationSet Name="FK_Socios_Personas" Association="CamaraWebsiteModel.FK_Socios_Personas">
+      <End Role="Personas" EntitySet="Personas" />
+      <End Role="Socios" EntitySet="Socios" />
+    </AssociationSet>
+    <EntitySet Name="Facturas" EntityType="CamaraWebsiteModel.Facturas" />
+    <AssociationSet Name="FK_TransaccionDetalle_Facturas" Association="CamaraWebsiteModel.FK_TransaccionDetalle_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="TransaccionDetalle" EntitySet="TransaccionDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionesTarjeta_Facturas" Association="CamaraWebsiteModel.FK_TransaccionesTarjeta_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="TransaccionesTarjeta" EntitySet="TransaccionesTarjeta" />
+    </AssociationSet>
+    <EntitySet Name="PropiedadesPorSociedad" EntityType="CamaraWebsiteModel.PropiedadesPorSociedad" />
+    <EntitySet Name="PropiedadesUI" EntityType="CamaraWebsiteModel.PropiedadesUI" />
+    <AssociationSet Name="FK_PropiedadesPorSociedad_PropiedadesUI" Association="CamaraWebsiteModel.FK_PropiedadesPorSociedad_PropiedadesUI">
+      <End Role="PropiedadesUI" EntitySet="PropiedadesUI" />
+      <End Role="PropiedadesPorSociedad" EntitySet="PropiedadesPorSociedad" />
+    </AssociationSet>
+    <EntitySet Name="TransaccionesDocDescargas" EntityType="CamaraWebsiteModel.TransaccionesDocDescargas" />
+    <EntitySet Name="Registros" EntityType="CamaraWebsiteModel.Registros" />
+    <AssociationSet Name="FK_Productos_Registros" Association="CamaraWebsiteModel.FK_Productos_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenciasBancarias_Registros" Association="CamaraWebsiteModel.FK_ReferenciasBancarias_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="ReferenciasBancarias" EntitySet="ReferenciasBancarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenciasComerciales_Registros" Association="CamaraWebsiteModel.FK_ReferenciasComerciales_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="ReferenciasComerciales" EntitySet="ReferenciasComerciales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrosActividades_Registros" Association="CamaraWebsiteModel.FK_RegistrosActividades_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="RegistrosActividades" EntitySet="RegistrosActividades" />
+    </AssociationSet>
+    <EntitySet Name="NombresComerciales" EntityType="CamaraWebsiteModel.NombresComerciales" />
+    <EntitySet Name="PropiedadesModificacionUI" EntityType="CamaraWebsiteModel.PropiedadesModificacionUI" />
+    <EntitySet Name="Transacciones" EntityType="CamaraWebsiteModel.Transacciones" />
+    <AssociationSet Name="FK_Transacciones_EstatusTransacciones" Association="CamaraWebsiteModel.FK_Transacciones_EstatusTransacciones">
+      <End Role="EstatusTransacciones" EntitySet="EstatusTransacciones" />
+      <End Role="Transacciones" EntitySet="Transacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Facturas_Transacciones" Association="CamaraWebsiteModel.FK_Facturas_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="Facturas" EntitySet="Facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transacciones_Transacciones" Association="CamaraWebsiteModel.FK_Transacciones_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="Transacciones1" EntitySet="Transacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionesDocDescargas_Transacciones" Association="CamaraWebsiteModel.FK_TransaccionesDocDescargas_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="TransaccionesDocDescargas" EntitySet="TransaccionesDocDescargas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionesDocumentos_Transacciones" Association="CamaraWebsiteModel.FK_TransaccionesDocumentos_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="TransaccionesDocumentos" EntitySet="TransaccionesDocumentos" />
+    </AssociationSet>
+    <EntitySet Name="TransaccionDocSeleccionado" EntityType="CamaraWebsiteModel.TransaccionDocSeleccionado" />
+    <AssociationSet Name="FK_TransaccionDocSeleccionado_Transacciones" Association="CamaraWebsiteModel.FK_TransaccionDocSeleccionado_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="TransaccionDocSeleccionado" EntitySet="TransaccionDocSeleccionado" />
+    </AssociationSet>
+    <EntitySet Name="LogTransacciones" EntityType="CamaraWebsiteModel.LogTransacciones" />
+    <EntitySet Name="TransaccionesCanceladas" EntityType="CamaraWebsiteModel.TransaccionesCanceladas" />
+    <AssociationSet Name="FK_TransaccionesCanceladas_EstatusTransacciones" Association="CamaraWebsiteModel.FK_TransaccionesCanceladas_EstatusTransacciones">
+      <End Role="EstatusTransacciones" EntitySet="EstatusTransacciones" />
+      <End Role="TransaccionesCanceladas" EntitySet="TransaccionesCanceladas" />
+    </AssociationSet>
+    <EntitySet Name="TransaccionCopiasCertificadas" EntityType="CamaraWebsiteModel.TransaccionCopiasCertificadas" />
+    <EntitySet Name="TransaccionInfo" EntityType="CamaraWebsiteModel.TransaccionInfo" />
+    <EntitySet Name="Bancos" EntityType="CamaraWebsiteModel.Bancos" />
+    <EntitySet Name="FormaEntregaCertificadoOnapi" EntityType="CamaraWebsiteModel.FormaEntregaCertificadoOnapi" />
+    <EntitySet Name="FormasPagos" EntityType="CamaraWebsiteModel.FormasPagos" />
+    <EntitySet Name="ImpresionTransacciones" EntityType="CamaraWebsiteModel.ImpresionTransacciones" />
+    <EntitySet Name="Institucion" EntityType="CamaraWebsiteModel.Institucion" />
+    <EntitySet Name="InstitucionSeguimiento" EntityType="CamaraWebsiteModel.InstitucionSeguimiento" />
+    <EntitySet Name="InstitucionSeguimientoTSS" EntityType="CamaraWebsiteModel.InstitucionSeguimientoTSS" />
+    <EntitySet Name="NotasCredito" EntityType="CamaraWebsiteModel.NotasCredito" />
+    <EntitySet Name="TransaccionesDocumentosOnapi" EntityType="CamaraWebsiteModel.TransaccionesDocumentosOnapi" />
+    <EntitySet Name="TransaccionOnapi" EntityType="CamaraWebsiteModel.TransaccionOnapi" />
+    <EntitySet Name="TransaccionOnapiTss" EntityType="CamaraWebsiteModel.TransaccionOnapiTss" />
+    <AssociationSet Name="FK_FormasPagos_Facturas" Association="CamaraWebsiteModel.FK_FormasPagos_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="FormasPagos" EntitySet="FormasPagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotasCredito_Facturas" Association="CamaraWebsiteModel.FK_NotasCredito_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="NotasCredito" EntitySet="NotasCredito" />
+    </AssociationSet>
+    <FunctionImport Name="GetAllTransaccionesVU" ReturnType="Collection(CamaraWebsiteModel.GetAllTransaccionesVU_Result)" />
+    <FunctionImport Name="GetDatosTSS" ReturnType="Collection(CamaraWebsiteModel.GetDatosTSS_Result)" />
+    <AssociationSet Name="FK_ReferenciasBancarias_Transaccion" Association="CamaraWebsiteModel.FK_ReferenciasBancarias_Transaccion">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="ReferenciasBancarias" EntitySet="ReferenciasBancarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenciasComerciales_Transaccion" Association="CamaraWebsiteModel.FK_ReferenciasComerciales_Transaccion">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="ReferenciasComerciales" EntitySet="ReferenciasComerciales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Registros_Transaccion" Association="CamaraWebsiteModel.FK_Registros_Transaccion">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="Registros" EntitySet="Registros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sociedades_Transaccion" Association="CamaraWebsiteModel.FK_Sociedades_Transaccion">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="Sociedades" EntitySet="Sociedades" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="CamaraWebsiteModel.sysdiagrams" />
+    <EntitySet Name="LogRegistroOnapi_VU" EntityType="CamaraWebsiteModel.LogRegistroOnapi_VU" />
+    <EntitySet Name="TokenMIT" EntityType="CamaraWebsiteModel.TokenMIT" />
+    <EntitySet Name="DatosGenerales" EntityType="CamaraWebsiteModel.DatosGenerales" />
+    <EntitySet Name="TempActividadesTransaccion" EntityType="CamaraWebsiteModel.TempActividadesTransaccion" />
+    <EntitySet Name="TempDatosSociedad" EntityType="CamaraWebsiteModel.TempDatosSociedad" />
+    <EntitySet Name="tempPersonas" EntityType="CamaraWebsiteModel.tempPersonas" />
+    <EntitySet Name="TempProductos" EntityType="CamaraWebsiteModel.TempProductos" />
+    <EntitySet Name="TempReferenciasBancarias" EntityType="CamaraWebsiteModel.TempReferenciasBancarias" />
+    <EntitySet Name="TempReferenciasComerciales" EntityType="CamaraWebsiteModel.TempReferenciasComerciales" />
+    <EntitySet Name="TempSocios" EntityType="CamaraWebsiteModel.TempSocios" />
+    <EntitySet Name="TempSucursales" EntityType="CamaraWebsiteModel.TempSucursales" />
+    <EntitySet Name="HistoricoTransacciones" EntityType="CamaraWebsiteModel.HistoricoTransacciones" />
+    <EntitySet Name="TransaccionesEmpBHD" EntityType="CamaraWebsiteModel.TransaccionesEmpBHD" />
+  </EntityContainer>
+  <EntityType Name="EmpresasPorUsuario">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaSolicitud" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="FechaCreacion" Precision="3" />
+    <Property Type="DateTime" Name="FechaUltModificacion" Precision="3" />
+    <Property Type="Int16" Name="Estado" Nullable="false" />
+    <Property Type="String" Name="CamaraID" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="NoRegistro" />
+    <Property Type="Int32" Name="TransaccionId" />
+    <Property Name="EsPersona" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Mensajes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UsuarioSistema" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SociedadID" />
+    <Property Type="String" Name="Titulo" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaEnvio" Precision="3" />
+    <Property Type="DateTime" Name="FechaLectura" Precision="3" />
+    <Property Type="Int32" Name="TransaccionId" />
+    <Property Type="Int32" Name="TipoMensaje" Nullable="false" />
+    <Property Type="String" Name="CamaraId" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="UsuarioPadre" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="Int64" Name="idFirmaDocumentos" />
+  </EntityType>
+  <EntityType Name="TipoServicioDetalles">
+    <Key>
+      <PropertyRef Name="TipoServicioId" />
+    </Key>
+    <Property Type="Int32" Name="TipoServicioId" Nullable="false" />
+    <Property Type="String" Name="Url" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WebKey" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DescripcionAyuda" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Cargos">
+    <Key>
+      <PropertyRef Name="CargoId" />
+    </Key>
+    <Property Type="Int32" Name="CargoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CategoriasSocios">
+    <Key>
+      <PropertyRef Name="TipoCategoriaId" />
+    </Key>
+    <Property Type="Int32" Name="TipoCategoriaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="TipoCategoria" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Ciudades">
+    <Key>
+      <PropertyRef Name="CiudadId" />
+    </Key>
+    <Property Type="Int32" Name="CiudadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PaisId" />
+    <Property Type="Int32" Name="Orden" Nullable="false" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Paises" Relationship="CamaraWebsiteModel.FK_Ciudades_Paises" FromRole="Ciudades" ToRole="Paises" />
+  </EntityType>
+  <EntityType Name="DiasFeriados">
+    <Key>
+      <PropertyRef Name="Fecha" />
+    </Key>
+    <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Direcciones">
+    <Key>
+      <PropertyRef Name="DireccionId" />
+    </Key>
+    <Property Type="Int32" Name="DireccionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Calle" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Numero" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CiudadId" />
+    <Property Type="Int32" Name="SectorId" />
+    <Property Type="String" Name="ApartadoPostal" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TelefonoCasa" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TelefonoOficina" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Extension" />
+    <Property Type="String" Name="Fax" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SitioWeb" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Personas" Relationship="CamaraWebsiteModel.FK_Personas_Direcciones__Persona_" FromRole="Direcciones" ToRole="Personas" />
+  </EntityType>
+  <EntityType Name="Paises">
+    <Key>
+      <PropertyRef Name="PaisId" />
+    </Key>
+    <Property Type="Int32" Name="PaisId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Orden" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Ciudades" Relationship="CamaraWebsiteModel.FK_Ciudades_Paises" FromRole="Paises" ToRole="Ciudades" />
+  </EntityType>
+  <EntityType Name="Personas">
+    <Key>
+      <PropertyRef Name="PersonaId" />
+    </Key>
+    <Property Type="Int32" Name="PersonaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="RegistroId" Nullable="false" />
+    <Property Type="String" Name="TipoDocumento" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Documento" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrimerNombre" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SegundoNombre" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrimerApellido" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SegundoApellido" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Rnc" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="NacionalidadId" />
+    <Property Type="String" Name="EstadoCivil" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="ProfesionId" />
+    <Property Type="Int32" Name="DireccionId" />
+    <NavigationProperty Name="Direcciones" Relationship="CamaraWebsiteModel.FK_Personas_Direcciones__Persona_" FromRole="Personas" ToRole="Direcciones" />
+    <NavigationProperty Name="Socios" Relationship="CamaraWebsiteModel.FK_Socios_Personas" FromRole="Personas" ToRole="Socios" />
+    <Property Type="String" Name="DireccionCalle" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DireccionNumero" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DireccionCiudadId" />
+    <Property Type="Int32" Name="DireccionSectorId" />
+    <Property Type="String" Name="DireccionApartadoPostal" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="ProductoId" />
+    </Key>
+    <Property Type="Int32" Name="ProductoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="RegistroId" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SistemaArmonizadoId" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SistemasArmonizados" Relationship="CamaraWebsiteModel.FK_Productos_SistemasArmonizados" FromRole="Productos" ToRole="SistemasArmonizados" />
+    <NavigationProperty Name="Registros" Relationship="CamaraWebsiteModel.FK_Productos_Registros" FromRole="Productos" ToRole="Registros" />
+  </EntityType>
+  <EntityType Name="Profesiones">
+    <Key>
+      <PropertyRef Name="ProfesionId" />
+    </Key>
+    <Property Type="Int32" Name="ProfesionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ReferenciasBancarias">
+    <Key>
+      <PropertyRef Name="ReferenciaBancariaId" />
+    </Key>
+    <Property Type="Int32" Name="ReferenciaBancariaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="RegistroId" Nullable="false" />
+    <Property Type="Int32" Name="BancoId" Nullable="false" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Registros" Relationship="CamaraWebsiteModel.FK_ReferenciasBancarias_Registros" FromRole="ReferenciasBancarias" ToRole="Registros" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <NavigationProperty Name="Transacciones" Relationship="CamaraWebsiteModel.FK_ReferenciasBancarias_Transaccion" FromRole="ReferenciasBancarias" ToRole="Transacciones" />
+  </EntityType>
+  <EntityType Name="ReferenciasComerciales">
+    <Key>
+      <PropertyRef Name="ReferenciaComercialId" />
+    </Key>
+    <Property Type="Int32" Name="ReferenciaComercialId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="RegistroId" Nullable="false" />
+    <Property Type="String" Name="TipoReferencia" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Registros" Relationship="CamaraWebsiteModel.FK_ReferenciasComerciales_Registros" FromRole="ReferenciasComerciales" ToRole="Registros" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <NavigationProperty Name="Transacciones" Relationship="CamaraWebsiteModel.FK_ReferenciasComerciales_Transaccion" FromRole="ReferenciasComerciales" ToRole="Transacciones" />
+  </EntityType>
+  <EntityType Name="RegistroActual">
+    <Key>
+      <PropertyRef Name="RegistroId" />
+    </Key>
+    <Property Type="Double" Name="RegistroId" Nullable="false" />
+    <Property Type="String" Name="EmpresaId" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="NumeroRegistro" />
+    <Property Type="Int32" Name="TipoSociedadId" />
+    <Property Type="String" Name="TipoSociedad" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaEmision" Precision="3" />
+    <Property Type="DateTime" Name="FechaVencimiento" Precision="3" />
+    <Property Type="DateTime" Name="FechaConstitucion" Precision="3" />
+    <Property Type="DateTime" Name="FechaInicioOperaciones" Precision="3" />
+    <Property Type="String" Name="NombreEstablecimiento" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RazonSocial" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="CapitalGeneral" />
+    <Property Type="Double" Name="CapitalAutorizado" />
+    <Property Type="Double" Name="CapitalPagado" />
+    <Property Type="Double" Name="Activos" />
+    <Property Type="Double" Name="BienesRaices" />
+    <Property Type="Boolean" Name="IsZonaFranca" />
+    <Property Type="String" Name="RNC" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RegistrosActividades">
+    <Key>
+      <PropertyRef Name="AtividadId" />
+    </Key>
+    <Property Type="Int32" Name="AtividadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="RegistroId" Nullable="false" />
+    <Property Type="Int32" Name="TipoActividadId" Nullable="false" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Registros" Relationship="CamaraWebsiteModel.FK_RegistrosActividades_Registros" FromRole="RegistrosActividades" ToRole="Registros" />
+    <Property Type="String" Name="CodigoCIIU" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sectores">
+    <Key>
+      <PropertyRef Name="SectorId" />
+    </Key>
+    <Property Type="Int32" Name="SectorId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CiudadId" Nullable="false" />
+    <Property Type="Int32" Name="Orden" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="SistemasArmonizados">
+    <Key>
+      <PropertyRef Name="SistemaArmonizadoId" />
+    </Key>
+    <Property Type="String" Name="SistemaArmonizadoId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Productos" Relationship="CamaraWebsiteModel.FK_Productos_SistemasArmonizados" FromRole="SistemasArmonizados" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Sociedades">
+    <Key>
+      <PropertyRef Name="SociedadId" />
+    </Key>
+    <Property Type="Int32" Name="SociedadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="RegistroId" Nullable="false" />
+    <Property Type="Int32" Name="TipoSociedadId" />
+    <Property Type="String" Name="NombreSocial" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Rnc" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="EsNacional" Nullable="false" />
+    <Property Type="Int32" Name="NacionalidadId" />
+    <Property Type="DateTime" Name="FechaConstitucion" Precision="3" />
+    <Property Type="String" Name="DuracionSociedad" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaAsamblea" Precision="3" />
+    <Property Type="Int32" Name="DuraccionDirectiva" />
+    <Property Type="Int32" Name="EstatusId" />
+    <Property Type="Boolean" Name="EsEnteRegulado" Nullable="false" />
+    <Property Type="Int32" Name="TipoEnteReguladoId" />
+    <Property Type="String" Name="NoResolucion" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NumeroNaveIndustrial" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NombreSiglas" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SiglasConfig" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AccionesNominales" />
+    <Property Type="Int32" Name="AccionesNoNominales" />
+    <NavigationProperty Name="Sucursales" Relationship="CamaraWebsiteModel.FK_Suscursales_Sociedades" FromRole="Sociedades" ToRole="Sucursales" />
+    <Property Type="DateTime" Name="FechaEnteRegulado" Precision="3" />
+    <Property Type="Int32" Name="SrmSociedadId" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <NavigationProperty Name="Transacciones" Relationship="CamaraWebsiteModel.FK_Sociedades_Transaccion" FromRole="Sociedades" ToRole="Transacciones" />
+  </EntityType>
+  <EntityType Name="Socios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="RegistroId" Nullable="false" />
+    <Property Type="String" Name="TipoSocio" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TipoRelacion" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CargoId" />
+    <Property Type="String" Name="TipoDocumento" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Documento" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="NacionalidadId" />
+    <Property Type="String" Name="RegistroMercantil" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Orden" Nullable="false" />
+    <Property Type="String" Name="SociedadNombreSocial" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PersonaPrimerNombre" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PersonaSegundoNombre" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PersonaPrimerApellido" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PersonaSegundoApellido" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PersonaEstadoCivil" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PersonaProfesionId" />
+    <Property Type="String" Name="DireccionCalle" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DireccionNumero" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DireccionCiudadId" />
+    <Property Type="Int32" Name="DireccionSectorId" />
+    <Property Type="String" Name="DireccionApartadoPostal" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RepresentanteId" />
+    <NavigationProperty Name="Personas" Relationship="CamaraWebsiteModel.FK_Socios_Personas" FromRole="Socios" ToRole="Personas" />
+    <Property Type="Int32" Name="CantidadAcciones" />
+    <Property Type="DateTime" Name="FechaNacimiento" Precision="3" />
+    <Property Name="TipoBeneficiario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdentificacionTributariaPais" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TipoDatosSocio" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="CorreoElectronico" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="SrmId" Type="Int32" />
+    <Property Name="SrmSocioId" Type="Int32" />
+    <Property Name="TransaccionId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Sucursales">
+    <Key>
+      <PropertyRef Name="SucursalId" />
+    </Key>
+    <Property Type="Int32" Name="SucursalId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="SociedadId" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DireccionId" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="DireccionCalle" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DireccionNumero" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DireccionCiudadId" />
+    <Property Type="Int32" Name="DireccionSectorId" />
+    <Property Type="String" Name="DireccionApartadoPostal" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DireccionTelefonoCasa" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DireccionTelefonoOficina" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DireccionExtension" />
+    <Property Type="String" Name="DireccionFax" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sociedades" Relationship="CamaraWebsiteModel.FK_Suscursales_Sociedades" FromRole="Sucursales" ToRole="Sociedades" />
+    <Property Type="String" Name="DireccionEmail" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tarifas">
+    <Key>
+      <PropertyRef Name="TarifaId" />
+    </Key>
+    <Property Type="Int32" Name="TarifaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="MontoInicial" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="MontoFinal" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="CostoContitucion" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="CostoModificacion" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="CostoModificacionNeto" Precision="38" Scale="6" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Decimal" Name="CostoRenovacion" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="CostoRenovacionNeto" Precision="38" Scale="6" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+  </EntityType>
+  <EntityType Name="TiposEnteRegulado">
+    <Key>
+      <PropertyRef Name="TipoEnteReguladoId" />
+    </Key>
+    <Property Type="Int32" Name="TipoEnteReguladoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="FK_Ciudades_Paises">
+    <End Type="CamaraWebsiteModel.Paises" Role="Paises" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.Ciudades" Role="Ciudades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paises">
+        <PropertyRef Name="PaisId" />
+      </Principal>
+      <Dependent Role="Ciudades">
+        <PropertyRef Name="PaisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personas_Direcciones__Persona_">
+    <End Type="CamaraWebsiteModel.Direcciones" Role="Direcciones" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.Personas" Role="Personas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Direcciones">
+        <PropertyRef Name="DireccionId" />
+      </Principal>
+      <Dependent Role="Personas">
+        <PropertyRef Name="DireccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_SistemasArmonizados">
+    <End Type="CamaraWebsiteModel.SistemasArmonizados" Role="SistemasArmonizados" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.Productos" Role="Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SistemasArmonizados">
+        <PropertyRef Name="SistemaArmonizadoId" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="SistemaArmonizadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Suscursales_Sociedades">
+    <End Type="CamaraWebsiteModel.Sociedades" Role="Sociedades" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.Sucursales" Role="Sucursales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sociedades">
+        <PropertyRef Name="SociedadId" />
+      </Principal>
+      <Dependent Role="Sucursales">
+        <PropertyRef Name="SociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TransaccionesDocumentos">
+    <Key>
+      <PropertyRef Name="TransaccionesDocumentosId" />
+    </Key>
+    <Property Type="Int32" Name="TransaccionesDocumentosId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="Int32" Name="TipoDocumentoId" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreArchivo" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaEnvio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="DocContent" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Type="Guid" Name="RowId" Nullable="false" />
+    <Property Type="String" Name="DocContentType" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CantidadCopia" Nullable="false" />
+    <Property Type="Int32" Name="CantidadOriginal" Nullable="false" />
+    <Property Type="DateTime" Name="FechaDocumento" Precision="3" />
+    <NavigationProperty Name="Transacciones" Relationship="CamaraWebsiteModel.FK_TransaccionesDocumentos_Transacciones" FromRole="TransaccionesDocumentos" ToRole="Transacciones" />
+    <Property Type="Boolean" Name="Deleted" Nullable="false" />
+    <Property Type="String" Name="Estatus" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DocSeleccionadoId" Nullable="false" />
+    <Property Name="FirmaDigital" Type="Boolean" />
+    <Property Name="SBDocumentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="TransaccionHistorico">
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="SrmTransaccionId" Nullable="true" />
+    <Property Type="String" Name="CamaraId" Nullable="false" MaxLength="3" />
+    <Property Type="Int32" Name="ServicioId" Nullable="false" />
+    <Property Type="Int32" Name="TipoSociedadId" Nullable="false" />
+    <Property Type="Int32" Name="EstatusTransId" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="EstatusTransacciones">
+    <Key>
+      <PropertyRef Name="EstatusTransId" />
+    </Key>
+    <Property Type="Int32" Name="EstatusTransId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="EstatusTranNombre" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EstatusTransDescripcion" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Transacciones" Relationship="CamaraWebsiteModel.FK_Transacciones_EstatusTransacciones" FromRole="EstatusTransacciones" ToRole="Transacciones" />
+    <NavigationProperty Name="TransaccionesCanceladas" Relationship="CamaraWebsiteModel.FK_TransaccionesCanceladas_EstatusTransacciones" FromRole="EstatusTransacciones" ToRole="TransaccionesCanceladas" />
+  </EntityType>
+  <EntityType Name="ServicioDetalles">
+    <Key>
+      <PropertyRef Name="ServicioId" />
+    </Key>
+    <Property Type="Int32" Name="ServicioId" Nullable="false" />
+    <Property Type="String" Name="Url" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TransaccionDetalle">
+    <Key>
+      <PropertyRef Name="TransaccionDetalles" />
+    </Key>
+    <Property Type="Int32" Name="TransaccionDetalles" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Cuenta" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Detalle" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Cantidad" Nullable="false" />
+    <Property Type="Decimal" Name="PrecioUnitario" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Descuento" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Decimal" Name="TotalBruto" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="FacturaId" Nullable="false" />
+    <NavigationProperty Name="Facturas" Relationship="CamaraWebsiteModel.FK_TransaccionDetalle_Facturas" FromRole="TransaccionDetalle" ToRole="Facturas" />
+    <Property Name="ServicioId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TransaccionesTarjeta">
+    <Key>
+      <PropertyRef Name="TarjetaId" />
+    </Key>
+    <Property Type="Int32" Name="TarjetaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="FacturaId" Nullable="false" />
+    <Property Type="DateTime" Name="FechaTransaccion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="NumeroTarjeta" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AnoVencimiento" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MesVencimiento" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreTarjeta" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreBanco" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TipoTarjeta" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="bProcesada" Nullable="false" />
+    <Property Type="Boolean" Name="bCancelada" Nullable="false" />
+    <NavigationProperty Name="Facturas" Relationship="CamaraWebsiteModel.FK_TransaccionesTarjeta_Facturas" FromRole="TransaccionesTarjeta" ToRole="Facturas" />
+    <Property Type="String" Name="CodigoAutorizacion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CodigoReferencia" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MedioDePago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Socios_Personas">
+    <End Type="CamaraWebsiteModel.Personas" Role="Personas" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.Socios" Role="Socios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personas">
+        <PropertyRef Name="PersonaId" />
+      </Principal>
+      <Dependent Role="Socios">
+        <PropertyRef Name="RepresentanteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="FacturaId" />
+    </Key>
+    <Property Type="Int32" Name="FacturaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="TransaccionId" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Ncf" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="Boolean" Name="Complementaria" Nullable="false" />
+    <Property Type="String" Name="TipoNcf" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="TotalFactura" Nullable="false" Precision="36" Scale="7" />
+    <Property Type="Int32" Name="FacturaSrmId" Nullable="false" />
+    <Property Type="String" Name="CamaraId" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="Credito" Nullable="true" Precision="36" Scale="7" />
+    <Property Type="Decimal" Name="CobroPorServicio" Nullable="true" Precision="36" Scale="7" />
+    <NavigationProperty Name="TransaccionDetalle" Relationship="CamaraWebsiteModel.FK_TransaccionDetalle_Facturas" FromRole="Facturas" ToRole="TransaccionDetalle" />
+    <NavigationProperty Name="TransaccionesTarjeta" Relationship="CamaraWebsiteModel.FK_TransaccionesTarjeta_Facturas" FromRole="Facturas" ToRole="TransaccionesTarjeta" />
+    <NavigationProperty Name="Transacciones" Relationship="CamaraWebsiteModel.FK_Facturas_Transacciones" FromRole="Facturas" ToRole="Transacciones" />
+    <NavigationProperty Name="FormasPagos" Relationship="CamaraWebsiteModel.FK_FormasPagos_Facturas" FromRole="Facturas" ToRole="FormasPagos" />
+    <NavigationProperty Name="NotasCredito" Relationship="CamaraWebsiteModel.FK_NotasCredito_Facturas" FromRole="Facturas" ToRole="NotasCredito" />
+    <Property Name="PagoAnterior" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="CobroPorServicios" Type="Decimal" Precision="36" Scale="7" />
+  </EntityType>
+  <Association Name="FK_TransaccionDetalle_Facturas">
+    <End Type="CamaraWebsiteModel.Facturas" Role="Facturas" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.TransaccionDetalle" Role="TransaccionDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="TransaccionDetalle">
+        <PropertyRef Name="FacturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionesTarjeta_Facturas">
+    <End Type="CamaraWebsiteModel.Facturas" Role="Facturas" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.TransaccionesTarjeta" Role="TransaccionesTarjeta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="TransaccionesTarjeta">
+        <PropertyRef Name="FacturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PropiedadesPorSociedad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="PropiedadID" Nullable="false" />
+    <Property Type="Int32" Name="TipoSociedadID" Nullable="false" />
+    <Property Type="Boolean" Name="Required" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="LowerLimit" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="UpperLimit" Precision="18" Scale="2" />
+    <NavigationProperty Name="PropiedadesUI" Relationship="CamaraWebsiteModel.FK_PropiedadesPorSociedad_PropiedadesUI" FromRole="PropiedadesPorSociedad" ToRole="PropiedadesUI" />
+  </EntityType>
+  <EntityType Name="PropiedadesUI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PropiedadesPorSociedad" Relationship="CamaraWebsiteModel.FK_PropiedadesPorSociedad_PropiedadesUI" FromRole="PropiedadesUI" ToRole="PropiedadesPorSociedad" />
+  </EntityType>
+  <Association Name="FK_PropiedadesPorSociedad_PropiedadesUI">
+    <End Type="CamaraWebsiteModel.PropiedadesUI" Role="PropiedadesUI" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.PropiedadesPorSociedad" Role="PropiedadesPorSociedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PropiedadesUI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PropiedadesPorSociedad">
+        <PropertyRef Name="PropiedadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TransaccionesDocDescargas">
+    <Key>
+      <PropertyRef Name="DescargaId" />
+    </Key>
+    <Property Type="Int32" Name="DescargaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="Binary" Name="DocContent" MaxLength="Max" FixedLength="false" />
+    <Property Type="DateTime" Name="FechaDescarga" Precision="3" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreSocialOrComment" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Transacciones" Relationship="CamaraWebsiteModel.FK_TransaccionesDocDescargas_Transacciones" FromRole="TransaccionesDocDescargas" ToRole="Transacciones" />
+  </EntityType>
+  <EntityType Name="Registros">
+    <Key>
+      <PropertyRef Name="RegistroId" />
+    </Key>
+    <Property Type="Int32" Name="RegistroId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="RegistroMercantil" />
+    <Property Type="DateTime" Name="FechaEmision" Precision="3" />
+    <Property Type="DateTime" Name="FechaVencimiento" Precision="3" />
+    <Property Type="Decimal" Name="CapitalSocial" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="CapitalAutorizado" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="CapitalPagado" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Activos" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="BienesRaices" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="FechaInicioOperacion" Precision="3" />
+    <Property Type="Int32" Name="EmpleadosMasculinos" />
+    <Property Type="Int32" Name="EmpleadosFemeninos" />
+    <Property Type="Int32" Name="EmpleadosTotal" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="NombreComercial" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RegistroNombreComercial" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MarcaFabrica" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RegistroMarcaFabrica" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PatenteInvencion" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RegistroPatenteInvencion" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NombreOperador" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ActividadNegocio" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NumeroSocios" />
+    <Property Type="Int32" Name="TotalAcciones" />
+    <Property Type="Boolean" Name="EsNuevoRegistro" Nullable="false" />
+    <Property Type="String" Name="DireccionCalle" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DireccionNumero" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DireccionCiudadId" />
+    <Property Type="String" Name="DireccionCiudad" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DireccionSectorId" />
+    <Property Type="String" Name="DireccionApartadoPostal" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DireccionTelefonoCasa" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DireccionTelefonoOficina" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DireccionExtension" />
+    <Property Type="String" Name="DireccionFax" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DireccionEmail" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DireccionSitioWeb" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NombreSolicitante" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CargoSolicitante" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GestorUsername" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaSolicitud" Precision="3" />
+    <Property Type="Boolean" Name="EntidadActiva" />
+    <Property Type="Boolean" Name="EsRenovacion" Nullable="false" />
+    <Property Type="Int32" Name="TipoMonedaCapitalSocial" />
+    <Property Type="Int32" Name="TipoMonedaCapitalAutorizado" />
+    <Property Type="Int32" Name="TipoMonedaCapitalPagado" />
+    <Property Type="Int32" Name="TipoMonedaActivos" />
+    <Property Type="Int32" Name="TipoMonedaBienesRaices" />
+    <NavigationProperty Name="Productos" Relationship="CamaraWebsiteModel.FK_Productos_Registros" FromRole="Registros" ToRole="Productos" />
+    <NavigationProperty Name="ReferenciasBancarias" Relationship="CamaraWebsiteModel.FK_ReferenciasBancarias_Registros" FromRole="Registros" ToRole="ReferenciasBancarias" />
+    <NavigationProperty Name="ReferenciasComerciales" Relationship="CamaraWebsiteModel.FK_ReferenciasComerciales_Registros" FromRole="Registros" ToRole="ReferenciasComerciales" />
+    <NavigationProperty Name="RegistrosActividades" Relationship="CamaraWebsiteModel.FK_RegistrosActividades_Registros" FromRole="Registros" ToRole="RegistrosActividades" />
+    <Property Type="String" Name="ActividadIdCIUU" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ActividadCIUU" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ActividadIdCIUU2" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ActividadCIUU2" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Id_Cierre_Fiscal" />
+    <Property Type="DateTime" Name="FechaAsamblea1" Precision="3" />
+    <Property Type="DateTime" Name="FechaAsamblea2" Precision="3" />
+    <Property Type="Int32" Name="SrmRegistroId" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <NavigationProperty Name="Transacciones" Relationship="CamaraWebsiteModel.FK_Registros_Transaccion" FromRole="Registros" ToRole="Transacciones" />
+    <Property Name="CorreoEmpresa" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="CorreoContacto" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Productos_Registros">
+    <End Type="CamaraWebsiteModel.Registros" Role="Registros" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.Productos" Role="Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenciasBancarias_Registros">
+    <End Type="CamaraWebsiteModel.Registros" Role="Registros" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.ReferenciasBancarias" Role="ReferenciasBancarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="ReferenciasBancarias">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenciasComerciales_Registros">
+    <End Type="CamaraWebsiteModel.Registros" Role="Registros" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.ReferenciasComerciales" Role="ReferenciasComerciales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="ReferenciasComerciales">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrosActividades_Registros">
+    <End Type="CamaraWebsiteModel.Registros" Role="Registros" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.RegistrosActividades" Role="RegistrosActividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="RegistrosActividades">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="NombresComerciales">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="TransaccionID" />
+    <Property Type="String" Name="NombreComercial1" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NombreComercial2" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NombreComercial3" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PropiedadesModificacionUI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="ServicioID" />
+    <Property Type="String" Name="NombreControl" MaxLength="80" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Transacciones">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="EstatusTransId" Nullable="false" />
+    <Property Type="Int32" Name="RegistroId" Nullable="false" />
+    <Property Type="Int32" Name="ServicioId" Nullable="false" />
+    <Property Type="String" Name="CamaraId" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TipoSociedadId" Nullable="false" />
+    <Property Type="String" Name="Solicitante" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RNCSolicitante" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreContacto" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TelefonoContacto" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FaxContacto" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NoReciboDGII" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaReciboDGII" Precision="3" />
+    <Property Type="Decimal" Name="MontoDGII" Precision="19" Scale="4" />
+    <Property Type="String" Name="DestinoTraslado" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreSocialPersona" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ApellidoPersona" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="NumeroRegistro" />
+    <Property Type="DateTime" Name="FechaAsamblea" Precision="3" />
+    <Property Type="Decimal" Name="CapitalSocial" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="ModificacionCapital" Precision="18" Scale="0" />
+    <Property Type="Boolean" Name="bLoadedInSRM" />
+    <Property Type="Int32" Name="Tipo" />
+    <Property Type="String" Name="NCF" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TipoNcf" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SrmTransaccionId" />
+    <Property Type="Boolean" Name="bPagada" Nullable="false" />
+    <Property Type="Int32" Name="SubTransaccionId" />
+    <Property Type="String" Name="InstanceXML" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="Prioridad" Nullable="false" />
+    <Property Type="Int32" Name="TipoModeloId" />
+    <Property Type="String" Name="Token" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TipoComprobanteId" />
+    <Property Type="String" Name="Comentario" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CorreoEmpresa" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EstatusTransacciones" Relationship="CamaraWebsiteModel.FK_Transacciones_EstatusTransacciones" FromRole="Transacciones" ToRole="EstatusTransacciones" />
+    <NavigationProperty Name="Facturas" Relationship="CamaraWebsiteModel.FK_Facturas_Transacciones" FromRole="Transacciones" ToRole="Facturas" />
+    <NavigationProperty Name="SubTransacciones" Relationship="CamaraWebsiteModel.FK_Transacciones_Transacciones" FromRole="Transacciones" ToRole="Transacciones1" />
+    <NavigationProperty Name="Transacciones2" Relationship="CamaraWebsiteModel.FK_Transacciones_Transacciones" FromRole="Transacciones1" ToRole="Transacciones" />
+    <NavigationProperty Name="TransaccionesDocDescargas" Relationship="CamaraWebsiteModel.FK_TransaccionesDocDescargas_Transacciones" FromRole="Transacciones" ToRole="TransaccionesDocDescargas" />
+    <NavigationProperty Name="TransaccionesDocumentos" Relationship="CamaraWebsiteModel.FK_TransaccionesDocumentos_Transacciones" FromRole="Transacciones" ToRole="TransaccionesDocumentos" />
+    <NavigationProperty Name="TransaccionDocSeleccionado" Relationship="CamaraWebsiteModel.FK_TransaccionDocSeleccionado_Transacciones" FromRole="Transacciones" ToRole="TransaccionDocSeleccionado" />
+    <Property Type="String" Name="CorreoContacto" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NumeroReciboOnapi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MontoReciboOnapi" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="FechaReciboOnapi" Precision="0" />
+    <Property Type="Boolean" Name="ServicioVentanillaUnica" />
+    <Property Name="CedulaPF" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="RegistradoDgiiPF" Type="Boolean" />
+    <Property Name="Modificado" Type="Boolean" />
+    <Property Name="UltimoEstadoCamara" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UltimoEstadoId" Type="Int32" />
+    <Property Name="ContratoFirmado" Type="Boolean" Nullable="true" />
+    <Property Name="FolderId" Type="String" MaxLength="50" FixedLength="false" Nullable="true" Unicode="false" />
+    <Property Name="EsCasoAperturado" Type="Boolean" Nullable="true" />
+    <Property Name="WebRegistroId" Type="Int32" Nullable="true" />
+    <Property Name="ComentariosProblema" Type="String" Nullable="true" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="bDataLoadedInSRM" Type="Boolean" />
+    <Property Name="ImprimirCopias" Type="Boolean" />
+    <NavigationProperty Name="ReferenciasBancarias" Relationship="CamaraWebsiteModel.FK_ReferenciasBancarias_Transaccion" FromRole="Transacciones" ToRole="ReferenciasBancarias" />
+    <NavigationProperty Name="ReferenciasComerciales" Relationship="CamaraWebsiteModel.FK_ReferenciasComerciales_Transaccion" FromRole="Transacciones" ToRole="ReferenciasComerciales" />
+    <NavigationProperty Name="Registros" Relationship="CamaraWebsiteModel.FK_Registros_Transaccion" FromRole="Transacciones" ToRole="Registros" />
+    <NavigationProperty Name="Sociedades" Relationship="CamaraWebsiteModel.FK_Sociedades_Transaccion" FromRole="Transacciones" ToRole="Sociedades" />
+    <Property Name="DepositarCansilleria" Type="Boolean" />
+    <Property Name="ANombreQuien" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentoNombreQuien" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CantidadCopiaCertificaciones" Type="Int32" />
+    <Property Name="EsCertificacion" Type="Boolean" />
+    <Property Type="Decimal" Name="PagadoConNota" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="FK_Transacciones_EstatusTransacciones">
+    <End Type="CamaraWebsiteModel.EstatusTransacciones" Role="EstatusTransacciones" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstatusTransacciones">
+        <PropertyRef Name="EstatusTransId" />
+      </Principal>
+      <Dependent Role="Transacciones">
+        <PropertyRef Name="EstatusTransId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Facturas_Transacciones">
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.Facturas" Role="Facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="Facturas">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transacciones_Transacciones">
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="Transacciones1">
+        <PropertyRef Name="SubTransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionesDocDescargas_Transacciones">
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.TransaccionesDocDescargas" Role="TransaccionesDocDescargas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="TransaccionesDocDescargas">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionesDocumentos_Transacciones">
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.TransaccionesDocumentos" Role="TransaccionesDocumentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="TransaccionesDocumentos">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TransaccionDocSeleccionado">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="Int32" Name="TipoDocumentoId" Nullable="false" />
+    <Property Type="Int32" Name="CantidadCopia" Nullable="false" />
+    <Property Type="Int32" Name="CantidadOriginal" Nullable="false" />
+    <Property Type="DateTime" Name="FechaDocumento" Precision="3" />
+    <NavigationProperty Name="Transacciones" Relationship="CamaraWebsiteModel.FK_TransaccionDocSeleccionado_Transacciones" FromRole="TransaccionDocSeleccionado" ToRole="Transacciones" />
+  </EntityType>
+  <Association Name="FK_TransaccionDocSeleccionado_Transacciones">
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.TransaccionDocSeleccionado" Role="TransaccionDocSeleccionado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="TransaccionDocSeleccionado">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="LogTransacciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="String" Name="URL" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Completed" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Date" Precision="3" />
+  </EntityType>
+  <EntityType Name="TransaccionesCanceladas">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha" Precision="3" />
+    <Property Type="Int32" Name="EstatusTransId" />
+    <Property Type="Int32" Name="RegistroId" />
+    <Property Type="Int32" Name="ServicioId" />
+    <Property Type="String" Name="CamaraId" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TipoSociedadId" />
+    <Property Type="String" Name="Solicitante" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RNCSolicitante" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreContacto" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TelefonoContacto" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FaxContacto" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NoReciboDGII" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaReciboDGII" Precision="3" />
+    <Property Type="Decimal" Name="MontoDGII" Precision="19" Scale="4" />
+    <Property Type="String" Name="DestinoTraslado" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreSocialPersona" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ApellidoPersona" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="NumeroRegistro" />
+    <Property Type="DateTime" Name="FechaAsamblea" Precision="3" />
+    <Property Type="Decimal" Name="CapitalSocial" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="ModificacionCapital" Precision="18" Scale="0" />
+    <Property Type="Boolean" Name="bLoadedInSRM" />
+    <Property Type="Int32" Name="Tipo" />
+    <Property Type="String" Name="NCF" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TipoNcf" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SrmTransaccionId" />
+    <Property Type="Boolean" Name="bPagada" />
+    <Property Type="Int32" Name="SubTransaccionId" />
+    <Property Type="String" Name="InstanceXML" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="Prioridad" />
+    <Property Type="Int32" Name="TipoModeloId" />
+    <Property Type="String" Name="Token" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TipoComprobanteId" />
+    <Property Type="String" Name="Comentario" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="ReCheck" />
+    <Property Type="Boolean" Name="VieneProblema" />
+    <Property Type="Boolean" Name="EsDigital" />
+    <NavigationProperty Name="EstatusTransacciones" Relationship="CamaraWebsiteModel.FK_TransaccionesCanceladas_EstatusTransacciones" FromRole="TransaccionesCanceladas" ToRole="EstatusTransacciones" />
+  </EntityType>
+  <Association Name="FK_TransaccionesCanceladas_EstatusTransacciones">
+    <End Type="CamaraWebsiteModel.EstatusTransacciones" Role="EstatusTransacciones" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.TransaccionesCanceladas" Role="TransaccionesCanceladas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstatusTransacciones">
+        <PropertyRef Name="EstatusTransId" />
+      </Principal>
+      <Dependent Role="TransaccionesCanceladas">
+        <PropertyRef Name="EstatusTransId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TransaccionCopiasCertificadas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="String" Name="Ruta" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NombreDocumento" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaDocumento" Precision="3" />
+    <Property Type="Int32" Name="CantPaginas" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransaccionInfo">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="Int32" Name="FacturaPagadaId" />
+    <Property Type="Boolean" Name="Problema" />
+    <Property Type="String" Name="CamaraId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TransaccionIdAnterior" />
+  </EntityType>
+  <EntityType Name="Bancos">
+    <Key>
+      <PropertyRef Name="BancoId" />
+    </Key>
+    <Property Type="Int32" Name="BancoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Orden" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="FormaEntregaCertificadoOnapi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="Codigo" />
+    <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FormasPagos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="FacturaId" Nullable="false" />
+    <Property Type="DateTime" Name="FechaCuadre" Nullable="false" Precision="0" />
+    <Property Type="String" Name="FormaPago" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="Valor" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Tasa" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="String" Name="Referencia" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NoTarjeta" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Divisa" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="ValorEntregado" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="ValorDevuelto" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="String" Name="Nota" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BancoId" />
+    <Property Type="String" Name="BancoDescripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConfirmacionPagoTarjeta" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NumeroNotaCredito" />
+    <Property Type="Int32" Name="NotaFacturaId" />
+    <Property Type="String" Name="FormaPagoDesc" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Facturas" Relationship="CamaraWebsiteModel.FK_FormasPagos_Facturas" FromRole="FormasPagos" ToRole="Facturas" />
+  </EntityType>
+  <EntityType Name="ImpresionTransacciones">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="Binary" Name="DocContent" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Type="DateTime" Name="Fecha" Precision="3" />
+  </EntityType>
+  <EntityType Name="Institucion">
+    <Key>
+      <PropertyRef Name="IdInstitucion" />
+    </Key>
+    <Property Type="Int32" Name="IdInstitucion" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Nombre" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sigla" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Orden" />
+    <Property Type="Boolean" Name="Activa" />
+  </EntityType>
+  <EntityType Name="InstitucionSeguimiento">
+    <Key>
+      <PropertyRef Name="IdInstitucionSeguimiento" />
+    </Key>
+    <Property Type="Int32" Name="IdInstitucionSeguimiento" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="IdInstitucion" />
+    <Property Type="Int32" Name="IdTransaccion" />
+    <Property Type="DateTime" Name="FEnvio" Precision="3" />
+    <Property Type="DateTime" Name="FPago" Precision="3" />
+    <Property Type="DateTime" Name="FEnAnalisis" Precision="3" />
+    <Property Type="DateTime" Name="FEnEntrega" Precision="3" />
+    <Property Type="DateTime" Name="FCompletado" Precision="3" />
+    <Property Type="DateTime" Name="FProblema" Precision="3" />
+    <Property Type="DateTime" Name="FDevuelto" Precision="3" />
+    <Property Type="DateTime" Name="FComentario" Precision="3" />
+    <Property Type="String" Name="Comentario" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Duracion" Precision="3" />
+    <Property Type="Int32" Name="IdEstatusActual" />
+    <Property Type="String" Name="EstatusActual" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="InstitucionSeguimientoTSS">
+    <Key>
+      <PropertyRef Name="IdInstitucionSeguimiento" />
+    </Key>
+    <Property Type="Int32" Name="IdInstitucionSeguimiento" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="IdInstitucion" />
+    <Property Type="Int32" Name="IdTransaccion" />
+    <Property Type="DateTime" Name="FEnvio" Precision="3" />
+    <Property Type="DateTime" Name="FPago" Precision="3" />
+    <Property Type="DateTime" Name="FEnAnalisis" Precision="3" />
+    <Property Type="DateTime" Name="FEnEntrega" Precision="3" />
+    <Property Type="DateTime" Name="FCompletado" Precision="3" />
+    <Property Type="DateTime" Name="FProblema" Precision="3" />
+    <Property Type="DateTime" Name="FDevuelto" Precision="3" />
+    <Property Type="DateTime" Name="FComentario" Precision="3" />
+    <Property Type="String" Name="Comentario" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Duracion" Precision="3" />
+    <Property Type="Int32" Name="IdEstatusActual" />
+    <Property Type="String" Name="EstatusActual" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NotasCredito">
+    <Key>
+      <PropertyRef Name="NotaCreditoID" />
+    </Key>
+    <Property Type="Int32" Name="NotaCreditoID" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="FacturaID" />
+    <Property Type="Decimal" Name="Monto" Precision="18" Scale="2" />
+    <Property Type="String" Name="NCF" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="UsuarioId" Nullable="false" />
+    <Property Type="Int32" Name="GestionNotaId" />
+    <Property Type="Boolean" Name="Activa" Nullable="false" />
+    <NavigationProperty Name="Facturas" Relationship="CamaraWebsiteModel.FK_NotasCredito_Facturas" FromRole="NotasCredito" ToRole="Facturas" />
+  </EntityType>
+  <EntityType Name="TransaccionesDocumentosOnapi">
+    <Key>
+      <PropertyRef Name="TransaccionesDocumentosOnapiId" />
+    </Key>
+    <Property Type="Int32" Name="TransaccionesDocumentosOnapiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="Int32" Name="numeroSolicitudONAPI" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreArchivo" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaEnvio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="RowId" Nullable="false" />
+    <Property Type="String" Name="DocContentType" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="DocContent" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="Estatus" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TransaccionOnapi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="TransaccionId" />
+    <Property Type="String" Name="Denominacion" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Actividad" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SolicitanteId" />
+    <Property Type="Int32" Name="SolicitanteDirId" />
+    <Property Type="Int32" Name="RepresentanteId" />
+    <Property Type="Int32" Name="RepresentanteDirId" />
+    <Property Type="DateTime" Name="FechaSolicitud" Precision="3" />
+    <Property Type="Int32" Name="Onapi_SolicitudId" />
+    <Property Type="Int32" Name="Onapi_EstatusId" />
+    <Property Type="Int32" Name="Onapi_NumeroOnapi" />
+    <Property Type="Int32" Name="FechaConfirmacion" />
+    <Property Type="Boolean" Name="bPago" />
+    <Property Type="Boolean" Name="bConfirmacion" />
+    <Property Type="String" Name="NoAutorizacionPago" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="FormaEnvioCertId" />
+    <Property Type="String" Name="FormaEnvioCertDesc" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UrlDocumento" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UrlDocumento2" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UrlActo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MontoAutorizacionPago" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CapitalAutorizado" Precision="18" Scale="2" />
+    <Property Type="String" Name="CamaraId" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Camara" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TipoSociedadId" />
+    <Property Type="String" Name="TipoSociedad" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="SolicitudActiva" />
+    <Property Type="String" Name="Onapi_NombreOnapi" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Onapi_Estatus" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClienteUserName" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClienteCorreo" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClienteTelefono" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Onapi_Objetada" />
+    <Property Type="Boolean" Name="TransaccionCompletada" />
+    <Property Type="Int32" Name="numeroSolicitudDGII" />
+    <Property Type="DateTime" Name="FEnvioDGII" Precision="3" />
+    <Property Type="String" Name="Rnc" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ActividadCiiuId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ActividadCiiu" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ComentarioDGII" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RegistroPatronalTSS" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FEnvioTSS" Precision="3" />
+    <Property Type="DateTime" Name="FEnvioCCP" Precision="3" />
+    <Property Type="DateTime" Name="FTransaccionCompleta" Precision="3" />
+    <Property Type="String" Name="ClienteCedula" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClienteNombreCompleto" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UrlCartaEIRL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FEnvioCartaEIRL_Dgii" Type="DateTime" Precision="3" />
+    <Property Name="FEnvioMIT" Type="DateTime" Precision="3" />
+    <Property Name="RegistroNacionalLaboralRNL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SectorDgiiId" Type="Int32" />
+    <Property Name="PagoEnLinea" Type="Boolean" />
+    <Property Name="ObligacionesPF" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TransaccionOnapiTss">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="TransaccionId" />
+    <Property Type="String" Name="Denominacion" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Actividad" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SolicitanteId" />
+    <Property Type="Int32" Name="SolicitanteDirId" />
+    <Property Type="Int32" Name="RepresentanteId" />
+    <Property Type="Int32" Name="RepresentanteDirId" />
+    <Property Type="DateTime" Name="FechaSolicitud" Precision="3" />
+    <Property Type="Int32" Name="Onapi_SolicitudId" />
+    <Property Type="Int32" Name="Onapi_EstatusId" />
+    <Property Type="Int32" Name="Onapi_NumeroOnapi" />
+    <Property Type="Int32" Name="FechaConfirmacion" />
+    <Property Type="Boolean" Name="bPago" />
+    <Property Type="Boolean" Name="bConfirmacion" />
+    <Property Type="String" Name="NoAutorizacionPago" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="FormaEnvioCertId" />
+    <Property Type="String" Name="FormaEnvioCertDesc" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UrlDocumento" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UrlDocumento2" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UrlActo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MontoAutorizacionPago" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CapitalAutorizado" Precision="18" Scale="2" />
+    <Property Type="String" Name="CamaraId" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Camara" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TipoSociedadId" />
+    <Property Type="String" Name="TipoSociedad" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="SolicitudActiva" />
+    <Property Type="String" Name="Onapi_NombreOnapi" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Onapi_Estatus" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClienteUserName" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClienteCorreo" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClienteTelefono" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Onapi_Objetada" />
+    <Property Type="Boolean" Name="TransaccionCompletada" />
+    <Property Type="Int32" Name="numeroSolicitudDGII" />
+    <Property Type="DateTime" Name="FEnvioDGII" Precision="3" />
+    <Property Type="String" Name="Rnc" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ActividadCiiuId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ActividadCiiu" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ComentarioDGII" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RegistroPatronalTSS" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FEnvioTSS" Precision="3" />
+    <Property Type="DateTime" Name="FEnvioCCP" Precision="3" />
+    <Property Type="DateTime" Name="FTransaccionCompleta" Precision="3" />
+    <Property Type="String" Name="ClienteCedula" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClienteNombreCompleto" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_FormasPagos_Facturas">
+    <End Type="CamaraWebsiteModel.Facturas" Role="Facturas" Multiplicity="1" />
+    <End Type="CamaraWebsiteModel.FormasPagos" Role="FormasPagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="FormasPagos">
+        <PropertyRef Name="FacturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotasCredito_Facturas">
+    <End Type="CamaraWebsiteModel.Facturas" Role="Facturas" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.NotasCredito" Role="NotasCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="NotasCredito">
+        <PropertyRef Name="FacturaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetAllTransaccionesVU_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="TransaccionId" Nullable="true" />
+    <Property Type="String" Name="Denominacion" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="Actividad" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="SolicitanteId" Nullable="true" />
+    <Property Type="Int32" Name="SolicitanteDirId" Nullable="true" />
+    <Property Type="Int32" Name="RepresentanteId" Nullable="true" />
+    <Property Type="Int32" Name="RepresentanteDirId" Nullable="true" />
+    <Property Type="DateTime" Name="FechaSolicitud" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Onapi_SolicitudId" Nullable="true" />
+    <Property Type="Int32" Name="Onapi_EstatusId" Nullable="true" />
+    <Property Type="Int32" Name="Onapi_NumeroOnapi" Nullable="true" />
+    <Property Type="Int32" Name="FechaConfirmacion" Nullable="true" />
+    <Property Type="Boolean" Name="bPago" Nullable="true" />
+    <Property Type="Boolean" Name="bConfirmacion" Nullable="true" />
+    <Property Type="String" Name="NoAutorizacionPago" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="FormaEnvioCertId" Nullable="true" />
+    <Property Type="String" Name="FormaEnvioCertDesc" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UrlDocumento" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UrlDocumento2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UrlActo" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="MontoAutorizacionPago" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CapitalAutorizado" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="CamaraId" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Camara" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="TipoSociedadId" Nullable="true" />
+    <Property Type="String" Name="TipoSociedad" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="SolicitudActiva" Nullable="true" />
+    <Property Type="String" Name="Onapi_NombreOnapi" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="Onapi_Estatus" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ClienteUserName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ClienteCorreo" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ClienteTelefono" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Onapi_Objetada" Nullable="true" />
+    <Property Type="Boolean" Name="TransaccionCompletada" Nullable="true" />
+    <Property Type="Int32" Name="numeroSolicitudDGII" Nullable="true" />
+    <Property Type="DateTime" Name="FEnvioDGII" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Rnc" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="ActividadCiiuId" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="ActividadCiiu" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ComentarioDGII" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="RegistroPatronalTSS" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="FEnvioTSS" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FEnvioCCP" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FTransaccionCompleta" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ClienteCedula" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="ClienteNombreCompleto" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="SrmTransaccionId" Nullable="true" />
+    <Property Type="String" Name="UserName2" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="bEnviadoDGII" Nullable="true" />
+    <Property Type="Int32" Name="Estatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetDatosTSS_Result">
+    <Property Type="Int32" Name="TransaccionId" Nullable="true" />
+    <Property Type="Boolean" Name="TransaccionCompletada" Nullable="true" />
+    <Property Type="Boolean" Name="SolicitudActiva" Nullable="true" />
+    <Property Type="String" Name="RegistroPatronalTSS" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TipoEmpresa" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="Rnc" Nullable="true" MaxLength="4000" />
+    <Property Type="String" Name="NombreEmpresa" Nullable="true" MaxLength="430" />
+    <Property Type="String" Name="NombreComercial" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="IdMunicipio" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Calle" Nullable="false" MaxLength="256" />
+    <Property Type="String" Name="Numero" Nullable="true" MaxLength="6" />
+    <Property Type="String" Name="Edificio" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Piso" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Apartamento" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Sector" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Telefono1" Nullable="true" MaxLength="4000" />
+    <Property Type="String" Name="Ext1" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Telefono2" Nullable="true" MaxLength="4000" />
+    <Property Type="String" Name="Ext2" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Fax" Nullable="true" MaxLength="4000" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="256" />
+    <Property Type="String" Name="SectorSalarial" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="SectorEconomico" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="EsZonaFranca" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="IdZonaFranca" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="TipoZonaFranca" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="DocumentoRepresentante" Nullable="true" MaxLength="8000" />
+    <Property Type="String" Name="NotificacionEmail" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Tel1Representante" Nullable="true" MaxLength="8000" />
+    <Property Type="String" Name="Ext1Representante" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Tel2Representante" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Ext2Representante" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="EmailRepresentante" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <Association Name="FK_ReferenciasBancarias_Transaccion">
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.ReferenciasBancarias" Role="ReferenciasBancarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="ReferenciasBancarias">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenciasComerciales_Transaccion">
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.ReferenciasComerciales" Role="ReferenciasComerciales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="ReferenciasComerciales">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Registros_Transaccion">
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.Registros" Role="Registros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="Registros">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sociedades_Transaccion">
+    <End Type="CamaraWebsiteModel.Transacciones" Role="Transacciones" Multiplicity="0..1" />
+    <End Type="CamaraWebsiteModel.Sociedades" Role="Sociedades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="Sociedades">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="LogRegistroOnapi_VU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IdSolicitudVU" Type="Int32" Nullable="false" />
+    <Property Name="OrdenId" Type="Int32" Nullable="false" />
+    <Property Name="EstatusId" Type="Int32" Nullable="false" />
+    <Property Name="DescripcionEstatus" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="MensajeEstatus" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NoCertificado" Type="Int32" Nullable="false" />
+    <Property Name="NombreCertificado" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SucursalRetirarCertificado" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Resultado" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RegistroCompletado" Type="Boolean" Nullable="false" />
+    <Property Name="Comentario" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TokenMIT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="access_token" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="token_type" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="userName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="expires_in" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCreado_issued" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaVencimiento_expires" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="DatosGenerales">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <Property Name="Calle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CalleNumero" Type="Int32" />
+    <Property Name="CiudadId" Type="Int32" />
+    <Property Name="Ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SectorId" Type="Int32" />
+    <Property Name="SectorDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ApartadoPostal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="WebSite" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ActividadCIUU1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ActividadCIUU1Desc" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="ActividadCIUU2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ActividadCIUU2Desc" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="ObjetoEmpresa" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Usuario" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TempActividadesTransaccion">
+    <Key>
+      <PropertyRef Name="AtividadId" />
+    </Key>
+    <Property Name="AtividadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="TransaccionId" Type="Int32" Nullable="false" />
+    <Property Name="TipoActividadId" Type="Int32" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TempDatosSociedad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <Property Name="CapitalSocial" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BienesRaices" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Activos" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="FechaInicioOperaciones" Type="DateTime" Precision="3" />
+    <Property Name="FechaEstatutosAsamblea" Type="DateTime" Precision="3" />
+    <Property Name="FechaPrimeraAsamblea" Type="DateTime" Precision="3" />
+    <Property Name="FechaCierreFiscal" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="DuracionEmpresa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DuracionOrganoGestion" Type="Int32" />
+    <Property Name="EmpleadosM" Type="Int32" />
+    <Property Name="EmpleadosF" Type="Int32" />
+    <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tempPersonas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="PersonaId" Type="Int32" Nullable="false" />
+    <Property Name="TransaccionId" Type="Int32" Nullable="false" />
+    <Property Name="TipoDocumento" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Documento" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PrimerNombre" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SegundoNombre" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PrimerApellido" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SegundoApellido" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Rnc" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="NacionalidadId" Type="Int32" />
+    <Property Name="EstadoCivil" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="ProfesionId" Type="Int32" />
+    <Property Name="DireccionId" Type="Int32" />
+    <Property Name="DireccionCalle" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="DireccionNumero" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="DireccionCiudadId" Type="Int32" />
+    <Property Name="DireccionSectorId" Type="Int32" />
+    <Property Name="DireccionApartadoPostal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TempProductos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <Property Name="ProductoId" Type="Int32" />
+    <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Usuario" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TempReferenciasBancarias">
+    <Key>
+      <PropertyRef Name="ReferenciaBancoId" />
+    </Key>
+    <Property Name="ReferenciaBancoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <Property Name="BancoId" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NombreBanco" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TempReferenciasComerciales">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="IdReferencias" Type="Int32" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TipoReferencia" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TempSocios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="TransaccionId" Type="Int32" Nullable="false" />
+    <Property Name="TipoSocio" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="TipoRelacion" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="CargoId" Type="Int32" />
+    <Property Name="TipoDocumento" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Documento" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NacionalidadId" Type="Int32" />
+    <Property Name="RegistroMercantil" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Orden" Type="Int32" Nullable="false" />
+    <Property Name="SociedadNombreSocial" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PersonaPrimerNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PersonaSegundoNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PersonaPrimerApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PersonaSegundoApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PersonaEstadoCivil" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="PersonaProfesionId" Type="Int32" />
+    <Property Name="DireccionCalle" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="DireccionNumero" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DireccionCiudadId" Type="Int32" />
+    <Property Name="DireccionSectorId" Type="Int32" />
+    <Property Name="DireccionApartadoPostal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RepresentanteId" Type="Int32" />
+    <Property Name="CantidadAcciones" Type="Int32" />
+    <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
+    <Property Name="TipoBeneficiario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdentificacionTributariaPais" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TipoDatosSocio" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="CorreoElectronico" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TempSucursales">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="SucursalId" Type="Int32" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="HistoricoTransacciones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="TransaccionId" Type="Int32" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+    <Property Name="ServicioId" Type="Int32" />
+    <Property Name="estado" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TransaccionesEmpBHD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="reference" Type="String" MaxLength="90" FixedLength="true" Unicode="true" />
+    <Property Name="TransactionId" Type="String" MaxLength="90" FixedLength="true" Unicode="true" />
+    <Property Name="Estatus" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="SolicitudId" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="EstadoString" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

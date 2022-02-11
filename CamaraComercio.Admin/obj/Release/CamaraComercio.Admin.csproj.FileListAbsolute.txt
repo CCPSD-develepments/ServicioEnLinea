@@ -1,0 +1,5 @@
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\CamaraComercio.Admin\obj\Release\CamaraComercio.Admin.csprojResolveAssemblyReference.cache
+C:\Desarrollo\CamaraOnline\trunk\oficinavirtual\CamaraComercio.Admin\obj\Release\CamaraComercio.Admin.csproj.CoreCompileInputs.cache
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.Admin\obj\Release\CamaraComercio.Admin.csprojAssemblyReference.cache
+C:\Desarrollo\PortalesWEB\oficinavirtual\CamaraComercio.Admin\obj\Release\CamaraComercio.Admin.csprojAssemblyReference.cache
+C:\Desarrollo\PortalesWEB\oficinavirtual\CamaraComercio.Admin\obj\Release\CamaraComercio.Admin.csproj.CoreCompileInputs.cache

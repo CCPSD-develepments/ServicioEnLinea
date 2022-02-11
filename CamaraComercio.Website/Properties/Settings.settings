@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CamaraComercio.Website.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CamaraComercio_Website_svrkofax_wsCSI" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://content/wsdeploy/wscsi.asmx</Value>
+    </Setting>
+    <Setting Name="CamaraComercio_Website_kofaxVisorWeb_DocumentWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://content/VisorWeb/DocumentWebService.asmx</Value>
+    </Setting>
+    <Setting Name="CamaraComercio_Website_wsOnapi2_ServicioCC" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.onapi.gob.do/cte/serviciocc.asmx</Value>
+    </Setting>
+    <Setting Name="CamaraComercio_Website_wsDgii3_wsDGII" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.dgii.gov.do/wsCamaraComercioTest/WSdgii.asmx</Value>
+    </Setting>
+    <Setting Name="CamaraComercio_Website_wsReporteRM_wsRegistroMercantil" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://websrm24:1042/wsRegistroMercantil.asmx</Value>
+    </Setting>
+    <Setting Name="CamaraComercio_Website_wsFacturacion_ServicioFacturacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:37249/Facturacion/ServicioFacturacion.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

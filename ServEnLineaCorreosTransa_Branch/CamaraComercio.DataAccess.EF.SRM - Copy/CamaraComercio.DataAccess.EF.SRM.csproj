@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AAA52714-64EB-48ED-B1EB-E580B756926F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CamaraComercio.DataAccess.EF.SRM</RootNamespace>
+    <AssemblyName>CamaraComercio.DataAccess.EF.SRM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\CamaraComercio.DataAccess.EF.SRM.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agenda.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AngendaTransacciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Asignaciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriasSocios.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContadorRegistro.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cvw_SociedadesRegistros.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEFINICION_COLUMNAS.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Direcciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentosTransacciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enumeraciones.cs" />
+    <Compile Include="EstatusTransacciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extended\BaseCobro.cs" />
+    <Compile Include="Extended\Direcciones.cs" />
+    <Compile Include="Extended\DocumentosTransacciones.cs" />
+    <Compile Include="Extended\Facturas.cs" />
+    <Compile Include="Extended\ModelosCertificaciones.cs" />
+    <Compile Include="Extended\Sociedades.cs" />
+    <Compile Include="Extended\SrmEntitiesFactory.cs" />
+    <Compile Include="Extended\SubTransacciones.cs" />
+    <Compile Include="Extended\ViewSumarioSociedades.cs" />
+    <Compile Include="Facturas.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormasPagos.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers.cs" />
+    <Compile Include="HistoricosDocumentos.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibroDigital.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelosCertificaciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModulosRoles.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NotasCredito.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NotificacionesTransacciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Oposiciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Personas.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonasDirecciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonasRegistros.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pGetTransaccionesHistorico_Result.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenciasBancarias.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenciasComerciales.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Registros.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrosActividades.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrosActividadesEspecificas.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrosOposiciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrosSocios.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Roles.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeguimientoOposiciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeguimientoTransacciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SetAsignaciones_Result.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SistemasArmonizados.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sociedades.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SociedadesLogos.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SociedadesRegistros.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SrmModel.Context.cs">
+      <DependentUpon>SrmModel.Context.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SrmModel.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SRMModel.Designer.cs">
+      <DependentUpon>SRMModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubTransacciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Suscursales.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tarifas.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiposContadores.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiposPagos.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiposSentencias.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiposTareas.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionDetalle.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionesPersonas.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionesSociedades.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaccionLog.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UbicacionesExpedientes.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosContadores.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosEstatus.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosRoles.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Variables.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDirecciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPersonasEnSociedades.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReferenciasBancarias.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRegistrosActividades.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRegistrosOposiciones.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRegistrosProductos.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRegistrosSocios.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSumarioSociedades.cs">
+      <DependentUpon>SrmModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="SRMModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SRMModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="SrmModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SrmModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SrmModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SrmModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

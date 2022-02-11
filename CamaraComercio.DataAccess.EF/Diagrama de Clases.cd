@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="CamaraComercio.DataAccess.EF.PredicateBuilder">
+    <Position X="1.25" Y="1.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAACAAAAAAAAAAAAAAAAAAAAgAAgAAAAAAAA=</HashCode>
+      <FileName>PredicateBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.DataAccess.EF.Repository&lt;E, C&gt;">
+    <Position X="5.25" Y="0.75" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAYAIIABACAAAQBBAAAAAMEAAAEBAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Repository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CamaraComercio.DataAccess.EF.Specification&lt;E&gt;">
+    <Position X="8.25" Y="0.75" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAQAACAA=</HashCode>
+      <FileName>Repository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository">
+    <Position X="6.25" Y="6" Width="4.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO">
+        <TypeIdentifier>
+          <NewMemberFileName>OFV\Repository\SociedadRepository.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OFV\Repository\SociedadRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository">
+    <Position X="1.5" Y="6" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>OFV\Repository\TransaccionesRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CamaraComercio.DataAccess.EF.IRepository&lt;E, C&gt;" Collapsed="true">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAIIABACAAAABBAAAAAMAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CamaraComercio.DataAccess.EF.ISpecification&lt;E&gt;" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado">
+    <Position X="1.75" Y="12.5" Width="2" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="CamaraComercio.DataAccess.EF.OficinaVirtual.TipoMensaje">
+    <Position X="4.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,24 @@
+﻿#warning {
+	background-color:#ffffcc;
+	width:98%;
+	margin:0 auto;
+	padding: 5px 5px 5px 30px;
+	color:#636465;
+	background-image:url(/res/img/warning-icon.gif);
+	background-repeat:no-repeat;
+	background-position:5px;
+	position:relative;
+}	
+#warning div.close {
+	position:absolute;
+	left:708px;
+	top:6px;
+}
+#warning div.close a {
+	text-decoration:none;
+	font-weight:bold;
+	color:#636465;
+}
+#warning div.close a:hover {
+	color:#000000;
+}

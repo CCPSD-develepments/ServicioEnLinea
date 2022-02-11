@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CamaraComunModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CamaraComunEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bancos" EntityType="CamaraComunModel.Bancos" />
+    <EntitySet Name="Cargos" EntityType="CamaraComunModel.Cargos" />
+    <EntitySet Name="Ciudades" EntityType="CamaraComunModel.Ciudades" />
+    <EntitySet Name="EstadoRegistro" EntityType="CamaraComunModel.EstadoRegistro" />
+    <EntitySet Name="Paises" EntityType="CamaraComunModel.Paises" />
+    <EntitySet Name="Profesiones" EntityType="CamaraComunModel.Profesiones" />
+    <EntitySet Name="Sectores" EntityType="CamaraComunModel.Sectores" />
+    <EntitySet Name="ServicioDocumentoRequerido" EntityType="CamaraComunModel.ServicioDocumentoRequerido" />
+    <EntitySet Name="TipoDocumento" EntityType="CamaraComunModel.TipoDocumento" />
+    <EntitySet Name="TipoMoneda" EntityType="CamaraComunModel.TipoMoneda" />
+    <EntitySet Name="TipoRegla" EntityType="CamaraComunModel.TipoRegla" />
+    <EntitySet Name="TipoReglaDocumento" EntityType="CamaraComunModel.TipoReglaDocumento" />
+    <EntitySet Name="TiposEnteRegulado" EntityType="CamaraComunModel.TiposEnteRegulado" />
+    <EntitySet Name="TipoServicio" EntityType="CamaraComunModel.TipoServicio" />
+    <EntitySet Name="TipoSociedadSufijo" EntityType="CamaraComunModel.TipoSociedadSufijo" />
+    <EntitySet Name="ViewServicioDocumentoRequerido" EntityType="CamaraComunModel.ViewServicioDocumentoRequerido" />
+    <EntitySet Name="ViewTipoDocumentoReglas" EntityType="CamaraComunModel.ViewTipoDocumentoRegla" />
+    <EntitySet Name="ServicioDocumentoRequeridoComentario" EntityType="CamaraComunModel.ServicioDocumentoRequeridoComentario" />
+    <AssociationSet Name="FK_TransaccionDocumentosRequisitos_Documentos" Association="CamaraComunModel.FK_TransaccionDocumentosRequisitos_Documentos">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="ServicioDocumentoRequerido" EntitySet="ServicioDocumentoRequerido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReglaTipoDocumento_ReglaTipoDocumento" Association="CamaraComunModel.FK_ReglaTipoDocumento_ReglaTipoDocumento">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="TipoReglaDocumento" EntitySet="TipoReglaDocumento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReglaTipoDocumento_TipoDocumentoRegla" Association="CamaraComunModel.FK_ReglaTipoDocumento_TipoDocumentoRegla">
+      <End Role="TipoRegla" EntitySet="TipoRegla" />
+      <End Role="TipoReglaDocumento" EntitySet="TipoReglaDocumento" />
+    </AssociationSet>
+    <EntitySet Name="ViewCiudades" EntityType="CamaraComunModel.ViewCiudades" />
+    <EntitySet Name="Nomenclaturas" EntityType="CamaraComunModel.Nomenclaturas" />
+    <EntitySet Name="TiposNcf" EntityType="CamaraComunModel.TiposNcf" />
+    <EntitySet Name="ServiciosEnCamara" EntityType="CamaraComunModel.ServiciosEnCamara" />
+    <EntitySet Name="TipoSociedadSocio" EntityType="CamaraComunModel.TipoSociedadSocio" />
+    <EntitySet Name="TipoSocio" EntityType="CamaraComunModel.TipoSocio" />
+    <AssociationSet Name="FK_TipoSociedadSocio_TipoSocio" Association="CamaraComunModel.FK_TipoSociedadSocio_TipoSocio">
+      <End Role="TipoSocio" EntitySet="TipoSocio" />
+      <End Role="TipoSociedadSocio" EntitySet="TipoSociedadSocio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ciudades_Paises" Association="CamaraComunModel.FK_Ciudades_Paises">
+      <End Role="Paises" EntitySet="Paises" />
+      <End Role="Ciudades" EntitySet="Ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sectores_Ciudades" Association="CamaraComunModel.FK_Sectores_Ciudades">
+      <End Role="Ciudades" EntitySet="Ciudades" />
+      <End Role="Sectores" EntitySet="Sectores" />
+    </AssociationSet>
+    <EntitySet Name="TiposEntidades" EntityType="CamaraComunModel.TiposEntidades" />
+    <EntitySet Name="Actividades" EntityType="CamaraComunModel.Actividades" />
+    <EntitySet Name="TipoSociedadCargos" EntityType="CamaraComunModel.TipoSociedadCargos" />
+    <EntitySet Name="TipoSociedad" EntityType="CamaraComunModel.TipoSociedad" />
+    <AssociationSet Name="FK_ServicioDocumentoRequerido_TipoSociedad" Association="CamaraComunModel.FK_ServicioDocumentoRequerido_TipoSociedad">
+      <End Role="TipoSociedad" EntitySet="TipoSociedad" />
+      <End Role="ServicioDocumentoRequerido" EntitySet="ServicioDocumentoRequerido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoSociedadSocio_TipoSociedad" Association="CamaraComunModel.FK_TipoSociedadSocio_TipoSociedad">
+      <End Role="TipoSociedad" EntitySet="TipoSociedad" />
+      <End Role="TipoSociedadSocio" EntitySet="TipoSociedadSocio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TiposSociedadesSufijos_TiposSociedades" Association="CamaraComunModel.FK_TiposSociedadesSufijos_TiposSociedades">
+      <End Role="TipoSociedad" EntitySet="TipoSociedad" />
+      <End Role="TipoSociedadSufijo" EntitySet="TipoSociedadSufijo" />
+    </AssociationSet>
+    <EntitySet Name="Camaras" EntityType="CamaraComunModel.Camaras" />
+    <AssociationSet Name="FK_ServiciosEnCamara_Camaras" Association="CamaraComunModel.FK_ServiciosEnCamara_Camaras">
+      <End Role="Camaras" EntitySet="Camaras" />
+      <End Role="ServiciosEnCamara" EntitySet="ServiciosEnCamara" />
+    </AssociationSet>
+    <EntitySet Name="TipoSociedadServicioCargo" EntityType="CamaraComunModel.TipoSociedadServicioCargo" />
+    <AssociationSet Name="FK_TipoSociedadServicioCargo_Cargos" Association="CamaraComunModel.FK_TipoSociedadServicioCargo_Cargos">
+      <End Role="Cargos" EntitySet="Cargos" />
+      <End Role="TipoSociedadServicioCargo" EntitySet="TipoSociedadServicioCargo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoSociedadServicioCargo_TipoSociedad" Association="CamaraComunModel.FK_TipoSociedadServicioCargo_TipoSociedad">
+      <End Role="TipoSociedad" EntitySet="TipoSociedad" />
+      <End Role="TipoSociedadServicioCargo" EntitySet="TipoSociedadServicioCargo" />
+    </AssociationSet>
+    <EntitySet Name="Servicio" EntityType="CamaraComunModel.Servicio" />
+    <AssociationSet Name="FK_TipoSociedadServicioCargo_Servicio" Association="CamaraComunModel.FK_TipoSociedadServicioCargo_Servicio">
+      <End Role="Servicio" EntitySet="Servicio" />
+      <End Role="TipoSociedadServicioCargo" EntitySet="TipoSociedadServicioCargo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TiposServicios_TiposTransacciones" Association="CamaraComunModel.FK_TiposServicios_TiposTransacciones">
+      <End Role="TipoServicio" EntitySet="TipoServicio" />
+      <End Role="Servicio" EntitySet="Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionDocumentosRequisitos_TiposServicios" Association="CamaraComunModel.FK_TransaccionDocumentosRequisitos_TiposServicios">
+      <End Role="Servicio" EntitySet="Servicio" />
+      <End Role="ServicioDocumentoRequerido" EntitySet="ServicioDocumentoRequerido" />
+    </AssociationSet>
+    <EntitySet Name="ActividadesCIIU" EntityType="CamaraComunModel.ActividadesCIIU" />
+  </EntityContainer>
+  <EntityType Name="Bancos">
+    <Key>
+      <PropertyRef Name="BancoId" />
+    </Key>
+    <Property Name="BancoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Orden" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cargos">
+    <Key>
+      <PropertyRef Name="CargoId" />
+    </Key>
+    <Property Name="CargoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Type="Boolean" Name="SiteVisible" />
+    <NavigationProperty Name="TipoSociedadServicioCargo" Relationship="CamaraComunModel.FK_TipoSociedadServicioCargo_Cargos" FromRole="Cargos" ToRole="TipoSociedadServicioCargo" />
+  </EntityType>
+  <EntityType Name="Ciudades">
+    <Key>
+      <PropertyRef Name="CiudadId" />
+    </Key>
+    <Property Name="CiudadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PaisId" Type="Int32" />
+    <Property Name="Orden" Type="Int32" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Paises" Relationship="CamaraComunModel.FK_Ciudades_Paises" FromRole="Ciudades" ToRole="Paises" />
+    <NavigationProperty Name="Sectores" Relationship="CamaraComunModel.FK_Sectores_Ciudades" FromRole="Ciudades" ToRole="Sectores" />
+  </EntityType>
+  <EntityType Name="EstadoRegistro">
+    <Key>
+      <PropertyRef Name="EstadoRegistroId" />
+    </Key>
+    <Property Name="EstadoRegistroId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Paises">
+    <Key>
+      <PropertyRef Name="PaisId" />
+    </Key>
+    <Property Name="PaisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Orden" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Ciudades" Relationship="CamaraComunModel.FK_Ciudades_Paises" FromRole="Paises" ToRole="Ciudades" />
+    <Property Type="Int32" Name="PaisIdDGII" />
+    <Property Name="Nacionalidad" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Profesiones">
+    <Key>
+      <PropertyRef Name="ProfesionId" />
+    </Key>
+    <Property Name="ProfesionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sectores">
+    <Key>
+      <PropertyRef Name="SectorId" />
+    </Key>
+    <Property Name="SectorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CiudadId" Type="Int32" Nullable="false" />
+    <Property Name="Orden" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Ciudades" Relationship="CamaraComunModel.FK_Sectores_Ciudades" FromRole="Sectores" ToRole="Ciudades" />
+  </EntityType>
+  <EntityType Name="ServicioDocumentoRequerido">
+    <Key>
+      <PropertyRef Name="TipoSociedadId" />
+      <PropertyRef Name="ServicioId" />
+      <PropertyRef Name="TipoDocumentoId" />
+    </Key>
+    <Property Name="TipoSociedadId" Type="Int32" Nullable="false" />
+    <Property Name="ServicioId" Type="Int32" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="Int32" Nullable="false" />
+    <Property Name="Requerido" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TipoDocumento" Relationship="CamaraComunModel.FK_TransaccionDocumentosRequisitos_Documentos" FromRole="ServicioDocumentoRequerido" ToRole="TipoDocumento" />
+    <Property Name="Grupo" Type="Int32" />
+    <Property Type="Boolean" Name="SiteVisible" Nullable="false" />
+    <NavigationProperty Name="TipoSociedad" Relationship="CamaraComunModel.FK_ServicioDocumentoRequerido_TipoSociedad" FromRole="ServicioDocumentoRequerido" ToRole="TipoSociedad" />
+    <NavigationProperty Name="Servicio" Relationship="CamaraComunModel.FK_TransaccionDocumentosRequisitos_TiposServicios" FromRole="ServicioDocumentoRequerido" ToRole="Servicio" />
+  </EntityType>
+  <EntityType Name="ServicioDocumentoRequeridoComentario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServicioId" Type="Int32" Nullable="false" />
+    <Property Name="TipoSociedadId" Type="Int32" Nullable="false" />
+    <Property Name="Comentario" Type="String" Nullable="true" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="ComentarioWeb" Type="String" Nullable="true" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="TipoDocumentoId" />
+    </Key>
+    <Property Name="TipoDocumentoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Registrable" Type="Boolean" Nullable="false" />
+    <Property Name="CostoOriginal" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="CostoCopia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+    <Property Name="DocumentoOnBaseId" Type="Int32" Nullable="false" />
+    <Property Name="DocumentoOnBaseDesc" Type="String" Nullable="false" />
+    <Property Name="DescripcionWeb" Type="String" Nullable="false" />
+    <NavigationProperty Name="ServicioDocumentoRequerido" Relationship="CamaraComunModel.FK_TransaccionDocumentosRequisitos_Documentos" FromRole="TipoDocumento" ToRole="ServicioDocumentoRequerido" />
+    <NavigationProperty Name="TipoReglaDocumento" Relationship="CamaraComunModel.FK_ReglaTipoDocumento_ReglaTipoDocumento" FromRole="TipoDocumento" ToRole="TipoReglaDocumento" />
+    <Property Type="Boolean" Name="SiteVisible" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TipoMoneda">
+    <Key>
+      <PropertyRef Name="TipoMonedaId" />
+    </Key>
+    <Property Name="TipoMonedaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="Abreviatura" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="AbreviaturaAPI" Type="String" Nullable="true" MaxLength="5" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TipoRegla">
+    <Key>
+      <PropertyRef Name="TipoReglaId" />
+    </Key>
+    <Property Name="TipoReglaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TipoReglaDocumento" Relationship="CamaraComunModel.FK_ReglaTipoDocumento_TipoDocumentoRegla" FromRole="TipoRegla" ToRole="TipoReglaDocumento" />
+  </EntityType>
+  <EntityType Name="TipoReglaDocumento">
+    <Key>
+      <PropertyRef Name="TipoReglaDocumentoId" />
+    </Key>
+    <Property Name="TipoReglaDocumentoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoDocumentoId" Type="Int32" Nullable="false" />
+    <Property Name="TipoReglaId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TipoDocumento" Relationship="CamaraComunModel.FK_ReglaTipoDocumento_ReglaTipoDocumento" FromRole="TipoReglaDocumento" ToRole="TipoDocumento" />
+    <NavigationProperty Name="TipoRegla" Relationship="CamaraComunModel.FK_ReglaTipoDocumento_TipoDocumentoRegla" FromRole="TipoReglaDocumento" ToRole="TipoRegla" />
+  </EntityType>
+  <EntityType Name="TiposEnteRegulado">
+    <Key>
+      <PropertyRef Name="TipoEnteReguladoId" />
+    </Key>
+    <Property Name="TipoEnteReguladoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoServicio">
+    <Key>
+      <PropertyRef Name="TipoServicioId" />
+    </Key>
+    <Property Name="TipoServicioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DescripcionWeb" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Sufijo" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="TipoIdentificador" Type="Int32" Nullable="false" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+    <Property Name="SiteVisible" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Servicio" Relationship="CamaraComunModel.FK_TiposServicios_TiposTransacciones" FromRole="TipoServicio" ToRole="Servicio" />
+  </EntityType>
+  <EntityType Name="TipoSociedadSufijo">
+    <Key>
+      <PropertyRef Name="TipoSociedadSufijoId" />
+    </Key>
+    <Property Name="TipoSociedadSufijoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoSociedadId" Type="Int32" Nullable="false" />
+    <Property Name="Sufijo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TipoSociedad" Relationship="CamaraComunModel.FK_TiposSociedadesSufijos_TiposSociedades" FromRole="TipoSociedadSufijo" ToRole="TipoSociedad" />
+  </EntityType>
+  <EntityType Name="ViewServicioDocumentoRequerido">
+    <Key>
+      <PropertyRef Name="TipoSociedadId" />
+      <PropertyRef Name="ServicioId" />
+      <PropertyRef Name="TipoDocumentoId" />
+    </Key>
+    <Property Name="TipoSociedadId" Type="Int32" Nullable="false" />
+    <Property Name="ServicioId" Type="Int32" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="Int32" Nullable="false" />
+    <Property Name="Requerido" Type="Boolean" Nullable="false" />
+    <Property Name="DocumentoDescripcion" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="TipoSociedadDescripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Registrable" Type="Boolean" Nullable="false" />
+    <Property Name="CostoOriginal" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="CostoCopia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Type="Int32" Name="Grupo" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ViewTipoDocumentoRegla">
+    <Key>
+      <PropertyRef Name="TipoReglaDocumentoId" />
+      <PropertyRef Name="TipoDocumentoId" />
+      <PropertyRef Name="TipoReglaId" />
+      <PropertyRef Name="Regla" />
+    </Key>
+    <Property Name="TipoReglaDocumentoId" Type="Int32" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="Int32" Nullable="false" />
+    <Property Name="TipoReglaId" Type="Int32" Nullable="false" />
+    <Property Name="Regla" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Validado" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_TransaccionDocumentosRequisitos_Documentos">
+    <End Role="TipoDocumento" Type="CamaraComunModel.TipoDocumento" Multiplicity="1" />
+    <End Role="ServicioDocumentoRequerido" Type="CamaraComunModel.ServicioDocumentoRequerido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="TipoDocumentoId" />
+      </Principal>
+      <Dependent Role="ServicioDocumentoRequerido">
+        <PropertyRef Name="TipoDocumentoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReglaTipoDocumento_ReglaTipoDocumento">
+    <End Role="TipoDocumento" Type="CamaraComunModel.TipoDocumento" Multiplicity="1" />
+    <End Role="TipoReglaDocumento" Type="CamaraComunModel.TipoReglaDocumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="TipoDocumentoId" />
+      </Principal>
+      <Dependent Role="TipoReglaDocumento">
+        <PropertyRef Name="TipoDocumentoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReglaTipoDocumento_TipoDocumentoRegla">
+    <End Role="TipoRegla" Type="CamaraComunModel.TipoRegla" Multiplicity="1" />
+    <End Role="TipoReglaDocumento" Type="CamaraComunModel.TipoReglaDocumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoRegla">
+        <PropertyRef Name="TipoReglaId" />
+      </Principal>
+      <Dependent Role="TipoReglaDocumento">
+        <PropertyRef Name="TipoReglaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ViewCiudades">
+    <Key>
+      <PropertyRef Name="CiudadId" />
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="Orden" />
+      <PropertyRef Name="FechaModificacion" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Type="Int32" Name="CiudadId" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PaisId" />
+    <Property Type="Int32" Name="Orden" Nullable="false" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" />
+    <Property Type="Guid" Name="rowguid" Nullable="false" />
+    <Property Type="String" Name="Pais" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Nomenclaturas">
+    <Key>
+      <PropertyRef Name="CamaraId" />
+      <PropertyRef Name="TipoNomenclatura" />
+    </Key>
+    <Property Type="String" Name="CamaraId" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TipoNomenclatura" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Prefijo" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sufijo" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Separador1" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Separador2" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Separador3" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Formato" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TiposNcf">
+    <Key>
+      <PropertyRef Name="TipoNcfId" />
+    </Key>
+    <Property Type="Int32" Name="TipoNcfId" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="SiteVisible" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiciosEnCamara">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ServicioID" />
+    <Property Type="String" Name="CamaraID" MaxLength="3" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Camaras" Relationship="CamaraComunModel.FK_ServiciosEnCamara_Camaras" FromRole="ServiciosEnCamara" ToRole="Camaras" />
+  </EntityType>
+  <EntityType Name="TipoSociedadSocio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TipoSocioId" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="TipoSociedadId" Nullable="false" />
+    <NavigationProperty Name="TipoSocio" Relationship="CamaraComunModel.FK_TipoSociedadSocio_TipoSocio" FromRole="TipoSociedadSocio" ToRole="TipoSocio" />
+    <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="RecibeCargo" />
+    <Property Type="Int16" Name="CantMinSocio" />
+    <Property Type="Int32" Name="CantMaxSocio" />
+    <Property Type="Boolean" Name="RecibeAcciones" />
+    <Property Type="Int32" Name="GrupoValidacion" />
+    <NavigationProperty Name="TipoSociedad" Relationship="CamaraComunModel.FK_TipoSociedadSocio_TipoSociedad" FromRole="TipoSociedadSocio" ToRole="TipoSociedad" />
+  </EntityType>
+  <EntityType Name="TipoSocio">
+    <Key>
+      <PropertyRef Name="TipoSocioId" />
+    </Key>
+    <Property Type="String" Name="TipoSocioId" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TipoSociedadSocio" Relationship="CamaraComunModel.FK_TipoSociedadSocio_TipoSocio" FromRole="TipoSocio" ToRole="TipoSociedadSocio" />
+  </EntityType>
+  <Association Name="FK_TipoSociedadSocio_TipoSocio">
+    <End Type="CamaraComunModel.TipoSocio" Role="TipoSocio" Multiplicity="1" />
+    <End Type="CamaraComunModel.TipoSociedadSocio" Role="TipoSociedadSocio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSocio">
+        <PropertyRef Name="TipoSocioId" />
+      </Principal>
+      <Dependent Role="TipoSociedadSocio">
+        <PropertyRef Name="TipoSocioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ciudades_Paises">
+    <End Type="CamaraComunModel.Paises" Role="Paises" Multiplicity="0..1" />
+    <End Type="CamaraComunModel.Ciudades" Role="Ciudades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paises">
+        <PropertyRef Name="PaisId" />
+      </Principal>
+      <Dependent Role="Ciudades">
+        <PropertyRef Name="PaisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sectores_Ciudades">
+    <End Type="CamaraComunModel.Ciudades" Role="Ciudades" Multiplicity="1" />
+    <End Type="CamaraComunModel.Sectores" Role="Sectores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudades">
+        <PropertyRef Name="CiudadId" />
+      </Principal>
+      <Dependent Role="Sectores">
+        <PropertyRef Name="CiudadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TiposEntidades">
+    <Key>
+      <PropertyRef Name="TipoEntidadId" />
+    </Key>
+    <Property Type="Int32" Name="TipoEntidadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Visible" />
+  </EntityType>
+  <EntityType Name="Actividades">
+    <Key>
+      <PropertyRef Name="ActividadID" />
+    </Key>
+    <Property Type="Int32" Name="ActividadID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PadreID" />
+    <Property Type="String" Name="Descripcion" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DescripconLarga" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaModificacion" />
+    <Property Type="Boolean" Name="RecibeAccion" />
+    <Property Type="Boolean" Name="TieneHijos" />
+    <Property Type="Boolean" Name="Visible" />
+  </EntityType>
+  <EntityType Name="TipoSociedadCargos">
+    <Key>
+      <PropertyRef Name="TipoSociedadCargoId" />
+    </Key>
+    <Property Type="Int32" Name="TipoSociedadCargoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="TipoSociedadId" />
+    <Property Type="Int32" Name="CargoId" />
+    <Property Type="Boolean" Name="PuedeSerEmpresa" />
+    <Property Type="Boolean" Name="CargoModificacion" />
+  </EntityType>
+  <EntityType Name="TipoSociedad">
+    <Key>
+      <PropertyRef Name="TipoSociedadId" />
+    </Key>
+    <Property Type="Int32" Name="TipoSociedadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TipoIdentificador" Nullable="false" />
+    <Property Type="String" Name="Etiqueta" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Boolean" Name="SiteVisible" />
+    <Property Type="Decimal" Name="CapitalAutorizado" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="DescripcionExtendida" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ServicioDocumentoRequerido" Relationship="CamaraComunModel.FK_ServicioDocumentoRequerido_TipoSociedad" FromRole="TipoSociedad" ToRole="ServicioDocumentoRequerido" />
+    <NavigationProperty Name="TipoSociedadSocio" Relationship="CamaraComunModel.FK_TipoSociedadSocio_TipoSociedad" FromRole="TipoSociedad" ToRole="TipoSociedadSocio" />
+    <NavigationProperty Name="TipoSociedadSufijo" Relationship="CamaraComunModel.FK_TiposSociedadesSufijos_TiposSociedades" FromRole="TipoSociedad" ToRole="TipoSociedadSufijo" />
+    <NavigationProperty Name="TipoSociedadServicioCargo" Relationship="CamaraComunModel.FK_TipoSociedadServicioCargo_TipoSociedad" FromRole="TipoSociedad" ToRole="TipoSociedadServicioCargo" />
+    <Property Type="Int32" Name="ExpirationDays" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ServicioDocumentoRequerido_TipoSociedad">
+    <End Type="CamaraComunModel.TipoSociedad" Role="TipoSociedad" Multiplicity="1" />
+    <End Type="CamaraComunModel.ServicioDocumentoRequerido" Role="ServicioDocumentoRequerido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSociedad">
+        <PropertyRef Name="TipoSociedadId" />
+      </Principal>
+      <Dependent Role="ServicioDocumentoRequerido">
+        <PropertyRef Name="TipoSociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoSociedadSocio_TipoSociedad">
+    <End Type="CamaraComunModel.TipoSociedad" Role="TipoSociedad" Multiplicity="1" />
+    <End Type="CamaraComunModel.TipoSociedadSocio" Role="TipoSociedadSocio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSociedad">
+        <PropertyRef Name="TipoSociedadId" />
+      </Principal>
+      <Dependent Role="TipoSociedadSocio">
+        <PropertyRef Name="TipoSociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TiposSociedadesSufijos_TiposSociedades">
+    <End Type="CamaraComunModel.TipoSociedad" Role="TipoSociedad" Multiplicity="1" />
+    <End Type="CamaraComunModel.TipoSociedadSufijo" Role="TipoSociedadSufijo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSociedad">
+        <PropertyRef Name="TipoSociedadId" />
+      </Principal>
+      <Dependent Role="TipoSociedadSufijo">
+        <PropertyRef Name="TipoSociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Camaras">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Nombre" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="GestionID" />
+    <Property Type="String" Name="RNC" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Activa" />
+    <Property Type="Boolean" Name="ActivaOnline" />
+    <Property Type="String" Name="HeaderImpresiones" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SecurityGroup" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Direccion" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PathCertificado" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Reason" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SignContact" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SignLocation" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="Logo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Boolean" Name="PuedeVenderOnline" />
+    <Property Type="String" Name="VisanetMerchant" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BraintreeMerchant" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NombreEncargado" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PuestoEncargado" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ServiciosEnCamara" Relationship="CamaraComunModel.FK_ServiciosEnCamara_Camaras" FromRole="Camaras" ToRole="ServiciosEnCamara" />
+  </EntityType>
+  <Association Name="FK_ServiciosEnCamara_Camaras">
+    <End Type="CamaraComunModel.Camaras" Role="Camaras" Multiplicity="0..1" />
+    <End Type="CamaraComunModel.ServiciosEnCamara" Role="ServiciosEnCamara" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Camaras">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ServiciosEnCamara">
+        <PropertyRef Name="CamaraID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TipoSociedadServicioCargo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CargoID" />
+    <Property Type="Int32" Name="TipoSociedadID" />
+    <Property Type="Int32" Name="ServicioID" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Cargos" Relationship="CamaraComunModel.FK_TipoSociedadServicioCargo_Cargos" FromRole="TipoSociedadServicioCargo" ToRole="Cargos" />
+    <NavigationProperty Name="TipoSociedad" Relationship="CamaraComunModel.FK_TipoSociedadServicioCargo_TipoSociedad" FromRole="TipoSociedadServicioCargo" ToRole="TipoSociedad" />
+    <NavigationProperty Name="Servicio" Relationship="CamaraComunModel.FK_TipoSociedadServicioCargo_Servicio" FromRole="TipoSociedadServicioCargo" ToRole="Servicio" />
+  </EntityType>
+  <Association Name="FK_TipoSociedadServicioCargo_Cargos">
+    <End Type="CamaraComunModel.Cargos" Role="Cargos" Multiplicity="0..1" />
+    <End Type="CamaraComunModel.TipoSociedadServicioCargo" Role="TipoSociedadServicioCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargos">
+        <PropertyRef Name="CargoId" />
+      </Principal>
+      <Dependent Role="TipoSociedadServicioCargo">
+        <PropertyRef Name="CargoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoSociedadServicioCargo_TipoSociedad">
+    <End Type="CamaraComunModel.TipoSociedad" Role="TipoSociedad" Multiplicity="0..1" />
+    <End Type="CamaraComunModel.TipoSociedadServicioCargo" Role="TipoSociedadServicioCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSociedad">
+        <PropertyRef Name="TipoSociedadId" />
+      </Principal>
+      <Dependent Role="TipoSociedadServicioCargo">
+        <PropertyRef Name="TipoSociedadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Servicio">
+    <Key>
+      <PropertyRef Name="ServicioId" />
+    </Key>
+    <Property Type="Int32" Name="ServicioId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TipoServicioId" Nullable="false" />
+    <Property Type="Decimal" Name="CostoServicio" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Boolean" Name="CalculoBaseCapital" Nullable="false" />
+    <Property Type="Int32" Name="TipoCalculoBaseCapital" Nullable="false" />
+    <Property Type="Boolean" Name="ServicioParalelo" Nullable="false" />
+    <Property Type="Int32" Name="ServicioFlowId" Nullable="false" />
+    <Property Type="String" Name="Cuenta" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="SeCobra" Nullable="false" />
+    <Property Type="Boolean" Name="SinDocumento" Nullable="false" />
+    <Property Type="Boolean" Name="SinCapital" />
+    <Property Type="Boolean" Name="SubTransaccional" Nullable="false" />
+    <Property Type="Boolean" Name="AfectaOtraCompania" Nullable="false" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" />
+    <Property Type="Boolean" Name="ValidarRenovacion" Nullable="false" />
+    <Property Type="Boolean" Name="EsTransformacion" Nullable="false" />
+    <Property Type="Int32" Name="TipoIdentificador" Nullable="false" />
+    <Property Type="Boolean" Name="Visible" Nullable="false" />
+    <Property Type="Boolean" Name="SiteVisible" Nullable="false" />
+    <Property Type="Boolean" Name="UsarCostoServicio" Nullable="false" />
+    <Property Type="Boolean" Name="CopiaExonerada" Nullable="false" />
+    <Property Type="String" Name="CuentaExpress" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="EsAdecuacion" Nullable="false" />
+    <Property Type="Boolean" Name="SeCobraEnSubTransaccion" Nullable="false" />
+    <Property Type="Int32" Name="TransaccionJerarquia" Nullable="false" />
+    <Property Type="Int32" Name="GrupoServicio" Nullable="false" />
+    <Property Type="String" Name="DescripcionWeb" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TransfDestinoId" />
+    <Property Type="Int32" Name="ServicioJerarquia" />
+    <Property Type="Boolean" Name="ServicioInmediato" />
+    <NavigationProperty Name="TipoSociedadServicioCargo" Relationship="CamaraComunModel.FK_TipoSociedadServicioCargo_Servicio" FromRole="Servicio" ToRole="TipoSociedadServicioCargo" />
+    <NavigationProperty Name="TipoServicio" Relationship="CamaraComunModel.FK_TiposServicios_TiposTransacciones" FromRole="Servicio" ToRole="TipoServicio" />
+    <NavigationProperty Name="ServicioDocumentoRequerido" Relationship="CamaraComunModel.FK_TransaccionDocumentosRequisitos_TiposServicios" FromRole="Servicio" ToRole="ServicioDocumentoRequerido" />
+  </EntityType>
+  <Association Name="FK_TipoSociedadServicioCargo_Servicio">
+    <End Type="CamaraComunModel.Servicio" Role="Servicio" Multiplicity="0..1" />
+    <End Type="CamaraComunModel.TipoSociedadServicioCargo" Role="TipoSociedadServicioCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio">
+        <PropertyRef Name="ServicioId" />
+      </Principal>
+      <Dependent Role="TipoSociedadServicioCargo">
+        <PropertyRef Name="ServicioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TiposServicios_TiposTransacciones">
+    <End Type="CamaraComunModel.TipoServicio" Role="TipoServicio" Multiplicity="1" />
+    <End Type="CamaraComunModel.Servicio" Role="Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoServicio">
+        <PropertyRef Name="TipoServicioId" />
+      </Principal>
+      <Dependent Role="Servicio">
+        <PropertyRef Name="TipoServicioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionDocumentosRequisitos_TiposServicios">
+    <End Type="CamaraComunModel.Servicio" Role="Servicio" Multiplicity="1" />
+    <End Type="CamaraComunModel.ServicioDocumentoRequerido" Role="ServicioDocumentoRequerido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio">
+        <PropertyRef Name="ServicioId" />
+      </Principal>
+      <Dependent Role="ServicioDocumentoRequerido">
+        <PropertyRef Name="ServicioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ActividadesCIIU">
+    <Key>
+      <PropertyRef Name="ActividadID" />
+    </Key>
+    <Property Type="Int32" Name="ActividadID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PadreID" />
+    <Property Type="String" Name="Seccion" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Codigo" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Especificacion" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CodigoCIIU" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Descripcion" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaModificacion" />
+    <Property Type="Boolean" Name="RecibeAccion" />
+    <Property Type="Boolean" Name="TieneHijos" />
+    <Property Type="Boolean" Name="Visible" />
+  </EntityType>
+</Schema>

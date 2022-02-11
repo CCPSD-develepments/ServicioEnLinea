@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CamaraMailBotModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="CamaraMailBotModelStoreContainer">
+          <EntitySet Name="Mails" EntityType="CamaraMailBotModel.Store.Mails" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Parameters" EntityType="CamaraMailBotModel.Store.Parameters" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Sources" EntityType="CamaraMailBotModel.Store.Sources" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Templates" EntityType="CamaraMailBotModel.Store.Templates" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <AssociationSet Name="FK_Notificaciones_Fuentes" Association="CamaraMailBotModel.Store.FK_Notificaciones_Fuentes">
+            <End Role="Sources" EntitySet="Sources" />
+            <End Role="Mails" EntitySet="Mails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Mails">
+          <Key>
+            <PropertyRef Name="MailID" />
+          </Key>
+          <Property Name="MailID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TemplateID" Type="int" Nullable="false" />
+          <Property Name="SourceID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="SendDate" Type="datetime" />
+          <Property Name="MailTo" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="MailCC" Type="varchar" MaxLength="256" />
+          <Property Name="MailBCC" Type="varchar" MaxLength="256" />
+          <Property Name="MailFrom" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="IsHTML" Type="bit" Nullable="false" />
+          <Property Name="RetryNo" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="MailText" Type="ntext" />
+          <Property Name="Subject" Type="varchar" MaxLength="256" />
+          <Property Name="LastTryDateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Parameters">
+          <Key>
+            <PropertyRef Name="ParameterID" />
+          </Key>
+          <Property Name="ParameterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TemplateID" Type="int" Nullable="false" />
+          <Property Name="ParameterTag" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsNeeded" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sources">
+          <Key>
+            <PropertyRef Name="SourceID" />
+          </Key>
+          <Property Name="SourceID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SourceName" Type="varchar" MaxLength="50" />
+          <Property Name="SourceCode" Type="varchar" Nullable="false" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="Templates">
+          <Key>
+            <PropertyRef Name="TemplateID" />
+          </Key>
+          <Property Name="TemplateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TemplateName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TemplateCode" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="IsHTML" Type="bit" Nullable="false" />
+          <Property Name="TemplateText" Type="ntext" Nullable="false" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <Association Name="FK_Notificaciones_Fuentes">
+          <End Role="Sources" Type="CamaraMailBotModel.Store.Sources" Multiplicity="1" />
+          <End Role="Mails" Type="CamaraMailBotModel.Store.Mails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sources">
+              <PropertyRef Name="SourceID" />
+            </Principal>
+            <Dependent Role="Mails">
+              <PropertyRef Name="SourceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fFuenteGetIdByCodigo" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Codigo" Type="char" Mode="In" />
+        </Function>
+        <Function Name="fPlantillaGetIdByCodigo" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Codigo" Type="char" Mode="In" />
+        </Function>
+        <Function Name="GetTemplate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MailGetPendingEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="MailInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="int" Mode="In" />
+          <Parameter Name="SourceID" Type="int" Mode="In" />
+          <Parameter Name="To" Type="varchar" Mode="In" />
+          <Parameter Name="CC" Type="varchar" Mode="In" />
+          <Parameter Name="BCC" Type="varchar" Mode="In" />
+          <Parameter Name="From" Type="varchar" Mode="In" />
+          <Parameter Name="IsHTML" Type="bit" Mode="In" />
+          <Parameter Name="MailText" Type="ntext" Mode="In" />
+          <Parameter Name="Subject" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="MailSetMailNotSent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MailID" Type="int" Mode="In" />
+          <Parameter Name="RetryNo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MailSetMailSent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MailID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="pEnviaNotificacionPagoBC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="varchar" Mode="In" />
+          <Parameter Name="NombreArchivo" Type="varchar" Mode="In" />
+          <Parameter Name="TipoArchivo" Type="varchar" Mode="In" />
+          <Parameter Name="Asunto" Type="varchar" Mode="In" />
+          <Parameter Name="Mensaje" Type="varchar" Mode="In" />
+          <Parameter Name="TemplateText" Type="varchar" Mode="In" />
+          <Parameter Name="From" Type="varchar" Mode="In" />
+          <Parameter Name="to" Type="varchar" Mode="In" />
+          <Parameter Name="mailCc" Type="varchar" Mode="In" />
+          <Parameter Name="mailBcc" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TemplateGetByCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateCode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TemplateInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateName" Type="varchar" Mode="In" />
+          <Parameter Name="TemplateCode" Type="varchar" Mode="In" />
+          <Parameter Name="IsHTML" Type="bit" Mode="In" />
+          <Parameter Name="TemplateText" Type="ntext" Mode="In" />
+          <Parameter Name="Subject" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="TemplateUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateName" Type="varchar" Mode="In" />
+          <Parameter Name="TemplateCode" Type="varchar" Mode="In" />
+          <Parameter Name="IsHTML" Type="bit" Mode="In" />
+          <Parameter Name="TemplateText" Type="ntext" Mode="In" />
+          <Parameter Name="Subject" Type="nvarchar" Mode="In" />
+          <Parameter Name="TemplateId" Type="int" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CamaraMailBotModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="CamaraMailBotEntities">
+          <EntitySet Name="Mails" EntityType="CamaraMailBotModel.Mails" />
+          <EntitySet Name="Parameters" EntityType="CamaraMailBotModel.Parameters" />
+          <EntitySet Name="Sources" EntityType="CamaraMailBotModel.Sources" />
+          <EntitySet Name="Templates" EntityType="CamaraMailBotModel.Templates" />
+          <AssociationSet Name="FK_Notificaciones_Fuentes" Association="CamaraMailBotModel.FK_Notificaciones_Fuentes">
+            <End Role="Sources" EntitySet="Sources" />
+            <End Role="Mails" EntitySet="Mails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Mails">
+          <Key>
+            <PropertyRef Name="MailID" />
+          </Key>
+          <Property Name="MailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="TemplateID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="SendDate" Type="DateTime" />
+          <Property Name="MailTo" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="MailCC" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="MailBCC" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="MailFrom" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="IsHTML" Type="Boolean" Nullable="false" />
+          <Property Name="RetryNo" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="MailText" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Subject" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="LastTryDateTime" Type="DateTime" />
+          <NavigationProperty Name="Sources" Relationship="CamaraMailBotModel.FK_Notificaciones_Fuentes" FromRole="Mails" ToRole="Sources" />
+        </EntityType>
+        <EntityType Name="Parameters">
+          <Key>
+            <PropertyRef Name="ParameterID" />
+          </Key>
+          <Property Name="ParameterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="TemplateID" Type="Int32" Nullable="false" />
+          <Property Name="ParameterTag" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsNeeded" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sources">
+          <Key>
+            <PropertyRef Name="SourceID" />
+          </Key>
+          <Property Name="SourceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="SourceName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SourceCode" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Mails" Relationship="CamaraMailBotModel.FK_Notificaciones_Fuentes" FromRole="Sources" ToRole="Mails" />
+        </EntityType>
+        <EntityType Name="Templates">
+          <Key>
+            <PropertyRef Name="TemplateID" />
+          </Key>
+          <Property Name="TemplateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="TemplateName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TemplateCode" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="IsHTML" Type="Boolean" Nullable="false" />
+          <Property Name="TemplateText" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Subject" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Notificaciones_Fuentes">
+          <End Role="Sources" Type="CamaraMailBotModel.Sources" Multiplicity="1" />
+          <End Role="Mails" Type="CamaraMailBotModel.Mails" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CamaraMailBotModelStoreContainer" CdmEntityContainer="CamaraMailBotEntities">
+          <EntitySetMapping Name="Mails"><EntityTypeMapping TypeName="CamaraMailBotModel.Mails"><MappingFragment StoreEntitySet="Mails">
+            <ScalarProperty Name="MailID" ColumnName="MailID" />
+            <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="SendDate" ColumnName="SendDate" />
+            <ScalarProperty Name="MailTo" ColumnName="MailTo" />
+            <ScalarProperty Name="MailCC" ColumnName="MailCC" />
+            <ScalarProperty Name="MailBCC" ColumnName="MailBCC" />
+            <ScalarProperty Name="MailFrom" ColumnName="MailFrom" />
+            <ScalarProperty Name="IsHTML" ColumnName="IsHTML" />
+            <ScalarProperty Name="RetryNo" ColumnName="RetryNo" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="MailText" ColumnName="MailText" />
+            <ScalarProperty Name="Subject" ColumnName="Subject" />
+            <ScalarProperty Name="LastTryDateTime" ColumnName="LastTryDateTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Parameters"><EntityTypeMapping TypeName="CamaraMailBotModel.Parameters"><MappingFragment StoreEntitySet="Parameters">
+            <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+            <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+            <ScalarProperty Name="ParameterTag" ColumnName="ParameterTag" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="IsNeeded" ColumnName="IsNeeded" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Sources"><EntityTypeMapping TypeName="CamaraMailBotModel.Sources"><MappingFragment StoreEntitySet="Sources">
+            <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+            <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+            <ScalarProperty Name="SourceCode" ColumnName="SourceCode" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Templates"><EntityTypeMapping TypeName="CamaraMailBotModel.Templates"><MappingFragment StoreEntitySet="Templates">
+            <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+            <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+            <ScalarProperty Name="TemplateCode" ColumnName="TemplateCode" />
+            <ScalarProperty Name="IsHTML" ColumnName="IsHTML" />
+            <ScalarProperty Name="TemplateText" ColumnName="TemplateText" />
+            <ScalarProperty Name="Subject" ColumnName="Subject" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_Notificaciones_Fuentes" TypeName="CamaraMailBotModel.FK_Notificaciones_Fuentes" StoreEntitySet="Mails">
+            <EndProperty Name="Sources">
+              <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+            </EndProperty>
+            <EndProperty Name="Mails">
+              <ScalarProperty Name="MailID" ColumnName="MailID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="MailBotModel">
+        <EntityTypeShape EntityType="CamaraMailBotModel.Mails" Width="1.5" PointX="3" PointY="1" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CamaraMailBotModel.Parameters" Width="1.5" PointX="5.75" PointY="0.75" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="CamaraMailBotModel.Sources" Width="1.5" PointX="0.75" PointY="2.125" Height="1.7879850260416665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CamaraMailBotModel.Templates" Width="1.5" PointX="0.75" PointY="5.75" Height="2.1725878906249996" IsExpanded="true" />
+        <AssociationConnector Association="CamaraMailBotModel.FK_Notificaciones_Fuentes" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="3.0189925130208333" />
+          <ConnectorPoint PointX="3" PointY="3.0189925130208333" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

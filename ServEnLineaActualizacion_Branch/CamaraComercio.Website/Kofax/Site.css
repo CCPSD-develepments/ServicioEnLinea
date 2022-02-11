@@ -1,0 +1,21 @@
+﻿
+
+#viewer .header
+{
+	background-color: #cccccc;
+	height: 32px;
+	padding: 7px 5px 0 0;
+	text-align: right;
+}
+
+.header 
+{
+   	background-color: #cccccc;
+	height: 32px;
+	padding: 7px 5px 0 0;
+	text-align: right; 
+}
+#page
+{
+	overflow: scroll;
+}

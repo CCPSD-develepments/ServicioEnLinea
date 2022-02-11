@@ -1,0 +1,1261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CamaraSRMModelStoreContainer" CdmEntityContainer="CamaraSRMEntities">
+    <FunctionImportMapping FunctionImportName="GetNcfSecuencia" FunctionName="CamaraSRMModel.Store.csp_GetNcfSecuencia" />
+    <FunctionImportMapping FunctionImportName="SentInvoiceDetailToAccounting" FunctionName="CamaraSRMModel.Store.csp_SentInvoiceDetailToAccounting" />
+    <FunctionImportMapping FunctionImportName="SentInvoiceHeaderToAccounting" FunctionName="CamaraSRMModel.Store.csp_SentInvoiceHeaderToAccounting" />
+    <FunctionImportMapping FunctionImportName="SentPaymentMethodsToAccounting" FunctionName="CamaraSRMModel.Store.csp_SentPaymentMethodsToAccounting" />
+    <FunctionImportMapping FunctionImportName="csp_GetCostoBaseReduccionCapital" FunctionName="CamaraSRMModel.Store.csp_GetCostoBaseReduccionCapital" />
+    <FunctionImportMapping FunctionImportName="csp_GetCostoBaseModificacionCapital" FunctionName="CamaraSRMModel.Store.csp_GetCostoBaseModificacionCapital" />
+    <FunctionImportMapping FunctionImportName="csp_GetCostoBaseCapital" FunctionName="CamaraSRMModel.Store.csp_GetCostoBaseCapital" />
+    <FunctionImportMapping FunctionImportName="csp_GetCostoServicio" FunctionName="CamaraSRMModel.Store.csp_GetCostoServicio" />
+    <EntitySetMapping Name="Modulos">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Modulos">
+        <MappingFragment StoreEntitySet="Modulos">
+          <ScalarProperty Name="HiddenOption" ColumnName="HiddenOption" />
+          <ScalarProperty Name="HeredaPadre" ColumnName="HeredaPadre" />
+          <ScalarProperty Name="SoloAdministrador" ColumnName="SoloAdministrador" />
+          <ScalarProperty Name="ShowInTreeNavBar" ColumnName="ShowInTreeNavBar" />
+          <ScalarProperty Name="ShowInNavBar" ColumnName="ShowInNavBar" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="CreateSerparator" ColumnName="CreateSerparator" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="NombreEtiqueta" ColumnName="NombreEtiqueta" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ModuloPadreId" ColumnName="ModuloPadreId" />
+          <ScalarProperty Name="ModuloId" ColumnName="ModuloId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModulosRoles">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ModulosRoles">
+        <MappingFragment StoreEntitySet="ModulosRoles">
+          <ScalarProperty Name="TipoAcceso" ColumnName="TipoAcceso" />
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+          <ScalarProperty Name="ModuloId" ColumnName="ModuloId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModicifacion" ColumnName="FechaModicifacion" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tarifas">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Tarifas">
+        <MappingFragment StoreEntitySet="Tarifas">
+          <ScalarProperty Name="CostoRenovacionNeto" ColumnName="CostoRenovacionNeto" />
+          <ScalarProperty Name="CostoRenovacion" ColumnName="CostoRenovacion" />
+          <ScalarProperty Name="CostoModificacionNeto" ColumnName="CostoModificacionNeto" />
+          <ScalarProperty Name="CostoModificacion" ColumnName="CostoModificacion" />
+          <ScalarProperty Name="CostoContitucion" ColumnName="CostoContitucion" />
+          <ScalarProperty Name="MontoFinal" ColumnName="MontoFinal" />
+          <ScalarProperty Name="MontoInicial" ColumnName="MontoInicial" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TarifaId" ColumnName="TarifaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposContadores">
+      <EntityTypeMapping TypeName="CamaraSRMModel.TiposContadores">
+        <MappingFragment StoreEntitySet="TiposContadores">
+          <ScalarProperty Name="ContadorTag" ColumnName="ContadorTag" />
+          <ScalarProperty Name="NombreContado" ColumnName="NombreContado" />
+          <ScalarProperty Name="TipoContadorId" ColumnName="TipoContadorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+          <ScalarProperty Name="TipoAsignacionId" ColumnName="TipoAsignacionId" />
+          <ScalarProperty Name="UsuarioEliminado" ColumnName="UsuarioEliminado" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="Iniciales" ColumnName="Iniciales" />
+          <ScalarProperty Name="EnCalidadDe" ColumnName="EnCalidadDe" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="Receptor" ColumnName="Receptor" />
+          <ScalarProperty Name="ContadorRecibo" ColumnName="ContadorRecibo" />
+          <ScalarProperty Name="NombreUsuarioReferencia" ColumnName="NombreUsuarioReferencia" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="ContadorAsignaciones" ColumnName="ContadorAsignaciones" />
+          <ScalarProperty Name="AutentificacionId" ColumnName="AutentificacionId" />
+          <ScalarProperty Name="UsuarioActivo" ColumnName="UsuarioActivo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Administrador" ColumnName="Administrador" />
+          <ScalarProperty Name="Dominio" ColumnName="Dominio" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosContadores">
+      <EntityTypeMapping TypeName="CamaraSRMModel.UsuariosContadores">
+        <MappingFragment StoreEntitySet="UsuariosContadores">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Contador" ColumnName="Contador" />
+          <ScalarProperty Name="Prioridad" ColumnName="Prioridad" />
+          <ScalarProperty Name="TipoTransacion" ColumnName="TipoTransacion" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="UsuarioContadorId" ColumnName="UsuarioContadorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosRoles">
+      <EntityTypeMapping TypeName="CamaraSRMModel.UsuariosRoles">
+        <MappingFragment StoreEntitySet="UsuariosRoles">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoricosDocumentos">
+      <EntityTypeMapping TypeName="CamaraSRMModel.HistoricosDocumentos">
+        <MappingFragment StoreEntitySet="HistoricosDocumentos">
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="NoExpediente" ColumnName="NoExpediente" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="Libro" ColumnName="Libro" />
+          <ScalarProperty Name="NoDocumento" ColumnName="NoDocumento" />
+          <ScalarProperty Name="FechaDocumento" ColumnName="FechaDocumento" />
+          <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransaccionLog">
+      <EntityTypeMapping TypeName="CamaraSRMModel.TransaccionLog">
+        <MappingFragment StoreEntitySet="TransaccionLog">
+          <ScalarProperty Name="Cambios" ColumnName="Cambios" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Maquina" ColumnName="Maquina" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+          <ScalarProperty Name="NumeroRegistro" ColumnName="NumeroRegistro" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Direcciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Direcciones">
+        <MappingFragment StoreEntitySet="Direcciones">
+          <ScalarProperty Name="SectorDgii" ColumnName="SectorDgii" />
+          <ScalarProperty Name="SectorDgiiId" ColumnName="SectorDgiiId" />
+          <ScalarProperty Name="PaisDescripcion" ColumnName="PaisDescripcion" />
+          <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+          <ScalarProperty Name="SectorDescripcion" ColumnName="SectorDescripcion" />
+          <ScalarProperty Name="CiudadDescripcion" ColumnName="CiudadDescripcion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="SitioWeb" ColumnName="SitioWeb" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="TelefonoOficina" ColumnName="TelefonoOficina" />
+          <ScalarProperty Name="TelefonoCasa" ColumnName="TelefonoCasa" />
+          <ScalarProperty Name="ApartadoPostal" ColumnName="ApartadoPostal" />
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="CiudadId" ColumnName="CiudadId" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="DireccionId" ColumnName="DireccionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personas">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Personas">
+        <MappingFragment StoreEntitySet="Personas">
+          <ScalarProperty Name="ProfecionDescripcion" ColumnName="ProfecionDescripcion" />
+          <ScalarProperty Name="NacionalidadDescripcion" ColumnName="NacionalidadDescripcion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="DireccionId" ColumnName="DireccionId" />
+          <ScalarProperty Name="ProfesionId" ColumnName="ProfesionId" />
+          <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+          <ScalarProperty Name="NacionalidadId" ColumnName="NacionalidadId" />
+          <ScalarProperty Name="Rnc" ColumnName="Rnc" />
+          <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="SegundoNombre" ColumnName="SegundoNombre" />
+          <ScalarProperty Name="PrimerNombre" ColumnName="PrimerNombre" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonasDirecciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.PersonasDirecciones">
+        <MappingFragment StoreEntitySet="PersonasDirecciones">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="DireccionId" ColumnName="DireccionId" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonasRegistros">
+      <EntityTypeMapping TypeName="CamaraSRMModel.PersonasRegistros">
+        <MappingFragment StoreEntitySet="PersonasRegistros">
+          <ScalarProperty Name="EsValido" ColumnName="EsValido" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="NumeroRegistro" ColumnName="NumeroRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Agenda">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Agenda">
+        <MappingFragment StoreEntitySet="Agenda">
+          <ScalarProperty Name="TipoTarea" ColumnName="TipoTarea" />
+          <ScalarProperty Name="UltimaAlaarma" ColumnName="UltimaAlaarma" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="FechaOcuFinal" ColumnName="FechaOcuFinal" />
+          <ScalarProperty Name="FechaOcuInicial" ColumnName="FechaOcuInicial" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="TipoTareaId" ColumnName="TipoTareaId" />
+          <ScalarProperty Name="AgendaId" ColumnName="AgendaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AngendaTransacciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.AngendaTransacciones">
+        <MappingFragment StoreEntitySet="AngendaTransacciones">
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="AgendaId" ColumnName="AgendaId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposTareas">
+      <EntityTypeMapping TypeName="CamaraSRMModel.TiposTareas">
+        <MappingFragment StoreEntitySet="TiposTareas">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoTareaId" ColumnName="TipoTareaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoriasSocios">
+      <EntityTypeMapping TypeName="CamaraSRMModel.CategoriasSocios">
+        <MappingFragment StoreEntitySet="CategoriasSocios">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoCategoria" ColumnName="TipoCategoria" />
+          <ScalarProperty Name="TipoCategoriaId" ColumnName="TipoCategoriaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContadorRegistro">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ContadorRegistro">
+        <MappingFragment StoreEntitySet="ContadorRegistro">
+          <ScalarProperty Name="LimiteContador" ColumnName="LimiteContador" />
+          <ScalarProperty Name="NoRegistro" ColumnName="NoRegistro" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="ProvinciaId" ColumnName="ProvinciaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LibroDigital">
+      <EntityTypeMapping TypeName="CamaraSRMModel.LibroDigital">
+        <MappingFragment StoreEntitySet="LibroDigital">
+          <ScalarProperty Name="Sufijo" ColumnName="Sufijo" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="NumeroLibro" ColumnName="NumeroLibro" />
+          <ScalarProperty Name="LibroId" ColumnName="LibroId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oposiciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Oposiciones">
+        <MappingFragment StoreEntitySet="Oposiciones">
+          <ScalarProperty Name="PersonaDescripcion" ColumnName="PersonaDescripcion" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="TipoRectificacionId" ColumnName="TipoRectificacionId" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="TipoSentenciaId" ColumnName="TipoSentenciaId" />
+          <ScalarProperty Name="Apoderado" ColumnName="Apoderado" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="NumeroActo" ColumnName="NumeroActo" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="OposicionId" ColumnName="OposicionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Productos">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="SistemaArmonizadoId" ColumnName="SistemaArmonizadoId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="ProductoId" ColumnName="ProductoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReferenciasBancarias">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ReferenciasBancarias">
+        <MappingFragment StoreEntitySet="ReferenciasBancarias">
+          <ScalarProperty Name="BancoDescripcion" ColumnName="BancoDescripcion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="BancoId" ColumnName="BancoId" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="ReferenciaBancariaId" ColumnName="ReferenciaBancariaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReferenciasComerciales">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ReferenciasComerciales">
+        <MappingFragment StoreEntitySet="ReferenciasComerciales">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoReferencia" ColumnName="TipoReferencia" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="ReferenciaComercialId" ColumnName="ReferenciaComercialId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistrosActividades">
+      <EntityTypeMapping TypeName="CamaraSRMModel.RegistrosActividades">
+        <MappingFragment StoreEntitySet="RegistrosActividades">
+          <ScalarProperty Name="TipoActividadDescripcion" ColumnName="TipoActividadDescripcion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="TipoActividadId" ColumnName="TipoActividadId" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="AtividadId" ColumnName="AtividadId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistrosActividadesEspecificas">
+      <EntityTypeMapping TypeName="CamaraSRMModel.RegistrosActividadesEspecificas">
+        <MappingFragment StoreEntitySet="RegistrosActividadesEspecificas">
+          <ScalarProperty Name="ActividadEspecificaDescripcion" ColumnName="ActividadEspecificaDescripcion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="TipoActividadEspecificaId" ColumnName="TipoActividadEspecificaId" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="AtividadId" ColumnName="AtividadId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistrosOposiciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.RegistrosOposiciones">
+        <MappingFragment StoreEntitySet="RegistrosOposiciones">
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Fecha_Modificacion" ColumnName="Fecha_Modificacion" />
+          <ScalarProperty Name="Justificacion" ColumnName="Justificacion" />
+          <ScalarProperty Name="FechaCierre" ColumnName="FechaCierre" />
+          <ScalarProperty Name="Cerrada" ColumnName="Cerrada" />
+          <ScalarProperty Name="Prioridad" ColumnName="Prioridad" />
+          <ScalarProperty Name="Requirientes" ColumnName="Requirientes" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="OposicionId" ColumnName="OposicionId" />
+          <ScalarProperty Name="RegistroOposicionId" ColumnName="RegistroOposicionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistrosSocios">
+      <EntityTypeMapping TypeName="CamaraSRMModel.RegistrosSocios">
+        <MappingFragment StoreEntitySet="RegistrosSocios">
+          <ScalarProperty Name="CantidaCuotasAcciones" ColumnName="CantidaCuotasAcciones" />
+          <ScalarProperty Name="TipoRelacionDescripcion" ColumnName="TipoRelacionDescripcion" />
+          <ScalarProperty Name="CargoDescripcion" ColumnName="CargoDescripcion" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="NumeroRM" ColumnName="NumeroRM" />
+          <ScalarProperty Name="CargoId" ColumnName="CargoId" />
+          <ScalarProperty Name="RepresentanteId" ColumnName="RepresentanteId" />
+          <ScalarProperty Name="DireccionId" ColumnName="DireccionId" />
+          <ScalarProperty Name="TipoRelacion" ColumnName="TipoRelacion" />
+          <ScalarProperty Name="TipoSocio" ColumnName="TipoSocio" />
+          <ScalarProperty Name="SocioId" ColumnName="SocioId" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SistemasArmonizados">
+      <EntityTypeMapping TypeName="CamaraSRMModel.SistemasArmonizados">
+        <MappingFragment StoreEntitySet="SistemasArmonizados">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="SistemaArmonizadoId" ColumnName="SistemaArmonizadoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposSentencias">
+      <EntityTypeMapping TypeName="CamaraSRMModel.TiposSentencias">
+        <MappingFragment StoreEntitySet="TiposSentencias">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoSentenciaId" ColumnName="TipoSentenciaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Variables">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Variables">
+        <MappingFragment StoreEntitySet="Variables">
+          <ScalarProperty Name="AutoReplace" ColumnName="AutoReplace" />
+          <ScalarProperty Name="MultiRow" ColumnName="MultiRow" />
+          <ScalarProperty Name="MultiCampoDespiegue" ColumnName="MultiCampoDespiegue" />
+          <ScalarProperty Name="MultiCampoVariable" ColumnName="MultiCampoVariable" />
+          <ScalarProperty Name="TipoVariable" ColumnName="TipoVariable" />
+          <ScalarProperty Name="CaseFormat" ColumnName="CaseFormat" />
+          <ScalarProperty Name="Filtro" ColumnName="Filtro" />
+          <ScalarProperty Name="TipoDespliegue" ColumnName="TipoDespliegue" />
+          <ScalarProperty Name="Formato" ColumnName="Formato" />
+          <ScalarProperty Name="TipoFormato" ColumnName="TipoFormato" />
+          <ScalarProperty Name="ValorPredeterminado" ColumnName="ValorPredeterminado" />
+          <ScalarProperty Name="CampoVariable" ColumnName="CampoVariable" />
+          <ScalarProperty Name="TablaVariable" ColumnName="TablaVariable" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="VariableId" ColumnName="VariableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sociedades">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Sociedades">
+        <MappingFragment StoreEntitySet="Sociedades">
+          <ScalarProperty Name="FechaEnteRegulado" ColumnName="FechaEnteRegulado" />
+          <ScalarProperty Name="EstatusDescripcion" ColumnName="EstatusDescripcion" />
+          <ScalarProperty Name="EnteReguladoDescripcion" ColumnName="EnteReguladoDescripcion" />
+          <ScalarProperty Name="NacionalidadDescripcion" ColumnName="NacionalidadDescripcion" />
+          <ScalarProperty Name="Sufijo" ColumnName="Sufijo" />
+          <ScalarProperty Name="TipoSociedad" ColumnName="TipoSociedad" />
+          <ScalarProperty Name="DireccionId" ColumnName="DireccionId" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Suscripcion" ColumnName="Suscripcion" />
+          <ScalarProperty Name="SiglasConfig" ColumnName="SiglasConfig" />
+          <ScalarProperty Name="NombreSiglas" ColumnName="NombreSiglas" />
+          <ScalarProperty Name="NumeroNaveIndustrial" ColumnName="NumeroNaveIndustrial" />
+          <ScalarProperty Name="NoResolucion" ColumnName="NoResolucion" />
+          <ScalarProperty Name="TipoEnteReguladoId" ColumnName="TipoEnteReguladoId" />
+          <ScalarProperty Name="EsEnteRegulado" ColumnName="EsEnteRegulado" />
+          <ScalarProperty Name="EstatusId" ColumnName="EstatusId" />
+          <ScalarProperty Name="DuraccionDirectiva" ColumnName="DuraccionDirectiva" />
+          <ScalarProperty Name="FechaAsamblea" ColumnName="FechaAsamblea" />
+          <ScalarProperty Name="DuracionSociedad" ColumnName="DuracionSociedad" />
+          <ScalarProperty Name="FechaConstitucion" ColumnName="FechaConstitucion" />
+          <ScalarProperty Name="NacionalidadId" ColumnName="NacionalidadId" />
+          <ScalarProperty Name="EsNacional" ColumnName="EsNacional" />
+          <ScalarProperty Name="Rnc" ColumnName="Rnc" />
+          <ScalarProperty Name="NombreSocial" ColumnName="NombreSocial" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="SociedadId" ColumnName="SociedadId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SociedadesLogos">
+      <EntityTypeMapping TypeName="CamaraSRMModel.SociedadesLogos">
+        <MappingFragment StoreEntitySet="SociedadesLogos">
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="LogoSmall" ColumnName="LogoSmall" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="SociedadId" ColumnName="SociedadId" />
+          <ScalarProperty Name="SociedadLogoId" ColumnName="SociedadLogoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suscursales">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Suscursales">
+        <MappingFragment StoreEntitySet="Suscursales">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="DireccionId" ColumnName="DireccionId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="SociedadId" ColumnName="SociedadId" />
+          <ScalarProperty Name="SucursalId" ColumnName="SucursalId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEFINICION_COLUMNAS">
+      <EntityTypeMapping TypeName="CamaraSRMModel.DEFINICION_COLUMNAS">
+        <MappingFragment StoreEntitySet="DEFINICION_COLUMNAS">
+          <ScalarProperty Name="TABLA_DEFAULT" ColumnName="TABLA_DEFAULT" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CONSULTA" ColumnName="CONSULTA" />
+          <ScalarProperty Name="TIPO_ENLACE" ColumnName="TIPO_ENLACE" />
+          <ScalarProperty Name="COLUMNA_ENLACE" ColumnName="COLUMNA_ENLACE" />
+          <ScalarProperty Name="TABLA_ENLACE" ColumnName="TABLA_ENLACE" />
+          <ScalarProperty Name="VISIBLE" ColumnName="VISIBLE" />
+          <ScalarProperty Name="LONGITUD" ColumnName="LONGITUD" />
+          <ScalarProperty Name="TIPO_DATOS" ColumnName="TIPO_DATOS" />
+          <ScalarProperty Name="ACEPTA_NULO" ColumnName="ACEPTA_NULO" />
+          <ScalarProperty Name="NOMBRE_COLUMNA" ColumnName="NOMBRE_COLUMNA" />
+          <ScalarProperty Name="NOMBRE_TABLA_CORTO" ColumnName="NOMBRE_TABLA_CORTO" />
+          <ScalarProperty Name="NOMBRE_ESQUEMA" ColumnName="NOMBRE_ESQUEMA" />
+          <ScalarProperty Name="NOMBRE_TABLA" ColumnName="NOMBRE_TABLA" />
+          <ScalarProperty Name="COLUMNA_ID" ColumnName="COLUMNA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asignaciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Asignaciones">
+        <MappingFragment StoreEntitySet="Asignaciones">
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UltimoUsuarioId" ColumnName="UltimoUsuarioId" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="AsignacionId" ColumnName="AsignacionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentosTransacciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.DocumentosTransacciones">
+        <MappingFragment StoreEntitySet="DocumentosTransacciones">
+          <ScalarProperty Name="Invalido" ColumnName="Invalido" />
+          <ScalarProperty Name="FacturaId" ColumnName="FacturaId" />
+          <ScalarProperty Name="WebDocumentoId" ColumnName="WebDocumentoId" />
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="CostoCopia" ColumnName="CostoCopia" />
+          <ScalarProperty Name="CostoOriginal" ColumnName="CostoOriginal" />
+          <ScalarProperty Name="Registrable" ColumnName="Registrable" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Sufijo" ColumnName="Sufijo" />
+          <ScalarProperty Name="Analizado" ColumnName="Analizado" />
+          <ScalarProperty Name="FechaDigitalizacion" ColumnName="FechaDigitalizacion" />
+          <ScalarProperty Name="Digitalizado" ColumnName="Digitalizado" />
+          <ScalarProperty Name="NumeroPaginas" ColumnName="NumeroPaginas" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="CheckValidated" ColumnName="CheckValidated" />
+          <ScalarProperty Name="AlertaPago" ColumnName="AlertaPago" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="Libro" ColumnName="Libro" />
+          <ScalarProperty Name="NoCopias" ColumnName="NoCopias" />
+          <ScalarProperty Name="NoOriginales" ColumnName="NoOriginales" />
+          <ScalarProperty Name="NoDocumento" ColumnName="NoDocumento" />
+          <ScalarProperty Name="FechaDocumento" ColumnName="FechaDocumento" />
+          <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
+          <ScalarProperty Name="SubTransaccionId" ColumnName="SubTransaccionId" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="DocumentoTransaccionId" ColumnName="DocumentoTransaccionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstatusTransacciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.EstatusTransacciones">
+        <MappingFragment StoreEntitySet="EstatusTransacciones">
+          <ScalarProperty Name="FlowStatus" ColumnName="FlowStatus" />
+          <ScalarProperty Name="EstatusTransaccion" ColumnName="EstatusTransaccion" />
+          <ScalarProperty Name="EstatusTransId" ColumnName="EstatusTransId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificacionesTransacciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.NotificacionesTransacciones">
+        <MappingFragment StoreEntitySet="NotificacionesTransacciones">
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="ClienteContactado" ColumnName="ClienteContactado" />
+          <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeguimientoTransacciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.SeguimientoTransacciones">
+        <MappingFragment StoreEntitySet="SeguimientoTransacciones">
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="TipoComentario" ColumnName="TipoComentario" />
+          <ScalarProperty Name="UsuarioAsignadoId" ColumnName="UsuarioAsignadoId" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="SeguimientoId" ColumnName="SeguimientoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposPagos">
+      <EntityTypeMapping TypeName="CamaraSRMModel.TiposPagos">
+        <MappingFragment StoreEntitySet="TiposPagos">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoPagoId" ColumnName="TipoPagoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transacciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Transacciones">
+        <MappingFragment StoreEntitySet="Transacciones">
+          <ScalarProperty Name="OrigenTransaccion" ColumnName="OrigenTransaccion" />
+          <ScalarProperty Name="numeroSolicitudDGII" ColumnName="numeroSolicitudDGII" />
+          <ScalarProperty Name="bConfirmacionDGII" ColumnName="bConfirmacionDGII" />
+          <ScalarProperty Name="bEnviadoDGII" ColumnName="bEnviadoDGII" />
+          <ScalarProperty Name="ServicioVentanillaUnica" ColumnName="ServicioVentanillaUnica" />
+          <ScalarProperty Name="FecharReciboOnapi" ColumnName="FecharReciboOnapi" />
+          <ScalarProperty Name="MontoReciboOnapi" ColumnName="MontoReciboOnapi" />
+          <ScalarProperty Name="NumeroReciboOnapi" ColumnName="NumeroReciboOnapi" />
+          <ScalarProperty Name="CorreoContacto" ColumnName="CorreoContacto" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="EsDigital" ColumnName="EsDigital" />
+          <ScalarProperty Name="VieneProblemas" ColumnName="VieneProblemas" />
+          <ScalarProperty Name="DesdeOfv" ColumnName="DesdeOfv" />
+          <ScalarProperty Name="TransaccionIdAnterior" ColumnName="TransaccionIdAnterior" />
+          <ScalarProperty Name="TipoServicioSufijo" ColumnName="TipoServicioSufijo" />
+          <ScalarProperty Name="Servicio" ColumnName="Servicio" />
+          <ScalarProperty Name="TipoServicio" ColumnName="TipoServicio" />
+          <ScalarProperty Name="UbicacionExterna" ColumnName="UbicacionExterna" />
+          <ScalarProperty Name="UbicacionExpedienteId" ColumnName="UbicacionExpedienteId" />
+          <ScalarProperty Name="TipoNcf" ColumnName="TipoNcf" />
+          <ScalarProperty Name="Receptor" ColumnName="Receptor" />
+          <ScalarProperty Name="HoraFinal" ColumnName="HoraFinal" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="NCF" ColumnName="NCF" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="CustomDecimal2" ColumnName="CustomDecimal2" />
+          <ScalarProperty Name="CustomDecimal1" ColumnName="CustomDecimal1" />
+          <ScalarProperty Name="CustomDateTime2" ColumnName="CustomDateTime2" />
+          <ScalarProperty Name="CustomDateTime1" ColumnName="CustomDateTime1" />
+          <ScalarProperty Name="CustomInt3" ColumnName="CustomInt3" />
+          <ScalarProperty Name="CustomInt2" ColumnName="CustomInt2" />
+          <ScalarProperty Name="CustomInt1" ColumnName="CustomInt1" />
+          <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+          <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+          <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+          <ScalarProperty Name="Prioridad" ColumnName="Prioridad" />
+          <ScalarProperty Name="Estatus2" ColumnName="Estatus2" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="FlowId" ColumnName="FlowId" />
+          <ScalarProperty Name="ComentarioHtml" ColumnName="ComentarioHtml" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="DestinoTraslado" ColumnName="DestinoTraslado" />
+          <ScalarProperty Name="MontoDGII" ColumnName="MontoDGII" />
+          <ScalarProperty Name="FechaReciboDGII" ColumnName="FechaReciboDGII" />
+          <ScalarProperty Name="NoReciboDGII" ColumnName="NoReciboDGII" />
+          <ScalarProperty Name="FaxContacto" ColumnName="FaxContacto" />
+          <ScalarProperty Name="TelefonoContacto" ColumnName="TelefonoContacto" />
+          <ScalarProperty Name="NombreContacto" ColumnName="NombreContacto" />
+          <ScalarProperty Name="RNCSolicitante" ColumnName="RNCSolicitante" />
+          <ScalarProperty Name="Salicitante" ColumnName="Salicitante" />
+          <ScalarProperty Name="TipoServicioId" ColumnName="TipoServicioId" />
+          <ScalarProperty Name="TipoTransaccionId" ColumnName="TipoTransaccionId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="RNCSolicitanteWeb" ColumnName="RNCSolicitanteWeb" />
+          <ScalarProperty Name="SolicitanteWeb" ColumnName="SolicitanteWeb" />
+          <ScalarProperty Name="ImprimirCopias" ColumnName="ImprimirCopias" />
+          <ScalarProperty Name="CorreoEmpresa" ColumnName="CorreoEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransaccionesPersonas">
+      <EntityTypeMapping TypeName="CamaraSRMModel.TransaccionesPersonas">
+        <MappingFragment StoreEntitySet="TransaccionesPersonas">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransaccionesSociedades">
+      <EntityTypeMapping TypeName="CamaraSRMModel.TransaccionesSociedades">
+        <MappingFragment StoreEntitySet="TransaccionesSociedades">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="SociedadId" ColumnName="SociedadId" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UbicacionesExpedientes">
+      <EntityTypeMapping TypeName="CamaraSRMModel.UbicacionesExpedientes">
+        <MappingFragment StoreEntitySet="UbicacionesExpedientes">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewSumarioSociedades">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ViewSumarioSociedades">
+        <MappingFragment StoreEntitySet="cvw_SumarioSociedades">
+          <ScalarProperty Name="Estatus_fecha" ColumnName="Estatus_fecha" />
+          <ScalarProperty Name="bAdecuada" ColumnName="bAdecuada" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="EstatusId" ColumnName="EstatusId" />
+          <ScalarProperty Name="NombreTipoSociedad" ColumnName="NombreTipoSociedad" />
+          <ScalarProperty Name="Sufijo" ColumnName="Sufijo" />
+          <ScalarProperty Name="FechaConstitucion" ColumnName="FechaConstitucion" />
+          <ScalarProperty Name="Rnc" ColumnName="Rnc" />
+          <ScalarProperty Name="NombreSocial" ColumnName="NombreSocial" />
+          <ScalarProperty Name="NumeroRegistro" ColumnName="NumeroRegistro" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="SociedadId" ColumnName="SociedadId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewRegistrosProductos">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ViewRegistrosProductos">
+        <MappingFragment StoreEntitySet="cvw_RegistrosProductos">
+          <ScalarProperty Name="SistemaAmortizado" ColumnName="SistemaAmortizado" />
+          <ScalarProperty Name="SistemaArmonizadoId" ColumnName="SistemaArmonizadoId" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="ProductoId" ColumnName="ProductoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewRegistrosSocios">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ViewRegistrosSocios">
+        <MappingFragment StoreEntitySet="cvw_RegistrosSocios">
+          <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+          <ScalarProperty Name="SectorDgii" ColumnName="SectorDgii" />
+          <ScalarProperty Name="SectorDgiiId" ColumnName="SectorDgiiId" />
+          <ScalarProperty Name="CargoDescripcion" ColumnName="CargoDescripcion" />
+          <ScalarProperty Name="CantidaCuotasAcciones" ColumnName="CantidaCuotasAcciones" />
+          <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+          <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+          <ScalarProperty Name="Nacionalidad" ColumnName="Nacionalidad" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="SitioWeb" ColumnName="SitioWeb" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="TelefonoOficina" ColumnName="TelefonoOficina" />
+          <ScalarProperty Name="TelefonoCasa" ColumnName="TelefonoCasa" />
+          <ScalarProperty Name="ApartadoPostal" ColumnName="ApartadoPostal" />
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="CiudadId" ColumnName="CiudadId" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="Representante" ColumnName="Representante" />
+          <ScalarProperty Name="Accionista" ColumnName="Accionista" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="NumeroRM" ColumnName="NumeroRM" />
+          <ScalarProperty Name="CargoId" ColumnName="CargoId" />
+          <ScalarProperty Name="RepresentanteId" ColumnName="RepresentanteId" />
+          <ScalarProperty Name="RalacionSocio" ColumnName="RalacionSocio" />
+          <ScalarProperty Name="DireccionId" ColumnName="DireccionId" />
+          <ScalarProperty Name="TipoRelacion" ColumnName="TipoRelacion" />
+          <ScalarProperty Name="TipoSocio" ColumnName="TipoSocio" />
+          <ScalarProperty Name="SocioId" ColumnName="SocioId" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewReferenciasBancarias">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ViewReferenciasBancarias">
+        <MappingFragment StoreEntitySet="cvw_ReferenciasBancarias">
+          <ScalarProperty Name="Banco" ColumnName="Banco" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="BancoId" ColumnName="BancoId" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="ReferenciaBancariaId" ColumnName="ReferenciaBancariaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewPersonasEnSociedades">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ViewPersonasEnSociedades">
+        <MappingFragment StoreEntitySet="cvw_PersonasEnSociedades">
+          <ScalarProperty Name="EstatusId" ColumnName="EstatusId" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="Rnc" ColumnName="Rnc" />
+          <ScalarProperty Name="NombreSocial" ColumnName="NombreSocial" />
+          <ScalarProperty Name="Accionista" ColumnName="Accionista" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="RegistroRelacion" ColumnName="RegistroRelacion" />
+          <ScalarProperty Name="TipoRelacion" ColumnName="TipoRelacion" />
+          <ScalarProperty Name="TipoSocio" ColumnName="TipoSocio" />
+          <ScalarProperty Name="FechaConstitucion" ColumnName="FechaConstitucion" />
+          <ScalarProperty Name="SocioId" ColumnName="SocioId" />
+          <ScalarProperty Name="NumeroRegistro" ColumnName="NumeroRegistro" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="pGetTransaccionesHistorico" FunctionName="CamaraSRMModel.Store.pGetTransaccionesHistorico">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CamaraSRMModel.pGetTransaccionesHistorico_Result">
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="TipoTransaccionId" ColumnName="TipoTransaccionId" />
+          <ScalarProperty Name="TipoServicioId" ColumnName="TipoServicioId" />
+          <ScalarProperty Name="Salicitante" ColumnName="Salicitante" />
+          <ScalarProperty Name="RNCSolicitante" ColumnName="RNCSolicitante" />
+          <ScalarProperty Name="NombreContacto" ColumnName="NombreContacto" />
+          <ScalarProperty Name="TelefonoContacto" ColumnName="TelefonoContacto" />
+          <ScalarProperty Name="FaxContacto" ColumnName="FaxContacto" />
+          <ScalarProperty Name="NoReciboDGII" ColumnName="NoReciboDGII" />
+          <ScalarProperty Name="FechaReciboDGII" ColumnName="FechaReciboDGII" />
+          <ScalarProperty Name="MontoDGII" ColumnName="MontoDGII" />
+          <ScalarProperty Name="DestinoTraslado" ColumnName="DestinoTraslado" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="ComentarioHtml" ColumnName="ComentarioHtml" />
+          <ScalarProperty Name="FlowId" ColumnName="FlowId" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Estatus2" ColumnName="Estatus2" />
+          <ScalarProperty Name="Prioridad" ColumnName="Prioridad" />
+          <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+          <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+          <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+          <ScalarProperty Name="CustomInt1" ColumnName="CustomInt1" />
+          <ScalarProperty Name="CustomInt2" ColumnName="CustomInt2" />
+          <ScalarProperty Name="CustomInt3" ColumnName="CustomInt3" />
+          <ScalarProperty Name="CustomDateTime1" ColumnName="CustomDateTime1" />
+          <ScalarProperty Name="CustomDateTime2" ColumnName="CustomDateTime2" />
+          <ScalarProperty Name="CustomDecimal1" ColumnName="CustomDecimal1" />
+          <ScalarProperty Name="CustomDecimal2" ColumnName="CustomDecimal2" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="NCF" ColumnName="NCF" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="HoraFinal" ColumnName="HoraFinal" />
+          <ScalarProperty Name="Receptor" ColumnName="Receptor" />
+          <ScalarProperty Name="TipoNcf" ColumnName="TipoNcf" />
+          <ScalarProperty Name="UbicacionExpedienteId" ColumnName="UbicacionExpedienteId" />
+          <ScalarProperty Name="UbicacionExterna" ColumnName="UbicacionExterna" />
+          <ScalarProperty Name="TipoServicio" ColumnName="TipoServicio" />
+          <ScalarProperty Name="Servicio" ColumnName="Servicio" />
+          <ScalarProperty Name="TipoServicioSufijo" ColumnName="TipoServicioSufijo" />
+          <ScalarProperty Name="TransaccionIdAnterior" ColumnName="TransaccionIdAnterior" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ViewRegistrosActividades">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ViewRegistrosActividades">
+        <MappingFragment StoreEntitySet="cvw_RegistrosActividades">
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="TipoActividadId" ColumnName="TipoActividadId" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="AtividadId" ColumnName="AtividadId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewDirecciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ViewDirecciones">
+        <MappingFragment StoreEntitySet="cvw_Direcciones">
+          <ScalarProperty Name="SectorDgiiId" ColumnName="SectorDgiiId" />
+          <ScalarProperty Name="SectorDgii" ColumnName="SectorDgii" />
+          <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="SitioWeb" ColumnName="SitioWeb" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="TelefonoOficina" ColumnName="TelefonoOficina" />
+          <ScalarProperty Name="TelefonoCasa" ColumnName="TelefonoCasa" />
+          <ScalarProperty Name="ApartadoPostal" ColumnName="ApartadoPostal" />
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="CiudadId" ColumnName="CiudadId" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="DireccionId" ColumnName="DireccionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewRegistrosOposiciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ViewRegistrosOposiciones">
+        <MappingFragment StoreEntitySet="cvw_RegistrosOposiciones">
+          <ScalarProperty Name="TipoRectificacion" ColumnName="TipoRectificacion" />
+          <ScalarProperty Name="PersonaDescripcion" ColumnName="PersonaDescripcion" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="TipoRectificacionId" ColumnName="TipoRectificacionId" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Fecha_Modificacion" ColumnName="Fecha_Modificacion" />
+          <ScalarProperty Name="Justificacion" ColumnName="Justificacion" />
+          <ScalarProperty Name="NumeroRegistro" ColumnName="NumeroRegistro" />
+          <ScalarProperty Name="Demandado" ColumnName="Demandado" />
+          <ScalarProperty Name="Sintesis" ColumnName="Sintesis" />
+          <ScalarProperty Name="Sentencia" ColumnName="Sentencia" />
+          <ScalarProperty Name="TipoSentenciaId" ColumnName="TipoSentenciaId" />
+          <ScalarProperty Name="NumeroActo" ColumnName="NumeroActo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Apoderado" ColumnName="Apoderado" />
+          <ScalarProperty Name="FechaCierre" ColumnName="FechaCierre" />
+          <ScalarProperty Name="Cerrada" ColumnName="Cerrada" />
+          <ScalarProperty Name="Prioridad" ColumnName="Prioridad" />
+          <ScalarProperty Name="Requirientes" ColumnName="Requirientes" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="OposicionId" ColumnName="OposicionId" />
+          <ScalarProperty Name="RegistroOposicionId" ColumnName="RegistroOposicionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facturas">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Facturas">
+        <MappingFragment StoreEntitySet="Facturas">
+          <ScalarProperty Name="TipoComprobanteId" ColumnName="TipoComprobanteId" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+          <ScalarProperty Name="RNC" ColumnName="RNC" />
+          <ScalarProperty Name="Cajero" ColumnName="Cajero" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="TotalFactura" ColumnName="TotalFactura" />
+          <ScalarProperty Name="TipoNcf" ColumnName="TipoNcf" />
+          <ScalarProperty Name="Complementaria" ColumnName="Complementaria" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Ncf" ColumnName="Ncf" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="FacturaId" ColumnName="FacturaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormasPagos">
+      <EntityTypeMapping TypeName="CamaraSRMModel.FormasPagos">
+        <MappingFragment StoreEntitySet="FormasPagos">
+          <ScalarProperty Name="NumeroNotaCredito" ColumnName="NumeroNotaCredito" />
+          <ScalarProperty Name="ConfirmacionPagoTarjeta" ColumnName="ConfirmacionPagoTarjeta" />
+          <ScalarProperty Name="BancoDescripcion" ColumnName="BancoDescripcion" />
+          <ScalarProperty Name="BancoId" ColumnName="BancoId" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="ValorDevuelto" ColumnName="ValorDevuelto" />
+          <ScalarProperty Name="ValorEntregado" ColumnName="ValorEntregado" />
+          <ScalarProperty Name="Divisa" ColumnName="Divisa" />
+          <ScalarProperty Name="NoTarjeta" ColumnName="NoTarjeta" />
+          <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+          <ScalarProperty Name="Tasa" ColumnName="Tasa" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />
+          <ScalarProperty Name="FechaCuadre" ColumnName="FechaCuadre" />
+          <ScalarProperty Name="FacturaId" ColumnName="FacturaId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransaccionDetalle">
+      <EntityTypeMapping TypeName="CamaraSRMModel.TransaccionDetalle">
+        <MappingFragment StoreEntitySet="TransaccionDetalle">
+          <ScalarProperty Name="TotalBruto" ColumnName="TotalBruto" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="FacturaId" ColumnName="FacturaId" />
+          <ScalarProperty Name="TransaccionDetalles" ColumnName="TransaccionDetalles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registros">
+      <EntityTypeMapping TypeName="CamaraSRMModel.Registros">
+        <MappingFragment StoreEntitySet="Registros">
+          <ScalarProperty Name="FechaAsamblea2" ColumnName="FechaAsamblea2" />
+          <ScalarProperty Name="FechaAsamblea1" ColumnName="FechaAsamblea1" />
+          <ScalarProperty Name="Id_Cierre_Fiscal" ColumnName="Id_Cierre_Fiscal" />
+          <ScalarProperty Name="ActividadCIUU2" ColumnName="ActividadCIUU2" />
+          <ScalarProperty Name="ActividadIdCIUU2" ColumnName="ActividadIdCIUU2" />
+          <ScalarProperty Name="ActividadCIUU" ColumnName="ActividadCIUU" />
+          <ScalarProperty Name="bActoAlguacil" ColumnName="bActoAlguacil" />
+          <ScalarProperty Name="isRncValido" ColumnName="isRncValido" />
+          <ScalarProperty Name="bActividadCIUU" ColumnName="bActividadCIUU" />
+          <ScalarProperty Name="ActividadNegocioOld" ColumnName="ActividadNegocioOld" />
+          <ScalarProperty Name="ActividadIdCIUU" ColumnName="ActividadIdCIUU" />
+          <ScalarProperty Name="SocioValido" ColumnName="SocioValido" />
+          <ScalarProperty Name="MonedaCapitalSocial" ColumnName="MonedaCapitalSocial" />
+          <ScalarProperty Name="MonedaCapitalPagado" ColumnName="MonedaCapitalPagado" />
+          <ScalarProperty Name="MonedaCapitalAutorizado" ColumnName="MonedaCapitalAutorizado" />
+          <ScalarProperty Name="MonedaBienesRaices" ColumnName="MonedaBienesRaices" />
+          <ScalarProperty Name="MonedaActivos" ColumnName="MonedaActivos" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="TipoSocioInterno" ColumnName="TipoSocioInterno" />
+          <ScalarProperty Name="EsSocioInterno" ColumnName="EsSocioInterno" />
+          <ScalarProperty Name="TotalAcciones" ColumnName="TotalAcciones" />
+          <ScalarProperty Name="NumeroSocios" ColumnName="NumeroSocios" />
+          <ScalarProperty Name="ActividadNegocio" ColumnName="ActividadNegocio" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TipoRegistro" ColumnName="TipoRegistro" />
+          <ScalarProperty Name="NombreSociedad" ColumnName="NombreSociedad" />
+          <ScalarProperty Name="NombreOperador" ColumnName="NombreOperador" />
+          <ScalarProperty Name="Comentario2" ColumnName="Comentario2" />
+          <ScalarProperty Name="Comentario1" ColumnName="Comentario1" />
+          <ScalarProperty Name="EsProvicional" ColumnName="EsProvicional" />
+          <ScalarProperty Name="RegistroPatenteInversion" ColumnName="RegistroPatenteInversion" />
+          <ScalarProperty Name="PatenteInversion" ColumnName="PatenteInversion" />
+          <ScalarProperty Name="RegistroMarcaFabrica" ColumnName="RegistroMarcaFabrica" />
+          <ScalarProperty Name="MarcaFabrica" ColumnName="MarcaFabrica" />
+          <ScalarProperty Name="RegistroNombreComercial" ColumnName="RegistroNombreComercial" />
+          <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+          <ScalarProperty Name="DireccionId" ColumnName="DireccionId" />
+          <ScalarProperty Name="EmpleadosTotal" ColumnName="EmpleadosTotal" />
+          <ScalarProperty Name="EmpleadosFemeninos" ColumnName="EmpleadosFemeninos" />
+          <ScalarProperty Name="EmpleadosMasculinos" ColumnName="EmpleadosMasculinos" />
+          <ScalarProperty Name="FechaInicioOperacion" ColumnName="FechaInicioOperacion" />
+          <ScalarProperty Name="TipoMonedaBienesRaices" ColumnName="TipoMonedaBienesRaices" />
+          <ScalarProperty Name="BienesRaices" ColumnName="BienesRaices" />
+          <ScalarProperty Name="TipoMonedaActivos" ColumnName="TipoMonedaActivos" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+          <ScalarProperty Name="TipoMonedaCapitalPagado" ColumnName="TipoMonedaCapitalPagado" />
+          <ScalarProperty Name="CapitalPagado" ColumnName="CapitalPagado" />
+          <ScalarProperty Name="TipoMonedaCapitalAutorizado" ColumnName="TipoMonedaCapitalAutorizado" />
+          <ScalarProperty Name="CapitalAutorizado" ColumnName="CapitalAutorizado" />
+          <ScalarProperty Name="TipoMonedaCapitalSocial" ColumnName="TipoMonedaCapitalSocial" />
+          <ScalarProperty Name="CapitalSocial" ColumnName="CapitalSocial" />
+          <ScalarProperty Name="NombreEstablecimiento" ColumnName="NombreEstablecimiento" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModelosCertificaciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.ModelosCertificaciones">
+        <MappingFragment StoreEntitySet="ModelosCertificaciones">
+          <ScalarProperty Name="EsPersona" ColumnName="EsPersona" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="ServicioId" ColumnName="ServicioId" />
+          <ScalarProperty Name="EsEmpresa" ColumnName="EsEmpresa" />
+          <ScalarProperty Name="TipoModelo" ColumnName="TipoModelo" />
+          <ScalarProperty Name="DefinicionModelo" ColumnName="DefinicionModelo" />
+          <ScalarProperty Name="NombreModelo" ColumnName="NombreModelo" />
+          <ScalarProperty Name="ModeloId" ColumnName="ModeloId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotasCredito">
+      <EntityTypeMapping TypeName="CamaraSRMModel.NotasCredito">
+        <MappingFragment StoreEntitySet="NotasCredito">
+          <ScalarProperty Name="GestionNotaId" ColumnName="GestionNotaId" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="Activa" ColumnName="Activa" />
+          <ScalarProperty Name="NCF" ColumnName="NCF" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="FacturaID" ColumnName="FacturaID" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="NotaCreditoID" ColumnName="NotaCreditoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ValidaRegistroVencido" FunctionName="CamaraSRMModel.Store.csp_ValidaRegistroVencido" />
+    <EntitySetMapping Name="SubTransacciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.SubTransacciones">
+        <MappingFragment StoreEntitySet="SubTransacciones">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="SubTransaccionPadreId" ColumnName="SubTransaccionPadreId" />
+          <ScalarProperty Name="Invalida" ColumnName="Invalida" />
+          <ScalarProperty Name="Servicio" ColumnName="Servicio" />
+          <ScalarProperty Name="TipoServicioSufijo" ColumnName="TipoServicioSufijo" />
+          <ScalarProperty Name="TipoServicio" ColumnName="TipoServicio" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="CustomDecimal2" ColumnName="CustomDecimal2" />
+          <ScalarProperty Name="CustomDecimal1" ColumnName="CustomDecimal1" />
+          <ScalarProperty Name="CustomDateTime2" ColumnName="CustomDateTime2" />
+          <ScalarProperty Name="CustomDateTime1" ColumnName="CustomDateTime1" />
+          <ScalarProperty Name="CustomInt3" ColumnName="CustomInt3" />
+          <ScalarProperty Name="CustomInt2" ColumnName="CustomInt2" />
+          <ScalarProperty Name="CustomInt1" ColumnName="CustomInt1" />
+          <ScalarProperty Name="CustomString3" ColumnName="CustomString3" />
+          <ScalarProperty Name="CustomString2" ColumnName="CustomString2" />
+          <ScalarProperty Name="CustomString1" ColumnName="CustomString1" />
+          <ScalarProperty Name="Estatus2" ColumnName="Estatus2" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="FlowId" ColumnName="FlowId" />
+          <ScalarProperty Name="DestinoTraslado" ColumnName="DestinoTraslado" />
+          <ScalarProperty Name="TipoServicioId" ColumnName="TipoServicioId" />
+          <ScalarProperty Name="TipoTransaccionId" ColumnName="TipoTransaccionId" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="SubTransaccionId" ColumnName="SubTransaccionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SociedadesRegistros">
+      <EntityTypeMapping TypeName="CamaraSRMModel.SociedadesRegistros">
+        <MappingFragment StoreEntitySet="SociedadesRegistros">
+          <ScalarProperty Name="bTransformada" ColumnName="bTransformada" />
+          <ScalarProperty Name="EsValida" ColumnName="EsValida" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="bAdecuada" ColumnName="bAdecuada" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="SociedadId" ColumnName="SociedadId" />
+          <ScalarProperty Name="NumeroRegistro" ColumnName="NumeroRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SetAsignaciones" FunctionName="CamaraSRMModel.Store.csp_SetAsignaciones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CamaraSRMModel.SetAsignaciones_Result">
+          <ScalarProperty Name="AsignacionId" ColumnName="AsignacionId" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="UltimoUsuarioId" ColumnName="UltimoUsuarioId" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="csp_AsignacionTransaccionVU" FunctionName="CamaraSRMModel.Store.csp_AsignacionTransaccionVU" />
+    <EntitySetMapping Name="UsuariosEstatus">
+      <EntityTypeMapping TypeName="CamaraSRMModel.UsuariosEstatus">
+        <MappingFragment StoreEntitySet="UsuariosEstatus">
+          <ScalarProperty Name="EstatusTransId" ColumnName="EstatusTransId" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="EstatusUsuarioId" ColumnName="EstatusUsuarioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cvw_SociedadesRegistros">
+      <EntityTypeMapping TypeName="CamaraSRMModel.cvw_SociedadesRegistros">
+        <MappingFragment StoreEntitySet="cvw_SociedadesRegistros">
+          <ScalarProperty Name="SocioValido" ColumnName="SocioValido" />
+          <ScalarProperty Name="ActividadIdCIUU" ColumnName="ActividadIdCIUU" />
+          <ScalarProperty Name="bActividadCIUU" ColumnName="bActividadCIUU" />
+          <ScalarProperty Name="FechaEnteRegulado" ColumnName="FechaEnteRegulado" />
+          <ScalarProperty Name="isRncValido" ColumnName="isRncValido" />
+          <ScalarProperty Name="FechaAsamblea2" ColumnName="FechaAsamblea2" />
+          <ScalarProperty Name="FechaAsamblea1" ColumnName="FechaAsamblea1" />
+          <ScalarProperty Name="bActoAlguacil" ColumnName="bActoAlguacil" />
+          <ScalarProperty Name="EsValida" ColumnName="EsValida" />
+          <ScalarProperty Name="VersionRegistro" ColumnName="VersionRegistro" />
+          <ScalarProperty Name="ActividadCIUU" ColumnName="ActividadCIUU" />
+          <ScalarProperty Name="ActividadIdCIUU2" ColumnName="ActividadIdCIUU2" />
+          <ScalarProperty Name="ActividadCIUU2" ColumnName="ActividadCIUU2" />
+          <ScalarProperty Name="Id_Cierre_Fiscal" ColumnName="Id_Cierre_Fiscal" />
+          <ScalarProperty Name="bAdecuada" ColumnName="bAdecuada" />
+          <ScalarProperty Name="Suscripcion" ColumnName="Suscripcion" />
+          <ScalarProperty Name="SiglasConfig" ColumnName="SiglasConfig" />
+          <ScalarProperty Name="TipoEnteRegulado" ColumnName="TipoEnteRegulado" />
+          <ScalarProperty Name="SufijoSociedad" ColumnName="SufijoSociedad" />
+          <ScalarProperty Name="Sociedad" ColumnName="Sociedad" />
+          <ScalarProperty Name="AbreviaturaTipoMonedaCapitalSocial" ColumnName="AbreviaturaTipoMonedaCapitalSocial" />
+          <ScalarProperty Name="AbreviaturaTipoMonedaCapitalPagado" ColumnName="AbreviaturaTipoMonedaCapitalPagado" />
+          <ScalarProperty Name="AbreviaturaTIpoMonedaCapitalAutorizado" ColumnName="AbreviaturaTIpoMonedaCapitalAutorizado" />
+          <ScalarProperty Name="AbreviaturaTipoMonedaBienesRaices" ColumnName="AbreviaturaTipoMonedaBienesRaices" />
+          <ScalarProperty Name="AbreviaturaTipoMonedaActivos" ColumnName="AbreviaturaTipoMonedaActivos" />
+          <ScalarProperty Name="TotalAcciones" ColumnName="TotalAcciones" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="TipoSocioInterno" ColumnName="TipoSocioInterno" />
+          <ScalarProperty Name="EsSocioInterno" ColumnName="EsSocioInterno" />
+          <ScalarProperty Name="NumeroSocios" ColumnName="NumeroSocios" />
+          <ScalarProperty Name="ActividadNegocio" ColumnName="ActividadNegocio" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TipoRegistro" ColumnName="TipoRegistro" />
+          <ScalarProperty Name="NombreSociedad" ColumnName="NombreSociedad" />
+          <ScalarProperty Name="NombreOperador" ColumnName="NombreOperador" />
+          <ScalarProperty Name="Comentario2" ColumnName="Comentario2" />
+          <ScalarProperty Name="Comentario1" ColumnName="Comentario1" />
+          <ScalarProperty Name="EsProvicional" ColumnName="EsProvicional" />
+          <ScalarProperty Name="RegistroPatenteInversion" ColumnName="RegistroPatenteInversion" />
+          <ScalarProperty Name="PatenteInversion" ColumnName="PatenteInversion" />
+          <ScalarProperty Name="RegistroMarcaFabrica" ColumnName="RegistroMarcaFabrica" />
+          <ScalarProperty Name="MarcaFabrica" ColumnName="MarcaFabrica" />
+          <ScalarProperty Name="RegistroNombreComercial" ColumnName="RegistroNombreComercial" />
+          <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+          <ScalarProperty Name="DireccionId" ColumnName="DireccionId" />
+          <ScalarProperty Name="EmpleadosTotal" ColumnName="EmpleadosTotal" />
+          <ScalarProperty Name="EmpleadosFemeninos" ColumnName="EmpleadosFemeninos" />
+          <ScalarProperty Name="EmpleadosMasculinos" ColumnName="EmpleadosMasculinos" />
+          <ScalarProperty Name="FechaInicioOperacion" ColumnName="FechaInicioOperacion" />
+          <ScalarProperty Name="TipoMonedaBienesRaices" ColumnName="TipoMonedaBienesRaices" />
+          <ScalarProperty Name="BienesRaices" ColumnName="BienesRaices" />
+          <ScalarProperty Name="TipoMonedaActivos" ColumnName="TipoMonedaActivos" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+          <ScalarProperty Name="TipoMonedaCapitalPagado" ColumnName="TipoMonedaCapitalPagado" />
+          <ScalarProperty Name="CapitalPagado" ColumnName="CapitalPagado" />
+          <ScalarProperty Name="TipoMonedaCapitalAutorizado" ColumnName="TipoMonedaCapitalAutorizado" />
+          <ScalarProperty Name="CapitalAutorizado" ColumnName="CapitalAutorizado" />
+          <ScalarProperty Name="TipoMonedaCapitalSocial" ColumnName="TipoMonedaCapitalSocial" />
+          <ScalarProperty Name="CapitalSocial" ColumnName="CapitalSocial" />
+          <ScalarProperty Name="NombreEstablecimiento" ColumnName="NombreEstablecimiento" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="NumeroRegistro" ColumnName="NumeroRegistro" />
+          <ScalarProperty Name="NumeroNaveIndustrial" ColumnName="NumeroNaveIndustrial" />
+          <ScalarProperty Name="NoResolucion" ColumnName="NoResolucion" />
+          <ScalarProperty Name="TipoEnteReguladoId" ColumnName="TipoEnteReguladoId" />
+          <ScalarProperty Name="EsEnteRegulado" ColumnName="EsEnteRegulado" />
+          <ScalarProperty Name="EstatusId" ColumnName="EstatusId" />
+          <ScalarProperty Name="DuraccionDirectiva" ColumnName="DuraccionDirectiva" />
+          <ScalarProperty Name="FechaAsamblea" ColumnName="FechaAsamblea" />
+          <ScalarProperty Name="DuracionSociedad" ColumnName="DuracionSociedad" />
+          <ScalarProperty Name="FechaConstitucion" ColumnName="FechaConstitucion" />
+          <ScalarProperty Name="NacionalidadId" ColumnName="NacionalidadId" />
+          <ScalarProperty Name="Nacionalidad" ColumnName="Nacionalidad" />
+          <ScalarProperty Name="EsNacional" ColumnName="EsNacional" />
+          <ScalarProperty Name="Rnc" ColumnName="Rnc" />
+          <ScalarProperty Name="NombreSiglas" ColumnName="NombreSiglas" />
+          <ScalarProperty Name="NombreEmpresa" ColumnName="NombreEmpresa" />
+          <ScalarProperty Name="NombreSocial" ColumnName="NombreSocial" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="SociedadId" ColumnName="SociedadId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeguimientoOposiciones">
+      <EntityTypeMapping TypeName="CamaraSRMModel.SeguimientoOposiciones">
+        <MappingFragment StoreEntitySet="SeguimientoOposiciones">
+          <ScalarProperty Name="Justificacion" ColumnName="Justificacion" />
+          <ScalarProperty Name="FechaCierre" ColumnName="FechaCierre" />
+          <ScalarProperty Name="Cerrada" ColumnName="Cerrada" />
+          <ScalarProperty Name="Prioridad" ColumnName="Prioridad" />
+          <ScalarProperty Name="Requirientes" ColumnName="Requirientes" />
+          <ScalarProperty Name="RegistroId" ColumnName="RegistroId" />
+          <ScalarProperty Name="RegistroOposicionId" ColumnName="RegistroOposicionId" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="TipoSentenciaId" ColumnName="TipoSentenciaId" />
+          <ScalarProperty Name="Apoderado" ColumnName="Apoderado" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="NumeroActo" ColumnName="NumeroActo" />
+          <ScalarProperty Name="TransaccionId" ColumnName="TransaccionId" />
+          <ScalarProperty Name="OposicionId" ColumnName="OposicionId" />
+          <ScalarProperty Name="Usuario_Modificacion" ColumnName="Usuario_Modificacion" />
+          <ScalarProperty Name="Fecha_Modificacion" ColumnName="Fecha_Modificacion" />
+          <ScalarProperty Name="Accion" ColumnName="Accion" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

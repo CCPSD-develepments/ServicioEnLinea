@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Acuerdo de uso - Cámara Online</title>
+    <style type="text/css">
+        body
+        {
+            font-family: Tahoma;
+            font-size: small;
+            color: #888888;
+        }
+        .header
+        {
+            font-weight: bold;
+        }
+        #divContrato div
+        {
+            margin-left: 15px;
+            margin-bottom: 5px;
+        }
+        #mainHeader
+        {
+            text-align:center;
+        }
+        ul
+        {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 1em;
+            text-indent: -1em;
+            margin-left: 15px;
+        }
+        li
+        {
+            margin-bottom: 5px;
+        }
+    </style>
+    <script src="/res/js/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="res/js/jquery-1.4.1-vsdoc.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#mainContent").load("/ContratoOfv.xml", function () { window.print(); });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="mainContent"></div>
+</body>
+</html>

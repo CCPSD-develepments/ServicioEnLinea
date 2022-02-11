@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModuloPagoVisanetModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ModuloPagoVisanetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Sistema" EntityType="ModuloPagoVisanetModel.Sistema" />
+    <EntitySet Name="TransaccionesVisanet" EntityType="ModuloPagoVisanetModel.TransaccionesVisanet" />
+    <AssociationSet Name="FK_TransaccionesVisanet_Sistema" Association="ModuloPagoVisanetModel.FK_TransaccionesVisanet_Sistema">
+      <End Role="Sistema" EntitySet="Sistema" />
+      <End Role="TransaccionesVisanet" EntitySet="TransaccionesVisanet" />
+    </AssociationSet>
+    <EntitySet Name="Order" EntityType="ModuloPagoVisanetModel.Order" />
+    <AssociationSet Name="FK_Order_Sistema" Association="ModuloPagoVisanetModel.FK_Order_Sistema">
+      <End Role="Sistema" EntitySet="Sistema" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Sistema">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TransaccionesVisanet" Relationship="ModuloPagoVisanetModel.FK_TransaccionesVisanet_Sistema" FromRole="Sistema" ToRole="TransaccionesVisanet" />
+    <NavigationProperty Name="Order" Relationship="ModuloPagoVisanetModel.FK_Order_Sistema" FromRole="Sistema" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="TransaccionesVisanet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SistemaId" Type="Int32" Nullable="false" />
+    <Property Name="MerchantKey" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="OrderID" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Currency" Type="Int32" />
+    <Property Name="Tarjeta" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AuthCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ReferenceCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FechaTransaccion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Sistema" Relationship="ModuloPagoVisanetModel.FK_TransaccionesVisanet_Sistema" FromRole="TransaccionesVisanet" ToRole="Sistema" />
+  </EntityType>
+  <Association Name="FK_TransaccionesVisanet_Sistema">
+    <End Role="Sistema" Type="ModuloPagoVisanetModel.Sistema" Multiplicity="1" />
+    <End Role="TransaccionesVisanet" Type="ModuloPagoVisanetModel.TransaccionesVisanet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sistema">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TransaccionesVisanet">
+        <PropertyRef Name="SistemaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SistemaId" Nullable="false" />
+    <Property Type="Int32" Name="TransaccionId" Nullable="false" />
+    <Property Type="DateTime" Name="FechaTransaccion" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Sistema" Relationship="ModuloPagoVisanetModel.FK_Order_Sistema" FromRole="Order" ToRole="Sistema" />
+  </EntityType>
+  <Association Name="FK_Order_Sistema">
+    <End Type="ModuloPagoVisanetModel.Sistema" Role="Sistema" Multiplicity="1" />
+    <End Type="ModuloPagoVisanetModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sistema">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="SistemaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

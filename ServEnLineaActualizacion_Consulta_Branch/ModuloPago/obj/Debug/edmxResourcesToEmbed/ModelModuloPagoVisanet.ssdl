@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModuloPagoVisanetModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModuloPagoVisanetModelStoreContainer">
+    <EntitySet Name="Order" EntityType="ModuloPagoVisanetModel.Store.Order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sistema" EntityType="ModuloPagoVisanetModel.Store.Sistema" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TransaccionesVisanet" EntityType="ModuloPagoVisanetModel.Store.TransaccionesVisanet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Order_Sistema" Association="ModuloPagoVisanetModel.Store.FK_Order_Sistema">
+      <End Role="Sistema" EntitySet="Sistema" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionesVisanet_Sistema" Association="ModuloPagoVisanetModel.Store.FK_TransaccionesVisanet_Sistema">
+      <End Role="Sistema" EntitySet="Sistema" />
+      <End Role="TransaccionesVisanet" EntitySet="TransaccionesVisanet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SistemaId" Type="int" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="FechaTransaccion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sistema">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TransaccionesVisanet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SistemaId" Type="int" Nullable="false" />
+    <Property Name="MerchantKey" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="Amount" Type="decimal" />
+    <Property Name="Currency" Type="int" />
+    <Property Name="Tarjeta" Type="nvarchar" MaxLength="50" />
+    <Property Name="AuthCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReferenceCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaTransaccion" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Order_Sistema">
+    <End Role="Sistema" Type="ModuloPagoVisanetModel.Store.Sistema" Multiplicity="1" />
+    <End Role="Order" Type="ModuloPagoVisanetModel.Store.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sistema">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="SistemaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionesVisanet_Sistema">
+    <End Role="Sistema" Type="ModuloPagoVisanetModel.Store.Sistema" Multiplicity="1" />
+    <End Role="TransaccionesVisanet" Type="ModuloPagoVisanetModel.Store.TransaccionesVisanet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sistema">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TransaccionesVisanet">
+        <PropertyRef Name="SistemaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

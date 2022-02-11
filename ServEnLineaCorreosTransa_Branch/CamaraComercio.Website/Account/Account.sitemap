@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Account/MyProfile.aspx" title="Mi Perfil"  description="Perfil del usuario.">
+    <siteMapNode url="~/Account/UsersAdmin.aspx" title="Administración de Usuarios"  description="Administración de Usuarios" />
+    <siteMapNode url="~/Account/UsersAuth.aspx" title="Usuarios Autorizados"  description="Usuarios autorizados a tramitar." />
+    <siteMapNode url="~/Account/ChangePassword.aspx" title="Cambiar Contraseña"  description="Cambiar contraseña." />
+  </siteMapNode>
+</siteMap>

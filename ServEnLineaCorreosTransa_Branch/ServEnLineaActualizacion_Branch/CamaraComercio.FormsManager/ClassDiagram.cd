@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CamaraComercio.FormsManager.DataForm" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABCAAAACEAgAACAAAAAAAQAAEAIABQEAAAAAABAgAA=</HashCode>
+      <FileName>DataForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.DataFormProcessor">
+    <Position X="0.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAIAgAAAAAAAAgAAAAAAACEAAAAAAAhAAIAA=</HashCode>
+      <FileName>DataFormProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.FormManagerException" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormManagerException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.Fields.CheckboxField" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAACAAABAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Fields\CheckboxField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.Fields.DataFormField" Collapsed="true">
+    <Position X="3.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAABAAAAAAAAAAAAAACQAABYAAAQQAAAgCAIAAAA=</HashCode>
+      <FileName>Fields\DataFormField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.Fields.DropDownFieldOptionCollection" Collapsed="true">
+    <Position X="7.5" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Fields\DropDownFieldOptionCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.Fields.DataFormFieldValue" Collapsed="true">
+    <Position X="5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAgAACAAAABAAAA=</HashCode>
+      <FileName>Fields\DataFormFieldValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.Fields.DataFormFieldValueCollection" Collapsed="true">
+    <Position X="5" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Fields\DataFormFieldValueCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.Fields.DropDownField" Collapsed="true">
+    <Position X="7.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAABAAAA=</HashCode>
+      <FileName>Fields\DropDownField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.Fields.NestedFormField" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Fields\NestedFormField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.Fields.TextField" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAA=</HashCode>
+      <FileName>Fields\TextField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.DataFormConfiguration" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="2" />
+    <Members>
+      <Field Name="m_baseWebPath" Hidden="true" />
+      <Field Name="m_uiWebPath" Hidden="true" />
+      <Field Name="m_websiteUrl" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAIAAAAQBAEABAAAAAIAQAAAACFAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataFormConfiguration.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CamaraComercio.FormsManager.DropDownFieldOption" Collapsed="true">
+    <Position X="7.5" Y="8" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAABAgAAAAAAI=</HashCode>
+      <FileName>Fields\DropDownFieldOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CamaraComercio.FormsManager.Fields.DataFormFieldType" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAgAAAAAAAAAAAAAAAAAAABAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Fields\DataFormFieldType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

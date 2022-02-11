@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DescargaCert.aspx.cs" Inherits="CamaraComercio.Website.Operaciones.Shared.DescargaCert" %>

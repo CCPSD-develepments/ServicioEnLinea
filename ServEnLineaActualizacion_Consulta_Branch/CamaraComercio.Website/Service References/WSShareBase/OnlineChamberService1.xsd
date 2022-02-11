@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Boundaries.DigitalSignatureVerification.Enums" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Boundaries.DigitalSignatureVerification.Enums" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="DocumentStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DocumentNotEvaluated" />
+      <xs:enumeration value="ValidSignatures" />
+      <xs:enumeration value="UnsignedDocument" />
+      <xs:enumeration value="NonPdfDocument" />
+      <xs:enumeration value="SignedWithInconsistencies" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocumentStatus" nillable="true" type="tns:DocumentStatus" />
+  <xs:simpleType name="DigitalSignatureStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotEvaluated" />
+      <xs:enumeration value="ValidSignature" />
+      <xs:enumeration value="Revoked" />
+      <xs:enumeration value="InvalidIssuer" />
+      <xs:enumeration value="CertificateHasExpired" />
+      <xs:enumeration value="UnableToCheckRevocationList" />
+      <xs:enumeration value="DateFromNotYetValid" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DigitalSignatureStatus" nillable="true" type="tns:DigitalSignatureStatus" />
+</xs:schema>

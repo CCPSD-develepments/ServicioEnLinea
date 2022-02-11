@@ -1,0 +1,1686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CamaraWebsiteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TransaccionesEmpBHD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="reference" Type="nchar" MaxLength="90" />
+    <Property Name="TransactionId" Type="nchar" MaxLength="90" />
+    <Property Name="Estatus" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="90" />
+    <Property Name="SolicitudId" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="EstadoString" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EmpresasPorUsuario">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaSolicitud" Type="datetime" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="FechaUltModificacion" Type="datetime" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="CamaraID" Type="char" MaxLength="3" />
+    <Property Name="NoRegistro" Type="int" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="EsPersona" Type="bit" />
+  </EntityType>
+  <EntityType Name="LogRegistroOnapi_VU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IdSolicitudVU" Type="int" Nullable="false" />
+    <Property Name="OrdenId" Type="int" Nullable="false" />
+    <Property Name="EstatusId" Type="int" Nullable="false" />
+    <Property Name="DescripcionEstatus" Type="varchar" MaxLength="150" />
+    <Property Name="MensajeEstatus" Type="varchar" MaxLength="500" />
+    <Property Name="NoCertificado" Type="int" Nullable="false" />
+    <Property Name="NombreCertificado" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="SucursalRetirarCertificado" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="500" />
+    <Property Name="RegistroCompletado" Type="bit" Nullable="false" />
+    <Property Name="Comentario" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mensajes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UsuarioSistema" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UsuarioPadre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TipoMensaje" Type="int" Nullable="false" />
+    <Property Name="Mensaje" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CamaraId" Type="char" MaxLength="3" />
+    <Property Name="SociedadID" Type="int" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="Titulo" Type="nvarchar" MaxLength="100" />
+    <Property Name="FechaEnvio" Type="datetime" />
+    <Property Name="FechaLectura" Type="datetime" />
+    <Property Name="idFirmaDocumentos" Type="bigint" />
+  </EntityType>
+  <EntityType Name="PropiedadesModificacionUI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServicioID" Type="int" />
+    <Property Name="NombreControl" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="PropiedadesPorSociedad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PropiedadID" Type="int" Nullable="false" />
+    <Property Name="TipoSociedadID" Type="int" Nullable="false" />
+    <Property Name="Required" Type="bit" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" />
+    <Property Name="LowerLimit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UpperLimit" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="PropiedadesUI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicioDetalles">
+    <Key>
+      <PropertyRef Name="ServicioId" />
+    </Key>
+    <Property Name="ServicioId" Type="int" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoServicioDetalles">
+    <Key>
+      <PropertyRef Name="TipoServicioId" />
+    </Key>
+    <Property Name="TipoServicioId" Type="int" Nullable="false" />
+    <Property Name="Url" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="WebKey" Type="varchar" MaxLength="50" />
+    <Property Name="DescripcionAyuda" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TokenMIT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="access_token" Type="varchar(max)" Nullable="false" />
+    <Property Name="token_type" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="expires_in" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="FechaCreado_issued" Type="datetime" Nullable="false" />
+    <Property Name="FechaVencimiento_expires" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransaccionInfo">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="FacturaPagadaId" Type="int" />
+    <Property Name="Problema" Type="bit" />
+    <Property Name="CamaraId" Type="varchar" MaxLength="50" />
+    <Property Name="TransaccionIdAnterior" Type="int" />
+  </EntityType>
+  <EntityType Name="Bancos">
+    <Key>
+      <PropertyRef Name="BancoId" />
+    </Key>
+    <Property Name="BancoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cargos">
+    <Key>
+      <PropertyRef Name="CargoId" />
+    </Key>
+    <Property Name="CargoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CategoriasSocios">
+    <Key>
+      <PropertyRef Name="TipoCategoriaId" />
+    </Key>
+    <Property Name="TipoCategoriaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoCategoria" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Descripcion" Type="text" />
+  </EntityType>
+  <EntityType Name="Ciudades">
+    <Key>
+      <PropertyRef Name="CiudadId" />
+    </Key>
+    <Property Name="CiudadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PaisId" Type="int" />
+    <Property Name="Orden" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiasFeriados">
+    <Key>
+      <PropertyRef Name="Fecha" />
+    </Key>
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Direcciones">
+    <Key>
+      <PropertyRef Name="DireccionId" />
+    </Key>
+    <Property Name="DireccionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Calle" Type="nvarchar" MaxLength="256" />
+    <Property Name="Numero" Type="nvarchar" MaxLength="6" />
+    <Property Name="CiudadId" Type="int" />
+    <Property Name="SectorId" Type="int" />
+    <Property Name="ApartadoPostal" Type="nvarchar" MaxLength="20" />
+    <Property Name="TelefonoCasa" Type="nvarchar" MaxLength="15" />
+    <Property Name="TelefonoOficina" Type="nvarchar" MaxLength="15" />
+    <Property Name="Extension" Type="int" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="SitioWeb" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="EstatusTransacciones">
+    <Key>
+      <PropertyRef Name="EstatusTransId" />
+    </Key>
+    <Property Name="EstatusTransId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EstatusTranNombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="EstatusTransDescripcion" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="FacturaId" />
+    </Key>
+    <Property Name="FacturaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Ncf" Type="varchar" MaxLength="25" />
+    <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Complementaria" Type="bit" Nullable="false" />
+    <Property Name="TipoNcf" Type="varchar" MaxLength="150" />
+    <Property Name="TotalFactura" Type="decimal" Precision="36" Scale="7" Nullable="false" />
+    <Property Name="FacturaSrmId" Type="int" Nullable="false" />
+    <Property Name="CamaraId" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="Credito" Type="decimal" Precision="36" Scale="7" />
+    <Property Name="PagoAnterior" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CobroPorServicio" Type="decimal" Precision="36" Scale="7" />
+    <Property Name="CobroPorServicios" Type="decimal" Precision="36" Scale="7" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CamaraWebsite.WebSRM.FormaEntregaCertificadoOnapi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FormaEntregaCertificadoOnapi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo" Type="int" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FormasPagos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FacturaId" Type="int" Nullable="false" />
+    <Property Name="FechaCuadre" Type="date" Nullable="false" />
+    <Property Name="FormaPago" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Valor" Type="money" Nullable="false" />
+    <Property Name="Tasa" Type="money" Nullable="false" />
+    <Property Name="Referencia" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="NoTarjeta" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Divisa" Type="money" Nullable="false" />
+    <Property Name="ValorEntregado" Type="money" Nullable="false" />
+    <Property Name="ValorDevuelto" Type="money" Nullable="false" />
+    <Property Name="Nota" Type="nvarchar(max)" />
+    <Property Name="BancoId" Type="int" />
+    <Property Name="BancoDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="ConfirmacionPagoTarjeta" Type="varchar" MaxLength="50" />
+    <Property Name="NumeroNotaCredito" Type="int" />
+    <Property Name="NotaFacturaId" Type="int" />
+    <Property Name="FormaPagoDesc" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="HistoricoTransacciones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="fecha" Type="datetime" />
+    <Property Name="ServicioId" Type="int" />
+    <Property Name="estado" Type="int" />
+  </EntityType>
+  <EntityType Name="ImpresionTransacciones">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="DocContent" Type="varbinary(max)" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Institucion">
+    <Key>
+      <PropertyRef Name="IdInstitucion" />
+    </Key>
+    <Property Name="IdInstitucion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="150" />
+    <Property Name="Sigla" Type="varchar" MaxLength="50" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="Activa" Type="bit" />
+  </EntityType>
+  <EntityType Name="InstitucionSeguimiento">
+    <Key>
+      <PropertyRef Name="IdInstitucionSeguimiento" />
+    </Key>
+    <Property Name="IdInstitucionSeguimiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdInstitucion" Type="int" />
+    <Property Name="IdTransaccion" Type="int" />
+    <Property Name="FEnvio" Type="datetime" />
+    <Property Name="FPago" Type="datetime" />
+    <Property Name="FEnAnalisis" Type="datetime" />
+    <Property Name="FEnEntrega" Type="datetime" />
+    <Property Name="FCompletado" Type="datetime" />
+    <Property Name="FProblema" Type="datetime" />
+    <Property Name="FDevuelto" Type="datetime" />
+    <Property Name="FComentario" Type="datetime" />
+    <Property Name="Comentario" Type="varchar(max)" />
+    <Property Name="Duracion" Type="datetime" />
+    <Property Name="IdEstatusActual" Type="int" />
+    <Property Name="EstatusActual" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CamaraWebsite.WebSRM.InstitucionSeguimientoTSS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InstitucionSeguimientoTSS">
+    <Key>
+      <PropertyRef Name="IdInstitucionSeguimiento" />
+    </Key>
+    <Property Name="IdInstitucionSeguimiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdInstitucion" Type="int" />
+    <Property Name="IdTransaccion" Type="int" />
+    <Property Name="FEnvio" Type="datetime" />
+    <Property Name="FPago" Type="datetime" />
+    <Property Name="FEnAnalisis" Type="datetime" />
+    <Property Name="FEnEntrega" Type="datetime" />
+    <Property Name="FCompletado" Type="datetime" />
+    <Property Name="FProblema" Type="datetime" />
+    <Property Name="FDevuelto" Type="datetime" />
+    <Property Name="FComentario" Type="datetime" />
+    <Property Name="Comentario" Type="varchar" MaxLength="800" />
+    <Property Name="Duracion" Type="datetime" />
+    <Property Name="IdEstatusActual" Type="int" />
+    <Property Name="EstatusActual" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="LogTransacciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="URL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Completed" Type="bit" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NombresComerciales">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionID" Type="int" />
+    <Property Name="NombreComercial1" Type="nvarchar" MaxLength="100" />
+    <Property Name="NombreComercial2" Type="nvarchar" MaxLength="100" />
+    <Property Name="NombreComercial3" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="NotasCredito">
+    <Key>
+      <PropertyRef Name="NotaCreditoID" />
+    </Key>
+    <Property Name="NotaCreditoID" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="FacturaID" Type="int" />
+    <Property Name="Monto" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NCF" Type="nvarchar" MaxLength="25" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="GestionNotaId" Type="int" />
+    <Property Name="Activa" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Paises">
+    <Key>
+      <PropertyRef Name="PaisId" />
+    </Key>
+    <Property Name="PaisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personas">
+    <Key>
+      <PropertyRef Name="PersonaId" />
+    </Key>
+    <Property Name="PersonaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="TipoDocumento" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="Documento" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="PrimerNombre" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SegundoNombre" Type="nvarchar" MaxLength="30" />
+    <Property Name="PrimerApellido" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SegundoApellido" Type="nvarchar" MaxLength="30" />
+    <Property Name="Rnc" Type="nvarchar" MaxLength="15" />
+    <Property Name="NacionalidadId" Type="int" />
+    <Property Name="EstadoCivil" Type="nchar" MaxLength="1" />
+    <Property Name="ProfesionId" Type="int" />
+    <Property Name="DireccionId" Type="int" />
+    <Property Name="DireccionCalle" Type="nvarchar" MaxLength="256" />
+    <Property Name="DireccionNumero" Type="nvarchar" MaxLength="6" />
+    <Property Name="DireccionCiudadId" Type="int" />
+    <Property Name="DireccionSectorId" Type="int" />
+    <Property Name="DireccionApartadoPostal" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="ProductoId" />
+    </Key>
+    <Property Name="ProductoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SistemaArmonizadoId" Type="nvarchar" MaxLength="10" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Profesiones">
+    <Key>
+      <PropertyRef Name="ProfesionId" />
+    </Key>
+    <Property Name="ProfesionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReferenciasBancarias">
+    <Key>
+      <PropertyRef Name="ReferenciaBancariaId" />
+    </Key>
+    <Property Name="ReferenciaBancariaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="BancoId" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+  </EntityType>
+  <EntityType Name="ReferenciasComerciales">
+    <Key>
+      <PropertyRef Name="ReferenciaComercialId" />
+    </Key>
+    <Property Name="ReferenciaComercialId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="TipoReferencia" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+  </EntityType>
+  <EntityType Name="RegistroActual">
+    <Key>
+      <PropertyRef Name="RegistroId" />
+    </Key>
+    <Property Name="RegistroId" Type="float" Nullable="false" />
+    <Property Name="EmpresaId" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="NumeroRegistro" Type="float" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="TipoSociedad" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaEmision" Type="datetime" />
+    <Property Name="FechaVencimiento" Type="datetime" />
+    <Property Name="FechaConstitucion" Type="datetime" />
+    <Property Name="FechaInicioOperaciones" Type="datetime" />
+    <Property Name="NombreEstablecimiento" Type="nvarchar" MaxLength="255" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="CapitalGeneral" Type="float" />
+    <Property Name="CapitalAutorizado" Type="float" />
+    <Property Name="CapitalPagado" Type="float" />
+    <Property Name="Activos" Type="float" />
+    <Property Name="BienesRaices" Type="float" />
+    <Property Name="IsZonaFranca" Type="bit" />
+    <Property Name="RNC" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Registros">
+    <Key>
+      <PropertyRef Name="RegistroId" />
+    </Key>
+    <Property Name="RegistroId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistroMercantil" Type="int" />
+    <Property Name="FechaEmision" Type="datetime" />
+    <Property Name="FechaVencimiento" Type="datetime" />
+    <Property Name="CapitalSocial" Type="money" />
+    <Property Name="CapitalAutorizado" Type="money" />
+    <Property Name="CapitalPagado" Type="money" />
+    <Property Name="Activos" Type="money" />
+    <Property Name="BienesRaices" Type="money" />
+    <Property Name="FechaInicioOperacion" Type="datetime" />
+    <Property Name="EmpleadosMasculinos" Type="int" />
+    <Property Name="EmpleadosFemeninos" Type="int" />
+    <Property Name="EmpleadosTotal" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="NombreComercial" Type="nvarchar" MaxLength="150" />
+    <Property Name="RegistroNombreComercial" Type="nvarchar" MaxLength="150" />
+    <Property Name="MarcaFabrica" Type="nvarchar" MaxLength="150" />
+    <Property Name="RegistroMarcaFabrica" Type="nvarchar" MaxLength="15" />
+    <Property Name="PatenteInvencion" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegistroPatenteInvencion" Type="nvarchar" MaxLength="15" />
+    <Property Name="NombreOperador" Type="nvarchar" MaxLength="50" />
+    <Property Name="ActividadNegocio" Type="text" />
+    <Property Name="NumeroSocios" Type="int" />
+    <Property Name="TotalAcciones" Type="int" />
+    <Property Name="EsNuevoRegistro" Type="bit" Nullable="false" />
+    <Property Name="DireccionCalle" Type="nvarchar" MaxLength="256" />
+    <Property Name="DireccionNumero" Type="nvarchar" MaxLength="6" />
+    <Property Name="DireccionCiudadId" Type="int" />
+    <Property Name="DireccionCiudad" Type="varchar" MaxLength="100" />
+    <Property Name="DireccionSectorId" Type="int" />
+    <Property Name="DireccionApartadoPostal" Type="nvarchar" MaxLength="20" />
+    <Property Name="DireccionTelefonoCasa" Type="nvarchar" MaxLength="15" />
+    <Property Name="DireccionTelefonoOficina" Type="nvarchar" MaxLength="15" />
+    <Property Name="DireccionExtension" Type="int" />
+    <Property Name="DireccionFax" Type="nvarchar" MaxLength="15" />
+    <Property Name="DireccionEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="DireccionSitioWeb" Type="nvarchar" MaxLength="256" />
+    <Property Name="NombreSolicitante" Type="nvarchar" MaxLength="80" />
+    <Property Name="CargoSolicitante" Type="nvarchar" MaxLength="80" />
+    <Property Name="GestorUsername" Type="nvarchar" MaxLength="150" />
+    <Property Name="FechaSolicitud" Type="datetime" />
+    <Property Name="EntidadActiva" Type="bit" />
+    <Property Name="EsRenovacion" Type="bit" Nullable="false" />
+    <Property Name="TipoMonedaCapitalSocial" Type="int" />
+    <Property Name="TipoMonedaCapitalAutorizado" Type="int" />
+    <Property Name="TipoMonedaCapitalPagado" Type="int" />
+    <Property Name="TipoMonedaActivos" Type="int" />
+    <Property Name="TipoMonedaBienesRaices" Type="int" />
+    <Property Name="ActividadIdCIUU" Type="varchar" MaxLength="10" />
+    <Property Name="ActividadCIUU" Type="varchar(max)" />
+    <Property Name="ActividadIdCIUU2" Type="varchar" MaxLength="10" />
+    <Property Name="ActividadCIUU2" Type="varchar(max)" />
+    <Property Name="Id_Cierre_Fiscal" Type="int" />
+    <Property Name="FechaAsamblea1" Type="datetime" />
+    <Property Name="FechaAsamblea2" Type="datetime" />
+    <Property Name="SrmRegistroId" Type="int" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="CorreoEmpresa" Type="nvarchar" MaxLength="256" />
+    <Property Name="CorreoContacto" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="RegistrosActividades">
+    <Key>
+      <PropertyRef Name="AtividadId" />
+    </Key>
+    <Property Name="AtividadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="TipoActividadId" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="CodigoCIIU" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Sectores">
+    <Key>
+      <PropertyRef Name="SectorId" />
+    </Key>
+    <Property Name="SectorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CiudadId" Type="int" Nullable="false" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SistemasArmonizados">
+    <Key>
+      <PropertyRef Name="SistemaArmonizadoId" />
+    </Key>
+    <Property Name="SistemaArmonizadoId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sociedades">
+    <Key>
+      <PropertyRef Name="SociedadId" />
+    </Key>
+    <Property Name="SociedadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="NombreSocial" Type="nvarchar" MaxLength="150" />
+    <Property Name="Rnc" Type="nvarchar" MaxLength="15" />
+    <Property Name="EsNacional" Type="bit" Nullable="false" />
+    <Property Name="NacionalidadId" Type="int" />
+    <Property Name="FechaConstitucion" Type="datetime" />
+    <Property Name="DuracionSociedad" Type="varchar" MaxLength="30" />
+    <Property Name="FechaAsamblea" Type="datetime" />
+    <Property Name="DuraccionDirectiva" Type="int" />
+    <Property Name="EstatusId" Type="int" />
+    <Property Name="EsEnteRegulado" Type="bit" Nullable="false" />
+    <Property Name="TipoEnteReguladoId" Type="int" />
+    <Property Name="NoResolucion" Type="nvarchar" MaxLength="15" />
+    <Property Name="NumeroNaveIndustrial" Type="nvarchar" MaxLength="20" />
+    <Property Name="NombreSiglas" Type="nvarchar" MaxLength="15" />
+    <Property Name="SiglasConfig" Type="nvarchar" MaxLength="5" />
+    <Property Name="AccionesNominales" Type="int" />
+    <Property Name="AccionesNoNominales" Type="int" />
+    <Property Name="FechaEnteRegulado" Type="datetime" />
+    <Property Name="SrmSociedadId" Type="int" />
+    <Property Name="TransaccionId" Type="int" />
+  </EntityType>
+  <EntityType Name="Socios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="TipoSocio" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="TipoRelacion" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="CargoId" Type="int" />
+    <Property Name="TipoDocumento" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="Documento" Type="nvarchar" MaxLength="20" />
+    <Property Name="NacionalidadId" Type="int" />
+    <Property Name="RegistroMercantil" Type="nvarchar" MaxLength="20" />
+    <Property Name="Orden" Type="int" Nullable="false" />
+    <Property Name="SociedadNombreSocial" Type="nvarchar" MaxLength="150" />
+    <Property Name="PersonaPrimerNombre" Type="nvarchar" MaxLength="150" />
+    <Property Name="PersonaSegundoNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="PersonaPrimerApellido" Type="nvarchar" MaxLength="50" />
+    <Property Name="PersonaSegundoApellido" Type="nvarchar" MaxLength="50" />
+    <Property Name="PersonaEstadoCivil" Type="nvarchar" MaxLength="2" />
+    <Property Name="PersonaProfesionId" Type="int" />
+    <Property Name="DireccionCalle" Type="nvarchar" MaxLength="256" />
+    <Property Name="DireccionNumero" Type="nvarchar" MaxLength="10" />
+    <Property Name="DireccionCiudadId" Type="int" />
+    <Property Name="DireccionSectorId" Type="int" />
+    <Property Name="DireccionApartadoPostal" Type="nvarchar" MaxLength="20" />
+    <Property Name="RepresentanteId" Type="int" />
+    <Property Name="CantidadAcciones" Type="int" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="TipoBeneficiario" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdentificacionTributariaPais" Type="nvarchar" MaxLength="50" />
+    <Property Name="TipoDatosSocio" Type="nvarchar" MaxLength="20" />
+    <Property Name="Telefono1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Telefono2" Type="nvarchar" MaxLength="25" />
+    <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="80" />
+    <Property Name="SrmId" Type="int" />
+    <Property Name="SrmSocioId" Type="int" />
+    <Property Name="TransaccionId" Type="int" />
+  </EntityType>
+  <EntityType Name="Sucursales">
+    <Key>
+      <PropertyRef Name="SucursalId" />
+    </Key>
+    <Property Name="SucursalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SociedadId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="DireccionId" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="DireccionCalle" Type="nvarchar" MaxLength="256" />
+    <Property Name="DireccionNumero" Type="nvarchar" MaxLength="6" />
+    <Property Name="DireccionCiudadId" Type="int" />
+    <Property Name="DireccionSectorId" Type="int" />
+    <Property Name="DireccionApartadoPostal" Type="nvarchar" MaxLength="20" />
+    <Property Name="DireccionTelefonoCasa" Type="nvarchar" MaxLength="15" />
+    <Property Name="DireccionTelefonoOficina" Type="nvarchar" MaxLength="15" />
+    <Property Name="DireccionExtension" Type="int" />
+    <Property Name="DireccionFax" Type="nvarchar" MaxLength="15" />
+    <Property Name="DireccionEmail" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Tarifas">
+    <Key>
+      <PropertyRef Name="TarifaId" />
+    </Key>
+    <Property Name="TarifaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="MontoInicial" Type="decimal" Precision="38" Scale="2" />
+    <Property Name="MontoFinal" Type="decimal" Precision="38" Scale="2" />
+    <Property Name="CostoContitucion" Type="decimal" Precision="38" Scale="6" Nullable="false" />
+    <Property Name="CostoModificacion" Type="decimal" Precision="38" Scale="6" Nullable="false" />
+    <Property Name="CostoModificacionNeto" Type="decimal" Precision="38" Scale="6" StoreGeneratedPattern="Computed" />
+    <Property Name="CostoRenovacion" Type="decimal" Precision="38" Scale="6" Nullable="false" />
+    <Property Name="CostoRenovacionNeto" Type="decimal" Precision="38" Scale="6" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TiposEnteRegulado">
+    <Key>
+      <PropertyRef Name="TipoEnteReguladoId" />
+    </Key>
+    <Property Name="TipoEnteReguladoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransaccionCopiasCertificadas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="Ruta" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NombreDocumento" Type="nvarchar" MaxLength="250" />
+    <Property Name="FechaDocumento" Type="datetime" />
+    <Property Name="CantPaginas" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransaccionDetalle">
+    <Key>
+      <PropertyRef Name="TransaccionDetalles" />
+    </Key>
+    <Property Name="TransaccionDetalles" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cuenta" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Detalle" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="PrecioUnitario" Type="money" Nullable="false" />
+    <Property Name="Descuento" Type="money" Nullable="false" />
+    <Property Name="Total" Type="money" StoreGeneratedPattern="Computed" />
+    <Property Name="TotalBruto" Type="money" StoreGeneratedPattern="Computed" />
+    <Property Name="FacturaId" Type="int" Nullable="false" />
+    <Property Name="ServicioId" Type="int" />
+  </EntityType>
+  <EntityType Name="TransaccionDocSeleccionado">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="int" Nullable="false" />
+    <Property Name="CantidadCopia" Type="int" Nullable="false" />
+    <Property Name="CantidadOriginal" Type="int" Nullable="false" />
+    <Property Name="FechaDocumento" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Transacciones">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Name="TransaccionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="EstatusTransId" Type="int" Nullable="false" />
+    <Property Name="RegistroId" Type="int" Nullable="false" />
+    <Property Name="ServicioId" Type="int" Nullable="false" />
+    <Property Name="CamaraId" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TipoSociedadId" Type="int" Nullable="false" />
+    <Property Name="Solicitante" Type="varchar" MaxLength="255" />
+    <Property Name="RNCSolicitante" Type="varchar" MaxLength="15" />
+    <Property Name="NombreContacto" Type="varchar" MaxLength="255" />
+    <Property Name="TelefonoContacto" Type="varchar" MaxLength="15" />
+    <Property Name="FaxContacto" Type="varchar" MaxLength="15" />
+    <Property Name="NoReciboDGII" Type="varchar" MaxLength="15" />
+    <Property Name="FechaReciboDGII" Type="datetime" />
+    <Property Name="MontoDGII" Type="money" />
+    <Property Name="DestinoTraslado" Type="varchar" MaxLength="150" />
+    <Property Name="NombreSocialPersona" Type="nvarchar" MaxLength="250" />
+    <Property Name="ApellidoPersona" Type="nvarchar" MaxLength="250" />
+    <Property Name="NumeroRegistro" Type="int" />
+    <Property Name="FechaAsamblea" Type="datetime" />
+    <Property Name="CapitalSocial" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ModificacionCapital" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="bLoadedInSRM" Type="bit" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="NCF" Type="varchar" MaxLength="20" />
+    <Property Name="TipoNcf" Type="varchar" MaxLength="150" />
+    <Property Name="SrmTransaccionId" Type="int" />
+    <Property Name="bPagada" Type="bit" Nullable="false" />
+    <Property Name="SubTransaccionId" Type="int" />
+    <Property Name="InstanceXML" Type="varchar(max)" />
+    <Property Name="Prioridad" Type="tinyint" Nullable="false" />
+    <Property Name="TipoModeloId" Type="int" />
+    <Property Name="Token" Type="nvarchar" MaxLength="50" />
+    <Property Name="TipoComprobanteId" Type="int" />
+    <Property Name="Comentario" Type="nvarchar" MaxLength="250" />
+    <Property Name="CorreoContacto" Type="varchar" MaxLength="250" />
+    <Property Name="NumeroReciboOnapi" Type="varchar" MaxLength="50" />
+    <Property Name="MontoReciboOnapi" Type="money" />
+    <Property Name="FechaReciboOnapi" Type="date" />
+    <Property Name="ServicioVentanillaUnica" Type="bit" />
+    <Property Name="CedulaPF" Type="nvarchar" MaxLength="13" />
+    <Property Name="RegistradoDgiiPF" Type="bit" />
+    <Property Name="Modificado" Type="bit" />
+    <Property Name="UltimoEstadoCamara" Type="nvarchar" MaxLength="50" />
+    <Property Name="UltimoEstadoId" Type="int" />
+    <Property Name="ContratoFirmado" Type="bit" />
+    <Property Name="EsCasoAperturado" Type="bit" />
+    <Property Name="FolderId" Type="varchar" MaxLength="50" />
+    <Property Name="WebRegistroId" Type="int" />
+    <Property Name="bDataLoadedInSRM" Type="bit" />
+    <Property Name="ComentariosProblema" Type="varchar(max)" />
+    <Property Name="ImprimirCopias" Type="bit" />
+    <Property Name="DepositarCansilleria" Type="bit" />
+    <Property Name="ANombreQuien" Type="nvarchar" MaxLength="255" />
+    <Property Name="DocumentoNombreQuien" Type="nvarchar" MaxLength="255" />
+    <Property Name="CantidadCopiaCertificaciones" Type="int" />
+    <Property Name="EsCertificacion" Type="bit" />
+    <Property Name="PagadoConNota" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CorreoEmpresa" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="TransaccionesCanceladas">
+    <Key>
+      <PropertyRef Name="TransaccionId" />
+    </Key>
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="EstatusTransId" Type="int" />
+    <Property Name="RegistroId" Type="int" />
+    <Property Name="ServicioId" Type="int" />
+    <Property Name="CamaraId" Type="char" MaxLength="3" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="Solicitante" Type="varchar" MaxLength="255" />
+    <Property Name="RNCSolicitante" Type="varchar" MaxLength="15" />
+    <Property Name="NombreContacto" Type="varchar" MaxLength="255" />
+    <Property Name="TelefonoContacto" Type="varchar" MaxLength="15" />
+    <Property Name="FaxContacto" Type="varchar" MaxLength="15" />
+    <Property Name="NoReciboDGII" Type="varchar" MaxLength="15" />
+    <Property Name="FechaReciboDGII" Type="datetime" />
+    <Property Name="MontoDGII" Type="money" />
+    <Property Name="DestinoTraslado" Type="varchar" MaxLength="150" />
+    <Property Name="NombreSocialPersona" Type="nvarchar" MaxLength="250" />
+    <Property Name="ApellidoPersona" Type="nvarchar" MaxLength="250" />
+    <Property Name="NumeroRegistro" Type="int" />
+    <Property Name="FechaAsamblea" Type="datetime" />
+    <Property Name="CapitalSocial" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ModificacionCapital" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="bLoadedInSRM" Type="bit" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="NCF" Type="varchar" MaxLength="20" />
+    <Property Name="TipoNcf" Type="varchar" MaxLength="150" />
+    <Property Name="SrmTransaccionId" Type="int" />
+    <Property Name="bPagada" Type="bit" />
+    <Property Name="SubTransaccionId" Type="int" />
+    <Property Name="InstanceXML" Type="varchar(max)" />
+    <Property Name="Prioridad" Type="tinyint" />
+    <Property Name="TipoModeloId" Type="int" />
+    <Property Name="Token" Type="nvarchar" MaxLength="50" />
+    <Property Name="TipoComprobanteId" Type="int" />
+    <Property Name="Comentario" Type="nvarchar" MaxLength="250" />
+    <Property Name="ReCheck" Type="bit" />
+    <Property Name="VieneProblema" Type="bit" />
+    <Property Name="EsDigital" Type="bit" />
+  </EntityType>
+  <EntityType Name="TransaccionesDocDescargas">
+    <Key>
+      <PropertyRef Name="DescargaId" />
+    </Key>
+    <Property Name="DescargaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="DocContent" Type="varbinary(max)" />
+    <Property Name="FechaDescarga" Type="datetime" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NombreSocialOrComment" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="TransaccionesDocumentos">
+    <Key>
+      <PropertyRef Name="TransaccionesDocumentosId" />
+    </Key>
+    <Property Name="TransaccionesDocumentosId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="int" />
+    <Property Name="Nombre" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="1000" />
+    <Property Name="NombreArchivo" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="FechaEnvio" Type="datetime" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RowId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DocContentType" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="DocContent" Type="varbinary(max)" Nullable="false" />
+    <Property Name="CantidadCopia" Type="int" Nullable="false" />
+    <Property Name="CantidadOriginal" Type="int" Nullable="false" />
+    <Property Name="FechaDocumento" Type="datetime" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="Estatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="DocSeleccionadoId" Type="int" Nullable="false" />
+    <Property Name="FirmaDigital" Type="bit" />
+    <Property Name="SBDocumentId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TransaccionesDocumentosOnapi">
+    <Key>
+      <PropertyRef Name="TransaccionesDocumentosOnapiId" />
+    </Key>
+    <Property Name="TransaccionesDocumentosOnapiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="numeroSolicitudONAPI" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="1000" />
+    <Property Name="NombreArchivo" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="FechaEnvio" Type="datetime" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RowId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DocContentType" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="DocContent" Type="varbinary(max)" Nullable="false" />
+    <Property Name="Estatus" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TransaccionesTarjeta">
+    <Key>
+      <PropertyRef Name="TarjetaId" />
+    </Key>
+    <Property Name="TarjetaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FacturaId" Type="int" Nullable="false" />
+    <Property Name="FechaTransaccion" Type="datetime" Nullable="false" />
+    <Property Name="NumeroTarjeta" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="AnoVencimiento" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MesVencimiento" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="NombreTarjeta" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NombreBanco" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="TipoTarjeta" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="bProcesada" Type="bit" Nullable="false" />
+    <Property Name="bCancelada" Type="bit" Nullable="false" />
+    <Property Name="CodigoAutorizacion" Type="varchar" MaxLength="50" />
+    <Property Name="CodigoReferencia" Type="varchar" MaxLength="50" />
+    <Property Name="MedioDePago" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TransaccionOnapi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="Denominacion" Type="varchar" MaxLength="300" />
+    <Property Name="Actividad" Type="varchar" MaxLength="8000" />
+    <Property Name="SolicitanteId" Type="int" />
+    <Property Name="SolicitanteDirId" Type="int" />
+    <Property Name="RepresentanteId" Type="int" />
+    <Property Name="RepresentanteDirId" Type="int" />
+    <Property Name="FechaSolicitud" Type="datetime" />
+    <Property Name="Onapi_SolicitudId" Type="int" />
+    <Property Name="Onapi_EstatusId" Type="int" />
+    <Property Name="Onapi_NumeroOnapi" Type="int" />
+    <Property Name="FechaConfirmacion" Type="int" />
+    <Property Name="bPago" Type="bit" />
+    <Property Name="bConfirmacion" Type="bit" />
+    <Property Name="NoAutorizacionPago" Type="varchar" MaxLength="50" />
+    <Property Name="FormaEnvioCertId" Type="int" />
+    <Property Name="FormaEnvioCertDesc" Type="varchar" MaxLength="100" />
+    <Property Name="UrlDocumento" Type="varchar" MaxLength="100" />
+    <Property Name="UrlDocumento2" Type="varchar" MaxLength="100" />
+    <Property Name="UrlActo" Type="varchar" MaxLength="100" />
+    <Property Name="MontoAutorizacionPago" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CapitalAutorizado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CamaraId" Type="char" MaxLength="3" />
+    <Property Name="Camara" Type="varchar" MaxLength="200" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="TipoSociedad" Type="varchar" MaxLength="200" />
+    <Property Name="SolicitudActiva" Type="bit" />
+    <Property Name="Onapi_NombreOnapi" Type="varchar" MaxLength="300" />
+    <Property Name="Onapi_Estatus" Type="varchar" MaxLength="150" />
+    <Property Name="ClienteUserName" Type="varchar" MaxLength="150" />
+    <Property Name="ClienteCorreo" Type="varchar" MaxLength="250" />
+    <Property Name="ClienteTelefono" Type="varchar" MaxLength="50" />
+    <Property Name="Onapi_Objetada" Type="bit" />
+    <Property Name="TransaccionCompletada" Type="bit" />
+    <Property Name="numeroSolicitudDGII" Type="int" />
+    <Property Name="FEnvioDGII" Type="datetime" />
+    <Property Name="Rnc" Type="varchar" MaxLength="15" />
+    <Property Name="ActividadCiiuId" Type="varchar" MaxLength="10" />
+    <Property Name="ActividadCiiu" Type="varchar" MaxLength="250" />
+    <Property Name="ComentarioDGII" Type="varchar" MaxLength="150" />
+    <Property Name="RegistroPatronalTSS" Type="varchar" MaxLength="50" />
+    <Property Name="FEnvioTSS" Type="datetime" />
+    <Property Name="FEnvioCCP" Type="datetime" />
+    <Property Name="FTransaccionCompleta" Type="datetime" />
+    <Property Name="ClienteCedula" Type="varchar" MaxLength="15" />
+    <Property Name="ClienteNombreCompleto" Type="varchar" MaxLength="250" />
+    <Property Name="UrlCartaEIRL" Type="varchar" MaxLength="100" />
+    <Property Name="FEnvioCartaEIRL_Dgii" Type="datetime" />
+    <Property Name="FEnvioMIT" Type="datetime" />
+    <Property Name="RegistroNacionalLaboralRNL" Type="varchar" MaxLength="50" />
+    <Property Name="SectorDgiiId" Type="int" />
+    <Property Name="PagoEnLinea" Type="bit" />
+    <Property Name="ObligacionesPF" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CamaraWebsite.WebSRM.TransaccionOnapiTss' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TransaccionOnapiTss">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="Denominacion" Type="varchar" MaxLength="300" />
+    <Property Name="Actividad" Type="varchar" MaxLength="500" />
+    <Property Name="SolicitanteId" Type="int" />
+    <Property Name="SolicitanteDirId" Type="int" />
+    <Property Name="RepresentanteId" Type="int" />
+    <Property Name="RepresentanteDirId" Type="int" />
+    <Property Name="FechaSolicitud" Type="datetime" />
+    <Property Name="Onapi_SolicitudId" Type="int" />
+    <Property Name="Onapi_EstatusId" Type="int" />
+    <Property Name="Onapi_NumeroOnapi" Type="int" />
+    <Property Name="FechaConfirmacion" Type="int" />
+    <Property Name="bPago" Type="bit" />
+    <Property Name="bConfirmacion" Type="bit" />
+    <Property Name="NoAutorizacionPago" Type="varchar" MaxLength="50" />
+    <Property Name="FormaEnvioCertId" Type="int" />
+    <Property Name="FormaEnvioCertDesc" Type="varchar" MaxLength="100" />
+    <Property Name="UrlDocumento" Type="varchar" MaxLength="100" />
+    <Property Name="UrlDocumento2" Type="varchar" MaxLength="100" />
+    <Property Name="UrlActo" Type="varchar" MaxLength="100" />
+    <Property Name="MontoAutorizacionPago" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CapitalAutorizado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CamaraId" Type="char" MaxLength="3" />
+    <Property Name="Camara" Type="varchar" MaxLength="200" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="TipoSociedad" Type="varchar" MaxLength="200" />
+    <Property Name="SolicitudActiva" Type="bit" />
+    <Property Name="Onapi_NombreOnapi" Type="varchar" MaxLength="300" />
+    <Property Name="Onapi_Estatus" Type="varchar" MaxLength="150" />
+    <Property Name="ClienteUserName" Type="varchar" MaxLength="150" />
+    <Property Name="ClienteCorreo" Type="varchar" MaxLength="250" />
+    <Property Name="ClienteTelefono" Type="varchar" MaxLength="50" />
+    <Property Name="Onapi_Objetada" Type="bit" />
+    <Property Name="TransaccionCompletada" Type="bit" />
+    <Property Name="numeroSolicitudDGII" Type="int" />
+    <Property Name="FEnvioDGII" Type="datetime" />
+    <Property Name="Rnc" Type="varchar" MaxLength="15" />
+    <Property Name="ActividadCiiuId" Type="varchar" MaxLength="10" />
+    <Property Name="ActividadCiiu" Type="varchar" MaxLength="250" />
+    <Property Name="ComentarioDGII" Type="varchar" MaxLength="150" />
+    <Property Name="RegistroPatronalTSS" Type="varchar" MaxLength="50" />
+    <Property Name="FEnvioTSS" Type="datetime" />
+    <Property Name="FEnvioCCP" Type="datetime" />
+    <Property Name="FTransaccionCompleta" Type="datetime" />
+    <Property Name="ClienteCedula" Type="varchar" MaxLength="15" />
+    <Property Name="ClienteNombreCompleto" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="DatosGenerales">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="Calle" Type="nvarchar" MaxLength="100" />
+    <Property Name="CalleNumero" Type="int" />
+    <Property Name="CiudadId" Type="int" />
+    <Property Name="Ciudad" Type="nvarchar" MaxLength="50" />
+    <Property Name="SectorId" Type="int" />
+    <Property Name="SectorDescripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="ApartadoPostal" Type="nvarchar" MaxLength="20" />
+    <Property Name="Telefono1" Type="nvarchar" MaxLength="20" />
+    <Property Name="Telefono2" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="80" />
+    <Property Name="WebSite" Type="nvarchar" MaxLength="100" />
+    <Property Name="ActividadCIUU1" Type="nchar" MaxLength="10" />
+    <Property Name="ActividadCIUU1Desc" Type="nvarchar" MaxLength="300" />
+    <Property Name="ActividadCIUU2" Type="nchar" MaxLength="10" />
+    <Property Name="ActividadCIUU2Desc" Type="nvarchar" MaxLength="300" />
+    <Property Name="ObjetoEmpresa" Type="nvarchar" MaxLength="250" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TempActividadesTransaccion">
+    <Key>
+      <PropertyRef Name="AtividadId" />
+    </Key>
+    <Property Name="AtividadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="TipoActividadId" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TempDatosSociedad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="CapitalSocial" Type="money" />
+    <Property Name="BienesRaices" Type="money" />
+    <Property Name="Activos" Type="money" />
+    <Property Name="FechaInicioOperaciones" Type="datetime" />
+    <Property Name="FechaEstatutosAsamblea" Type="datetime" />
+    <Property Name="FechaPrimeraAsamblea" Type="datetime" />
+    <Property Name="FechaCierreFiscal" Type="nvarchar" MaxLength="25" />
+    <Property Name="DuracionEmpresa" Type="nvarchar" MaxLength="20" />
+    <Property Name="DuracionOrganoGestion" Type="int" />
+    <Property Name="EmpleadosM" Type="int" />
+    <Property Name="EmpleadosF" Type="int" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tempPersonas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonaId" Type="int" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="TipoDocumento" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="Documento" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="PrimerNombre" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SegundoNombre" Type="nvarchar" MaxLength="30" />
+    <Property Name="PrimerApellido" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SegundoApellido" Type="nvarchar" MaxLength="30" />
+    <Property Name="Rnc" Type="nvarchar" MaxLength="15" />
+    <Property Name="NacionalidadId" Type="int" />
+    <Property Name="EstadoCivil" Type="nchar" MaxLength="1" />
+    <Property Name="ProfesionId" Type="int" />
+    <Property Name="DireccionId" Type="int" />
+    <Property Name="DireccionCalle" Type="nvarchar" MaxLength="256" />
+    <Property Name="DireccionNumero" Type="nvarchar" MaxLength="6" />
+    <Property Name="DireccionCiudadId" Type="int" />
+    <Property Name="DireccionSectorId" Type="int" />
+    <Property Name="DireccionApartadoPostal" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TempProductos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="ProductoId" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="200" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TempReferenciasBancarias">
+    <Key>
+      <PropertyRef Name="ReferenciaBancoId" />
+    </Key>
+    <Property Name="ReferenciaBancoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="BancoId" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="NombreBanco" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TempReferenciasComerciales">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdReferencias" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="TipoReferencia" Type="nchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TempSocios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransaccionId" Type="int" Nullable="false" />
+    <Property Name="TipoSocio" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="TipoRelacion" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="CargoId" Type="int" />
+    <Property Name="TipoDocumento" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="Documento" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="NacionalidadId" Type="int" />
+    <Property Name="RegistroMercantil" Type="nvarchar" MaxLength="20" />
+    <Property Name="Orden" Type="int" Nullable="false" />
+    <Property Name="SociedadNombreSocial" Type="nvarchar" MaxLength="150" />
+    <Property Name="PersonaPrimerNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="PersonaSegundoNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="PersonaPrimerApellido" Type="nvarchar" MaxLength="50" />
+    <Property Name="PersonaSegundoApellido" Type="nvarchar" MaxLength="50" />
+    <Property Name="PersonaEstadoCivil" Type="nvarchar" MaxLength="2" />
+    <Property Name="PersonaProfesionId" Type="int" />
+    <Property Name="DireccionCalle" Type="nvarchar" MaxLength="256" />
+    <Property Name="DireccionNumero" Type="nvarchar" MaxLength="10" />
+    <Property Name="DireccionCiudadId" Type="int" />
+    <Property Name="DireccionSectorId" Type="int" />
+    <Property Name="DireccionApartadoPostal" Type="nvarchar" MaxLength="20" />
+    <Property Name="RepresentanteId" Type="int" />
+    <Property Name="CantidadAcciones" Type="int" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="TipoBeneficiario" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdentificacionTributariaPais" Type="nvarchar" MaxLength="100" />
+    <Property Name="TipoDatosSocio" Type="nvarchar" MaxLength="20" />
+    <Property Name="Telefono1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Telefono2" Type="nvarchar" MaxLength="25" />
+    <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="TempSucursales">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SucursalId" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" />
+    <Property Name="TransaccionId" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Ciudades_Paises">
+    <End Role="Paises" Type="Self.Paises" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ciudades" Type="Self.Ciudades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paises">
+        <PropertyRef Name="PaisId" />
+      </Principal>
+      <Dependent Role="Ciudades">
+        <PropertyRef Name="PaisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Facturas_Transacciones">
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="0..1" />
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="Facturas">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormasPagos_Facturas">
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="1" />
+    <End Role="FormasPagos" Type="Self.FormasPagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="FormasPagos">
+        <PropertyRef Name="FacturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotasCredito_Facturas">
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="0..1" />
+    <End Role="NotasCredito" Type="Self.NotasCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="NotasCredito">
+        <PropertyRef Name="FacturaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personas_Direcciones (Persona)">
+    <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
+    <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Direcciones">
+        <PropertyRef Name="DireccionId" />
+      </Principal>
+      <Dependent Role="Personas">
+        <PropertyRef Name="DireccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Registros">
+    <End Role="Registros" Type="Self.Registros" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_SistemasArmonizados">
+    <End Role="SistemasArmonizados" Type="Self.SistemasArmonizados" Multiplicity="0..1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SistemasArmonizados">
+        <PropertyRef Name="SistemaArmonizadoId" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="SistemaArmonizadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PropiedadesPorSociedad_PropiedadesUI">
+    <End Role="PropiedadesUI" Type="Self.PropiedadesUI" Multiplicity="1" />
+    <End Role="PropiedadesPorSociedad" Type="Self.PropiedadesPorSociedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PropiedadesUI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PropiedadesPorSociedad">
+        <PropertyRef Name="PropiedadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenciasBancarias_Registros">
+    <End Role="Registros" Type="Self.Registros" Multiplicity="1" />
+    <End Role="ReferenciasBancarias" Type="Self.ReferenciasBancarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="ReferenciasBancarias">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenciasBancarias_Transaccion">
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="0..1" />
+    <End Role="ReferenciasBancarias" Type="Self.ReferenciasBancarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="ReferenciasBancarias">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenciasComerciales_Registros">
+    <End Role="Registros" Type="Self.Registros" Multiplicity="1" />
+    <End Role="ReferenciasComerciales" Type="Self.ReferenciasComerciales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="ReferenciasComerciales">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenciasComerciales_Transaccion">
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="0..1" />
+    <End Role="ReferenciasComerciales" Type="Self.ReferenciasComerciales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="ReferenciasComerciales">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Registros_Transaccion">
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="0..1" />
+    <End Role="Registros" Type="Self.Registros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="Registros">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrosActividades_Registros">
+    <End Role="Registros" Type="Self.Registros" Multiplicity="1" />
+    <End Role="RegistrosActividades" Type="Self.RegistrosActividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registros">
+        <PropertyRef Name="RegistroId" />
+      </Principal>
+      <Dependent Role="RegistrosActividades">
+        <PropertyRef Name="RegistroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sociedades_Transaccion">
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="0..1" />
+    <End Role="Sociedades" Type="Self.Sociedades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="Sociedades">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Socios_Personas">
+    <End Role="Personas" Type="Self.Personas" Multiplicity="0..1" />
+    <End Role="Socios" Type="Self.Socios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personas">
+        <PropertyRef Name="PersonaId" />
+      </Principal>
+      <Dependent Role="Socios">
+        <PropertyRef Name="RepresentanteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Suscursales_Sociedades">
+    <End Role="Sociedades" Type="Self.Sociedades" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sucursales" Type="Self.Sucursales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sociedades">
+        <PropertyRef Name="SociedadId" />
+      </Principal>
+      <Dependent Role="Sucursales">
+        <PropertyRef Name="SociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionDetalle_Facturas">
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TransaccionDetalle" Type="Self.TransaccionDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="TransaccionDetalle">
+        <PropertyRef Name="FacturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transacciones_EstatusTransacciones">
+    <End Role="EstatusTransacciones" Type="Self.EstatusTransacciones" Multiplicity="1" />
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstatusTransacciones">
+        <PropertyRef Name="EstatusTransId" />
+      </Principal>
+      <Dependent Role="Transacciones">
+        <PropertyRef Name="EstatusTransId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transacciones_Transacciones">
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="0..1" />
+    <End Role="Transacciones1" Type="Self.Transacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="Transacciones1">
+        <PropertyRef Name="SubTransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionesCanceladas_EstatusTransacciones">
+    <End Role="EstatusTransacciones" Type="Self.EstatusTransacciones" Multiplicity="0..1" />
+    <End Role="TransaccionesCanceladas" Type="Self.TransaccionesCanceladas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstatusTransacciones">
+        <PropertyRef Name="EstatusTransId" />
+      </Principal>
+      <Dependent Role="TransaccionesCanceladas">
+        <PropertyRef Name="EstatusTransId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionesDocDescargas_Transacciones">
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="1" />
+    <End Role="TransaccionesDocDescargas" Type="Self.TransaccionesDocDescargas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="TransaccionesDocDescargas">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionesDocumentos_Transacciones">
+    <End Role="Transacciones" Type="Self.Transacciones" Multiplicity="1" />
+    <End Role="TransaccionesDocumentos" Type="Self.TransaccionesDocumentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transacciones">
+        <PropertyRef Name="TransaccionId" />
+      </Principal>
+      <Dependent Role="TransaccionesDocumentos">
+        <PropertyRef Name="TransaccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionesTarjeta_Facturas">
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="1" />
+    <End Role="TransaccionesTarjeta" Type="Self.TransaccionesTarjeta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="FacturaId" />
+      </Principal>
+      <Dependent Role="TransaccionesTarjeta">
+        <PropertyRef Name="FacturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetAllTransaccionesVU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetDatosTSS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="trunc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="datetime">
+    <Parameter Name="input" Type="datetime" Mode="In" />
+  </Function>
+  <EntityContainer Name="CamaraWebsiteModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionesEmpBHD" EntityType="Self.TransaccionesEmpBHD" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="EmpresasPorUsuario" EntityType="Self.EmpresasPorUsuario" Schema="OFV" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="LogRegistroOnapi_VU" EntityType="Self.LogRegistroOnapi_VU" Schema="OFV" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Mensajes" EntityType="Self.Mensajes" Schema="OFV" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="PropiedadesModificacionUI" EntityType="Self.PropiedadesModificacionUI" Schema="OFV" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="PropiedadesPorSociedad" EntityType="Self.PropiedadesPorSociedad" Schema="OFV" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="PropiedadesUI" EntityType="Self.PropiedadesUI" Schema="OFV" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ServicioDetalles" EntityType="Self.ServicioDetalles" Schema="OFV" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoServicioDetalles" EntityType="Self.TipoServicioDetalles" Schema="OFV" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TokenMIT" EntityType="Self.TokenMIT" Schema="OFV" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionInfo" EntityType="Self.TransaccionInfo" Schema="OFV" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Bancos" EntityType="Self.Bancos" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Cargos" EntityType="Self.Cargos" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="CategoriasSocios" EntityType="Self.CategoriasSocios" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Ciudades" EntityType="Self.Ciudades" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="DiasFeriados" EntityType="Self.DiasFeriados" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Direcciones" EntityType="Self.Direcciones" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="EstatusTransacciones" EntityType="Self.EstatusTransacciones" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Facturas" EntityType="Self.Facturas" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="FormasPagos" EntityType="Self.FormasPagos" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="HistoricoTransacciones" EntityType="Self.HistoricoTransacciones" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ImpresionTransacciones" EntityType="Self.ImpresionTransacciones" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Institucion" EntityType="Self.Institucion" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="InstitucionSeguimiento" EntityType="Self.InstitucionSeguimiento" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="LogTransacciones" EntityType="Self.LogTransacciones" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="NombresComerciales" EntityType="Self.NombresComerciales" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="NotasCredito" EntityType="Self.NotasCredito" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Paises" EntityType="Self.Paises" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Personas" EntityType="Self.Personas" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Productos" EntityType="Self.Productos" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Profesiones" EntityType="Self.Profesiones" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ReferenciasBancarias" EntityType="Self.ReferenciasBancarias" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ReferenciasComerciales" EntityType="Self.ReferenciasComerciales" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="RegistroActual" EntityType="Self.RegistroActual" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Registros" EntityType="Self.Registros" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="RegistrosActividades" EntityType="Self.RegistrosActividades" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Sectores" EntityType="Self.Sectores" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="SistemasArmonizados" EntityType="Self.SistemasArmonizados" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Sociedades" EntityType="Self.Sociedades" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Socios" EntityType="Self.Socios" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Sucursales" EntityType="Self.Sucursales" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Tarifas" EntityType="Self.Tarifas" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TiposEnteRegulado" EntityType="Self.TiposEnteRegulado" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionCopiasCertificadas" EntityType="Self.TransaccionCopiasCertificadas" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionDetalle" EntityType="Self.TransaccionDetalle" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionDocSeleccionado" EntityType="Self.TransaccionDocSeleccionado" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Transacciones" EntityType="Self.Transacciones" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionesCanceladas" EntityType="Self.TransaccionesCanceladas" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionesDocDescargas" EntityType="Self.TransaccionesDocDescargas" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionesDocumentos" EntityType="Self.TransaccionesDocumentos" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionesDocumentosOnapi" EntityType="Self.TransaccionesDocumentosOnapi" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionesTarjeta" EntityType="Self.TransaccionesTarjeta" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TransaccionOnapi" EntityType="Self.TransaccionOnapi" Schema="WebSRM" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="DatosGenerales" EntityType="Self.DatosGenerales" Schema="WebTemp" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TempActividadesTransaccion" EntityType="Self.TempActividadesTransaccion" Schema="WebTemp" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TempDatosSociedad" EntityType="Self.TempDatosSociedad" Schema="WebTemp" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tempPersonas" EntityType="Self.tempPersonas" Schema="WebTemp" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TempProductos" EntityType="Self.TempProductos" Schema="WebTemp" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TempReferenciasBancarias" EntityType="Self.TempReferenciasBancarias" Schema="WebTemp" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TempReferenciasComerciales" EntityType="Self.TempReferenciasComerciales" Schema="WebTemp" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TempSocios" EntityType="Self.TempSocios" Schema="WebTemp" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TempSucursales" EntityType="Self.TempSucursales" Schema="WebTemp" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="FormaEntregaCertificadoOnapi" EntityType="Self.FormaEntregaCertificadoOnapi" store:Type="Tables" store:Schema="WebSRM" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>SELECT 
+[FormaEntregaCertificadoOnapi].[Id] AS [Id], 
+[FormaEntregaCertificadoOnapi].[Codigo] AS [Codigo], 
+[FormaEntregaCertificadoOnapi].[Descripcion] AS [Descripcion]
+FROM [WebSRM].[FormaEntregaCertificadoOnapi] AS [FormaEntregaCertificadoOnapi]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InstitucionSeguimientoTSS" EntityType="Self.InstitucionSeguimientoTSS" store:Type="Tables" store:Schema="WebSRM" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>SELECT 
+[InstitucionSeguimientoTSS].[IdInstitucionSeguimiento] AS [IdInstitucionSeguimiento], 
+[InstitucionSeguimientoTSS].[IdInstitucion] AS [IdInstitucion], 
+[InstitucionSeguimientoTSS].[IdTransaccion] AS [IdTransaccion], 
+[InstitucionSeguimientoTSS].[FEnvio] AS [FEnvio], 
+[InstitucionSeguimientoTSS].[FPago] AS [FPago], 
+[InstitucionSeguimientoTSS].[FEnAnalisis] AS [FEnAnalisis], 
+[InstitucionSeguimientoTSS].[FEnEntrega] AS [FEnEntrega], 
+[InstitucionSeguimientoTSS].[FCompletado] AS [FCompletado], 
+[InstitucionSeguimientoTSS].[FProblema] AS [FProblema], 
+[InstitucionSeguimientoTSS].[FDevuelto] AS [FDevuelto], 
+[InstitucionSeguimientoTSS].[FComentario] AS [FComentario], 
+[InstitucionSeguimientoTSS].[Comentario] AS [Comentario], 
+[InstitucionSeguimientoTSS].[Duracion] AS [Duracion], 
+[InstitucionSeguimientoTSS].[IdEstatusActual] AS [IdEstatusActual], 
+[InstitucionSeguimientoTSS].[EstatusActual] AS [EstatusActual]
+FROM [WebSRM].[InstitucionSeguimientoTSS] AS [InstitucionSeguimientoTSS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TransaccionOnapiTss" EntityType="Self.TransaccionOnapiTss" store:Type="Tables" store:Schema="WebSRM" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>SELECT 
+[TransaccionOnapiTss].[Id] AS [Id], 
+[TransaccionOnapiTss].[TransaccionId] AS [TransaccionId], 
+[TransaccionOnapiTss].[Denominacion] AS [Denominacion], 
+[TransaccionOnapiTss].[Actividad] AS [Actividad], 
+[TransaccionOnapiTss].[SolicitanteId] AS [SolicitanteId], 
+[TransaccionOnapiTss].[SolicitanteDirId] AS [SolicitanteDirId], 
+[TransaccionOnapiTss].[RepresentanteId] AS [RepresentanteId], 
+[TransaccionOnapiTss].[RepresentanteDirId] AS [RepresentanteDirId], 
+[TransaccionOnapiTss].[FechaSolicitud] AS [FechaSolicitud], 
+[TransaccionOnapiTss].[Onapi_SolicitudId] AS [Onapi_SolicitudId], 
+[TransaccionOnapiTss].[Onapi_EstatusId] AS [Onapi_EstatusId], 
+[TransaccionOnapiTss].[Onapi_NumeroOnapi] AS [Onapi_NumeroOnapi], 
+[TransaccionOnapiTss].[FechaConfirmacion] AS [FechaConfirmacion], 
+[TransaccionOnapiTss].[bPago] AS [bPago], 
+[TransaccionOnapiTss].[bConfirmacion] AS [bConfirmacion], 
+[TransaccionOnapiTss].[NoAutorizacionPago] AS [NoAutorizacionPago], 
+[TransaccionOnapiTss].[FormaEnvioCertId] AS [FormaEnvioCertId], 
+[TransaccionOnapiTss].[FormaEnvioCertDesc] AS [FormaEnvioCertDesc], 
+[TransaccionOnapiTss].[UrlDocumento] AS [UrlDocumento], 
+[TransaccionOnapiTss].[UrlDocumento2] AS [UrlDocumento2], 
+[TransaccionOnapiTss].[UrlActo] AS [UrlActo], 
+[TransaccionOnapiTss].[MontoAutorizacionPago] AS [MontoAutorizacionPago], 
+[TransaccionOnapiTss].[CapitalAutorizado] AS [CapitalAutorizado], 
+[TransaccionOnapiTss].[CamaraId] AS [CamaraId], 
+[TransaccionOnapiTss].[Camara] AS [Camara], 
+[TransaccionOnapiTss].[TipoSociedadId] AS [TipoSociedadId], 
+[TransaccionOnapiTss].[TipoSociedad] AS [TipoSociedad], 
+[TransaccionOnapiTss].[SolicitudActiva] AS [SolicitudActiva], 
+[TransaccionOnapiTss].[Onapi_NombreOnapi] AS [Onapi_NombreOnapi], 
+[TransaccionOnapiTss].[Onapi_Estatus] AS [Onapi_Estatus], 
+[TransaccionOnapiTss].[ClienteUserName] AS [ClienteUserName], 
+[TransaccionOnapiTss].[ClienteCorreo] AS [ClienteCorreo], 
+[TransaccionOnapiTss].[ClienteTelefono] AS [ClienteTelefono], 
+[TransaccionOnapiTss].[Onapi_Objetada] AS [Onapi_Objetada], 
+[TransaccionOnapiTss].[TransaccionCompletada] AS [TransaccionCompletada], 
+[TransaccionOnapiTss].[numeroSolicitudDGII] AS [numeroSolicitudDGII], 
+[TransaccionOnapiTss].[FEnvioDGII] AS [FEnvioDGII], 
+[TransaccionOnapiTss].[Rnc] AS [Rnc], 
+[TransaccionOnapiTss].[ActividadCiiuId] AS [ActividadCiiuId], 
+[TransaccionOnapiTss].[ActividadCiiu] AS [ActividadCiiu], 
+[TransaccionOnapiTss].[ComentarioDGII] AS [ComentarioDGII], 
+[TransaccionOnapiTss].[RegistroPatronalTSS] AS [RegistroPatronalTSS], 
+[TransaccionOnapiTss].[FEnvioTSS] AS [FEnvioTSS], 
+[TransaccionOnapiTss].[FEnvioCCP] AS [FEnvioCCP], 
+[TransaccionOnapiTss].[FTransaccionCompleta] AS [FTransaccionCompleta], 
+[TransaccionOnapiTss].[ClienteCedula] AS [ClienteCedula], 
+[TransaccionOnapiTss].[ClienteNombreCompleto] AS [ClienteNombreCompleto]
+FROM [WebSRM].[TransaccionOnapiTss] AS [TransaccionOnapiTss]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Ciudades_Paises" Association="Self.FK_Ciudades_Paises">
+      <End Role="Paises" EntitySet="Paises" />
+      <End Role="Ciudades" EntitySet="Ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Facturas_Transacciones" Association="Self.FK_Facturas_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="Facturas" EntitySet="Facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormasPagos_Facturas" Association="Self.FK_FormasPagos_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="FormasPagos" EntitySet="FormasPagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotasCredito_Facturas" Association="Self.FK_NotasCredito_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="NotasCredito" EntitySet="NotasCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personas_Direcciones (Persona)" Association="Self.FK_Personas_Direcciones (Persona)">
+      <End Role="Direcciones" EntitySet="Direcciones" />
+      <End Role="Personas" EntitySet="Personas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Registros" Association="Self.FK_Productos_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_SistemasArmonizados" Association="Self.FK_Productos_SistemasArmonizados">
+      <End Role="SistemasArmonizados" EntitySet="SistemasArmonizados" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PropiedadesPorSociedad_PropiedadesUI" Association="Self.FK_PropiedadesPorSociedad_PropiedadesUI">
+      <End Role="PropiedadesUI" EntitySet="PropiedadesUI" />
+      <End Role="PropiedadesPorSociedad" EntitySet="PropiedadesPorSociedad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenciasBancarias_Registros" Association="Self.FK_ReferenciasBancarias_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="ReferenciasBancarias" EntitySet="ReferenciasBancarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenciasBancarias_Transaccion" Association="Self.FK_ReferenciasBancarias_Transaccion">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="ReferenciasBancarias" EntitySet="ReferenciasBancarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenciasComerciales_Registros" Association="Self.FK_ReferenciasComerciales_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="ReferenciasComerciales" EntitySet="ReferenciasComerciales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenciasComerciales_Transaccion" Association="Self.FK_ReferenciasComerciales_Transaccion">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="ReferenciasComerciales" EntitySet="ReferenciasComerciales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Registros_Transaccion" Association="Self.FK_Registros_Transaccion">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="Registros" EntitySet="Registros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrosActividades_Registros" Association="Self.FK_RegistrosActividades_Registros">
+      <End Role="Registros" EntitySet="Registros" />
+      <End Role="RegistrosActividades" EntitySet="RegistrosActividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sociedades_Transaccion" Association="Self.FK_Sociedades_Transaccion">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="Sociedades" EntitySet="Sociedades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Socios_Personas" Association="Self.FK_Socios_Personas">
+      <End Role="Personas" EntitySet="Personas" />
+      <End Role="Socios" EntitySet="Socios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Suscursales_Sociedades" Association="Self.FK_Suscursales_Sociedades">
+      <End Role="Sociedades" EntitySet="Sociedades" />
+      <End Role="Sucursales" EntitySet="Sucursales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionDetalle_Facturas" Association="Self.FK_TransaccionDetalle_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="TransaccionDetalle" EntitySet="TransaccionDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transacciones_EstatusTransacciones" Association="Self.FK_Transacciones_EstatusTransacciones">
+      <End Role="EstatusTransacciones" EntitySet="EstatusTransacciones" />
+      <End Role="Transacciones" EntitySet="Transacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transacciones_Transacciones" Association="Self.FK_Transacciones_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="Transacciones1" EntitySet="Transacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionesCanceladas_EstatusTransacciones" Association="Self.FK_TransaccionesCanceladas_EstatusTransacciones">
+      <End Role="EstatusTransacciones" EntitySet="EstatusTransacciones" />
+      <End Role="TransaccionesCanceladas" EntitySet="TransaccionesCanceladas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionesDocDescargas_Transacciones" Association="Self.FK_TransaccionesDocDescargas_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="TransaccionesDocDescargas" EntitySet="TransaccionesDocDescargas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionesDocumentos_Transacciones" Association="Self.FK_TransaccionesDocumentos_Transacciones">
+      <End Role="Transacciones" EntitySet="Transacciones" />
+      <End Role="TransaccionesDocumentos" EntitySet="TransaccionesDocumentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionesTarjeta_Facturas" Association="Self.FK_TransaccionesTarjeta_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="TransaccionesTarjeta" EntitySet="TransaccionesTarjeta" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

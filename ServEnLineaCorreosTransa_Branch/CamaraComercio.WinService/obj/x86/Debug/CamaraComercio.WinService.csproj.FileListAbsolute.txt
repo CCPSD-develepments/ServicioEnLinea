@@ -1,0 +1,164 @@
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe.config
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.pdb
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.dll
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.dll
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.dll
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.dll
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.dll
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\LinqKit.dll
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.pdb
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.xml
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.pdb
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.xml
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.pdb
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.xml
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.pdb
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.xml
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.pdb
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.xml
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.Service1.resources
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.exe
+C:\CCPSDBID\branches\05 - Dic 2011\src\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.pdb
+C:\OFV\src\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csprojResolveAssemblyReference.cache
+C:\OFV\src\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.Service1.resources
+C:\OFV\src\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csproj.GenerateResource.Cache
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe.config
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.pdb
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.dll
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.dll
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.dll
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.dll
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.dll
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\LinqKit.dll
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.pdb
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.xml
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.pdb
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.xml
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.pdb
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.xml
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.pdb
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.xml
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.pdb
+C:\OFV\src\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.xml
+C:\OFV\src\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.exe
+C:\OFV\src\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.pdb
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe.config
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.pdb
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.dll
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.dll
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.dll
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.dll
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.dll
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\LinqKit.dll
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.pdb
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.xml
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.pdb
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.xml
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.pdb
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.xml
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.pdb
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.xml
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.pdb
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.xml
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csprojResolveAssemblyReference.cache
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.Service1.resources
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csproj.GenerateResource.Cache
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.exe
+C:\CamaraOnline\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.pdb
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe.config
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.pdb
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.dll
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.dll
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.dll
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.dll
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.dll
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\LinqKit.dll
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.pdb
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.xml
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.dll.config
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.pdb
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.xml
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.dll.config
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.pdb
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.xml
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.dll.config
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.pdb
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.xml
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.dll.config
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.pdb
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.xml
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.dll.config
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csprojAssemblyReference.cache
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.Service1.resources
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csproj.GenerateResource.cache
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csproj.CoreCompileInputs.cache
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csproj.CopyComplete
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.exe
+D:\Workspace\Camara de Comercio\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.pdb
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe.config
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.pdb
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.dll
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.dll
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.dll
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.dll
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.dll
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\LinqKit.dll
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.pdb
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.xml
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.dll.config
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.pdb
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.xml
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.dll.config
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.pdb
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.xml
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.dll.config
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.pdb
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.xml
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.dll.config
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.pdb
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.xml
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.dll.config
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csprojAssemblyReference.cache
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.Service1.resources
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csproj.GenerateResource.cache
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csproj.CopyComplete
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.exe
+C:\Desarrollo\PortalesWebs\CamaraEnLineaFix\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.pdb
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe.config
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.exe
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.WinService.pdb
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.dll
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.dll
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.dll
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.dll
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.dll
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\LinqKit.dll
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.pdb
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.xml
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.OficinaVirtual.dll.config
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.pdb
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.xml
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.dll.config
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.pdb
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.xml
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.CamaraComun.dll.config
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.pdb
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.xml
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.SRM.dll.config
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.pdb
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.xml
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\bin\Debug\CamaraComercio.DataAccess.EF.Membership.dll.config
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csprojAssemblyReference.cache
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.Service1.resources
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csproj.GenerateResource.cache
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.csproj.CopyComplete
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.exe
+C:\Desarrollo\PortalesWebs\CamaraOnlineLasted\trunk\oficinavirtual\CamaraComercio.WinService\obj\x86\Debug\CamaraComercio.WinService.pdb

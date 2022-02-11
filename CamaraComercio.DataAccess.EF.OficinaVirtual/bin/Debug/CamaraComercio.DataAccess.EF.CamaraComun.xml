@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CamaraComercio.DataAccess.EF.CamaraComun</name>
+    </assembly>
+    <members>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.CamarasController">
+            <summary>
+            Controlador de Camaras
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CamarasController.FetchAllActivas">
+            <summary>
+            Retorna la colección de cámaras activas en el sistema
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CamarasController.FetchAll">
+            <summary>
+            Retorna la colección de cámaras activas en el sistema
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CamarasController.FetchByID(System.String)">
+            <summary>
+            Retorna la cámara activa indentificada con el Id pasado por parametros.
+            </summary>
+            <param name="id">Identificador de la cámara.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CamarasController.Update(System.String,System.String,System.Int32,System.String,System.Boolean,System.String)">
+            <summary>
+            Actualiza una cámara
+            </summary>
+            <param name="camaraId">ID de la Cámara</param>
+            <param name="nombre">Nombre</param>
+            <param name="gestionId">ID en el sistema de gestión</param>
+            <param name="RNC">RNC de la cámara</param>
+            <param name="activa">Indica si la cámara está activa o no</param>
+            <param name="header">Header de impresión</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CamarasController.Insert(System.String,System.String,System.Int32,System.String,System.Boolean,System.String)">
+            <summary>
+            Inserta una nueva cámara
+            </summary>
+            <param name="camaraId">ID de la Cámara</param>
+            <param name="nombre">Nombre</param>
+            <param name="gestionId">ID en el sistema de gestión</param>
+            <param name="RNC">RNC de la cámara</param>
+            <param name="activa">Indica si la cámara está activa o no</param>
+            <param name="header">Header de impresión</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CamarasController.Delete(System.String)">
+            <summary>
+            Borra una cámara de la base de datos
+            </summary>
+            <param name="camaraId">Id de la cámara</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CamarasController.GetGestionId(System.String)">
+            <summary>
+            Retorna el Id del sistema de gestión de la cámara correspondiente.
+            </summary>
+            <param name="camaraId">Identificador de la cámara.</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.ServiciosController">
+            <summary>
+            Controlador de servicios
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServiciosController.GetServiciosByTipoSociedadId(System.Int32,System.Int32)">
+            <summary>
+            Obtiene los servicios por Tipo de Sociedad y Tipo de servicio.
+            </summary>
+            <param name="tipoSociedadId">Id del tipo de Sociedad.</param>
+            <param name="tipoServicioId">Id del tipo de Servicio.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServiciosController.GetServiciosByID(System.Int32)">
+            <summary>
+            Obtiene los servicios por Tipo de Sociedad y Tipo de servicio.
+            </summary>
+            <param name="tipoSociedadId">Id del tipo de Sociedad.</param>
+            <param name="tipoServicioId">Id del tipo de Servicio.</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentosRequeridosControler">
+            <summary>
+            Controlador para la vista ServicioDocumentosRequeridos
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentosRequeridosControler.GetDocumentosRequeridos(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Obtiene todos los documentos requeridos para un servicio
+            </summary>
+            <param name="servicioId">Tipo de servicio</param>
+            <param name="tipoSociedadId">Tipo de sociedad</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentosRequeridosControler.GetDocumentosRequeridos(System.Collections.Generic.List{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Obtiene todo slos docuemntos requeridos a partir de un lsitado de servicios
+            </summary>
+            <param name="servicioId">Listado de IDs para servicios</param>
+            <param name="tipoSociedadId">Tipo de sociedad</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentosRequeridosControler.GetDocumentosRequeridos(System.Collections.Generic.List{System.Int32},System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Obtiene los tipos de servicios a partir de grupos
+            </summary>
+            <param name="servicioId">Tipo de Servicio</param>
+            <param name="tipoSociedadId">Tipo de Sociedad</param>
+            <param name="grupo">Grupo</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentosRequeridosControler.GetGrupoDocumentosRequeridos(System.Collections.Generic.List{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Obtiene los grupos de documentos requeridos para un servicio
+            </summary>
+            <param name="servicioId">ID del servicio</param>
+            <param name="tipoSociedadId">Tipo de Sociedad</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentosRequeridosControler.GetServicios">
+            <summary>
+            Obtiene todos los servicios desde la base de datos CamaraComun
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentosRequeridosControler.GetDocumentosRequeridosByTipoSociedad(System.Int32,System.Int32)">
+            <summary>
+            Obtiene los documentos requeridos por tipo de sociedad
+            </summary>
+            <param name="servicioId">ID del Servicio</param>
+            <param name="tipoSociedadId">ID del tipo de sociedad</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido">
+            <summary>
+            Clase que representa un Documento Requerido por un Servicio. 
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido.CantidadOriginal">
+            <summary>
+            Cantidad de documentos originales
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido.CantidadCopia">
+            <summary>
+            Cantidad de documentos en copia
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido.Nombre">
+            <summary>
+            Nombre del Documento.  Debe poblarse para poder mostrar el contenido.  se Accede a traves de la Propiedad TipoDocumento.
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido.CostoCopia">
+            <summary>
+            Costo Copia.  Debe poblarse para poder mostrar el contenido.  se Accede a traves de la Propiedad TipoDocumento.
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido.CostoOriginal">
+            <summary>
+            Costo Original.  Debe poblarse para poder mostrar el contenido.  se Accede a traves de la Propiedad TipoDocumento.
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido.bExpress">
+            <summary>
+            Indica que el servicio se solicitó bajo la modalidad express (VIP)
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido.PorcentajeVIP">
+            <summary>
+            Porcentaje a facturar por ser express
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido.CostoCopiaFinal">
+            <summary>
+            Costo total por copias
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido.CostoOriginalFinal">
+            <summary>
+            Costo total por originales
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoExtension">
+            <summary>
+            Extensiones para los documentos requeridos
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoExtension.GetTotal(System.Collections.Generic.IEnumerable{CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido},System.Boolean)">
+            <summary>
+            Calculo de totales por tipo de servicio
+            </summary>
+            <param name="servicio">Servicio par el cual se calcula el total</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoExtension.GetTotal(System.Collections.Generic.IEnumerable{CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequerido},System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Calcula el total 
+            </summary>
+            <param name="servicio"></param>
+            <param name="cantidadCopiaExoneradasNuevaEmpresa"></param>
+            <param name="cantidadOriginalExoneradasNuevaEmpresa"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

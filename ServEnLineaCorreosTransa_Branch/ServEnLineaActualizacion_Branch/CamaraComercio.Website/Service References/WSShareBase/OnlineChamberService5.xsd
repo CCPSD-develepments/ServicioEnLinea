@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Common.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Common.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.10.80.12:8083/OnlineChamberService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Boundaries.DigitalSignatureVerification" />
+  <xs:complexType name="BasicOperationResultOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BasicOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BasicOperationResultOfstring" nillable="true" type="tns:BasicOperationResultOfstring" />
+  <xs:complexType name="OnlineTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CamaraId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CapitalAutorizado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comentario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorreoEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorreoSolicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Destino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EsDigital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EsVentanillaUnica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaRegistroMercantil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Imagen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoTransaccionVentanilla" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreRepresentante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreSolicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroRegistroMercantil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Peso" type="xs:float" />
+      <xs:element minOccurs="0" name="RNC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RNCSolicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Servicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TelSolicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoServicioSufijo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoSociedad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoSolicitud" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransaccionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UbicacionExterna" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OnlineTransaction" nillable="true" type="tns:OnlineTransaction" />
+  <xs:complexType name="ArrayOfOnlineDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OnlineDocument" nillable="true" type="tns:OnlineDocument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOnlineDocument" nillable="true" type="tns:ArrayOfOnlineDocument" />
+  <xs:complexType name="OnlineDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CamaraId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CantidadCopias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CantidadOriginales" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EsOriginal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EsRegistrable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Imprimir" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoRegistroMercantil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroPagina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransaccionId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OnlineDocument" nillable="true" type="tns:OnlineDocument" />
+  <xs:complexType name="BasicOperationResultOfDocumentValidationResponsev8czTo8Q">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BasicOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DocumentValidationResponse" Namespace="http://schemas.datacontract.org/2004/07/Boundaries.DigitalSignatureVerification" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Boundaries.DigitalSignatureVerification" minOccurs="0" name="Entity" nillable="true" type="q1:DocumentValidationResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BasicOperationResultOfDocumentValidationResponsev8czTo8Q" nillable="true" type="tns:BasicOperationResultOfDocumentValidationResponsev8czTo8Q" />
+</xs:schema>

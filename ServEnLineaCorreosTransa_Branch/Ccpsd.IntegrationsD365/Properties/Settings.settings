@@ -1,0 +1,17 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ccpsd.IntegrationsD365.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ReportesAgricolaConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DSCREEN-PC\SQLEXPRESS;Initial Catalog=DBAGRICOLA;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DSCREEN-PC\SQLEXPRESS;Initial Catalog=DBAGRICOLA;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="Ccpsd_IntegrationsD365_IntegrationDynamics365WS_IntegracionDynamics365WS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.30.21:365/IntegracionDynamics365.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

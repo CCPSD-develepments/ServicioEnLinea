@@ -1,0 +1,335 @@
+﻿using System;
+using System.Globalization;
+using System.Linq;
+using System.Web.UI;
+using CamaraComercio.DataAccess.EF.CamaraComun;
+using CamaraComercio.DataAccess.EF.OficinaVirtual;
+using EF = CamaraComercio.DataAccess.EF;
+using SRM = CamaraComercio.DataAccess.EF.SRM;
+using OFV = CamaraComercio.DataAccess.EF.OficinaVirtual;
+using Comun = CamaraComercio.DataAccess.EF.CamaraComun;
+using System.Web.Security;
+using CamaraComercio.Website.Helpers;
+using System.Web.Configuration;
+using System.Data.Common;
+using System.Web.UI.WebControls;
+
+namespace CamaraComercio.Website.Empresas
+{
+    ///<summary>
+    /// Página para solicitar acceso a una empresa previamente matriculada en una Cámara
+    ///</summary>
+    [MembershipHelper.MenuSiteMapAttribute(SiteMapProvider = "EmpresaSiteMap")]
+    public partial class SolicitudInclusion : System.Web.UI.Page
+    {
+        public static ServicioSection ServiciosDefault
+        {
+            get
+            {
+                return (ServicioSection)WebConfigurationManager.GetWebApplicationSection("servicioSection");
+            }
+        }
+
+        #region Private fields and properties
+
+        /// <summary>
+        /// Número de Registro Mercantil de la empresa.
+        /// </summary>
+        protected int RegistroId
+        {
+            get
+            {
+                return Session["RegistroId"] == null ? 0 : int.Parse(Session["RegistroId"].ToString());
+            }
+            set
+            {
+                Session["RegistroId"] = value;
+            }
+        }
+
+        /// <summary>
+        /// Id de la Camara.
+        /// </summary>
+        protected String CamaraId
+        {
+            get
+            {
+                if (Session["CamaraId"] == null)
+                    return String.Empty;
+                return Session["CamaraId"].ToString();
+            }
+            set
+            {
+                Session["CamaraId"] = value;
+            }
+        }
+        /// <summary>
+        /// Nombre de la Empresa de la cual se solicita la inclusión.
+        /// </summary>
+        protected String NombreEmpresa
+        {
+            get
+            {
+                if (Session["NombreEmpresa"] == null)
+                    return String.Empty;
+                return Session["NombreEmpresa"].ToString();
+            }
+            set
+            {
+                Session["NombreEmpresa"] = value;
+            }
+        }
+        /// <summary>
+        /// Rnc de la Empresa de la cual se solicita la inclusión.
+        /// </summary>
+        protected String RncSolicitante
+        {
+            get
+            {
+                if (Session["RncSolicitante"] == null)
+                    return String.Empty;
+                return Session["RncSolicitante"].ToString();
+            }
+            set
+            {
+                Session["RncSolicitante"] = value;
+            }
+
+        }
+        /// <summary>
+        /// Usuario Logueado en la applicacion.
+        /// </summary>
+        private MembershipUser _currentuser;
+        /// <summary>
+        /// Flag que indica si ya he cargado el usuario anteriormente para evitar busquedas repetidas.
+        /// </summary>
+        private bool _bLoaded = false;
+        /// <summary>
+        /// Usuario logueado actualmente en el sistema.
+        /// </summary>
+        public MembershipUser CurrentUser
+        {
+            get
+            {
+                if (!_bLoaded)
+                {
+                    _currentuser = Membership.GetUser(Context.User.Identity.Name);
+                    _bLoaded = true;
+                }
+                return _currentuser;
+            }
+        }
+
+        public int TipoSociedadId
+        {
+            get
+            {
+                if (Session["TipoSociedadId"] == null)
+                    return 0;
+                return int.Parse(Session["TipoSociedadId"].ToString());
+            }
+            set
+            {
+                Session["TipoSociedadId"] = value;
+            }
+        }
+
+        #endregion
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Page.IsPostBack)
+                return;
+        }
+
+        protected void btnSolicitud_Click(object sender, EventArgs e)
+        {
+            //Validación del CAPTCHA
+            if (!Page.IsValid)
+                return;
+
+            var noRegistro = int.Parse(this.txtNumeroRegistro.Text);
+            var camaraId = this.ddlCamara.SelectedItem.Value;
+            var ctrlSociedades = new SRM.SociedadesController();
+
+            var sociedades = ctrlSociedades.FetchByRegistroAndCamara(noRegistro, camaraId);
+            if (sociedades.Count == 0)
+            {
+                this.GenerateCustomError("No se encontró ninguna sociedad con ese Número de Registro en la Cámara indicada");
+                return;
+            }
+            
+           
+            var sociedad = sociedades.First();
+            this.lblRnc.Text = sociedad.Rnc;
+            this.lblNombreEmpresa.Text = sociedad.NombreSocial;
+            this.lblRegistro.Text = sociedad.NumeroRegistro.ToString();
+            this.lblCamaraID.Text = sociedad.CamaraID;
+            this.lblFechaConstitucion.Text = sociedad.FechaConstitucion.HasValue 
+                                            ? sociedad.FechaConstitucion.Value.ToStringDom()
+                                            : String.Empty;
+
+            this.mvInclusion.SetActiveView(vRevision);
+
+
+            //Guardo Valores 
+            this.CamaraId = this.ddlCamara.SelectedItem.Value;
+            this.RegistroId = sociedad.RegistroId;
+            this.RncSolicitante = sociedad.Rnc;
+            this.NombreEmpresa = sociedad.NombreSocial;
+            this.TipoSociedadId = sociedad.TipoSociedadId.Value2();
+            
+        }
+
+        protected void btnSolicitar_Click(object sender, EventArgs e)
+        {
+            //Variables
+            var rnc = this.lblRnc.Text;
+            var usuario = User.Identity.Name;
+            var camaraId = this.lblCamaraID.Text;
+            var noRegistroStr = this.lblRegistro.Text;
+            var noRegistro = 0; Int32.TryParse(noRegistroStr, out noRegistro);
+
+            //direccion de la camara
+            var comunDB = new Comun.CamarasController();
+            var camara = comunDB.FetchByID(ddlCamara.SelectedValue).FirstOrDefault();
+
+            //setear el valor en el literal con la direccion de la camara.
+            this.ltrDireccionCamara.Text = camara.HeaderImpresiones;
+
+            //Se revisa que no haya una solicitud pendiente para este usuario/rnc o que ya exista para otra empresa
+            var ctrlEmpresasPorUsuario = new OFV.EmpresasPorUsuarioController();
+            if (ctrlEmpresasPorUsuario.ExisteSolicitud(usuario, noRegistro, camaraId))
+            {
+                this.GenerateCustomError("Este usuario ya ha realizado una solicitud para la inclusión de este RNC.", "ContactoVal");
+                return;
+            }
+
+            var usuarioDueno = ctrlEmpresasPorUsuario.ExisteUsuarioConEmpresa(noRegistro);
+            if (!String.IsNullOrEmpty(usuarioDueno))
+            {
+                //Quiere decir que hay un usuario
+                if (usuarioDueno == usuario)
+                {
+                    this.GenerateCustomError("Ya esta empresa está registrada bajo esta cuenta.", "ContactoVal");
+                    return;
+                }
+                else
+                {
+                    //Quiere decir que otra empresa ya tiene este usuario. Se notifica al usuario que se enviará un correo.
+                    this.lblMensajesConfirmacion.Visible = true;
+                }
+            }
+            var dbWeb = new CamaraComercio.DataAccess.EF.OficinaVirtual.CamaraWebsiteEntities();
+            var dbSrm = SRM.CamaraSRMEntitiesFactory.CreateSrmEntitiesContext(camaraId);
+            
+            var repEmpresa = new EF.Repository<OFV.EmpresasPorUsuario, EF.OficinaVirtual.CamaraWebsiteEntities>(dbWeb);
+            var repTransacion = new EF.Repository<OFV.Transacciones, EF.OficinaVirtual.CamaraWebsiteEntities>(dbWeb);
+            var repDocSeleccionados = new EF.Repository<OFV.TransaccionDocSeleccionado, EF.OficinaVirtual.CamaraWebsiteEntities>(dbWeb);
+            var repFacturas = new EF.Repository<OFV.Facturas, EF.OficinaVirtual.CamaraWebsiteEntities>(dbWeb);
+
+            var repDocs = new EF.Repository<ServicioDocumentoRequerido, EF.CamaraComun.CamaraComunEntities>(
+                          new CamaraComunEntities());
+            var docRequeridos =
+                repDocs.DoQuery().Where(
+                d => d.TipoSociedadId == this.TipoSociedadId && d.ServicioId == Helper.ServicioInclusionId).ToList();
+
+            using (DbTransaction tnx = repEmpresa.BeginTransaction())
+            {
+
+                var servicioId = 0;
+                var servicio = ServiciosDefault.Servicios.Where(srv => srv.TipoSociedadId == this.TipoSociedadId).FirstOrDefault();
+                if (servicio != null)
+                    servicioId = servicio.SolicitudInclusionId;
+
+                var registro = dbSrm.Registros.Where(a => a.RegistroId == this.RegistroId).FirstOrDefault();
+
+                //Ingreso de la transacción
+                var nombreSolicitante = ((OficinaVirtualUserProfile) Context.Profile).NombreSolicitante;
+                var rncSolicitante = ((OficinaVirtualUserProfile) Context.Profile).RNC;
+                var transSolicitudInclusion = new OFV.Transacciones()
+                                                  {
+                                                      Solicitante = nombreSolicitante,
+                                                      RegistroId = this.RegistroId,
+                                                      NombreSocialPersona = this.NombreEmpresa,
+                                                      NombreContacto = this.txtPersonaContacto.Text,
+                                                      TelefonoContacto = this.txtTelefonoContacto.Text,
+                                                      RNCSolicitante = rncSolicitante,
+                                                      CamaraId = this.CamaraId,
+                                                      ServicioId = servicioId,
+                                                      UserName = User.Identity.Name,
+                                                      TipoSociedadId = this.TipoSociedadId,
+                                                      Fecha = DateTime.Now,
+                                                      EstatusTransId = Helper.EstatusTransIdNuevo,
+                                                      bPagada = false,
+                                                      CapitalSocial = registro.CapitalSocial,
+                                                      NumeroRegistro = noRegistro
+                                                  };
+
+                repTransacion.Add(transSolicitudInclusion);
+                repTransacion.Save();
+
+                //Factura (vacía)
+                var factura = new OFV.Facturas
+                                {
+                                    Complementaria = false,
+                                    Estado = 2,
+                                    Fecha = DateTime.Now,
+                                    TipoNcf = Helper.TipoComprobanteIdDefault,
+                                    TransaccionId = transSolicitudInclusion.TransaccionId,
+                                    Usuario = User.Identity.Name,
+                                    CamaraId = this.CamaraId
+                                };
+                repFacturas.Add(factura);
+                repFacturas.Save();
+
+                //Ingreso de documentos requeridos
+                foreach (var doc in docRequeridos)
+                {
+                    repDocSeleccionados.Add(new TransaccionDocSeleccionado
+                                                {
+                                                    CantidadCopia = 0,
+                                                    CantidadOriginal = 1,
+                                                    FechaDocumento = DateTime.Now,
+                                                    TipoDocumentoId = doc.TipoDocumentoId,
+                                                    TransaccionId = transSolicitudInclusion.TransaccionId
+                                                });
+                }
+                repDocSeleccionados.Save();
+
+                //Ingreso de la solicitud
+                var empresa = new OFV.EmpresasPorUsuario()
+                {
+                    CamaraID = camaraId,
+                    Usuario = usuario,
+                    FechaSolicitud = DateTime.Now,
+                    FechaUltModificacion = DateTime.Now,
+                    NoRegistro = noRegistro,
+                    Estado = (short)OFV.EmpresaPorUsuarioEstado.Solicitado,
+                    TransaccionId = transSolicitudInclusion.TransaccionId
+                };
+
+                repEmpresa.Add(empresa);
+
+                //Se graba Empresa por Usuario
+                repEmpresa.Save();
+
+                //Se Asigna número de Transaccion para ser visualizado.
+                lblNoRecibo.Text = transSolicitudInclusion.TransaccionId.ToString();
+                this.lnkFormEnvioDatos.NavigateUrl = "VerDetalleTransaccion.aspx?nSolicitud=" + transSolicitudInclusion.TransaccionId;
+
+
+                //Se setea el valor del query string para el formulario de envio de datos en el navigate url
+                this.hlnkEnvioDatos.NavigateUrl = string.Format("EnvioDatos.aspx?nSolicitud={0}", transSolicitudInclusion.TransaccionId);
+                //Guardando Valores para impresion de Solicitud
+
+                this.mvInclusion.SetActiveView(vConfirmacion);
+
+                //Guardando IdTransaccion en Seccion Para que la solicitud pueda imprimirla
+                Session.Add("IdTransacciones", transSolicitudInclusion.TransaccionId);
+
+                tnx.Commit();
+            }
+        }
+    }
+}

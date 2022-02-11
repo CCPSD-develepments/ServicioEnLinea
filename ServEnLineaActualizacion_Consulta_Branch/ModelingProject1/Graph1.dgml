@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(Namespace=CamaraComercio.DataAccess.EF.CamaraComun)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.DataAccess.EF.CamaraComun" />
+    <Node Id="(Namespace=CamaraComercio.DataAccess.EF.Membership)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.DataAccess.EF.Membership" />
+    <Node Id="(Namespace=CamaraComercio.DataAccess.EF.OficinaVirtual)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.DataAccess.EF.OficinaVirtual" />
+    <Node Id="(Namespace=CamaraComercio.DataAccess.EF.SRM)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.DataAccess.EF.SRM" />
+    <Node Id="(Namespace=CamaraComercio.Website.Account)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Account" />
+    <Node Id="(Namespace=CamaraComercio.Website.Consultas)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Consultas" />
+    <Node Id="(Namespace=CamaraComercio.Website.DTO.DGII)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.DTO.DGII" />
+    <Node Id="(Namespace=CamaraComercio.Website.DTO.ONAPI)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.DTO.ONAPI" />
+    <Node Id="(Namespace=CamaraComercio.Website.Empresas)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Empresas" />
+    <Node Id="(Namespace=CamaraComercio.Website.Helpers)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Helpers" />
+    <Node Id="(Namespace=CamaraComercio.Website.Helpers.ExtendedControls)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Helpers.ExtendedControls" />
+    <Node Id="(Namespace=CamaraComercio.Website.Operaciones.Modificaciones)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Operaciones.Modificaciones" />
+    <Node Id="(Namespace=CamaraComercio.Website.Operaciones.Registro)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Operaciones.Registro" />
+    <Node Id="(Namespace=CamaraComercio.Website.Operaciones.Shared)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Operaciones.Shared" />
+    <Node Id="(Namespace=CamaraComercio.Website.Operations)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Operations" />
+    <Node Id="(Namespace=CamaraComercio.Website.Properties)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Properties" />
+    <Node Id="(Namespace=CamaraComercio.Website.Services)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Services" />
+    <Node Id="(Namespace=CamaraComercio.Website.TarjetaCredito)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.TarjetaCredito" />
+    <Node Id="(Namespace=CamaraComercio.Website.UserControls)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.UserControls" />
+    <Node Id="(Namespace=CamaraComercio.Website.res)" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.res" />
+    <Node Id="@1" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.DataAccess.EF" />
+    <Node Id="@2" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.DTO" />
+    <Node Id="@3" Category="CodeSchema_Namespace" IsDragSource="True" Label="CamaraComercio.Website.Operaciones" />
+  </Nodes>
+  <Links>
+    <Link Source="(Namespace=CamaraComercio.Website.Helpers)" Target="(Namespace=CamaraComercio.Website.Helpers.ExtendedControls)" Category="Contains" />
+    <Link Source="@1" Target="(Namespace=CamaraComercio.DataAccess.EF.CamaraComun)" Category="Contains" />
+    <Link Source="@1" Target="(Namespace=CamaraComercio.DataAccess.EF.Membership)" Category="Contains" />
+    <Link Source="@1" Target="(Namespace=CamaraComercio.DataAccess.EF.OficinaVirtual)" Category="Contains" />
+    <Link Source="@1" Target="(Namespace=CamaraComercio.DataAccess.EF.SRM)" Category="Contains" />
+    <Link Source="@2" Target="(Namespace=CamaraComercio.Website.DTO.DGII)" Category="Contains" />
+    <Link Source="@2" Target="(Namespace=CamaraComercio.Website.DTO.ONAPI)" Category="Contains" />
+    <Link Source="@3" Target="(Namespace=CamaraComercio.Website.Operaciones.Modificaciones)" Category="Contains" />
+    <Link Source="@3" Target="(Namespace=CamaraComercio.Website.Operaciones.Registro)" Category="Contains" />
+    <Link Source="@3" Target="(Namespace=CamaraComercio.Website.Operaciones.Shared)" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Block" Label="Block" BasedOn="CodeSchema_Statement" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" IsProviderRoot="False" NavigationActionLabel="Blocks" />
+    <Category Id="CodeSchema_Namespace" Label="Namespace" BasedOn="CodeSchema_Block" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" IsProviderRoot="False" NavigationActionLabel="Namespaces" />
+    <Category Id="CodeSchema_Statement" Label="Statement" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" IsProviderRoot="False" NavigationActionLabel="Statement" />
+    <Category Id="Contains" Label="Contains" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+  </Categories>
+  <Properties>
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsDragSource" Label="IsDragSource" Description="IsDragSource" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Id="(Namespace=CamaraComercio.DataAccess.EF)" />
+    <Alias n="2" Id="(Namespace=CamaraComercio.Website.DTO)" />
+    <Alias n="3" Id="(Namespace=CamaraComercio.Website.Operaciones)" />
+  </IdentifierAliases>
+</DirectedGraph>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CamaraComercio.DataAccess.EF.Membership</name>
+    </assembly>
+    <members>
+        <member name="P:CamaraComercio.DataAccess.EF.Membership.CamaraAuthUsers.NombreCamara">
+            <summary>
+            Propiedad Extendida: Nombre de la Cámara
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.Membership.CamaraAuthUsers.NombreEmpresa">
+            <summary>
+            Propiedad Extendida: Nombre de la Empresa
+            </summary>
+        </member>
+    </members>
+</doc>

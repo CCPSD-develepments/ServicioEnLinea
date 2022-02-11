@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="BuscarSocio_RM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="camaraId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoRegistro" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="noRegistro" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarSocio_RMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarSocio_RMResult" type="tns:ArrayOfAccionista" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAccionista">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Accionista" nillable="true" type="tns:Accionista" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Accionista">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreAccionista" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cargo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CamaraId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoRegistro" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoRegistro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreEmpresa" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CantidadAcciones" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdConsulta" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BuscarSocio_Documento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="camaraId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoRegistro" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="noRegistro" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarSocio_DocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarSocio_DocumentoResult" type="tns:ArrayOfAccionista" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarRM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="camaraId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoRegistro" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="noRegistro" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarRMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarRMResult" type="tns:Registro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Registro">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CamaraId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DenominacionSocial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreComercial" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoRegistro" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RegistroMercantil" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DirTelefono1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DirTelefono2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DirFax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DirEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RNC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaFormacion" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaEmisionRM" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaVencimientoRM" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Estatus" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CapitalSocial" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nacionalidad" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmpleadosMasculinos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmpleadosFemeninos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmpleadosTotal" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActividadNegocio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdConsulta" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListaCamarasActivas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaCamarasActivasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaCamarasActivasResult" type="tns:ArrayOfCamara" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCamara">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Camara" nillable="true" type="tns:Camara" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Camara">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreCompleto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Activa" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLogConsultaId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="consultaId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLogConsultaIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLogConsultaIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerCertificadoRM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroRM" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoSociedad" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CamaraId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerCertificadoRMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerCertificadoRMResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BuscarSocio_RMSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarSocio_RM" />
+  </wsdl:message>
+  <wsdl:message name="BuscarSocio_RMSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarSocio_RMResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarSocio_DocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarSocio_Documento" />
+  </wsdl:message>
+  <wsdl:message name="BuscarSocio_DocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarSocio_DocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarRMSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarRM" />
+  </wsdl:message>
+  <wsdl:message name="BuscarRMSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaCamarasActivasSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaCamarasActivas" />
+  </wsdl:message>
+  <wsdl:message name="ListaCamarasActivasSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaCamarasActivasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLogConsultaIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLogConsultaId" />
+  </wsdl:message>
+  <wsdl:message name="GetLogConsultaIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLogConsultaIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerCertificadoRMSoapIn">
+    <wsdl:part name="parameters" element="tns:VerCertificadoRM" />
+  </wsdl:message>
+  <wsdl:message name="VerCertificadoRMSoapOut">
+    <wsdl:part name="parameters" element="tns:VerCertificadoRMResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsRegistroMercantilSoap">
+    <wsdl:operation name="BuscarSocio_RM">
+      <wsdl:input message="tns:BuscarSocio_RMSoapIn" />
+      <wsdl:output message="tns:BuscarSocio_RMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSocio_Documento">
+      <wsdl:input message="tns:BuscarSocio_DocumentoSoapIn" />
+      <wsdl:output message="tns:BuscarSocio_DocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarRM">
+      <wsdl:input message="tns:BuscarRMSoapIn" />
+      <wsdl:output message="tns:BuscarRMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaCamarasActivas">
+      <wsdl:input message="tns:ListaCamarasActivasSoapIn" />
+      <wsdl:output message="tns:ListaCamarasActivasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogConsultaId">
+      <wsdl:input message="tns:GetLogConsultaIdSoapIn" />
+      <wsdl:output message="tns:GetLogConsultaIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerCertificadoRM">
+      <wsdl:input message="tns:VerCertificadoRMSoapIn" />
+      <wsdl:output message="tns:VerCertificadoRMSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsRegistroMercantilSoap" type="tns:wsRegistroMercantilSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BuscarSocio_RM">
+      <soap:operation soapAction="http://tempuri.org/BuscarSocio_RM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSocio_Documento">
+      <soap:operation soapAction="http://tempuri.org/BuscarSocio_Documento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarRM">
+      <soap:operation soapAction="http://tempuri.org/BuscarRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaCamarasActivas">
+      <soap:operation soapAction="http://tempuri.org/ListaCamarasActivas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogConsultaId">
+      <soap:operation soapAction="http://tempuri.org/GetLogConsultaId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerCertificadoRM">
+      <soap:operation soapAction="http://tempuri.org/VerCertificadoRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsRegistroMercantilSoap12" type="tns:wsRegistroMercantilSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BuscarSocio_RM">
+      <soap12:operation soapAction="http://tempuri.org/BuscarSocio_RM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSocio_Documento">
+      <soap12:operation soapAction="http://tempuri.org/BuscarSocio_Documento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarRM">
+      <soap12:operation soapAction="http://tempuri.org/BuscarRM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaCamarasActivas">
+      <soap12:operation soapAction="http://tempuri.org/ListaCamarasActivas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogConsultaId">
+      <soap12:operation soapAction="http://tempuri.org/GetLogConsultaId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerCertificadoRM">
+      <soap12:operation soapAction="http://tempuri.org/VerCertificadoRM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsRegistroMercantil">
+    <wsdl:port name="wsRegistroMercantilSoap" binding="tns:wsRegistroMercantilSoap">
+      <soap:address location="http://websrm24:1042/wsRegistroMercantil.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsRegistroMercantilSoap12" binding="tns:wsRegistroMercantilSoap12">
+      <soap12:address location="http://websrm24:1042/wsRegistroMercantil.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

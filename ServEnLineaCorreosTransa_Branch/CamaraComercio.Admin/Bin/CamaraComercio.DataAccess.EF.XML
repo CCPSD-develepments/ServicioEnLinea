@@ -1,0 +1,2238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CamaraComercio.DataAccess.EF</name>
+    </assembly>
+    <members>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository">
+            <summary>
+            Repositorio de documentos en transacciones
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.Repository`2">
+            <summary>
+            Clase que representa los repositorios de datos
+            </summary>
+            <typeparam name="E">Tipo de entidad a instanciar en el repositorio</typeparam>
+            <typeparam name="C">Objecto del Entity Framework para el contexto de la base de datos (DBContext)</typeparam>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.IRepository`2">
+            <summary>
+            Interfaz que define la funcionalidad basica del repositorio. 
+            Se puede implementar para cada controlador o simplemente hacer una clase genérica que se instancie para cada tipo
+            </summary>
+            <typeparam name="T">
+            Tipo de entidad (de System.Data.Entity)
+            </typeparam>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.BeginTransaction">
+            <summary>
+             Método que inicia la transaccion en la base de datos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.Add(`0)">
+            <summary>
+            Método que agrega una nueva entidad al repositorio
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.DeleteRelatedEntries(`0)">
+            <summary>
+            Método que borra entidades relacionadas con la entidad instanciada en el repositorio
+            </summary>
+            <param name="entity">Tipo de entidad a borrar</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.DeleteRelatedEntries(`0,System.Collections.ObjectModel.ObservableCollection{System.String})">
+            <summary>
+            Método que borra entidades relacionadas con la entidad instanciada en el repositorio (sobrecarga)
+            </summary>
+            <param name="entity">Tipo de entidad a borrar</param>
+            <param name="keyListOfIgnoreEntites">Lista de entidades a ignorar</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.Delete(`0)">
+            <summary>
+            Método que borra una entidad del repositorio
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.Save">
+            <summary>
+            Método que persiste los cambios realizados a la base de datos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.DoQuery(System.String)">
+            <summary>
+            Ejecución del Query
+            </summary>
+            <param name="entitySetName">Nombre del set de entidades</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.DoQuery">
+            <summary>
+            Ejecución del Query (default)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.DoQuery(System.String,CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            Ejecución del Query
+            </summary>
+            <param name="entitySetName">Nombre del set de entidades</param>
+            <param name="where">Predicado (Where)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.DoQuery(CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            Ejecución del Query
+            </summary>
+            <param name="where">Predicado (Where)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.DoQuery(System.Int32,System.Int32)">
+            <summary>
+            Ejecución paginada del Query
+            </summary>
+            <param name="maximumRows">Cantidad máxima a traer de rows</param>
+            <param name="startRowIndex">Índice de inicio</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.DoQuery(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            Ejecución Ordenada del Query (Sorted)
+            </summary>
+            <param name="sortExpression">Expresión de orden (sort)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.DoQuery(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Int32,System.Int32)">
+            <summary>
+            Ejecución paginada y ordenada del Query
+            </summary>
+            <param name="sortExpression">Expresión de orden (sort)</param>
+            <param name="maximumRows">Cantidad máxima a traer de rows</param>
+            <param name="startRowIndex">Índice de inicio</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.SelectAll(System.String)">
+            <summary>
+            Selección de todos los objetos en el repositorio
+            </summary>
+            <param name="entitySetName">Nombre del set de entidades</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.SelectAll">
+            <summary>
+            Selección de todos los objetos en el repositorio (default)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.SelectAll(System.String,CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            Selección de todos los objetos en el repositorio
+            </summary>
+            <param name="entitySetName">Nombre del set de entidades</param>
+            <param name="where">Predicado (Where)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.SelectAll(CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            Selección de todos los objetos en el repositorio
+            </summary>
+            <param name="where">Predicado (Where)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.SelectAll(System.Int32,System.Int32)">
+            <summary>
+            Selección de todos los objetos en el repositorio
+            </summary>
+            <param name="maximumRows">Cantidad máxima a traer de rows</param>
+            <param name="startRowIndex">Índice de inicio</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.SelectAll(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            Selección de todos los objetos en el repositorio (sorted)
+            </summary>
+            <param name="sortExpression">Expresión de orden (sort)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.SelectAll(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Int32,System.Int32)">
+            <summary>
+            Selección de todos los objetos en el repositorio. Ordenada y paginada
+            </summary>
+            <param name="sortExpression">Expresión de orden (sort)</param>
+            <param name="maximumRows">Cantidad máxima a traer de rows</param>
+            <param name="startRowIndex">Índice de inicio</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.SelectByKey(System.Int32)">
+            <summary>
+            Selección de un objeto por llave primaria (int)
+            </summary>
+            <param name="key">Valor a filtrar</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.SelectByKey(System.String,System.Object)">
+            <summary>
+            Seleccón de un objeto por llave específica
+            </summary>
+            <param name="keyProperty">Nombre de la propiedad considerada llave</param>
+            <param name="key">Valor a filtrar</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.TrySameValueExist(System.String,System.Object,System.String)">
+            <summary>
+            Comprobación de un valor previo existente en el repositorio
+            </summary>
+            <param name="fieldName">Nombre del campo</param>
+            <param name="fieldValue">Valor a comparar</param>
+            <param name="key">Nombre de la llave</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.TryEntity(CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            Intento de conversión a la entidad
+            </summary>
+            <param name="selectSpec">Especificación de la entidad</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.GetCount">
+            <summary>
+            Retorna el total de registros en la base de datos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.IRepository`2.GetCount(CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            Retorna el total de registros en la base de datos. Filtrado por un predicado.
+            </summary>
+            <param name="selectSpec">Predicado (where)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.DoQuery(System.String)">
+            <summary>
+            Metodo genérico que retorna todas las entidades del modelo
+            </summary>
+            <param name="entitySetName">
+            Nombre del EntitySet en el modelo.
+            </param>
+            <typeparam name="TEntity">
+            Entidad a cargar desde la base de datos
+            </typeparam>
+            <returns>Un set del tipo TEntity.</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.DoQuery">
+            <summary>
+            A generic method to return ALL the entities
+            </summary>
+            <typeparam name="TEntity">
+            Entidad a cargar desde la base de datos
+            </typeparam>
+            <returns>Un set del tipo TEntity.</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.DoQuery(System.String,CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            </summary>
+            <param name="entitySetName">
+            Metodo genérico que retorna todas las entidades del modelo
+            </param>
+            <typeparam name="TEntity">
+            Entidad a cargar desde la base de datos
+            </typeparam>
+            <returns>Un set del tipo TEntity.</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.DoQuery(CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            </summary>
+            <typeparam name="TEntity">
+            Entidad a cargar desde la base de datos
+            </typeparam>
+            <returns>Un set del tipo TEntity.</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.DoQuery(System.Int32,System.Int32)">
+            <summary>
+            Entity Query con Paginación
+            </summary>
+            <param name="maximumRows">Maximo de rows a cargar</param>
+            <param name="startRowIndex">Index de inicio</param>
+            <returns>Colección de Entities</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.DoQuery(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            Entity Query en el orden especificado
+            </summary>
+            <param name="sortExpression">Expresion para sortear</param>
+            <returns>Colección de entidades</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.DoQuery(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Int32,System.Int32)">
+            <summary>
+            Query para todas las entidades en el orden especificado y con soporte para Paging
+            </summary>
+            <param name="sortExpression">Expresion para ordenar</param>
+            <param name="maximumRows">Máximo de rows a cargar</param>
+            <param name="startRowIndex">Index de inicio</param>
+            <returns>Colección de Entidads</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.SelectAll(System.String)">
+            <summary>
+            Método genérico que retorna todas las entidades
+            </summary>
+            <param name="entitySetName">
+            Nombre del entityset en el modelo
+            </param>
+            <typeparam name="TEntity">
+            Entidad a cargar desde la base de datos
+            </typeparam>
+            <returns>Un set del tipo TEntity.</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.SelectAll">
+            <summary>
+            Método genérico que retorna todas las entidades
+            </summary>
+            <returns>Un set del tipo TEntity.</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.SelectAll(System.String,CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            Método genérico que retorna todas las entidades
+            </summary>
+            <param name="entitySetName">
+            Nombre del EntitySet en el modelo
+            </param>
+            <returns>Un set del tipo TEntity.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CamaraComercio.DataAccess.EF.Repository`2.SelectAll(CamaraComercio.DataAccess.EF.ISpecification{`0})" -->
+        <!-- Badly formed XML comment ignored for member "M:CamaraComercio.DataAccess.EF.Repository`2.SelectAll(System.Int32,System.Int32)" -->
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.SelectAll(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            Selecciona todas las entidades en el orden especificado
+            </summary>
+            <param name="sortExpression">Expresion para ordenar</param>
+            <returns>Colección de Entities</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.SelectAll(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Int32,System.Int32)">
+            <summary>
+            Selecciona todas las entidades con soporte de paginacion y filtro
+            </summary>
+            <param name="sortExpression">Expresión para ordenar</param>
+            <param name="maximumRows">Máximo de rows a cargar</param>
+            <param name="startRowIndex">Index de inicio</param>
+            <returns>Colección de Entities</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.SelectByKey(System.Int32)">
+            <summary>
+            Obtiene el Entity por su llave primaria (siempre y cuando se llame ID)
+            </summary>
+            <typeparam name="E">Tipo de Entidad</typeparam>
+            <param name="key">Valor a buscar</param>
+            <returns>return entity</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.SelectByKey(System.String,System.Object)">
+            <summary>
+            Obtiene el Entity por la llave especificada
+            </summary>
+            <typeparam name="E">Tipo de Entidad</typeparam>
+            <param name="keyProperty">Llave por la cual se desea buscar el query</param>
+            <param name="key">Valor a buscar</param>
+            <returns>return entity</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.TrySameValueExist(System.String,System.Object,System.String)">
+            <summary>
+            Check if value of specific field is already exist
+            </summary>
+            <typeparam name="E"></typeparam>
+            <param name="fieldName">name of the Field</param>
+            <param name="fieldValue">Field value</param>
+            <param name="key">Primary key value</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.TryEntity(CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            Check if Entities exist with Condition
+            </summary>
+            <param name="selectExpression">Selection Condition</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.GetCount">
+            <summary>
+            Get Count of all records
+            </summary>
+            <typeparam name="E"></typeparam>
+            <returns>count of all records</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.GetCount(CamaraComercio.DataAccess.EF.ISpecification{`0})">
+            <summary>
+            Get count of selection
+            </summary>
+            <typeparam name="E">Selection Condition</typeparam>
+            <returns>count of selection</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.Delete(`0)">
+            <summary>
+            Delete data from context
+            </summary>
+            <typeparam name="E"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.Delete(System.Object)">
+            <summary>
+            Delete data from context
+            </summary>
+            <typeparam name="E"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.Add(`0)">
+            <summary>
+            Insert new data into context
+            </summary>
+            <typeparam name="E"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.BeginTransaction">
+            <summary>
+            Start Transaction
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.DeleteRelatedEntries(`0)">
+            <summary>
+            Delete all related entries
+            </summary>
+            <param name="entity"></param>        
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Repository`2.DeleteRelatedEntries(`0,System.Collections.ObjectModel.ObservableCollection{System.String})">
+            <summary>
+            Delete all related entries
+            </summary>
+            <param name="entity"></param>        
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.#ctor(System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="camaraId">ID de la Cámara</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.GetDocumentosByNoRegistro(System.Int32,System.String)">
+            <summary>
+            Obtiene todos los documentos que han sido depositados por una empresa
+            </summary>
+            <param name="noRegistro">Número de Registro</param>
+            <param name="camaraID">ID de la Cámara</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.GetDocumentosByNoRegistroDt(System.Int32,System.String)">
+            <summary>
+            Obtiene todos los documentos que han sido depositados por una empresa
+            </summary>
+            <param name="noRegistro">Número de registro</param>
+            <param name="camaraID">ID de la Cámara</param>
+            <returns>Retorna un DataTable con la estructura de DocumentoTransaccionOfv</returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.DocumentoTransaccionOfv">
+            <summary>
+            Clase DTO que representa un Documento asociado a una transaccion
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.DocumentoTransaccionOfv.DocumentoID">
+            <summary>
+            ID del tipo de documento
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.DocumentoTransaccionOfv.DocumentoTransaccionID">
+            <summary>
+            ID identificador (key)
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.DocumentoTransaccionOfv.FechaModificacion">
+            <summary>
+            Fecha de última modificación
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.DocumentoTransaccionOfv.FechaDocumento">
+            <summary>
+            Fecha del documento (de su creación, no del depósito en la cámara)
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.DocumentoTransaccionOfv.NombreDocumento">
+            <summary>
+            Descripción del tipo de documento
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.DocumentoTransaccionOfv.CostoOriginal">
+            <summary>
+            Costo de depósito de un original
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.DocumentosTransaccionesRepository.DocumentoTransaccionOfv.CostoCopia">
+            <summary>
+            Costo de depósito de una copia
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.SearchEmpresasRepository">
+            <summary>
+            Repositorio de búsqueda para sociedades
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SearchEmpresasRepository.#ctor(System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="camaraID">ID de la Cámara</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SearchEmpresasRepository.FindSociedades(System.String,CamaraComercio.DataAccess.EF.SRM.TipoBusquedaSociedades)">
+            <summary>
+            Realiza una búsqueda de sociedades por RNC, No. de Registro o Nombre
+            </summary>
+            <param name="qry">Valor de la búsqueda</param>
+            <param name="tipoBusqueda">Tipo de la búsqueda (nombre, registro o RNC)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SearchEmpresasRepository.FindSociedadTransacciones(System.String,System.Int32)">
+            <summary>
+            Obtiene un listado de las transacciones asociadas a una sociedad/empresa. 
+            </summary>
+            <param name="rnc">Número de RNC</param>
+            <param name="maximumRows">Cantidad máxima de registros a retornar</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SearchEmpresasRepository.FindSociedadesRegistros(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Obtiene un listado de la relación entre Sociedades y Registros a partir de un rango de IDs
+            </summary>
+            <param name="ids">IDs a buscar</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.RegistroController">
+            <summary>
+            Controlador de registros
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController">
+            <summary>
+            Controlador para los mensajes
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController.FetchByUser(System.String,System.Int32,System.Int32)">
+            <summary>
+            Obtiene todos los mensajes enviados a un usuario en particular
+            </summary>
+            <param name="usuario"></param>
+            <param name="pagInicio">Para los registros paginados, indica la pagina a buscar en la BD. Usar "0" para mostrar todos los registros</param>
+            <param name="pagTamano">Para los registros paginados, indica el tamaño de las páginas</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController.CountByUser(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Obtiene el count de todos los mensjaes para un usuario especifico
+            </summary>
+            <param name="usuario"></param>
+            <param name="pagInicio">Placeholder para que el signature concuerde con el del método FetchByUser</param>
+            <param name="pagTamano">Placeholder para que el signature concuerde con el del método FetchByUser</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController.CountUnreadByUser(System.String)">
+            <summary>
+            Retorna la cantidad de mensajes aun no leidos por el usuario
+            </summary>
+            <param name="usuario">username</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController.FetchByUserAndSociedad(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Obtiene todos los mensajes enviados a un usuario referentes a una misma sociedad
+            </summary>
+            <param name="sociedadId">ID de la sociedad</param>
+            <param name="pagInicio">Para los registros paginados, indica la pagina a buscar en la BD</param>
+            <param name="pagTamano">Para los registros paginados, indica el tamaño de las páginas</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController.CountByUserAndSociedad(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Obtiene el count de todos los mensajes para una sociedad especifica
+            </summary>
+            <param name="usuario"></param>
+            <param name="sociedadId">ID de la sociedad</param>
+            <param name="pagInicio">Placeholder para que el signature concuerde con el del método FetchByUserAndSociedad</param>
+            <param name="pagTamano">Placeholder para que el signature concuerde con el del método FetchByUserAndSociedad</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController.FetchByUsuarioPadre(System.String,System.Int32,System.Int32)">
+            <summary>
+            Obtiene todos los mensajes enviados a un usuario padre (todos los mensajes de una empresa gestora)
+            </summary>
+            <param name="usuarioPadre">Usuario logeado</param>
+            <param name="pagInicio">Para los registros paginados, indica la pagina a buscar en la BD. Usar "0" para mostrar todos los registros</param>
+            <param name="pagTamano">Para los registros paginados, indica el tamaño de las páginas</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController.CountByUsuarioPadre(System.String,System.Int32,System.Int32)">
+            <summary>
+            Obtiene el count de todos los mensjaes para un usuario padre especifico
+            </summary>
+            <param name="usuarioPadre">Nombre del usuario logueado</param>
+            <param name="pagInicio">Placeholder para que el signature concuerde con el del método FetchByUser</param>
+            <param name="pagTamano">Placeholder para que el signature concuerde con el del método FetchByUser</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController.FetchByTransaccion(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Obtiene todos los mensajes enviados a un usuario en particular
+            </summary>
+            <param name="transaccion">ID de la transacción</param>
+            <param name="startRowIndex">Para los registros paginados, indica la pagina a buscar en la BD. Usar "0" para mostrar todos los registros</param>
+            <param name="maximumRows">Para los registros paginados, indica el tamaño de las páginas</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.MensajesController.CountByTransaccion(System.Int32)">
+            <summary>
+            Obtiene la cantidad total de documentos por transacción
+            </summary>
+            <param name="transaccion">ID de la transacción</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequeridoRepository">
+            <summary>
+            Repositorio para los documentos requeridos por servicio
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequeridoRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequeridoRepository.GetDocumentosSeleccionados(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Obtiene los documentos requeridos para un servicio y tipo de sociedad específicos
+            </summary>
+            <param name="servicioId">ID del servicio</param>
+            <param name="tipoSociedadId">ID del tipo de sociedad</param>
+            <param name="transaccionId">ID de la transacción</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequeridoRepository.GetDocumentosInTransaccion(System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Obtiene los documentos asociados a una transacción
+            </summary>
+            <param name="tipoSociedadId"></param>
+            <param name="transaccionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioDocumentoRequeridoRepository.GetDocumentosSeleccionados(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Obtiene los documentos requeridos para un servicio y tipo de sociedad específicos
+            </summary>
+            <param name="servicioId">ID del servicio</param>
+            <param name="tipoSociedadId">ID del tipo de sociedad</param>
+            <param name="transaccionId">ID de la transacción</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.Membership.MembershipController">
+            <summary>
+            Controlador para los objetos del Membership (directo)
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.MembershipController.AuthUsersGetByUsername(System.String)">
+            <summary>
+            Obtiene los usuarios autorizados por su username
+            </summary>
+            <param name="usuarioPadre">Nombre del usuario padre</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.CiudadesRepository">
+            <summary>
+            Repositorio de ciudades
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CiudadesRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CiudadesRepository.FecthInDominicanRepublic(System.Collections.Generic.List{System.Int32},System.Int32)">
+            <summary>
+            Obtiene todas las ciudades de un pais, con las ciudades principales
+            apareciendo en el primer lugar de la lista. 
+            </summary>
+            <param name="primerasCiudadesEnLista"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.UsuarioRepository.#ctor(System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="camaraId">ID de la cámara</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.UsuarioRepository.GetUsuarioIdByUsername(System.String)">
+            <summary>
+            Obtiene el ID de un usuario a partir de su username
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.ServicioDetallesRepository">
+            <summary>
+            Repositorio para el detalle de servicios
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.ServicioDetallesRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.ServicioDetallesRepository.GetServicios(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Obtiene el detalle de los servicios de una lista de IDs
+            </summary>
+            <param name="lstServicios">Listado de servicios para los que se requiere el detalle</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.PersonaRepository">
+            <summary>
+            Repositorio de la entidad Personas. Usado para búsquedas
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.PersonaRepository.#ctor(System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="camaraID">ID de la Cámara</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.PersonaRepository.FindPersona(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Busqueda de una persona en la base de datos del registro mercantil (búsqueda dinámica)
+            </summary>
+            <param name="primerNombre">Primer Nombre</param>
+            <param name="segundoNombre">Segundo Nombre</param>
+            <param name="primerApellido">Primer Apellido</param>
+            <param name="segundoApellido">Segundo Apellido</param>
+            <param name="documento">Número de Documento</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.Membership.UsuariosController">
+            <summary>
+            Controlador para usuarios del Membership
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.FetchByUsuarioPadre(System.String)">
+            <summary>
+            Obtiene todos los usuarios hijos de un usuario padre
+            </summary>
+            <param name="usuarioPadre">Nombre del usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.FetchByUsuarioPadre(System.String,System.String)">
+            <summary>
+            Obtiene todos los usuarios hijos de un usuario padre filtrando por usuarios activos
+            </summary>
+            <param name="usuarioPadre">Nombre del usuario</param>
+            <param name="traerActivos">Valor que indica si se deben traer los usuarios activos o inactivos1</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.ExisteUsuario(System.String)">
+            <summary>
+            Revisa si existe el usuario en la base de datos
+            </summary>
+            <param name="usuario">Usuario a revisar</param>
+            <returns>Devuelvue true si existe el usuario, de lo contrario false</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.ExisteEmail(System.String)">
+            <summary>
+            Verifica si el correo electrónico de un usuario existe en la base de datos
+            </summary>
+            <param name="email">Correo electrónico </param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.ExisteNoDocumento(System.String)">
+            <summary>
+            Revisa si existe el numero de documento en la base de datos.
+            </summary>
+            <param name="noDocumento">Numero de documento (cedula o pasaporte)</param>
+            <returns>retorna true si encuentra un registro con el número de documento</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetEmailByUsername(System.String)">
+            <summary>
+            Trae el email basandose en el username
+            </summary>
+            <param name="username">El nombre usuario</param>
+            <returns>Retorna el email del usuario</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetUsernameByPasswordResetKey(System.String)">
+            <summary>
+            Busca el username en base al Password reset key generado en el formulario forgotpassword.
+            </summary>
+            <param name="passwordResetKey">Guid generado</param>
+            <returns>Retorna el username</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetUsernameByActivateUserKey(System.String)">
+            <summary>
+            Obtiene un nombre de usuario a partir del key de reactivación de un usuario
+            </summary>
+            <param name="activateUserKey">Llave de activación para un usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetUsuarioPadreByUsername(System.String)">
+            <summary>
+            Busca el usuario padre pasado en el usuario que se le pasa
+            </summary>
+            <param name="username">Username del que se quiere saber su usuario padre</param>
+            <returns>Retorna el usuario padre y si retorna null es que el username es el usuario padre.</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetInfoUsuarioPadreByUserName(System.String)">
+            <summary>
+            Obtiene la información de los parametros personalizados de un usuario en la base de datos de membership a partir del padre de un usuario
+            </summary>
+            <param name="userName">Nombre del usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetInfoUsuarioByUserName(System.String)">
+            <summary>
+            Obtiene la información de los parametros personalizados de un usuario en la base de datos de membership
+            </summary>
+            <param name="userName">Nombre del usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.DesactivarUsuarioPadre(System.String)">
+            <summary>
+            Desactiva el usuario padre y retorna la colección de sus hijos
+            </summary>
+            <param name="usuarioPadre">El usuario padre a desactivar.</param>
+            <returns>Retorna la colección de sus hijos</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.SourceSystemExists(System.Guid)">
+            <summary>
+            Valida si existe el sistema fuente en la tabla de Systemas.
+            </summary>
+            <param name="systemId">Guid que representa el systema.</param>
+            <returns>Retorna true si existe el systema</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.AddAuthenticationToken(System.String,System.Guid)">
+            <summary>
+            Agrega un token de autenticacion para autenticación automática.
+            </summary>
+            <param name="username">Nombre de usuario a autenticar.</param>
+            <param name="systemId">System id que pide la autenticacion.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.ValidateUserToken(System.String,System.String,System.Int32)">
+            <summary>
+            Valida si un token para un usuario aun está activo
+            </summary>
+            <param name="username">Usuario que genera el token</param>
+            <param name="token">Token generado</param>
+            <param name="desiredTokenLife">Timepo de vida deseado para el token</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.UsuarioAutorizadoInsert(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+             Inserta un nuevo usuario autorizado
+            </summary>
+            <param name="userName">Nombre del usuario</param>
+            <param name="noRegistro">Numero de registro mercantil</param>
+            <param name="camaraID">Cámara de comercio</param>
+            <param name="cedula">Cedula del usuario</param>
+            <param name="nombre">Nombre Completo</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.UsuarioAutorizadoUpdate(System.String,System.Int32,System.String,System.String,System.String,System.Boolean)">
+             <summary>
+             Actualiza un usuario autorizado
+             </summary>
+            <param name="userName">Nombre del usuario</param>
+            <param name="noRegistro">Numero de registro mercantil</param>
+            <param name="camaraID">Cámara de comercio</param>
+            <param name="cedula">Cedula del usuario</param>
+            <param name="nombre">Nombre Completo</param>
+             <param name="Activo">Indica si el usuario está activo o no</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.ExisteUsuarioAutorizado(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Verifica si un usuario autorizado existe
+            </summary>
+            <param name="userName">Nombre del usuario</param>
+            <param name="noRegistro">Número de registro mercantil</param>
+            <param name="cedula">Cédula</param>
+            <param name="camaraId">ID de la Cámara</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.LogUserActivity(System.String,System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            Agrega una entrada en la tabla de actividades de usuarios logeados
+            </summary>
+            <param name="userName">Nombre del usuario</param>
+            <param name="activity">Actividad realizada</param>
+            <param name="pageUrl">URL de la página donde se efectuó la actividad</param>
+            <param name="activityDate"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetLastUserActivityDate(System.String)">
+            <summary>
+            Retorna la última fecha de actividad de un usuario a partir de su nombre de usuario
+            </summary>
+            <param name="username">Nombre de usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetUserCreatedDate(System.String)">
+            <summary>
+            Obtiene la fecha de creación de un usuario nuevo
+            </summary>
+            <param name="username">Nombre de usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetAllUserActivity(System.String)">
+            <summary>
+            Retorna las actidades de un usuario en el portal
+            </summary>
+            <param name="userName">Username deseado</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetAllActivityDt">
+            <summary>
+            Retorna las actidades en el portal.
+            </summary>      
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Membership.UsuariosController.GetAllActivity">
+            <summary>
+            Retorna las actidades de un usuario en el portal
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.NomenclaturasRepository">
+            <summary>
+            Repositorio de Nomenclaturas
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.NomenclaturasRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.NomenclaturasRepository.FetchByCamaraId(System.String,System.String)">
+            <summary>
+            Obtiene todas las nomenclaturas en una cámara de comercio
+            </summary>
+            <param name="camaraId">ID de la Cámara</param>
+            <param name="tipo">Tipo de nomenclatura</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.CamarasRepository">
+            <summary>
+            Repositorio de Camaras
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CamarasRepository.#ctor">
+            <summary>
+            Constructor predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CamarasRepository.GetCamara(System.String)">
+            <summary>
+            Obtiene una camara a partir de su security group
+            </summary>
+            <param name="securityGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CamarasRepository.GetActivas">
+            <summary>
+            Obtiene todas las cámaras del sistema que están activas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.ReferenciasBancariasController">
+            <summary>
+            Controlador para Referencias Bancarias
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.ReferenciasBancariasController.FetchReferenciasBancariasByRegistroId(System.Int32,System.String)">
+            <summary>
+            Obtiene las referencias bancarias asociadas a un registro mercantil.
+            </summary>
+            <param name="registroId">Id del Registro Mercantil.</param>
+            <param name="camaraId">ID de la camara</param>
+            <returns>Retorna una collection que contiene todas las referencias bancarias de una empresa.</returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.Specification`1">
+            <summary>
+            Especificacion del objeto a construir dentro del repositorio
+            </summary>
+            <typeparam name="E">Tipo de entidad</typeparam>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.ISpecification`1">
+            <summary>
+            Interfaz que permite la definición de where's dinámicos
+            </summary>
+            <typeparam name="E">Tipo de entidad</typeparam>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.ISpecification`1.EvalPredicate">
+            <summary>
+            Expresion Select/Where
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.ISpecification`1.EvalFunc">
+            <summary>
+            Funcion para evaluar el Where
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.Specification`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="predicate">Predicado con el que se hace el where para el query de linq</param>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.Specification`1.EvalPredicate">
+            <summary>
+            Expresion dinámica por la cual se generarn queries de Linq
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.Specification`1.EvalFunc">
+            <summary>
+            Función anónima para llamadas al objeto especificado
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.Repository.NotaCreditoRepository">
+            <summary>
+            Repositorio de Notas de Çrédito.
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository">
+            <summary>
+            Repositorio para el manejo de sociedades en Oficina Virtual
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.GetNuevasSociedadesPendientes(System.String)">
+            <summary>
+            Retorna todas las solicitudes de constitución activas para un usuario
+            </summary>
+            <param name="username">Nombre del usuario</param>
+            <returns>Una colección IEnumerable de SociedadOfvDTO</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.GetNuevasSociedadesPendientesDt(System.String)">
+            <summary>
+            Retorna todas las solicitudes de constitución activas para un usuario
+            </summary>
+            <param name="username">Nombre del usuario</param>
+            <returns>Retorna un objeto DataTable con a partir de una colección IEnumerable de SociedadOfvDTO</returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO">
+            <summary>
+            Clase DTO que representa una sociedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.TransaccionID">
+            <summary>
+            ID de la transacción
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.CamaraID">
+            <summary>
+            ID de la cámara de comercio
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.RegistroID">
+            <summary>
+            Número de registro mercantil
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.SociedadID">
+            <summary>
+            ID de la sociedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.TipoSociedadID">
+            <summary>
+            ID del tipo de sociedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.NombreSocial">
+            <summary>
+            Nombre / razón social de la empresa o sociedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.TipoSociedad">
+            <summary>
+            Descripcion del tipo de sociedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.SiglasTipoSociedad">
+            <summary>
+            Siglas del tipo de sociedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.FechaSolicitud">
+            <summary>
+            Fecha de solicitud de la transacción
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.EstatusTransaccion">
+            <summary>
+            Estatus de las transacciones
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.SociedadesRepository.SociedadOfvDTO.EstatusId">
+             <summary>
+            Id del estatus 
+             </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.SociedadesController">
+            <summary>
+            Controlador para Sociedades (del lado del SRM)
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SociedadesController.FetchAllSociedadesByUser(System.String,CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Obtiene todas las sociedades de la vista vEmpresas para la coleccion de RNCs
+            </summary>
+            <param name="usuario">Usuario para el que se solicita la lista de empresas</param>
+            <param name="estado">Estado de la empresa (solicitada, activa, etc)</param>
+            <param name="pagInicio">Para los registros paginados, indica la pagina a buscar en la BD</param>
+            <param name="pagTamano">Para los registros paginados, indica el tamaño de las páginas</param>
+            <param name="fetchAll">Override para traer todos los rows, independientemente de la pagina o indice</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SociedadesController.FetchAllSociedadesByUserDt(System.String,CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado,System.Int32,System.Int32)">
+            <summary>
+            Obtiene todas las sociedades de la vista vEmpresas para la coleccion de RNCs
+            </summary>
+            <param name="usuario">Nombre del usuario</param>
+            <param name="estado">Estado de la sociedad</param>
+            <param name="pagInicio">Índice de la página en donde debe comenzar la búsqueda</param>
+            <param name="pagTamano">Cantidad de registros a retornar por página</param>
+            <returns>Retorna un DataTable que se puede filtrar en objetos de Telerik</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SociedadesController.CountSociedadesByUser(System.String,CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado,System.Int32,System.Int32)">
+            <summary>
+            Obtiene el count de todas las sociedades bajo el control de un usuario
+            </summary>
+            <param name="usuario">Usuario para el que se solicita la lista de empresas</param>
+            <param name="estado">Estado de la empresa (solicitada, activa, etc)</param>
+            <param name="pagInicio">Placeholder para que el signature concuerde con el del método FetchAllSociedadesByUser</param>
+            <param name="pagTamano">Placeholder para que el signature concuerde con el del método FetchAllSociedadesByUser</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SociedadesController.GetSociedadIdByRegistro(System.Int32,System.String)">
+            <summary>
+            Obtiene el ID de una sociedad a partir del numero de registro
+            </summary>
+            <param name="noRegistro">Número del registro mercantil</param>
+            <param name="camaraId">ID de la cámara</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SociedadesController.FetchByRegistroRncAndCamara(System.Int32,System.String,System.String)">
+            <summary>
+            Obtiene una sociedad verificando su RNC, No. de registro y Camara de Comercio
+            Este método es utilizado para la solicitud de inclusión de nuevas empresas bajo un usuario
+            </summary>
+            <param name="noRegistro">No. de registro mercantil</param>
+            <param name="rnc">RNC o Cédula (formateado)</param>
+            <param name="camaraId">ID de la camara</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SociedadesController.FetchByRegistroAndCamara(System.Int32,System.String)">
+            <summary>
+            Obtiene una sociedad a partir de su No. de registro y cámara de comercio
+            Este método es utilizado para la solicitud de inclusión de nuevas empresas bajo un usuario
+            </summary>
+            <param name="noRegistro">No. de Registro Mercantil</param>
+            <param name="camaraId">ID de la cámara donde se realiza la búsqueda</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SociedadesController.FetchByAccionistas(System.Int32,System.String,System.String)">
+            <summary>
+            Obtiene una sociedad verificando la cedula de los accionistas de una empresa y su registro
+            Este método es utilizado para la solicitud de inclusión de nuevas empresas bajo un usuario
+            </summary>
+            <param name="noRegistro">No. de registro mercantil</param>
+            <param name="documento">Cédula o pasasporte del accionista</param>
+            <param name="camaraId">ID de la Cámara</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SociedadesController.FetchBySociedadId(System.Int32,System.String)">
+            <summary>
+            Obtiene una Sociedad basado en el id de la sociedad según la cámara.
+            </summary>
+            <param name="sociedadId">Id de la Sociedad. Primary Key.</param>
+            <param name="camaraId">ID de la Cámara. Representa la localidad de la Cámara.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SociedadesController.FetchSociedadesRegistroBySociedadId(System.Int32,System.String)">
+            <summary>
+            Obtiene la informacion de una sociedad y los datos del registro mercantil mediante el numero de sociedad.
+            </summary>
+            <param name="sociedadId">Id de la Sociedad. Primary Key.</param>
+            <param name="camaraId">ID de la Cámara. Representa la localidad de la Cámara.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SociedadesController.FindRegistro(System.Int32,System.String)">
+            <summary>
+            Obtiene la informacion de una sociedad y los datos del registro mercantil mediante el numero de sociedad.
+            </summary>
+            <param name="registroId">Número del registro mercantil</param>
+            <param name="camaraId">ID de la Cámara. Representa la localidad de la Cámara.</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.RegistrosSociosController">
+            <summary>
+            Controlador de socios por registro
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.RegistrosSociosController.FetchAllSociosByRegistroId(System.Int32,System.String)">
+            <summary>
+            Obtiene todos los socios que pertenencen a un registro mercantil.
+            </summary>
+            <param name="registroId">Id del Registro Mercantil.</param>
+            <param name="camaraId">ID de la camara</param>
+            <returns>Retorna todas las socios de una empresa registrada.</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.RegistrosSociosController.FetchAllSociosByRegistroIdAndTipoRelacion(System.Int32,System.String,System.String)">
+            <summary>
+            Obtiene todos los socios que pertenencen a un registro mercantil Segun Tipo De Relacion
+            </summary>
+            <param name="registroId">Id del Registro Mercantil.</param>
+            <param name="camaraId">ID de la camara</param>
+            <param name="tipoRelacion">Identifica el tipo de socio.</param>
+            <returns>Retorna todas las socios de una empresa registrada.</returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.ModelosCertifacionesRepository">
+            <summary>
+            Repositorio de los modelos de certificaciones simples (generadas automáticamente)
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.ModelosCertifacionesRepository.#ctor(System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.ModelosCertifacionesRepository.#ctor">
+            <summary>
+            Constructor Sin Parametros
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.ModelosCertifacionesRepository.GetModelosCertificacion(System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean})">
+            <summary>
+            Obtiene todos los modelos de certificación para una cámara de comercio
+            </summary>
+            <param name="camaraId">ID de la Cámara</param>
+            <param name="tipoSociedadId">ID del tipo de sociedad</param>
+            <param name="esEmpresa">Especifica si las certificaciones son para una empresa o una persona</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.ModelosCertifacionesRepository.GetModelosCertificacion(System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Obtiene todos los modelos de certificación para una cámara de comercio
+            </summary>
+            <param name="camaraId">ID de la Cámara</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.PropiedadesModUIRepository">
+            <summary>
+             Repositorio de propiedades que se pueden acceder en los formularios de modificación
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.PropiedadesModUIRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.PropiedadesModUIRepository.GetControlesByServicioIDs(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Obtiene los nombres de los controles que no se bloequean en el form de modificacion
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.CargosRepository">
+            <summary>
+            Repositorio de Cargos
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CamaraComercio.DataAccess.EF.CamaraComun.CargosRepository.#ctor" -->
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CargosRepository.SelectVisible">
+            <summary>
+             Retorna todos los cargos 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.CargosRepository.SelectByTipoSociedadId(System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+             Retorna todos los cargos permitidos para un tipo de sociedadID
+            </summary>
+            <param name="tipoSociedadId">ID del tipo de sociedad</param>
+            <param name="puedeSerEmpresa">Indica si se deben incluir las empresas en el filtro de cargos</param>
+            <param name="esModificacion">Indica si se deben incluir los cargos solo permitidos en modificacion</param>
+            <returns></returns>
+             [DataObjectMethod(DataObjectMethodType.Select)]
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.SumarioRepository">
+            <summary>
+            Repositorio de la vista SumarioSociedades
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SumarioRepository.#ctor(System.String)">
+            <summary>
+            Constructor Predeterminado 
+            </summary>
+            <param name="camaraID">ID de la Cámara</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SumarioRepository.FindSociedades(System.String,CamaraComercio.DataAccess.EF.SRM.TipoBusquedaSociedades)">
+            <summary>
+            Realiza una búsqueda en la vista que unifica Sociedades y Registros
+            </summary>
+            <param name="qry"></param>
+            <param name="tipoBusqueda"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.SuscursalesController">
+            <summary>
+            Controlador para sucursales
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SuscursalesController.FetchSucursalesByRegistroId(System.Int32,System.String)">
+            <summary>
+            Obtiene todas las sucursales de una empresa.
+            </summary>
+            <param name="sociedadId">Id de la sociedad.</param>
+            <param name="camaraId">ID de la camara</param>
+            <returns>Retorna todas las sucursales de una empresa registrada.</returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.ReferenciasComercialesController">
+            <summary>
+            Controlador de referencias comerciales
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.ReferenciasComercialesController.FetchReferenciasComercialesByRegistroId(System.Int32,System.String)">
+            <summary>
+            Obtiene las referencias comerciales asociadas a un registro mercantil.
+            </summary>
+            <param name="registroId">Id del Registro Mercantil.</param>
+            <param name="camaraId">ID de la camara</param>
+            <returns>Retorna una collection que contiene todas las referencias comerciales de una empresa.</returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.TransaccionesRepository">
+            <summary>
+            Repositorio de Transacciones
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.TransaccionesRepository.#ctor(System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="camaraId">ID de la cámara</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.TransaccionesRepository.#ctor(CamaraComercio.DataAccess.EF.SRM.CamaraSRMEntities)">
+            <summary>
+             Sobrecarga para usar un contexto compartido
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.TransaccionesRepository.CountTransaccionActiva(System.Int32,System.Nullable{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Cuenta las transacciones activas para un servicio
+            </summary>
+            <param name="servicioId">ID Del servicio</param>
+            <param name="statusCerrados">Estados a obviar en el query</param>
+            <param name="numeroRegistro">Número del registro mercantil</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.TransaccionesRepository.CountTransaccionActiva(System.Collections.Generic.List{System.Int32},System.Nullable{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Cuenta las transacciones activas para un servicio
+            </summary>
+            <param name="servicioId">ID Del servicio</param>
+            <param name="statusCerrados">Estados a obviar en el query</param>
+            <param name="numeroRegistro">Número del registro mercantil</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.TransaccionesRepository.GetTransaccionesByNoRegistro(System.Int32)">
+            <summary>
+            Obtiene todas las transacciones asociadas a un número de registro mercantil
+            </summary>
+            <param name="noRegistro">Número del registro mercantil</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.TransaccionesRepository.ReciboDgiiExiste(System.String)">
+            <summary>
+            Revisa la base de datos de registros para verificar si un número de recibo
+            de la DGII ha sido utilizado anteriormente
+            </summary>
+            <param name="noRecibo">Número del registro mercantil</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.TransaccionesRepository.RegistroOnapiExiste(System.String)">
+            <summary>
+            Consulta la base de datos de registros para verificar si un número de registro
+            de nombre comercial existe previamente
+            </summary>
+            <param name="noRegistro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.TransaccionesRepository.AsignarTransaccion(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+             Función que asigna de forma automática una tansacción para que sea manejada por un analista en el SRM
+            </summary>
+             <remarks>
+             Esta función es llamada para enviar una transacción a un analista directamente desde la web con el formulario
+             de envío de datos/documentos con firma digital
+             </remarks>
+            <param name="transaccionId"></param>
+            <param name="roldId"></param>
+            <param name="lastUserId"></param>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.SubTransaccionesRepository">
+            <summary>
+            Repositorio de Sub-Transacciones (solo se usa así en el SRM)
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SubTransaccionesRepository.#ctor(System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="camaraId">ID de la cámara</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.SubTransaccionesRepository.#ctor(CamaraComercio.DataAccess.EF.SRM.CamaraSRMEntities)">
+            <summary>
+            Sobrecarga para usar un contexto compartido
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresasPorUsuarioController">
+            <summary>
+            Controlador para la vista EmpresasPorUsuario
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresasPorUsuarioController.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresasPorUsuarioController.FetchByUsername(System.String,CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresaPorUsuarioEstado,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Obtiene las empresas asociadas a un usuario del website
+            </summary>
+            <param name="usuario">Usuario para el cual se quiere la lista de empresas</param>
+            <param name="estado">Estado de la empresa</param>
+            <param name="pagInicio">Para los registros paginados, indica la pagina a buscar en la BD</param>
+            <param name="pagTamano">Para los registros paginados, indica el tamaño de las páginas</param>
+            <param name="fetchAll">Override para traer todos los registros independientemente de pagina o indice</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresasPorUsuarioController.FetchByUserNoRegistroCamara(System.String,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Retorna la solicitud de acceso de inclusion para la combinacion de No. de Registro, Usuario y Camara
+            </summary>
+            <param name="usuario">usuario</param>
+            <param name="noRegistro">No. de Registro Mercantil</param>
+            <param name="camaraID">Camara para la cual se realiza la búsqueda</param>
+            <param name="pagInicio">Para los registros paginados, indica la pagina a buscar en la BD</param>
+            <param name="pagTamano">Para los registros paginados, indica el tamaño de las páginas</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresasPorUsuarioController.CerrarAcceso(System.Int32,System.String)">
+            <summary>
+            Cierra el acceso de todos los usuarios activos para la empresa y cámara especificada
+            </summary>
+            <param name="noRegistro"></param>
+            <param name="camaraID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresasPorUsuarioController.FetchEmpresaOwnerName(System.Int32,System.String)">
+            <summary>
+            Obtiene el nombre del usuario actual con el control de una empresa
+            </summary>
+            <param name="noRegistro">No. de registro mercantil de la empresa</param>
+            <param name="camaraId">Camara a la que el registro pertenece</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresasPorUsuarioController.ExisteSolicitud(System.String,System.Int32,System.String)">
+            <summary>
+            Especifica si ya existe una solicitud para la combinación usuario/rnc en el sistema.
+            Se utiliza para prevenir que se solicite un acceso de usuario cuando ya exista uno en proceso
+            </summary>
+            <param name="usuario"></param>
+            <param name="noRegistro"></param>
+            <param name="camaraID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresasPorUsuarioController.ExisteUsuarioConEmpresa(System.Int32)">
+            <summary>
+            Verifica si ya existe un usuario que administre esta empresa en el sistema
+            </summary>
+            <param name="noRegistro">Numero de Registro Mercantil</param>
+            <returns>Retorna un string con el nombre del usuario. En caso de no existir retorna un string vacío</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.EmpresasPorUsuarioController.FetchAllByUserName(System.String)">
+            <summary>
+            Obtiene todas las empresas de un usuario a partir de su nombre de usuario
+            </summary>
+            <param name="userName">Nombre del usuario logueado</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionDocumentosController">
+            <summary>
+            Controlador de documentos por transacción
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionDocumentosController.DocumentosEnviados(System.Nullable{System.Int32},System.Int32,System.Int32)">
+            <summary>
+            Retorna el listado de los Documentos Enviados
+            </summary>
+            <param name="_transaccionID">ID de la Transaccion</param>
+            <param name="pagInicio">Parametro de paginación: página de inicio</param>
+            <param name="pagTamano">Parametro de paginación: tamaño de cada página</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionDocumentosController.savedocuments(System.Int32,System.String,System.DateTime,System.String,System.Guid,System.Byte[],System.String)">
+            <summary>
+            Guardado de un documento en la base de datos
+            </summary>
+            <param name="_solicitud">ID de la solicitud</param>
+            <param name="_descripcion">Descripcion del documento</param>
+            <param name="_fecha">Fecha de registro</param>
+            <param name="_idusuario">ID del usuario que realiza la solicitud</param>
+            <param name="_filename">Nombre del archivo</param>
+            <param name="archivo">Data binaria</param>
+            <param name="contentType">Tipo del contenido (extensión del archivo)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionDocumentosController.UpdateDocumentosEnviados(System.Int32,System.String,System.DateTime,System.String)">
+            <summary>
+            Actualiza los documentos registrados con una transaccion cuando son enviados
+            </summary>
+            <param name="TransaccionesDocumentosId"></param>
+            <param name="Descripcion"></param>
+            <param name="FechaEnvio"></param>
+            <param name="nombre"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionDocumentosController.UpdateDocumentosEnviados(System.Int32,System.String,System.Int32)">
+            <summary>
+            Actualiza los documentos registrados con una transaccion cuando son enviados
+            </summary>
+            <param name="TransaccionesDocumentosId"></param>
+            <param name="Descripcion"></param>
+            <param name="tipoDocumentoId"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionDocumentosController.DeleteDocumentosEnviados(System.Int32)">
+            <summary>
+            Borra los documentos asociados a una transaccion de la base de datos
+            </summary>
+            <remarks>
+            Documento marcado como deprecado/obsoleto. Nunca se borrarán documentos en la aplicación
+            </remarks>
+            <param name="TransaccionesDocumentosId"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionDocumentosController.GetDocumentosSeleccionados(System.Int32)">
+            <summary>
+            Borra los documentos asociados a una transaccion de la base de datos
+            </summary>
+            <remarks>
+            Documento marcado como deprecado/obsoleto. Nunca se borrarán documentos en la aplicación
+            </remarks>
+            <param name="transactionId"></param>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoServicioDetallesController">
+            <summary>
+            Controlador para el detalle de los tipos de servicios
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TipoServicioDetallesController.GetTipoServiciosByTipoSociedad(System.Int32)">
+            <summary>
+            Obtiene los Tipos de Servicios disponibles para un tipo de sociedad.
+            </summary>
+            <param name="tipoSociedadId">Id del tipo de sociedad.</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.DataExtensions">
+            <summary>
+            Metodos Extendidos para acceso y transformacion de datos
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.DataExtensions.ToDataTable``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Convierte una coleccion IEnumerable en un DataTable
+            </summary>
+            <typeparam name="T">Entidad IEnumerable a convertir</typeparam>
+            <param name="varlist">Listado de variables</param>
+            <returns>Datatable (non-typed)</returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.FacturasRepository">
+            <summary>
+            Repositorio de Facturas
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.FacturasRepository.GetFacturas(System.String,System.Int32,System.Int32)">
+            <summary>
+            Obtiene todas las facturas para un usuario específico
+            </summary>
+            <param name="userName">Nombre de usuario</param>
+            <param name="startRowIndex">Índice de inicio para el query</param>
+            <param name="maximumRows">Máximo número de registros a traer</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.FacturasRepository.GetCountFacturas(System.String)">
+            <summary>
+            Cuenta la cantidad de facturas registradas a nombre de un usuario
+            </summary>
+            <param name="userName">Nombre del usuario</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.FacturasSrmRepository">
+            <summary>
+            Repositorio de Facturas del SRM
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.TransaccionDetalleRepository">
+            <summary>
+            Repositorio de Detalle de Facturas para el SRM
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.SectoresRepository">
+            <summary>
+            Repositorio de Sectores
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.SectoresRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.SectoresRepository.FetchByCiudad(System.Int32)">
+            <summary>
+            Obtiene todos los sectores en una ciudad
+            </summary>
+            <param name="ciudadId">ID de la ciudad</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController">
+            <summary>
+            Controlador para Transacciones en la Oficina Virtual
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetTransaccionesHistoria(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Obtiene el histórico de transacciones de un usuario a partir de su ID
+            </summary>
+            <param name="userId"></param>
+            <param name="startRowIndex"></param>
+            <param name="maximumRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetTransaccionesHistoriaDt(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Obtiene el histórico de transacciones de un usuario a partir de su ID
+            </summary>
+            <param name="userId"></param>
+            <param name="startRowIndex"></param>
+            <param name="maximumRows"></param>
+            <returns>Retorna un DataTable</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetCountTransaccionesHistoria(System.Int32)">
+            <summary>
+            Retorna la cantidad de Transacciones Historicas asociadas a una Transacción.
+            </summary>
+            <param name="transaccionId">User Id del Usuario.</param>
+            <remarks>Se adicionan los parametros opcionales startRowIndex y maximumRows 
+            para cumplir con el signature de algunos object data sources</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetCountTransaccionesHistoria(System.Int32,System.Int32)">
+            <summary>
+            Retorna la cantidad de Transacciones Historicas asociadas a una Transacción.
+            </summary>
+            <param name="transaccionId">User Id del Usuario.</param>
+            <remarks>Se adicionan los parametros opcionales startRowIndex y maximumRows 
+            para cumplir con el signature de algunos object data sources</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetCountTransaccionesHistoria(System.String,System.Int32,System.Int32)">
+            <summary>
+            Retorna la cantidad de Transacciones de un usuario.
+            </summary>
+            <param name="userId">User Id del Usuario.</param>
+            <param name="startRowIndex"></param>
+            <param name="maximumRows"></param>
+            <remarks>Se adicionan los parametros opcionales startRowIndex y maximumRows 
+            para cumplir con el signature de algunos object data sources</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetTransaccionHistoria(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Obtiene todas las transacciones hijas realizadas a partir de una transacción.
+            </summary>
+            <param name="transaccionId">Id de la Transaccion Padre.</param>
+            <param name="startRowIndex"></param>
+            <param name="maximumRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetUltimoEstado(System.Int32)">
+            <summary>
+             Obtiene el ultimo estado de la transacción de acuerdo al TransaccionId en CamaraWebsite
+            </summary>
+            <param name="transaccionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetTransaccionById(System.Int32)">
+            <summary>
+            Método que retorna una transacción a partir de su ID en CamaraWebsite
+            </summary>
+            <param name="transaccionId">Transaccion Id de la solicitud.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetTransaccionBySrmId(System.Int32,System.String)">
+            <summary>
+            Metodo que retorna una transaccion a partir del ID en el que fue guardado en SRM
+            </summary>
+            <param name="transaccionSrmId">Número de transacción en el SRM</param>
+            <param name="camaraId">Cámara a la que pertenece la transacción</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetTransaccionesDocumentos(System.Int32)">
+            <summary>
+            Obtiene todos los documentos asociados a una transacción el SRM.
+            </summary>
+            <param name="SrmTransaccionId">Id de la transacción en el SRM.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.GetTransaccionesDocumentos(System.Int32,System.Int32)">
+            <summary>
+            Obtiene el documento para visualizar.
+            </summary>
+            <param name="id">Id del docuemnto registrado en el Website.</param>
+            <param name="srmTransaccionId">Id de la transacción en el SRM.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.UpdateTransacciones(System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Actualiza una transacción como cargada en el SRM
+            </summary>
+            <param name="transaccionId">ID de la transacción</param>
+            <param name="bLoadedSrm">Parametro de carga en el SRM (bool)</param>
+            <param name="srmTransaccionId">ID de la transacción en el SRM</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesController.UpdateTransaccionPagada(System.Int32)">
+            <summary>
+            Actualiza una transacción como pagada desde el SRM
+            </summary>
+            <param name="transaccionId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm">
+            <summary>
+            Representación de una transacción en el SRM, desde Oficina Virtual. Esta es una clase DTO
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.InitializeWithSrm(System.Int32,System.String)">
+            <summary>
+            Inicializa la transacción dentro del SRM
+            </summary>
+            <param name="transaccionId"></param>
+            <param name="camaraId"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.InitializeWithWebSite(System.Int32,System.String)">
+            <summary>
+            Inicializa la transacción para OFV
+            </summary>
+            <param name="transaccionId"></param>
+            <param name="camaraId"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.InitializeObjects">
+            <summary>
+            Inicialización del objeto
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.Transaccion">
+            <summary>
+            Listado de transacciones
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.Registro">
+            <summary>
+            Objeto de Registro Mercantil (tabla Registros)
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.Sociedad">
+            <summary>
+            Objeto de la sociedad (tabla Sociedades)
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.Socios">
+            <summary>
+            Listado de Socios en este registro
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.Productos">
+            <summary>
+            Listado de productos de la emrpesa
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.RegistroActividades">
+            <summary>
+            Listado de actividades comerciales de la emrpesa
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.ReferenciasComerciales">
+            <summary>
+            Listado de referencias comerciales de la empresa
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.ReferenciasBancarias">
+            <summary>
+            Listado de referencias bancarias de la empresa
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.Sucursales">
+            <summary>
+             Listado de sucursales
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.Factura">
+            <summary>
+             Factura relacionada a la transaccion
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionSrm.TransaccionDetalle">
+            <summary>
+             Transaccion Detalle relacionada a la transaccion (Factura Detalle)
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.PropiedadesPorSociedadRepository">
+            <summary>
+            Repositorio de Propiedades gráficas UI para una sociedad. 
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.PropiedadesPorSociedadRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.PropiedadesPorSociedadRepository.GetPropiedadesByTipo(System.Int32)">
+            <summary>
+            Obtiene todas las propiedades y reglas según el tipo de sociedad invocada
+            </summary>
+            <param name="tipoSociedadID">ID del tipo de sociedad</param>
+            <returns>Listado de objetos gráficos para renderizar el UI</returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.ServicioRepository">
+            <summary>
+            Repositorio de los servicios en CamaraComun
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioRepository.GetTotalServicio(System.Int32,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Boolean,System.Decimal,CamaraComercio.DataAccess.EF.OficinaVirtual.Transacciones)">
+            <summary>
+            Obtiene el total a pagar por un servicio
+            </summary>
+            <param name="servicioId">ID del servicio</param>
+            <param name="camaraId">ID de la Cámara</param>
+            <param name="CapitalAutorizado">Capital Autorizado de la empresa</param>
+            <param name="CapitalModificado">Capital Modificado de la empresa</param>
+            <param name="bExpress">Indica si la transaccion es express</param>
+            <param name="PorcentajeVip">Porcentaje a facturar para transacción express</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioRepository.GetServicios(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Obtiene todos los servicios para un tipo de sociedad y tipo de servicio específicos
+            </summary>
+            <param name="tipoServicioId">ID del tipo de servicio</param>
+            <param name="tipoSociedadId">ID del tipo de sociedad</param>
+            <param name="sinCapital">Indica si se deben traer servicios par empresas sin capital</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioRepository.GetServiciosCertificacionAvanzados(System.Int32,System.Int32,System.String,System.Boolean,System.Int32)">
+            <summary>
+            Obtiene los servicios de certificación avanzados
+            </summary>
+            <param name="tipoServicioId">ID del tipo de servicio</param>
+            <param name="tipoSociedadId">ID del tipo de sociedad</param>
+            <param name="camaraId">ID de la Cámara</param>
+            <param name="esEmpresa">Indica si es para personas (accionistas) o emrpesa</param>
+            <param name="servicioFlowIdNoRequiereAnalisis">ID indicador de certificados avanzados</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioRepository.GetServiciosCertificacionAvanzados(System.Int32,System.String,System.Boolean,System.Int32)">
+            <summary>
+            Obtiene los servicios de certificación avanzados Para Personas
+            </summary>
+            <param name="tipoServicioId">ID del tipo de servicio</param>
+            <param name="camaraId">ID de la Cámara</param>
+            <param name="esEmpresa">Indica si es para personas (accionistas) o emrpesa</param>
+            <param name="servicioFlowIdNoRequiereAnalisis">ID indicador de certificados avanzados</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.ServicioRepository.GetServicio(System.Int32)">
+            <summary>
+            Retorna un servicio a partir de su ID
+            </summary>
+            <param name="servicioId">ID del servicio</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.ViewRegistrosProductosController">
+            <summary>
+            Controlador para la vista de Productos por Registro
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.ViewRegistrosProductosController.FetchbyRegistroId(System.Int32,System.String)">
+            <summary>
+            Obtiene los Productos Registrados para un registro Mercantil.
+            </summary>
+            <param name="registroId">Id del Registro Mercantil.</param>
+            <param name="camaraId">ID de la camara</param>
+            <returns>Retorna todas las productos de una empresa registrada.</returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.FacturaRepository">
+            <summary>
+            Repositorio para facturas en la Oficina Virtual
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.FacturaRepository.#ctor">
+            <summary>
+             Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.FacturaRepository.GetHistoricoFacturas(System.String,System.Int32,System.Int32)">
+            <summary>
+            Retorna el histórico de facturas para un usuario
+            </summary>
+            <param name="userName">Nombre de usuario</param>
+            <param name="startRowIndex">índice de inicio</param>
+            <param name="maximumRows">Cantidad de registros a retornar</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.FacturaRepository.GetCountHistoricoFacturas(System.String)">
+            <summary>
+            Cuenta la cantidad de facturas asignadas a un usuario (asiste con la paginación)
+            </summary>
+            <param name="userName">Nombre de usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.TipoSociedadServicioCargoRepository.GetValidations(System.Int32,System.Collections.Generic.IEnumerable{System.Nullable{System.Int32}})">
+            <summary>
+            Obtiene las validaciones de cargos para un servicio (de modificación) a partir del tipo de sociedad y servicios escogidos
+            </summary>
+            <param name="tipoSociedadId">Tipo de sociedad para la cual se realiza una modificacion</param>
+            <param name="servicioIds">Servicios solicitados</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.TiposNcfRepository">
+            <summary>
+            Repositorio para tipos de NCF
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.TiposNcfRepository.#ctor(System.String)">
+            <summary>
+            Constructor que acepta CamaraID
+            </summary>
+            <param name="camaraId"></param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.TiposNcfRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.TiposNcfRepository.GetAll">
+            <summary>
+            Obtiene todos los tipos de NCF disponibles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository">
+            <summary>
+            Repositorio de transacciones para Oficina Virtual
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository.#ctor">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository.CountTransaccionActiva(System.Int32,System.Nullable{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Obtiene el total de transacciones activas para la combinacion de Servicio/No. Mercantil
+            </summary>
+            <param name="servicioId"></param>
+            <param name="numeroMercantil"></param>
+            <param name="estatusCerrados"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository.CountTransaccionActiva(System.Collections.Generic.List{System.Int32},System.Nullable{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Obtiene el total de transacciones activas para la combinacion de Servicio/No. Mercantil
+            </summary>
+            <param name="servicioId"></param>
+            <param name="numeroMercantil"></param>
+            <param name="estatusCerrados"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository.GetTransaccionActiva(System.Collections.Generic.List{System.Int32},System.Nullable{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Obtiene una transaccion activa para la combinacion de Servicio/No. Mercantil
+            </summary>
+            <param name="servicioId"></param>
+            <param name="numeroMercantil"></param>
+            <param name="estatusCerrados"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository.GetTransaccionActiva(System.Int32,System.Nullable{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Obtiene el ID de la transaccion activa para la combinacion de Servicio/No. Mercantil
+            </summary>
+            <param name="servicioId"></param>
+            <param name="numeroMercantil"></param>
+            <param name="estatusCerrados"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository.GetTransaccion(System.Int32,System.String)">
+            <summary>
+            Obtiene una Transaccion asociada a un Usuario.
+            </summary>
+            <param name="transactionId">Id de la Transaccion.</param>
+            <param name="userName">Usuario que realizó la operación</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository.GetCertificacionTransaccion(System.Int32,System.String)">
+            <summary>
+            Obtiene una Transaccion asociada a un Usuario.
+            </summary>
+            <param name="transactionId">Id de la Transaccion.</param>
+            <param name="userName">Usuario que realizó la operación</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository.GetCostoTransaccionCabecera(CamaraComercio.DataAccess.EF.OficinaVirtual.Transacciones,System.Decimal)">
+            <summary>
+            Calcula el costo de la Transaccion Padre.
+            </summary>
+            <param name="trans"></param>
+            <param name="PorcentajeVIP"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.TransaccionesRepository.GetCostoTransaccionSub(CamaraComercio.DataAccess.EF.OficinaVirtual.Transacciones,System.Decimal,System.Boolean,System.Boolean)">
+            <summary>
+            Calcula el costo de las subtransacciones.
+            </summary>
+            <param name="trans">Objeto de transaccion</param>
+            <param name="PorcentajeVIP">Incluir costos para porcentaje VIP</param>
+            <param name="considerarMod">Indica si debe considerar las modificaciones como cobrables</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.TipoDocumentoRepository">
+            <summary>
+            Repositorio para el tipo de documentos
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.TipoDocumentoRepository.SelectAll">
+            <summary>
+            Obtiene todos los documentos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.TipoDocumentoRepository.SelectAllByTransId(System.Int32)">
+            <summary>
+            Obtiene todos los documentos por transacción
+            </summary>
+            <param name="TransaccionId">ID de la transacción</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.TipoDocumentoRepository.SelectByID(System.Int32)">
+            <summary>
+            Obtiene todos los documentos por transacción
+            </summary>
+            <param name="TransaccionId">ID de la transacción</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.ActividadDTO">
+            <summary>
+            Representacion de la actividad
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.PersonaEnSociedadRepository">
+            <summary>
+            Repositorio para la vista ViewPersonasEnSociedades. Usado para búsquedas
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.PersonaEnSociedadRepository.#ctor(System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="camaraID">ID de la Cámara</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.PersonaEnSociedadRepository.ListEmpresasAccionistas(System.Int32)">
+            <summary>
+            Retorna todas las empresas para la cual el socioID pasado es accionista
+            </summary>
+            <param name="socioId">ID Del Socio</param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.PersonaEnSociedadRepository.GetTiposAccionistaAsString(System.Collections.Generic.IEnumerable{CamaraComercio.DataAccess.EF.SRM.ViewPersonasEnSociedades},System.Int32,System.Int32)">
+            <summary>
+            Obtiene todos los tipos de accionistas para una persona en forma de strings
+            </summary>
+            <param name="col">Colección de registros de un usuario como accionista</param>
+            <param name="socioId">Id del socio</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDtoRepository">
+            <summary>
+            Repositorio del tipo PersonaSociedadDto que facilita el despliegue en el UI
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDtoRepository.#ctor(System.String)">
+            <summary>
+            Constructor Predeterminado
+            </summary>
+            <param name="camaraID">ID de la Cámara</param>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDtoRepository.ListEmpresasAccionistas(System.Int32)">
+            <summary>
+            Lista las empresas en las cuales una persona es accionista
+            </summary>
+            <param name="socioId">ID de la persona para la que se realiza la búsqueda</param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDto">
+            <summary>
+            Clase que facilita el despliegue de informaciones de una persona a nivel de UI (POCO)
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDto.RegistroId">
+            <summary>
+            ID del Registro
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDto.NumeroRegistro">
+            <summary>
+            Numero de registro mercantil
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDto.SocioId">
+            <summary>
+            ID de la persona
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDto.TipoSociedadId">
+            <summary>
+            Tipo de sociedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDto.FechaConstitucion">
+            <summary>
+            Fecha de constitución de la sociedad/empresa
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDto.TipoSocio">
+            <summary>
+            ID del tipo de socio
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDto.RegistroRelacion">
+            <summary>
+            Descripción del ID del tipo de socio
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDto.NombreSocial">
+            <summary>
+            Nombre social de la empresa/sociedad
+            </summary>
+        </member>
+        <member name="P:CamaraComercio.DataAccess.EF.SRM.PersonaSociedadDto.Rnc">
+            <summary>
+            Número de RNC para la empresa
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.SRM.TiposRegistroPorPersona">
+            <summary>
+            Clase que define el tipo de registro que una persona puede tener como accionista/socio de una empresa
+            </summary>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.PredicateBuilder">
+            <summary>
+            Constructor de predicados para where's dinámicos
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.PredicateBuilder.True``1">
+            <summary>
+             Expresión dinámica que siempre retorna verdadero
+            </summary>
+             <remarks>
+             Se utiliza para iniciar la cadena de evaluación del Where
+             </remarks>
+            <typeparam name="T"></typeparam>
+            <returns>True</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.PredicateBuilder.False``1">
+            <summary>
+             Expresión dinámica que siempre retorna falso
+            </summary>
+             <remarks>
+             Se utiliza para iniciar la cadena de evaluación del Where
+             </remarks>
+            <typeparam name="T"></typeparam>
+            <returns>False</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.PredicateBuilder.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Expresión dinámica que concatena una evaluación disyuntiva a un Where
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="expr1"></param>
+            <param name="expr2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.PredicateBuilder.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Expresión dinámica que concatena una evaluación conjuntiva a un Where
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="expr1"></param>
+            <param name="expr2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.OficinaVirtual.SucursalRepository">
+            <summary>
+            Repositorio para el manejo de sucursales
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.SucursalRepository.GetSucursalesByTransaccionID(System.Int32)">
+            <summary>
+             Obtiene todas las sucursales por ID de la transaccion
+            </summary>
+            <param name="transId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.OficinaVirtual.SucursalRepository.GetSucursalesByNumeroRegistro(System.Int32,System.String)">
+            <summary>
+             Retorna la colección de sucursales asociadas a un registro mercantil
+            </summary>
+            <param name="numeroRegistro">Número de registro mercantil</param>
+            <param name="camaraID">ID de la cámara</param>
+            <returns>Colección IEnumerable de Sucursales</returns>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.TipoSociedadSocioRepository.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CamaraComercio.DataAccess.EF.CamaraComun.TipoSociedadSocioRepository.#ctor(CamaraComercio.DataAccess.EF.CamaraComun.CamaraComunEntities)">
+            <summary>
+            
+            </summary>
+            <param name="dbComun"></param>
+        </member>
+        <member name="T:CamaraComercio.DataAccess.EF.CamaraComun.TipoMonedaRepository">
+            <summary>
+            Repositorio para el tipo de monedas
+            </summary>
+        </member>
+    </members>
+</doc>

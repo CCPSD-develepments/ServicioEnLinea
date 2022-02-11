@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://DGII.GOV.DO/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://DGII.GOV.DO/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://DGII.GOV.DO/">
+      <s:element name="GeneraAutorizacionPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pRnc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pMontoCapital" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneraAutorizacionPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeneraAutorizacionPagoResult" type="tns:rGeneraAutorizacionPago" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="rGeneraAutorizacionPago">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:rTemplate">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="NumeroAutorizacion" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoAutorizacionPago" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaLimiteAutorizacion" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaPagoAutorizacion" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="Pagada" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="rTemplate" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoMensaje" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescripcionMensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RNC_Cedula" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreRazonSocial" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CalcularAutorizacionPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pMontoCapital" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularAutorizacionPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalcularAutorizacionPagoResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaAutorizacionPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNumeroAutorizacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaAutorizacionPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaAutorizacionPagoResult" type="tns:rGeneraAutorizacionPago" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GeneraAutorizacionPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:GeneraAutorizacionPago" />
+  </wsdl:message>
+  <wsdl:message name="GeneraAutorizacionPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:GeneraAutorizacionPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularAutorizacionPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularAutorizacionPago" />
+  </wsdl:message>
+  <wsdl:message name="CalcularAutorizacionPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularAutorizacionPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaAutorizacionPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaAutorizacionPago" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaAutorizacionPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaAutorizacionPagoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsDGIISoap">
+    <wsdl:operation name="GeneraAutorizacionPago">
+      <wsdl:input message="tns:GeneraAutorizacionPagoSoapIn" />
+      <wsdl:output message="tns:GeneraAutorizacionPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularAutorizacionPago">
+      <wsdl:input message="tns:CalcularAutorizacionPagoSoapIn" />
+      <wsdl:output message="tns:CalcularAutorizacionPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaAutorizacionPago">
+      <wsdl:input message="tns:ConsultaAutorizacionPagoSoapIn" />
+      <wsdl:output message="tns:ConsultaAutorizacionPagoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsDGIISoap" type="tns:wsDGIISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GeneraAutorizacionPago">
+      <soap:operation soapAction="http://DGII.GOV.DO/GeneraAutorizacionPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularAutorizacionPago">
+      <soap:operation soapAction="http://DGII.GOV.DO/CalcularAutorizacionPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaAutorizacionPago">
+      <soap:operation soapAction="http://DGII.GOV.DO/ConsultaAutorizacionPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsDGIISoap12" type="tns:wsDGIISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GeneraAutorizacionPago">
+      <soap12:operation soapAction="http://DGII.GOV.DO/GeneraAutorizacionPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularAutorizacionPago">
+      <soap12:operation soapAction="http://DGII.GOV.DO/CalcularAutorizacionPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaAutorizacionPago">
+      <soap12:operation soapAction="http://DGII.GOV.DO/ConsultaAutorizacionPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsDGII">
+    <wsdl:port name="wsDGIISoap" binding="tns:wsDGIISoap">
+      <soap:address location="http://www.dgii.gov.do/wsCamaraComercioTest/WSdgii.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsDGIISoap12" binding="tns:wsDGIISoap12">
+      <soap12:address location="http://www.dgii.gov.do/wsCamaraComercioTest/WSdgii.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

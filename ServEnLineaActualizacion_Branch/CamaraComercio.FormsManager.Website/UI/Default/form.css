@@ -1,0 +1,65 @@
+﻿body *
+{
+	font-family: Calibri;
+	font-size: 10pt;
+}
+.DF_table
+{
+	padding: 5px;
+	width:100%;
+}
+
+.DF_nestedTable
+{
+border: solid 1px #e8e7e7;
+}
+
+.DF_multiInstance_add
+{
+border: solid 1px #bdbdbd;
+}
+
+.DF_instructions
+{
+	vertical-align:top;
+	margin:5px;
+	background-color:#ffffe3;
+	border: dashed 2px #dad9d9;	
+	width:100px;
+	height:95%;
+	padding:5px;
+}
+	
+.DF_title
+{
+	background-color: #f2f2f2;
+}
+.DF_title_text
+{
+	font-size: 14;
+	text-decoration: underline;
+}
+.DF_instructions_text
+{
+    color: Gray;
+}
+.DF_label
+{
+	vertical-align: top;
+	font-weight: bold;
+	background-color: whitesmoke;
+	padding: 5px;
+}
+.DF_input
+{
+	vertical-align: top;
+	background-color: white;
+	padding: 5px;
+}
+.DF_NestedForm_Label
+{
+	vertical-align: top;
+	font-weight: bold;
+	background-color: whitesmoke;
+	padding-top: 12px;
+}

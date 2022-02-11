@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GenerarNotaCreditoSRM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transaccionId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="camaraId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerarNotaCreditoSRMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GenerarNotaCreditoSRMResult" type="tns:TipoRespuestaNotaCredito" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="TipoRespuestaNotaCredito">
+        <s:restriction base="s:string">
+          <s:enumeration value="FacturaMontoCero" />
+          <s:enumeration value="ErrorWebService" />
+          <s:enumeration value="NotaCreditoCreada" />
+          <s:enumeration value="EstadoInicial" />
+          <s:enumeration value="NoPuedeGenerarGreditos" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AgregaPagosConNotasVigentesSRM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transaccionId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="camaraId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregaPagosConNotasVigentesSRMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgregaPagosConNotasVigentesSRMResult" type="tns:FormasPagoViewModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FormasPagoViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BancoDescripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BancoId" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConfirmacionPagoTarjeta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Divisa" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FacturaId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaCuadre" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormaPago" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormaPagoDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nota" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoTarjeta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroNotaCredito" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tasa" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorDevuelto" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorEntregado" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotaCreditoValida" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaCreacionNota" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Voucher" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidacionVigenciaNotaCreditoSRM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transaccionId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="camaraId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidacionVigenciaNotaCreditoSRMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidacionVigenciaNotaCreditoSRMResult" type="tns:VigenciaNotaCreditoViewModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VigenciaNotaCreditoViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NotaCreditoValida" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaCreacionNota" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiasTranscurridos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdNotaCredito" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GenerarNotaCreditoSRMSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerarNotaCreditoSRM" />
+  </wsdl:message>
+  <wsdl:message name="GenerarNotaCreditoSRMSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerarNotaCreditoSRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregaPagosConNotasVigentesSRMSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregaPagosConNotasVigentesSRM" />
+  </wsdl:message>
+  <wsdl:message name="AgregaPagosConNotasVigentesSRMSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregaPagosConNotasVigentesSRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidacionVigenciaNotaCreditoSRMSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidacionVigenciaNotaCreditoSRM" />
+  </wsdl:message>
+  <wsdl:message name="ValidacionVigenciaNotaCreditoSRMSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidacionVigenciaNotaCreditoSRMResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FacturacionSRMSoap">
+    <wsdl:operation name="GenerarNotaCreditoSRM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Genera una nota de credito a partir de un número de transacción, un nombre de usuario y el ID de la camara</wsdl:documentation>
+      <wsdl:input message="tns:GenerarNotaCreditoSRMSoapIn" />
+      <wsdl:output message="tns:GenerarNotaCreditoSRMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaPagosConNotasVigentesSRM">
+      <wsdl:input message="tns:AgregaPagosConNotasVigentesSRMSoapIn" />
+      <wsdl:output message="tns:AgregaPagosConNotasVigentesSRMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionVigenciaNotaCreditoSRM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validar la nota de credito para servicio en linea</wsdl:documentation>
+      <wsdl:input message="tns:ValidacionVigenciaNotaCreditoSRMSoapIn" />
+      <wsdl:output message="tns:ValidacionVigenciaNotaCreditoSRMSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FacturacionSRMSoap" type="tns:FacturacionSRMSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GenerarNotaCreditoSRM">
+      <soap:operation soapAction="http://tempuri.org/GenerarNotaCreditoSRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaPagosConNotasVigentesSRM">
+      <soap:operation soapAction="http://tempuri.org/AgregaPagosConNotasVigentesSRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionVigenciaNotaCreditoSRM">
+      <soap:operation soapAction="http://tempuri.org/ValidacionVigenciaNotaCreditoSRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FacturacionSRMSoap12" type="tns:FacturacionSRMSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GenerarNotaCreditoSRM">
+      <soap12:operation soapAction="http://tempuri.org/GenerarNotaCreditoSRM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaPagosConNotasVigentesSRM">
+      <soap12:operation soapAction="http://tempuri.org/AgregaPagosConNotasVigentesSRM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionVigenciaNotaCreditoSRM">
+      <soap12:operation soapAction="http://tempuri.org/ValidacionVigenciaNotaCreditoSRM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FacturacionSRM">
+    <wsdl:port name="FacturacionSRMSoap" binding="tns:FacturacionSRMSoap">
+      <soap:address location="http://10.10.30.21:900/Facturacion/FacturacionSRM.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FacturacionSRMSoap12" binding="tns:FacturacionSRMSoap12">
+      <soap12:address location="http://10.10.30.21:900/Facturacion/FacturacionSRM.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

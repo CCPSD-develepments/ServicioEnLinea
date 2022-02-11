@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CamaraComunModelStoreContainer" CdmEntityContainer="CamaraComunEntities">
+    <EntitySetMapping Name="Bancos">
+      <EntityTypeMapping TypeName="CamaraComunModel.Bancos">
+        <MappingFragment StoreEntitySet="Bancos">
+          <ScalarProperty Name="BancoId" ColumnName="BancoId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cargos">
+      <EntityTypeMapping TypeName="CamaraComunModel.Cargos">
+        <MappingFragment StoreEntitySet="Cargos">
+          <ScalarProperty Name="SiteVisible" ColumnName="SiteVisible" />
+          <ScalarProperty Name="CargoId" ColumnName="CargoId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ciudades">
+      <EntityTypeMapping TypeName="CamaraComunModel.Ciudades">
+        <MappingFragment StoreEntitySet="Ciudades">
+          <ScalarProperty Name="CiudadId" ColumnName="CiudadId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoRegistro">
+      <EntityTypeMapping TypeName="CamaraComunModel.EstadoRegistro">
+        <MappingFragment StoreEntitySet="EstadoRegistro">
+          <ScalarProperty Name="EstadoRegistroId" ColumnName="EstadoRegistroId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paises">
+      <EntityTypeMapping TypeName="CamaraComunModel.Paises">
+        <MappingFragment StoreEntitySet="Paises">
+          <ScalarProperty Name="PaisIdDGII" ColumnName="PaisIdDGII" />
+          <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="Nacionalidad" ColumnName="Nacionalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesiones">
+      <EntityTypeMapping TypeName="CamaraComunModel.Profesiones">
+        <MappingFragment StoreEntitySet="Profesiones">
+          <ScalarProperty Name="ProfesionId" ColumnName="ProfesionId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sectores">
+      <EntityTypeMapping TypeName="CamaraComunModel.Sectores">
+        <MappingFragment StoreEntitySet="Sectores">
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="CiudadId" ColumnName="CiudadId" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioDocumentoRequerido">
+      <EntityTypeMapping TypeName="CamaraComunModel.ServicioDocumentoRequerido">
+        <MappingFragment StoreEntitySet="ServicioDocumentoRequerido">
+          <ScalarProperty Name="SiteVisible" ColumnName="SiteVisible" />
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="ServicioId" ColumnName="ServicioId" />
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="Requerido" ColumnName="Requerido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioDocumentoRequeridoComentario">
+      <EntityTypeMapping TypeName="CamaraComunModel.ServicioDocumentoRequeridoComentario">
+        <MappingFragment StoreEntitySet="ServicioDocumentoRequeridoComentario">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServicioId" ColumnName="ServicioId" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="ComentarioWeb" ColumnName="ComentarioWeb" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDocumento">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoDocumento">
+        <MappingFragment StoreEntitySet="TipoDocumento">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="SiteVisible" ColumnName="SiteVisible" />
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Registrable" ColumnName="Registrable" />
+          <ScalarProperty Name="CostoOriginal" ColumnName="CostoOriginal" />
+          <ScalarProperty Name="CostoCopia" ColumnName="CostoCopia" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="DocumentoOnBaseId" ColumnName="DocumentoOnBaseId" />
+          <ScalarProperty Name="DocumentoOnBaseDesc" ColumnName="DocumentoOnBaseDesc" />
+          <ScalarProperty Name="DescripcionWeb" ColumnName="DescripcionWeb" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoMoneda">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoMoneda">
+        <MappingFragment StoreEntitySet="TipoMoneda">
+          <ScalarProperty Name="TipoMonedaId" ColumnName="TipoMonedaId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Abreviatura" ColumnName="Abreviatura" />
+          <ScalarProperty Name="AbreviaturaAPI" ColumnName="AbreviaturaAPI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoRegla">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoRegla">
+        <MappingFragment StoreEntitySet="TipoRegla">
+          <ScalarProperty Name="TipoReglaId" ColumnName="TipoReglaId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoReglaDocumento">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoReglaDocumento">
+        <MappingFragment StoreEntitySet="TipoReglaDocumento">
+          <ScalarProperty Name="TipoReglaDocumentoId" ColumnName="TipoReglaDocumentoId" />
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="TipoReglaId" ColumnName="TipoReglaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposEnteRegulado">
+      <EntityTypeMapping TypeName="CamaraComunModel.TiposEnteRegulado">
+        <MappingFragment StoreEntitySet="TiposEnteRegulado">
+          <ScalarProperty Name="TipoEnteReguladoId" ColumnName="TipoEnteReguladoId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoServicio">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoServicio">
+        <MappingFragment StoreEntitySet="TipoServicio">
+          <ScalarProperty Name="TipoServicioId" ColumnName="TipoServicioId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="DescripcionWeb" ColumnName="DescripcionWeb" />
+          <ScalarProperty Name="Sufijo" ColumnName="Sufijo" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="TipoIdentificador" ColumnName="TipoIdentificador" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="SiteVisible" ColumnName="SiteVisible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSociedadSufijo">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoSociedadSufijo">
+        <MappingFragment StoreEntitySet="TipoSociedadSufijo">
+          <ScalarProperty Name="TipoSociedadSufijoId" ColumnName="TipoSociedadSufijoId" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="Sufijo" ColumnName="Sufijo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewServicioDocumentoRequerido">
+      <EntityTypeMapping TypeName="CamaraComunModel.ViewServicioDocumentoRequerido">
+        <MappingFragment StoreEntitySet="cvw_ServicioDocumentoRequerido">
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="ServicioId" ColumnName="ServicioId" />
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="Requerido" ColumnName="Requerido" />
+          <ScalarProperty Name="DocumentoDescripcion" ColumnName="DocumentoDescripcion" />
+          <ScalarProperty Name="TipoSociedadDescripcion" ColumnName="TipoSociedadDescripcion" />
+          <ScalarProperty Name="Registrable" ColumnName="Registrable" />
+          <ScalarProperty Name="CostoOriginal" ColumnName="CostoOriginal" />
+          <ScalarProperty Name="CostoCopia" ColumnName="CostoCopia" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewTipoDocumentoReglas">
+      <EntityTypeMapping TypeName="CamaraComunModel.ViewTipoDocumentoRegla">
+        <MappingFragment StoreEntitySet="cvw_TipoDocumentoRegla">
+          <ScalarProperty Name="TipoReglaDocumentoId" ColumnName="TipoReglaDocumentoId" />
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="TipoReglaId" ColumnName="TipoReglaId" />
+          <ScalarProperty Name="Regla" ColumnName="Regla" />
+          <ScalarProperty Name="Validado" ColumnName="Validado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewCiudades">
+      <EntityTypeMapping TypeName="CamaraComunModel.ViewCiudades">
+        <MappingFragment StoreEntitySet="cvw_Ciudades">
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="CiudadId" ColumnName="CiudadId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nomenclaturas">
+      <EntityTypeMapping TypeName="CamaraComunModel.Nomenclaturas">
+        <MappingFragment StoreEntitySet="Nomenclaturas">
+          <ScalarProperty Name="Formato" ColumnName="Formato" />
+          <ScalarProperty Name="Separador3" ColumnName="Separador3" />
+          <ScalarProperty Name="Separador2" ColumnName="Separador2" />
+          <ScalarProperty Name="Separador1" ColumnName="Separador1" />
+          <ScalarProperty Name="Sufijo" ColumnName="Sufijo" />
+          <ScalarProperty Name="Prefijo" ColumnName="Prefijo" />
+          <ScalarProperty Name="TipoNomenclatura" ColumnName="TipoNomenclatura" />
+          <ScalarProperty Name="CamaraId" ColumnName="CamaraId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposNcf">
+      <EntityTypeMapping TypeName="CamaraComunModel.TiposNcf">
+        <MappingFragment StoreEntitySet="TiposNcf">
+          <ScalarProperty Name="SiteVisible" ColumnName="SiteVisible" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoNcfId" ColumnName="TipoNcfId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiciosEnCamara">
+      <EntityTypeMapping TypeName="CamaraComunModel.ServiciosEnCamara">
+        <MappingFragment StoreEntitySet="ServiciosEnCamara">
+          <ScalarProperty Name="CamaraID" ColumnName="CamaraID" />
+          <ScalarProperty Name="ServicioID" ColumnName="ServicioID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSociedadSocio">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoSociedadSocio">
+        <MappingFragment StoreEntitySet="TipoSociedadSocio">
+          <ScalarProperty Name="GrupoValidacion" ColumnName="GrupoValidacion" />
+          <ScalarProperty Name="RecibeAcciones" ColumnName="RecibeAcciones" />
+          <ScalarProperty Name="CantMaxSocio" ColumnName="CantMaxSocio" />
+          <ScalarProperty Name="CantMinSocio" ColumnName="CantMinSocio" />
+          <ScalarProperty Name="RecibeCargo" ColumnName="RecibeCargo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="TipoSocioId" ColumnName="TipoSocioId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSocio">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoSocio">
+        <MappingFragment StoreEntitySet="TipoSocio">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoSocioId" ColumnName="TipoSocioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposEntidades">
+      <EntityTypeMapping TypeName="CamaraComunModel.TiposEntidades">
+        <MappingFragment StoreEntitySet="TiposEntidades">
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoEntidadId" ColumnName="TipoEntidadId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Actividades">
+      <EntityTypeMapping TypeName="CamaraComunModel.Actividades">
+        <MappingFragment StoreEntitySet="Actividades">
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="TieneHijos" ColumnName="TieneHijos" />
+          <ScalarProperty Name="RecibeAccion" ColumnName="RecibeAccion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="DescripconLarga" ColumnName="DescripconLarga" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="PadreID" ColumnName="PadreID" />
+          <ScalarProperty Name="ActividadID" ColumnName="ActividadID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSociedadCargos">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoSociedadCargos">
+        <MappingFragment StoreEntitySet="TipoSociedadCargos">
+          <ScalarProperty Name="CargoModificacion" ColumnName="CargoModificacion" />
+          <ScalarProperty Name="PuedeSerEmpresa" ColumnName="PuedeSerEmpresa" />
+          <ScalarProperty Name="CargoId" ColumnName="CargoId" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+          <ScalarProperty Name="TipoSociedadCargoId" ColumnName="TipoSociedadCargoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSociedad">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoSociedad">
+        <MappingFragment StoreEntitySet="TipoSociedad">
+          <ScalarProperty Name="ExpirationDays" ColumnName="ExpirationDays" />
+          <ScalarProperty Name="DescripcionExtendida" ColumnName="DescripcionExtendida" />
+          <ScalarProperty Name="CapitalAutorizado" ColumnName="CapitalAutorizado" />
+          <ScalarProperty Name="SiteVisible" ColumnName="SiteVisible" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Etiqueta" ColumnName="Etiqueta" />
+          <ScalarProperty Name="TipoIdentificador" ColumnName="TipoIdentificador" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoSociedadId" ColumnName="TipoSociedadId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Camaras">
+      <EntityTypeMapping TypeName="CamaraComunModel.Camaras">
+        <MappingFragment StoreEntitySet="Camaras">
+          <ScalarProperty Name="PuestoEncargado" ColumnName="PuestoEncargado" />
+          <ScalarProperty Name="NombreEncargado" ColumnName="NombreEncargado" />
+          <ScalarProperty Name="BraintreeMerchant" ColumnName="BraintreeMerchant" />
+          <ScalarProperty Name="VisanetMerchant" ColumnName="VisanetMerchant" />
+          <ScalarProperty Name="PuedeVenderOnline" ColumnName="PuedeVenderOnline" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="SignLocation" ColumnName="SignLocation" />
+          <ScalarProperty Name="SignContact" ColumnName="SignContact" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PathCertificado" ColumnName="PathCertificado" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="SecurityGroup" ColumnName="SecurityGroup" />
+          <ScalarProperty Name="HeaderImpresiones" ColumnName="HeaderImpresiones" />
+          <ScalarProperty Name="ActivaOnline" ColumnName="ActivaOnline" />
+          <ScalarProperty Name="Activa" ColumnName="Activa" />
+          <ScalarProperty Name="RNC" ColumnName="RNC" />
+          <ScalarProperty Name="GestionID" ColumnName="GestionID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSociedadServicioCargo">
+      <EntityTypeMapping TypeName="CamaraComunModel.TipoSociedadServicioCargo">
+        <MappingFragment StoreEntitySet="TipoSociedadServicioCargo">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ServicioID" ColumnName="ServicioID" />
+          <ScalarProperty Name="TipoSociedadID" ColumnName="TipoSociedadID" />
+          <ScalarProperty Name="CargoID" ColumnName="CargoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicio">
+      <EntityTypeMapping TypeName="CamaraComunModel.Servicio">
+        <MappingFragment StoreEntitySet="Servicio">
+          <ScalarProperty Name="ServicioJerarquia" ColumnName="ServicioJerarquia" />
+          <ScalarProperty Name="ServicioInmediato" ColumnName="ServicioInmediato" />
+          <ScalarProperty Name="TransfDestinoId" ColumnName="TransfDestinoId" />
+          <ScalarProperty Name="DescripcionWeb" ColumnName="DescripcionWeb" />
+          <ScalarProperty Name="GrupoServicio" ColumnName="GrupoServicio" />
+          <ScalarProperty Name="TransaccionJerarquia" ColumnName="TransaccionJerarquia" />
+          <ScalarProperty Name="SeCobraEnSubTransaccion" ColumnName="SeCobraEnSubTransaccion" />
+          <ScalarProperty Name="EsAdecuacion" ColumnName="EsAdecuacion" />
+          <ScalarProperty Name="CuentaExpress" ColumnName="CuentaExpress" />
+          <ScalarProperty Name="CopiaExonerada" ColumnName="CopiaExonerada" />
+          <ScalarProperty Name="UsarCostoServicio" ColumnName="UsarCostoServicio" />
+          <ScalarProperty Name="SiteVisible" ColumnName="SiteVisible" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="TipoIdentificador" ColumnName="TipoIdentificador" />
+          <ScalarProperty Name="EsTransformacion" ColumnName="EsTransformacion" />
+          <ScalarProperty Name="ValidarRenovacion" ColumnName="ValidarRenovacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="AfectaOtraCompania" ColumnName="AfectaOtraCompania" />
+          <ScalarProperty Name="SubTransaccional" ColumnName="SubTransaccional" />
+          <ScalarProperty Name="SinCapital" ColumnName="SinCapital" />
+          <ScalarProperty Name="SinDocumento" ColumnName="SinDocumento" />
+          <ScalarProperty Name="SeCobra" ColumnName="SeCobra" />
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="ServicioFlowId" ColumnName="ServicioFlowId" />
+          <ScalarProperty Name="ServicioParalelo" ColumnName="ServicioParalelo" />
+          <ScalarProperty Name="TipoCalculoBaseCapital" ColumnName="TipoCalculoBaseCapital" />
+          <ScalarProperty Name="CalculoBaseCapital" ColumnName="CalculoBaseCapital" />
+          <ScalarProperty Name="CostoServicio" ColumnName="CostoServicio" />
+          <ScalarProperty Name="TipoServicioId" ColumnName="TipoServicioId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ServicioId" ColumnName="ServicioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActividadesCIIU">
+      <EntityTypeMapping TypeName="CamaraComunModel.ActividadesCIIU">
+        <MappingFragment StoreEntitySet="ActividadesCIIU">
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="TieneHijos" ColumnName="TieneHijos" />
+          <ScalarProperty Name="RecibeAccion" ColumnName="RecibeAccion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CodigoCIIU" ColumnName="CodigoCIIU" />
+          <ScalarProperty Name="Especificacion" ColumnName="Especificacion" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Seccion" ColumnName="Seccion" />
+          <ScalarProperty Name="PadreID" ColumnName="PadreID" />
+          <ScalarProperty Name="ActividadID" ColumnName="ActividadID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

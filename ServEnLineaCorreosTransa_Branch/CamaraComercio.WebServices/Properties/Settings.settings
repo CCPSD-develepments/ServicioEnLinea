@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CamaraComercio.WebServices.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CamaraComercio_WebServices_WebSrmWS_FacturacionSRM" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.30.21:900/Facturacion/FacturacionSRM.asmx</Value>
+    </Setting>
+    <Setting Name="CamaraComercio_WebServices_GestionWs_Contabilidad" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.30.22/sgcc/ws/contabilidad.asmx</Value>
+    </Setting>
+    <Setting Name="CamaraComercio_WebServices_WSIntegrationDynamics365_IntegracionDynamics365WS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.30.21:365/IntegracionDynamics365.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

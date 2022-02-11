@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode>
+    <siteMapNode url="~/Account/Login.aspx" title="Login"  description="" roles="*"></siteMapNode>
+    <siteMapNode url="~/Default.aspx" title="Inicio"  description=""></siteMapNode>
+
+    <!--<siteMapNode url="~/Test.aspx" title="Pagina Test"  description=""></siteMapNode>
+    <siteMapNode url="~/ExceptionTest.aspx" title="Pagina Excepcion"   description="" roles="Gestores,Administradores"></siteMapNode>
+    <siteMapNode url="~/Empresas/Oficina.aspx" title="Oficina Virtual"  description="" roles="Gestores"></siteMapNode>
+    -->
+  </siteMapNode>
+</siteMap>

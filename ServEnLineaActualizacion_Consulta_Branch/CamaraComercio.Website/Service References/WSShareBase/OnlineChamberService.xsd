@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.10.80.12:8083/OnlineChamberService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Common.Model" />
+  <xs:import schemaLocation="http://10.10.80.12:8083/OnlineChamberService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Common.Model.ShareBase" />
+  <xs:element name="CreateFolderOnSharebase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="folderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="camara" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateFolderOnSharebaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Common.Model" minOccurs="0" name="CreateFolderOnSharebaseResult" nillable="true" type="q1:BasicOperationResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocumentOnSharebase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="folderId" type="xs:long" />
+        <xs:element minOccurs="0" name="solicitud" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Common.Model.ShareBase" minOccurs="0" name="document" nillable="true" type="q2:DocumentData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocumentOnSharebaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Common.Model" minOccurs="0" name="CreateDocumentOnSharebaseResult" nillable="true" type="q3:BasicOperationResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFolderOnSharebase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="folderId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFolderOnSharebaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Common.Model" minOccurs="0" name="DeleteFolderOnSharebaseResult" nillable="true" type="q4:BasicOperationResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocumentOnSharebase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocumentOnSharebaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Common.Model" minOccurs="0" name="DeleteDocumentOnSharebaseResult" nillable="true" type="q5:BasicOperationResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AperturarCasoOnline">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="folderId" type="xs:long" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Common.Model" minOccurs="0" name="data" nillable="true" type="q6:OnlineTransaction" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Common.Model" minOccurs="0" name="documentsData" nillable="true" type="q7:ArrayOfOnlineDocument" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AperturarCasoOnlineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Common.Model" minOccurs="0" name="AperturarCasoOnlineResult" nillable="true" type="q8:BasicOperationResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentBase64" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Common.Model" minOccurs="0" name="ValidateDocumentResult" nillable="true" type="q9:BasicOperationResultOfDocumentValidationResponsev8czTo8Q" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

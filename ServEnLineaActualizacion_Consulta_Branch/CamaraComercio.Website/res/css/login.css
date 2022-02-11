@@ -1,0 +1,153 @@
+﻿/*------LOGIN--------*/
+#login {
+	color:#ffffff;
+	font-size:1.1em;
+	background-image:url(/res/img/tranparentwhite.png);
+	padding:3px;
+}
+#login a {
+	color:#ffffff;
+	text-decoration:none;
+}
+
+
+/*------LOGIN-BOX--------*/
+.loginbox {
+	width:400px;
+	padding:5px;
+	border:1px solid #ebebeb;
+	float:left;
+}
+div.validation {
+	padding:5px 30px;
+	margin-top:1px;
+}
+div.denied {
+	background-color:#fce9e9;
+	border-bottom:1px solid #e5b7b7;
+	border-top:1px solid #f4dada;
+	background-image:url(/res/img/denied.gif);
+	background-repeat:no-repeat;
+	background-position:10px 4px;
+	color:#b46e6e;
+}
+input.validationMark {
+	background-color:#fce9e9 !important;
+	border:1px solid #e8c8c8 !important;
+}
+.loginbox .form-caption {
+	background-color:#f6f6f6;
+	border-bottom:1px solid #e9e8e8;
+	padding:15px;
+}
+.loginbox .form-caption h1 {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#5b82b3;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+}
+	
+.loginbox .form-caption p {
+	margin:0;
+	padding:0;
+}
+.loginbox .login-fieldset {
+	padding:0;
+	margin:0;
+	border:none;
+}
+.loginbox .login-fieldset .login-form {
+	padding:15px;
+	border-bottom:1px solid #e5e5e5;
+	background-color:#f9f9f9;
+}
+.loginbox .login-fieldset .login-form p, .loginbox .form-footer p {
+	margin: 5px 0 0 0;
+	float:left;
+}
+.loginbox .login-fieldset .login-form a {
+	color:#427fa5;
+	text-decoration:none;
+}
+.loginbox .login-fieldset .login-form a:hover {
+	text-decoration:underline;
+}
+.loginbox .login-fieldset .login-form p.field {
+	float:left;
+	margin-top:0;
+	padding:4px 10px 59px 10px;
+    height: 41px;
+}
+.loginbox .login-fieldset .login-form input {
+ display: block;
+  width: 150%;
+  height: 31px;
+  padding: 0px 0px 0px 8px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
+
+.rememberme {
+   margin-top:15px;
+    
+}
+
+select {
+    display: block;
+  width: 34%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.loginbox .login-fieldset .login-form p.field label {
+	display:block;
+
+}
+.loginbox .form-footer {
+	padding:0 15px 10px 15px;	
+	background-color:#f6f6f6;
+}
+.loginbox .form-footer .submitButton {
+	float:right;
+	margin-top:10px;
+
+
+}
+.loginbox .form-footer .rememberme {
+	margin-top:15px;
+   
+
+}
+.loginbox .form-footer .chk {
+	margin-right:6px;
+}
+
+.loginbox.centered
+{
+    margin-left:262.5px;
+}

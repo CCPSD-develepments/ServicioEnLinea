@@ -1,0 +1,141 @@
+.jbar{
+	width: 100%;
+	position:fixed;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=98); 
+	opacity: 0.95;
+	-moz-opacity: 0.95;
+	text-align:center;
+	left:0px;
+	z-index:9999999;
+	margin:0px;
+	padding:0px;
+	background-color: #E1E9ED  !important;
+}
+.jbar-top{
+	top:0px;
+	color: #0D324A;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #999;
+	border-bottom-color: #0B2E45;
+	background-color: #FFC !important;
+}
+.jbar-bottom{
+	bottom:0px;
+	color: #0D324A;
+	border-top-width: 0px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #123B57;
+	border-bottom-color: #257593;
+}
+.jbar-content{
+	line-height:46px;
+	font-size: 14px;
+	font-family:qrial, helvetica, sans-serif;
+	font-weight: normal;
+	color: #0A2C42;
+}
+a.jbar-cross{
+	position:absolute;
+	width:31px;
+	height:31px;
+	background:transparent url(/res/js/images/cross.png) no-repeat top left;	
+	cursor:pointer;
+	right:10px;
+}
+a.jbar-cross:hover{
+	background-image: url(/res/js/images/cross_hover.png)
+}
+.jbar-top a.jbar-cross{
+	top:8px;	
+}
+.jbar-bottom a.jbar-cross{
+	bottom:8px;
+}
+
+.button {
+    background: -moz-linear-gradient(center top , #90B100 0%, #005400 99%) repeat scroll 0 0 transparent;
+    border: 1px solid #061C2A;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF !important;
+    display: block;
+    font-size: 13px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    width: 80px;
+}
+.button:hover {
+    background: -moz-linear-gradient(center top , #9BBF00 0%, #005D00 99%) repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000000;
+}
+.button-blue:hover, .button-round-blue:hover {
+    background: -moz-linear-gradient(center top , #FEB10D 0%, #F68B21 99%) repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.button-red {
+    background: -moz-linear-gradient(center top , #FEB10D 0%, #F68B21 100%) repeat scroll 0 0 #EF9026;
+    border: 1px solid #802F15;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF !important;
+    font-size: 13px;
+    padding: 16px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    width: 80px;
+}
+.button-red:hover {
+    background: -moz-linear-gradient(center top , #F68B21 0%, #D67514 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #990000;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000000;
+}
+a.home-button-red, a.home-button-red:active, a.home-button-red:visited {
+    color: #FFFFFF !important;
+}
+.home-button-red {
+    background: -moz-linear-gradient(center top , #D20F0A 0%, #6B0000 99%) repeat scroll 0 0 transparent;
+    border: 1px solid #802F15;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF !important;
+    font-size: 13px;
+    padding: 16px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    width: 80px;
+}
+.home-button-red:hover {
+    background: -moz-linear-gradient(center top , #EE0600 0%, #780000 100%) repeat scroll 0 0 transparent;
+    text-decoration: none;
+}
+.button-blue, .button-blue:visited, .button-blue:link, .button-blue:active {
+    background: -moz-linear-gradient(center top , #3E7EA9 0%, #1E5578 100%) repeat scroll 0 0 transparent;
+    border: 3px solid #FFFFFF;
+    border-radius: 6px 6px 6px 6px;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+.button-blue:hover {
+    background: -moz-linear-gradient(center top , #FEB10D 0%, #F68B21 100%) repeat scroll 0 0 transparent !important;
+    color: #FFFFFF;
+}
+.button-round-blue {
+    background: -moz-linear-gradient(center top , #3E7DA7 0%, #1F577A 100%) repeat scroll 0 0 transparent;
+    border-radius: 15px 15px 15px 15px;
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 4px 10px 6px;
+    text-decoration: none;
+}

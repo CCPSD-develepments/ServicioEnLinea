@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CrearCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="facturasArg" type="tns:WSFacturasArg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSFacturasArg">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="idEmpresa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="factura" type="tns:WSFactura" />
+          <s:element minOccurs="0" maxOccurs="1" name="pagos" type="tns:ArrayOfWSPago" />
+          <s:element minOccurs="0" maxOccurs="1" name="detalle" type="tns:ArrayOfWSDetalleFacturas" />
+          <s:element minOccurs="1" maxOccurs="1" name="desicionSaldoPendienteField" type="tns:DesicionSaldoPendiente" />
+          <s:element minOccurs="0" maxOccurs="1" name="salesCurrencyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="customerGroupId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="countryRegionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="unidadNegocio" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSFactura">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RncCliente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Complementaria" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdFactura" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoNcf" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFactura" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransaccionId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfWSPago">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSPago" nillable="true" type="tns:WSPago" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSPago">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoPago" type="tns:TipoPago" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nota" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VoucherNotaCredito" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TipoPago">
+        <s:restriction base="s:string">
+          <s:enumeration value="EFECTIVO" />
+          <s:enumeration value="CHEQUE" />
+          <s:enumeration value="TRANSF" />
+          <s:enumeration value="TCAZUL" />
+          <s:enumeration value="TCVISANET" />
+          <s:enumeration value="TCCARNET" />
+          <s:enumeration value="TCAMEX" />
+          <s:enumeration value="BOTONBHD" />
+          <s:enumeration value="NOTACREDITO" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfWSDetalleFacturas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSDetalleFacturas" nillable="true" type="tns:WSDetalleFacturas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSDetalleFacturas">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Descuento" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Precio" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdFactura" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdProducto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="DesicionSaldoPendiente">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="RenunciaSaldoPendiente" />
+          <s:enumeration value="ReclamaraSaldoPendiente" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CrearClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearClienteResult" type="tns:WSFacturasResultOfWSFactura" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSFacturasResultOfWSFactura">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errores" type="tns:ArrayOfWSError" />
+          <s:element minOccurs="1" maxOccurs="1" name="hasError" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="result" type="tns:WSFactura" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NCFId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Voucher" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpirationDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VATNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesOrderNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfWSError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSError" nillable="true" type="tns:WSError" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSError">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="tipoError" type="tns:TipoError" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="trace" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TipoError">
+        <s:restriction base="s:string">
+          <s:enumeration value="NcfAgotado" />
+          <s:enumeration value="PeriodoCerrado" />
+          <s:enumeration value="FechaDistintaAlPeriodo" />
+          <s:enumeration value="MontoPagosDiferenteMontoFactura" />
+          <s:enumeration value="ProductoNoMapeado" />
+          <s:enumeration value="FacturaAnulada" />
+          <s:enumeration value="FacturaNoExiste" />
+          <s:enumeration value="FechaNoTienePeriodo" />
+          <s:enumeration value="ErrorCreadoRNC" />
+          <s:enumeration value="ErrorCreandoCliente" />
+          <s:enumeration value="ErrorGenerandoOrdenVenta" />
+          <s:enumeration value="ErrorGenerandoFactura" />
+          <s:enumeration value="ErrorGenerandoPago" />
+          <s:enumeration value="ErrorDesconocido" />
+          <s:enumeration value="ErrorAuthUsuarioIntegracion" />
+          <s:enumeration value="RepresentanteNoExiste" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UserIntegration" type="tns:UserIntegration" />
+      <s:complexType name="UserIntegration">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="AgregarFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="facturasArg" type="tns:WSFacturasArg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgregarFacturaResult" type="tns:WSFacturasResultOfWSFactura" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerarNotasCredito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="facturasArg" type="tns:WSFacturasArg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerarNotasCreditoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerarNotasCreditoResult" type="tns:WSFacturasResultOfWSFactura" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CajaCierreMontoSobranteFaltante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="monto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoEntrada" type="tns:EntradaMontoCierre" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRepresentante" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nota" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unidadNegocio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="EntradaMontoCierre">
+        <s:restriction base="s:string">
+          <s:enumeration value="Sobrante" />
+          <s:enumeration value="Faltante" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CajaCierreMontoSobranteFaltanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CajaCierreMontoSobranteFaltanteResult" type="tns:WSFacturasResultOfWSFactura" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidacionVigenciaNotaCredito">
+        <s:complexType />
+      </s:element>
+      <s:element name="ValidacionVigenciaNotaCreditoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ValidarMontoNotaDeCredito">
+        <s:complexType />
+      </s:element>
+      <s:element name="ValidarMontoNotaDeCreditoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WakeUpMicrosoft">
+        <s:complexType />
+      </s:element>
+      <s:element name="WakeUpMicrosoftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WakeUpMicrosoftResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarRepresentante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioIdDynamics" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarRepresentanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarRepresentanteResult" type="tns:ArrayOfWSError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CrearClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearCliente" />
+  </wsdl:message>
+  <wsdl:message name="CrearClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearClienteUserIntegration">
+    <wsdl:part name="UserIntegration" element="tns:UserIntegration" />
+  </wsdl:message>
+  <wsdl:message name="AgregarFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarFactura" />
+  </wsdl:message>
+  <wsdl:message name="AgregarFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarFacturaUserIntegration">
+    <wsdl:part name="UserIntegration" element="tns:UserIntegration" />
+  </wsdl:message>
+  <wsdl:message name="GenerarNotasCreditoSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerarNotasCredito" />
+  </wsdl:message>
+  <wsdl:message name="GenerarNotasCreditoSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerarNotasCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerarNotasCreditoUserIntegration">
+    <wsdl:part name="UserIntegration" element="tns:UserIntegration" />
+  </wsdl:message>
+  <wsdl:message name="CajaCierreMontoSobranteFaltanteSoapIn">
+    <wsdl:part name="parameters" element="tns:CajaCierreMontoSobranteFaltante" />
+  </wsdl:message>
+  <wsdl:message name="CajaCierreMontoSobranteFaltanteSoapOut">
+    <wsdl:part name="parameters" element="tns:CajaCierreMontoSobranteFaltanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CajaCierreMontoSobranteFaltanteUserIntegration">
+    <wsdl:part name="UserIntegration" element="tns:UserIntegration" />
+  </wsdl:message>
+  <wsdl:message name="ValidacionVigenciaNotaCreditoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidacionVigenciaNotaCredito" />
+  </wsdl:message>
+  <wsdl:message name="ValidacionVigenciaNotaCreditoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidacionVigenciaNotaCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarMontoNotaDeCreditoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarMontoNotaDeCredito" />
+  </wsdl:message>
+  <wsdl:message name="ValidarMontoNotaDeCreditoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarMontoNotaDeCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WakeUpMicrosoftSoapIn">
+    <wsdl:part name="parameters" element="tns:WakeUpMicrosoft" />
+  </wsdl:message>
+  <wsdl:message name="WakeUpMicrosoftSoapOut">
+    <wsdl:part name="parameters" element="tns:WakeUpMicrosoftResponse" />
+  </wsdl:message>
+  <wsdl:message name="WakeUpMicrosoftUserIntegration">
+    <wsdl:part name="UserIntegration" element="tns:UserIntegration" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRepresentanteSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarRepresentante" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRepresentanteSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarRepresentanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRepresentanteUserIntegration">
+    <wsdl:part name="UserIntegration" element="tns:UserIntegration" />
+  </wsdl:message>
+  <wsdl:portType name="IntegracionDynamics365WSSoap">
+    <wsdl:operation name="CrearCliente">
+      <wsdl:input message="tns:CrearClienteSoapIn" />
+      <wsdl:output message="tns:CrearClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFactura">
+      <wsdl:input message="tns:AgregarFacturaSoapIn" />
+      <wsdl:output message="tns:AgregarFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarNotasCredito">
+      <wsdl:input message="tns:GenerarNotasCreditoSoapIn" />
+      <wsdl:output message="tns:GenerarNotasCreditoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CajaCierreMontoSobranteFaltante">
+      <wsdl:input message="tns:CajaCierreMontoSobranteFaltanteSoapIn" />
+      <wsdl:output message="tns:CajaCierreMontoSobranteFaltanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionVigenciaNotaCredito">
+      <wsdl:input message="tns:ValidacionVigenciaNotaCreditoSoapIn" />
+      <wsdl:output message="tns:ValidacionVigenciaNotaCreditoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMontoNotaDeCredito">
+      <wsdl:input message="tns:ValidarMontoNotaDeCreditoSoapIn" />
+      <wsdl:output message="tns:ValidarMontoNotaDeCreditoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WakeUpMicrosoft">
+      <wsdl:input message="tns:WakeUpMicrosoftSoapIn" />
+      <wsdl:output message="tns:WakeUpMicrosoftSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRepresentante">
+      <wsdl:input message="tns:ValidarRepresentanteSoapIn" />
+      <wsdl:output message="tns:ValidarRepresentanteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IntegracionDynamics365WSSoap" type="tns:IntegracionDynamics365WSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearCliente">
+      <soap:operation soapAction="http://tempuri.org/CrearCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CrearClienteUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFactura">
+      <soap:operation soapAction="http://tempuri.org/AgregarFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AgregarFacturaUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarNotasCredito">
+      <soap:operation soapAction="http://tempuri.org/GenerarNotasCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GenerarNotasCreditoUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaCierreMontoSobranteFaltante">
+      <soap:operation soapAction="http://tempuri.org/CajaCierreMontoSobranteFaltante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CajaCierreMontoSobranteFaltanteUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionVigenciaNotaCredito">
+      <soap:operation soapAction="http://tempuri.org/ValidacionVigenciaNotaCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMontoNotaDeCredito">
+      <soap:operation soapAction="http://tempuri.org/ValidarMontoNotaDeCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WakeUpMicrosoft">
+      <soap:operation soapAction="http://tempuri.org/WakeUpMicrosoft" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:WakeUpMicrosoftUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRepresentante">
+      <soap:operation soapAction="http://tempuri.org/ValidarRepresentante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ValidarRepresentanteUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegracionDynamics365WSSoap12" type="tns:IntegracionDynamics365WSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearCliente">
+      <soap12:operation soapAction="http://tempuri.org/CrearCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CrearClienteUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFactura">
+      <soap12:operation soapAction="http://tempuri.org/AgregarFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AgregarFacturaUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarNotasCredito">
+      <soap12:operation soapAction="http://tempuri.org/GenerarNotasCredito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GenerarNotasCreditoUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaCierreMontoSobranteFaltante">
+      <soap12:operation soapAction="http://tempuri.org/CajaCierreMontoSobranteFaltante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CajaCierreMontoSobranteFaltanteUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionVigenciaNotaCredito">
+      <soap12:operation soapAction="http://tempuri.org/ValidacionVigenciaNotaCredito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMontoNotaDeCredito">
+      <soap12:operation soapAction="http://tempuri.org/ValidarMontoNotaDeCredito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WakeUpMicrosoft">
+      <soap12:operation soapAction="http://tempuri.org/WakeUpMicrosoft" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:WakeUpMicrosoftUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRepresentante">
+      <soap12:operation soapAction="http://tempuri.org/ValidarRepresentante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ValidarRepresentanteUserIntegration" part="UserIntegration" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IntegracionDynamics365WS">
+    <wsdl:port name="IntegracionDynamics365WSSoap" binding="tns:IntegracionDynamics365WSSoap">
+      <soap:address location="http://10.10.30.21:365/IntegracionDynamics365.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegracionDynamics365WSSoap12" binding="tns:IntegracionDynamics365WSSoap12">
+      <soap12:address location="http://10.10.30.21:365/IntegracionDynamics365.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

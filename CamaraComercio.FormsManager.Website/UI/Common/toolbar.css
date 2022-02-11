@@ -1,0 +1,13 @@
+﻿    #fieldsContainer {
+        width:100%;
+        height:380px;
+        border:1px solid #C0C0C0;
+    }
+    .menu-title{
+        background: #ebeadb url(img/grid3-hrow.gif) repeat-x;
+        border-bottom:1px solid #C0C0C0;
+        color:#C0C0C0;
+        font:bold 10px tahoma,arial,verdana,sans-serif;
+        display:block;
+        padding:3px;    }    
+    #fieldName {font-size:18pt;}

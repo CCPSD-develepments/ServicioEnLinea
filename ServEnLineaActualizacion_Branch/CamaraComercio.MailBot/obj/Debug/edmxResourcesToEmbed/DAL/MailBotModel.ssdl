@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CamaraMailBotModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CamaraMailBotModelStoreContainer">
+    <EntitySet Name="Mails" EntityType="CamaraMailBotModel.Store.Mails" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Parameters" EntityType="CamaraMailBotModel.Store.Parameters" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Sources" EntityType="CamaraMailBotModel.Store.Sources" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Templates" EntityType="CamaraMailBotModel.Store.Templates" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <AssociationSet Name="FK_Notificaciones_Fuentes" Association="CamaraMailBotModel.Store.FK_Notificaciones_Fuentes">
+      <End Role="Sources" EntitySet="Sources" />
+      <End Role="Mails" EntitySet="Mails" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Mails">
+    <Key>
+      <PropertyRef Name="MailID" />
+    </Key>
+    <Property Name="MailID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateID" Type="int" Nullable="false" />
+    <Property Name="SourceID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="SendDate" Type="datetime" />
+    <Property Name="MailTo" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="MailCC" Type="varchar" MaxLength="256" />
+    <Property Name="MailBCC" Type="varchar" MaxLength="256" />
+    <Property Name="MailFrom" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="IsHTML" Type="bit" Nullable="false" />
+    <Property Name="RetryNo" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="MailText" Type="ntext" />
+    <Property Name="Subject" Type="varchar" MaxLength="256" />
+    <Property Name="LastTryDateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Parameters">
+    <Key>
+      <PropertyRef Name="ParameterID" />
+    </Key>
+    <Property Name="ParameterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateID" Type="int" Nullable="false" />
+    <Property Name="ParameterTag" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsNeeded" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sources">
+    <Key>
+      <PropertyRef Name="SourceID" />
+    </Key>
+    <Property Name="SourceID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SourceName" Type="varchar" MaxLength="50" />
+    <Property Name="SourceCode" Type="varchar" Nullable="false" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Templates">
+    <Key>
+      <PropertyRef Name="TemplateID" />
+    </Key>
+    <Property Name="TemplateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TemplateCode" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="IsHTML" Type="bit" Nullable="false" />
+    <Property Name="TemplateText" Type="ntext" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <Association Name="FK_Notificaciones_Fuentes">
+    <End Role="Sources" Type="CamaraMailBotModel.Store.Sources" Multiplicity="1" />
+    <End Role="Mails" Type="CamaraMailBotModel.Store.Mails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sources">
+        <PropertyRef Name="SourceID" />
+      </Principal>
+      <Dependent Role="Mails">
+        <PropertyRef Name="SourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fFuenteGetIdByCodigo" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Codigo" Type="char" Mode="In" />
+  </Function>
+  <Function Name="fPlantillaGetIdByCodigo" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Codigo" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetTemplate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MailGetPendingEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MailInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="int" Mode="In" />
+    <Parameter Name="SourceID" Type="int" Mode="In" />
+    <Parameter Name="To" Type="varchar" Mode="In" />
+    <Parameter Name="CC" Type="varchar" Mode="In" />
+    <Parameter Name="BCC" Type="varchar" Mode="In" />
+    <Parameter Name="From" Type="varchar" Mode="In" />
+    <Parameter Name="IsHTML" Type="bit" Mode="In" />
+    <Parameter Name="MailText" Type="ntext" Mode="In" />
+    <Parameter Name="Subject" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MailSetMailNotSent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MailID" Type="int" Mode="In" />
+    <Parameter Name="RetryNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MailSetMailSent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MailID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pEnviaNotificacionPagoBC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fecha" Type="varchar" Mode="In" />
+    <Parameter Name="NombreArchivo" Type="varchar" Mode="In" />
+    <Parameter Name="TipoArchivo" Type="varchar" Mode="In" />
+    <Parameter Name="Asunto" Type="varchar" Mode="In" />
+    <Parameter Name="Mensaje" Type="varchar" Mode="In" />
+    <Parameter Name="TemplateText" Type="varchar" Mode="In" />
+    <Parameter Name="From" Type="varchar" Mode="In" />
+    <Parameter Name="to" Type="varchar" Mode="In" />
+    <Parameter Name="mailCc" Type="varchar" Mode="In" />
+    <Parameter Name="mailBcc" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TemplateGetByCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TemplateInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateName" Type="varchar" Mode="In" />
+    <Parameter Name="TemplateCode" Type="varchar" Mode="In" />
+    <Parameter Name="IsHTML" Type="bit" Mode="In" />
+    <Parameter Name="TemplateText" Type="ntext" Mode="In" />
+    <Parameter Name="Subject" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="TemplateUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateName" Type="varchar" Mode="In" />
+    <Parameter Name="TemplateCode" Type="varchar" Mode="In" />
+    <Parameter Name="IsHTML" Type="bit" Mode="In" />
+    <Parameter Name="TemplateText" Type="ntext" Mode="In" />
+    <Parameter Name="Subject" Type="nvarchar" Mode="In" />
+    <Parameter Name="TemplateId" Type="int" Mode="In" />
+  </Function>
+</Schema>

@@ -1,0 +1,102 @@
+﻿body {
+	font-family: arial,helvetica,sans-serif;
+        min-width:960px;
+    background-color: #e1e9ed;
+    background-image: url(/res/img/fondo.jpg) !important;
+}
+a {
+    color: #1E4685;
+    text-decoration: none;
+}
+a img 
+{
+    border:none!important;
+    margin:10px;
+}
+a:hover {
+    text-decoration: underline;
+}
+#wrap {
+    margin: 0 auto;
+    width: 623px;
+}
+#logo {
+    padding: 11px;
+}
+#error-box {
+    background-image: url("/res/img/bg_error.png");
+    background-repeat: no-repeat;
+    height: 391px;
+    overflow: hidden;
+    padding: 11px;
+}
+#error-box-s {
+    background-image: url("/res/img/bg_error_s.png");
+    background-repeat: no-repeat;
+    height: 314px;
+    overflow: hidden;
+    padding: 11px;
+}
+#head {
+	background-color: #1E4685;
+	color: #FFFFFF;
+	font-size: 20px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+	font-weight: bold;
+	display: block;
+	height: 58px;
+	padding-right: 30px;
+	padding-left: 30px;
+	line-height: 58px;
+}
+#content {
+    font-size: 12px;
+    line-height: 1.5em;
+    padding: 10px 15px 20px;
+	-moz-border-radius-topleft: 0px;
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomright: 5px;
+-moz-border-radius-bottomleft: 5px;
+-webkit-border-radius: 0px 0px 5px 5px;
+border-radius: 0px 0px 5px 5px;
+}
+#content #text {
+    padding: 0 15px 15px;
+}
+#pics {
+}
+#pics ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+#pics ul li {
+    -moz-background-inline-policy: continuous;
+    background: url("/res/img/bg_pics_tn.png") no-repeat scroll 50% 0 transparent;
+    display: list-item;
+    float: left;
+    height: 98px;
+    margin: 0 3px;
+    padding: 7px 14px 9px;
+    width: 107px;
+}
+#action {
+    font-size: 10px;
+    padding: 0 30px;
+}
+#action a.report {
+    background-image: url("/res/img/ex_icon.gif");
+    background-repeat: no-repeat;
+    color: #1E4685;
+    padding-left: 15px;
+}
+#action td.more_pic {
+    text-align: right;
+    width: 200px;
+}

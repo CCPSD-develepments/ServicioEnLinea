@@ -1,0 +1,7 @@
+C:\OFV\src\CamaraComercio.DataAccess\bin\Debug\CamaraComercio.DataAccess.dll
+C:\OFV\src\CamaraComercio.DataAccess\bin\Debug\CamaraComercio.DataAccess.pdb
+C:\OFV\src\CamaraComercio.DataAccess\bin\Debug\SubSonic.dll
+C:\OFV\src\CamaraComercio.DataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\OFV\src\CamaraComercio.DataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\OFV\src\CamaraComercio.DataAccess\obj\Debug\CamaraComercio.DataAccess.dll
+C:\OFV\src\CamaraComercio.DataAccess\obj\Debug\CamaraComercio.DataAccess.pdb

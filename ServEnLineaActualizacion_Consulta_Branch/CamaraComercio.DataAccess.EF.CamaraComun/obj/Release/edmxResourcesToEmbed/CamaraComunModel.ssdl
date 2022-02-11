@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CamaraComunModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CamaraComunModelStoreContainer">
+    <EntitySet Name="Actividades" EntityType="CamaraComunModel.Store.Actividades" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ActividadesCIIU" EntityType="CamaraComunModel.Store.ActividadesCIIU" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Bancos" EntityType="CamaraComunModel.Store.Bancos" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Camaras" EntityType="CamaraComunModel.Store.Camaras" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Cargos" EntityType="CamaraComunModel.Store.Cargos" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Ciudades" EntityType="CamaraComunModel.Store.Ciudades" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="EstadoRegistro" EntityType="CamaraComunModel.Store.EstadoRegistro" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Nomenclaturas" EntityType="CamaraComunModel.Store.Nomenclaturas" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Paises" EntityType="CamaraComunModel.Store.Paises" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Profesiones" EntityType="CamaraComunModel.Store.Profesiones" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Sectores" EntityType="CamaraComunModel.Store.Sectores" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Servicio" EntityType="CamaraComunModel.Store.Servicio" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ServicioDocumentoRequerido" EntityType="CamaraComunModel.Store.ServicioDocumentoRequerido" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ServiciosEnCamara" EntityType="CamaraComunModel.Store.ServiciosEnCamara" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoDocumento" EntityType="CamaraComunModel.Store.TipoDocumento" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoMoneda" EntityType="CamaraComunModel.Store.TipoMoneda" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoRegla" EntityType="CamaraComunModel.Store.TipoRegla" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoReglaDocumento" EntityType="CamaraComunModel.Store.TipoReglaDocumento" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TiposEnteRegulado" EntityType="CamaraComunModel.Store.TiposEnteRegulado" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TiposEntidades" EntityType="CamaraComunModel.Store.TiposEntidades" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoServicio" EntityType="CamaraComunModel.Store.TipoServicio" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TiposNcf" EntityType="CamaraComunModel.Store.TiposNcf" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoSociedad" EntityType="CamaraComunModel.Store.TipoSociedad" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoSociedadCargos" EntityType="CamaraComunModel.Store.TipoSociedadCargos" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoSociedadServicioCargo" EntityType="CamaraComunModel.Store.TipoSociedadServicioCargo" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoSociedadSocio" EntityType="CamaraComunModel.Store.TipoSociedadSocio" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoSociedadSufijo" EntityType="CamaraComunModel.Store.TipoSociedadSufijo" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TipoSocio" EntityType="CamaraComunModel.Store.TipoSocio" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ServicioDocumentoRequeridoComentario" EntityType="CamaraComunModel.Store.ServicioDocumentoRequeridoComentario" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="cvw_Ciudades" EntityType="CamaraComunModel.Store.cvw_Ciudades" store:Type="Views" store:Schema="dbo" store:Name="cvw_Ciudades" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>
+              SELECT
+              [cvw_Ciudades].[CiudadId] AS [CiudadId],
+              [cvw_Ciudades].[Nombre] AS [Nombre],
+              [cvw_Ciudades].[PaisId] AS [PaisId],
+              [cvw_Ciudades].[Orden] AS [Orden],
+              [cvw_Ciudades].[FechaModificacion] AS [FechaModificacion],
+              [cvw_Ciudades].[rowguid] AS [rowguid],
+              [cvw_Ciudades].[Pais] AS [Pais]
+              FROM [dbo].[cvw_Ciudades] AS [cvw_Ciudades]
+            </DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cvw_ServicioDocumentoRequerido" EntityType="CamaraComunModel.Store.cvw_ServicioDocumentoRequerido" store:Type="Views" store:Schema="dbo" store:Name="cvw_ServicioDocumentoRequerido" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>
+              SELECT
+              [cvw_ServicioDocumentoRequerido].[TipoSociedadId] AS [TipoSociedadId],
+              [cvw_ServicioDocumentoRequerido].[ServicioId] AS [ServicioId],
+              [cvw_ServicioDocumentoRequerido].[TipoDocumentoId] AS [TipoDocumentoId],
+              [cvw_ServicioDocumentoRequerido].[Requerido] AS [Requerido],
+              [cvw_ServicioDocumentoRequerido].[Grupo] AS [Grupo],
+              [cvw_ServicioDocumentoRequerido].[DocumentoDescripcion] AS [DocumentoDescripcion],
+              [cvw_ServicioDocumentoRequerido].[TipoSociedadDescripcion] AS [TipoSociedadDescripcion],
+              [cvw_ServicioDocumentoRequerido].[Registrable] AS [Registrable],
+              [cvw_ServicioDocumentoRequerido].[CostoOriginal] AS [CostoOriginal],
+              [cvw_ServicioDocumentoRequerido].[CostoCopia] AS [CostoCopia],
+              [cvw_ServicioDocumentoRequerido].[Visible] AS [Visible],
+              [cvw_ServicioDocumentoRequerido].[FechaModificacion] AS [FechaModificacion]
+              FROM [dbo].[cvw_ServicioDocumentoRequerido] AS [cvw_ServicioDocumentoRequerido]
+            </DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cvw_TipoDocumentoRegla" EntityType="CamaraComunModel.Store.cvw_TipoDocumentoRegla" store:Type="Views" store:Schema="dbo" store:Name="cvw_TipoDocumentoRegla" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>
+              SELECT
+              [cvw_TipoDocumentoRegla].[TipoReglaDocumentoId] AS [TipoReglaDocumentoId],
+              [cvw_TipoDocumentoRegla].[TipoDocumentoId] AS [TipoDocumentoId],
+              [cvw_TipoDocumentoRegla].[TipoReglaId] AS [TipoReglaId],
+              [cvw_TipoDocumentoRegla].[Regla] AS [Regla],
+              [cvw_TipoDocumentoRegla].[Validado] AS [Validado]
+              FROM [dbo].[cvw_TipoDocumentoRegla] AS [cvw_TipoDocumentoRegla]
+            </DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Ciudades_Paises" Association="CamaraComunModel.Store.FK_Ciudades_Paises">
+      <End Role="Paises" EntitySet="Paises" />
+      <End Role="Ciudades" EntitySet="Ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReglaTipoDocumento_TipoDocumentoRegla" Association="CamaraComunModel.Store.FK_ReglaTipoDocumento_TipoDocumentoRegla">
+      <End Role="TipoRegla" EntitySet="TipoRegla" />
+      <End Role="TipoReglaDocumento" EntitySet="TipoReglaDocumento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sectores_Ciudades" Association="CamaraComunModel.Store.FK_Sectores_Ciudades">
+      <End Role="Ciudades" EntitySet="Ciudades" />
+      <End Role="Sectores" EntitySet="Sectores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioDocumentoRequerido_TipoSociedad" Association="CamaraComunModel.Store.FK_ServicioDocumentoRequerido_TipoSociedad">
+      <End Role="TipoSociedad" EntitySet="TipoSociedad" />
+      <End Role="ServicioDocumentoRequerido" EntitySet="ServicioDocumentoRequerido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiciosEnCamara_Camaras" Association="CamaraComunModel.Store.FK_ServiciosEnCamara_Camaras">
+      <End Role="Camaras" EntitySet="Camaras" />
+      <End Role="ServiciosEnCamara" EntitySet="ServiciosEnCamara" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoSociedadServicioCargo_Cargos" Association="CamaraComunModel.Store.FK_TipoSociedadServicioCargo_Cargos">
+      <End Role="Cargos" EntitySet="Cargos" />
+      <End Role="TipoSociedadServicioCargo" EntitySet="TipoSociedadServicioCargo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoSociedadServicioCargo_Servicio" Association="CamaraComunModel.Store.FK_TipoSociedadServicioCargo_Servicio">
+      <End Role="Servicio" EntitySet="Servicio" />
+      <End Role="TipoSociedadServicioCargo" EntitySet="TipoSociedadServicioCargo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoSociedadServicioCargo_TipoSociedad" Association="CamaraComunModel.Store.FK_TipoSociedadServicioCargo_TipoSociedad">
+      <End Role="TipoSociedad" EntitySet="TipoSociedad" />
+      <End Role="TipoSociedadServicioCargo" EntitySet="TipoSociedadServicioCargo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoSociedadSocio_TipoSociedad" Association="CamaraComunModel.Store.FK_TipoSociedadSocio_TipoSociedad">
+      <End Role="TipoSociedad" EntitySet="TipoSociedad" />
+      <End Role="TipoSociedadSocio" EntitySet="TipoSociedadSocio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoSociedadSocio_TipoSocio" Association="CamaraComunModel.Store.FK_TipoSociedadSocio_TipoSocio">
+      <End Role="TipoSocio" EntitySet="TipoSocio" />
+      <End Role="TipoSociedadSocio" EntitySet="TipoSociedadSocio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TiposServicios_TiposTransacciones" Association="CamaraComunModel.Store.FK_TiposServicios_TiposTransacciones">
+      <End Role="TipoServicio" EntitySet="TipoServicio" />
+      <End Role="Servicio" EntitySet="Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TiposSociedadesSufijos_TiposSociedades" Association="CamaraComunModel.Store.FK_TiposSociedadesSufijos_TiposSociedades">
+      <End Role="TipoSociedad" EntitySet="TipoSociedad" />
+      <End Role="TipoSociedadSufijo" EntitySet="TipoSociedadSufijo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransaccionDocumentosRequisitos_TiposServicios" Association="CamaraComunModel.Store.FK_TransaccionDocumentosRequisitos_TiposServicios">
+      <End Role="Servicio" EntitySet="Servicio" />
+      <End Role="ServicioDocumentoRequerido" EntitySet="ServicioDocumentoRequerido" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Actividades">
+    <Key>
+      <PropertyRef Name="ActividadID" />
+    </Key>
+    <Property Name="ActividadID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PadreID" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="200" />
+    <Property Name="DescripconLarga" Type="nvarchar" MaxLength="500" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="RecibeAccion" Type="bit" />
+    <Property Name="TieneHijos" Type="bit" />
+    <Property Name="Visible" Type="bit" />
+  </EntityType>
+  <EntityType Name="ActividadesCIIU">
+    <Key>
+      <PropertyRef Name="ActividadID" />
+    </Key>
+    <Property Name="ActividadID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PadreID" Type="int" />
+    <Property Name="Seccion" Type="nvarchar" MaxLength="2" />
+    <Property Name="Codigo" Type="nvarchar" MaxLength="4" />
+    <Property Name="Especificacion" Type="nvarchar" MaxLength="2" />
+    <Property Name="CodigoCIIU" Type="nvarchar" MaxLength="10" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="500" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="RecibeAccion" Type="bit" />
+    <Property Name="TieneHijos" Type="bit" />
+    <Property Name="Visible" Type="bit" />
+  </EntityType>
+  <EntityType Name="Bancos">
+    <Key>
+      <PropertyRef Name="BancoId" />
+    </Key>
+    <Property Name="BancoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Camaras">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="60" />
+    <Property Name="GestionID" Type="int" />
+    <Property Name="RNC" Type="nvarchar" MaxLength="20" />
+    <Property Name="Activa" Type="bit" />
+    <Property Name="HeaderImpresiones" Type="nvarchar(max)" />
+    <Property Name="SecurityGroup" Type="varchar" MaxLength="200" />
+    <Property Name="Direccion" Type="nvarchar(max)" />
+    <Property Name="PathCertificado" Type="nvarchar" MaxLength="256" />
+    <Property Name="Password" Type="varchar" MaxLength="500" />
+    <Property Name="Reason" Type="varchar" MaxLength="100" />
+    <Property Name="SignContact" Type="varchar" MaxLength="100" />
+    <Property Name="SignLocation" Type="varchar" MaxLength="100" />
+    <Property Name="Logo" Type="image" />
+    <Property Name="PuedeVenderOnline" Type="bit" />
+    <Property Name="VisanetMerchant" Type="nvarchar" MaxLength="50" />
+    <Property Name="BraintreeMerchant" Type="nvarchar" MaxLength="50" />
+    <Property Name="NombreEncargado" Type="varchar" MaxLength="50" />
+    <Property Name="PuestoEncargado" Type="varchar" MaxLength="50" />
+    <Property Name="ActivaOnline" Type="bit" />
+  </EntityType>
+  <EntityType Name="Cargos">
+    <Key>
+      <PropertyRef Name="CargoId" />
+    </Key>
+    <Property Name="CargoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SiteVisible" Type="bit" />
+  </EntityType>
+  <EntityType Name="Ciudades">
+    <Key>
+      <PropertyRef Name="CiudadId" />
+    </Key>
+    <Property Name="CiudadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PaisId" Type="int" />
+    <Property Name="Orden" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstadoRegistro">
+    <Key>
+      <PropertyRef Name="EstadoRegistroId" />
+    </Key>
+    <Property Name="EstadoRegistroId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Nomenclaturas">
+    <Key>
+      <PropertyRef Name="CamaraId" />
+      <PropertyRef Name="TipoNomenclatura" />
+    </Key>
+    <Property Name="CamaraId" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TipoNomenclatura" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Prefijo" Type="varchar" MaxLength="3" />
+    <Property Name="Sufijo" Type="varchar" MaxLength="3" />
+    <Property Name="Separador1" Type="char" MaxLength="1" />
+    <Property Name="Separador2" Type="char" MaxLength="1" />
+    <Property Name="Separador3" Type="char" MaxLength="1" />
+    <Property Name="Formato" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Paises">
+    <Key>
+      <PropertyRef Name="PaisId" />
+    </Key>
+    <Property Name="PaisId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PaisIdDGII" Type="int" />
+    <Property Name="Nacionalidad" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Profesiones">
+    <Key>
+      <PropertyRef Name="ProfesionId" />
+    </Key>
+    <Property Name="ProfesionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sectores">
+    <Key>
+      <PropertyRef Name="SectorId" />
+    </Key>
+    <Property Name="SectorId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CiudadId" Type="int" Nullable="false" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Servicio">
+    <Key>
+      <PropertyRef Name="ServicioId" />
+    </Key>
+    <Property Name="ServicioId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="TipoServicioId" Type="int" Nullable="false" />
+    <Property Name="CostoServicio" Type="money" Nullable="false" />
+    <Property Name="CalculoBaseCapital" Type="bit" Nullable="false" />
+    <Property Name="TipoCalculoBaseCapital" Type="int" Nullable="false" />
+    <Property Name="ServicioParalelo" Type="bit" Nullable="false" />
+    <Property Name="ServicioFlowId" Type="int" Nullable="false" />
+    <Property Name="Cuenta" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SeCobra" Type="bit" Nullable="false" />
+    <Property Name="SinDocumento" Type="bit" Nullable="false" />
+    <Property Name="SubTransaccional" Type="bit" Nullable="false" />
+    <Property Name="AfectaOtraCompania" Type="bit" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="ValidarRenovacion" Type="bit" Nullable="false" />
+    <Property Name="EsTransformacion" Type="bit" Nullable="false" />
+    <Property Name="TipoIdentificador" Type="int" Nullable="false" />
+    <Property Name="Visible" Type="bit" Nullable="false" />
+    <Property Name="SiteVisible" Type="bit" Nullable="false" />
+    <Property Name="UsarCostoServicio" Type="bit" Nullable="false" />
+    <Property Name="CopiaExonerada" Type="bit" Nullable="false" />
+    <Property Name="CuentaExpress" Type="varchar" MaxLength="25" />
+    <Property Name="EsAdecuacion" Type="bit" Nullable="false" />
+    <Property Name="SeCobraEnSubTransaccion" Type="bit" Nullable="false" />
+    <Property Name="TransaccionJerarquia" Type="int" Nullable="false" />
+    <Property Name="GrupoServicio" Type="int" Nullable="false" />
+    <Property Name="DescripcionWeb" Type="nvarchar" MaxLength="250" />
+    <Property Name="TransfDestinoId" Type="int" />
+    <Property Name="SinCapital" Type="bit" />
+    <Property Name="ServicioJerarquia" Type="int" />
+    <Property Name="ServicioInmediato" Type="bit" />
+  </EntityType>
+  <EntityType Name="ServicioDocumentoRequerido">
+    <Key>
+      <PropertyRef Name="TipoSociedadId" />
+      <PropertyRef Name="ServicioId" />
+      <PropertyRef Name="TipoDocumentoId" />
+    </Key>
+    <Property Name="TipoSociedadId" Type="int" Nullable="false" />
+    <Property Name="ServicioId" Type="int" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="int" Nullable="false" />
+    <Property Name="Requerido" Type="bit" Nullable="false" />
+    <Property Name="Grupo" Type="int" />
+    <Property Name="SiteVisible" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicioDocumentoRequeridoComentario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ServicioId" Type="int" Nullable="false" />
+    <Property Name="TipoSociedadId" Type="int" Nullable="false" />
+    <Property Name="Comentario" Type="varchar" Nullable="true" MaxLength="Max" />
+    <Property Name="ComentarioWeb" Type="varchar" Nullable="true" MaxLength="Max" />
+  </EntityType>
+  <EntityType Name="ServiciosEnCamara">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ServicioID" Type="int" />
+    <Property Name="CamaraID" Type="char" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="TipoDocumentoId" />
+    </Key>
+    <Property Name="TipoDocumentoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="Registrable" Type="bit" Nullable="false" />
+    <Property Name="CostoOriginal" Type="money" Nullable="false" />
+    <Property Name="CostoCopia" Type="money" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="Visible" Type="bit" Nullable="false" />
+    <Property Name="SiteVisible" Type="bit" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+    <Property Name="DocumentoOnBaseId" Type="int" />
+    <Property Name="DocumentoOnBaseDesc" Type="varchar" MaxLength="150" />
+    <Property Name="DescripcionWeb" Type="varchar" Nullable="true" MaxLength="Max" />
+  </EntityType>
+  <EntityType Name="TipoMoneda">
+    <Key>
+      <PropertyRef Name="TipoMonedaId" />
+    </Key>
+    <Property Name="TipoMonedaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="Abreviatura" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="AbreviaturaAPI" Type="varchar" Nullable="true" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="TipoRegla">
+    <Key>
+      <PropertyRef Name="TipoReglaId" />
+    </Key>
+    <Property Name="TipoReglaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoReglaDocumento">
+    <Key>
+      <PropertyRef Name="TipoReglaDocumentoId" />
+    </Key>
+    <Property Name="TipoReglaDocumentoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipoDocumentoId" Type="int" Nullable="false" />
+    <Property Name="TipoReglaId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TiposEnteRegulado">
+    <Key>
+      <PropertyRef Name="TipoEnteReguladoId" />
+    </Key>
+    <Property Name="TipoEnteReguladoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TiposEntidades">
+    <Key>
+      <PropertyRef Name="TipoEntidadId" />
+    </Key>
+    <Property Name="TipoEntidadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Visible" Type="bit" />
+  </EntityType>
+  <EntityType Name="TipoServicio">
+    <Key>
+      <PropertyRef Name="TipoServicioId" />
+    </Key>
+    <Property Name="TipoServicioId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DescripcionWeb" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sufijo" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="TipoIdentificador" Type="int" Nullable="false" />
+    <Property Name="Visible" Type="bit" Nullable="false" />
+    <Property Name="SiteVisible" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TiposNcf">
+    <Key>
+      <PropertyRef Name="TipoNcfId" />
+    </Key>
+    <Property Name="TipoNcfId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SiteVisible" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoSociedad">
+    <Key>
+      <PropertyRef Name="TipoSociedadId" />
+    </Key>
+    <Property Name="TipoSociedadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TipoIdentificador" Type="int" Nullable="false" />
+    <Property Name="Etiqueta" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="Visible" Type="bit" />
+    <Property Name="CapitalAutorizado" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="SiteVisible" Type="bit" />
+    <Property Name="DescripcionExtendida" Type="nvarchar(max)" />
+    <Property Name="ExpirationDays" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoSociedadCargos">
+    <Key>
+      <PropertyRef Name="TipoSociedadCargoId" />
+    </Key>
+    <Property Name="TipoSociedadCargoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipoSociedadId" Type="int" />
+    <Property Name="CargoId" Type="int" />
+    <Property Name="PuedeSerEmpresa" Type="bit" />
+    <Property Name="CargoModificacion" Type="bit" />
+  </EntityType>
+  <EntityType Name="TipoSociedadServicioCargo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CargoID" Type="int" />
+    <Property Name="TipoSociedadID" Type="int" />
+    <Property Name="ServicioID" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TipoSociedadSocio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipoSocioId" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="TipoSociedadId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="RecibeCargo" Type="bit" />
+    <Property Name="CantMinSocio" Type="smallint" />
+    <Property Name="CantMaxSocio" Type="int" />
+    <Property Name="RecibeAcciones" Type="bit" />
+    <Property Name="GrupoValidacion" Type="int" />
+  </EntityType>
+  <EntityType Name="TipoSociedadSufijo">
+    <Key>
+      <PropertyRef Name="TipoSociedadSufijoId" />
+    </Key>
+    <Property Name="TipoSociedadSufijoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipoSociedadId" Type="int" Nullable="false" />
+    <Property Name="Sufijo" Type="varchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="TipoSocio">
+    <Key>
+      <PropertyRef Name="TipoSocioId" />
+    </Key>
+    <Property Name="TipoSocioId" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraComun.dbo.cvw_Ciudades' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_Ciudades">
+    <Key>
+      <PropertyRef Name="CiudadId" />
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="Orden" />
+      <PropertyRef Name="FechaModificacion" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="CiudadId" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PaisId" Type="int" />
+    <Property Name="Orden" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Pais" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraComun.dbo.cvw_ServicioDocumentoRequerido' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_ServicioDocumentoRequerido">
+    <Key>
+      <PropertyRef Name="TipoSociedadId" />
+      <PropertyRef Name="ServicioId" />
+      <PropertyRef Name="TipoDocumentoId" />
+    </Key>
+    <Property Name="TipoSociedadId" Type="int" Nullable="false" />
+    <Property Name="ServicioId" Type="int" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="int" Nullable="false" />
+    <Property Name="Requerido" Type="bit" Nullable="false" />
+    <Property Name="Grupo" Type="int" Nullable="false" />
+    <Property Name="DocumentoDescripcion" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="TipoSociedadDescripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Registrable" Type="bit" Nullable="false" />
+    <Property Name="CostoOriginal" Type="money" Nullable="false" />
+    <Property Name="CostoCopia" Type="money" Nullable="false" />
+    <Property Name="Visible" Type="bit" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'CamaraComun.dbo.cvw_TipoDocumentoRegla' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cvw_TipoDocumentoRegla">
+    <Key>
+      <PropertyRef Name="TipoReglaDocumentoId" />
+      <PropertyRef Name="TipoDocumentoId" />
+      <PropertyRef Name="TipoReglaId" />
+      <PropertyRef Name="Regla" />
+    </Key>
+    <Property Name="TipoReglaDocumentoId" Type="int" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="int" Nullable="false" />
+    <Property Name="TipoReglaId" Type="int" Nullable="false" />
+    <Property Name="Regla" Type="varchar(max)" Nullable="false" />
+    <Property Name="Validado" Type="bit" />
+  </EntityType>
+  <Association Name="FK_Ciudades_Paises">
+    <End Role="Paises" Type="CamaraComunModel.Store.Paises" Multiplicity="0..1" />
+    <End Role="Ciudades" Type="CamaraComunModel.Store.Ciudades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paises">
+        <PropertyRef Name="PaisId" />
+      </Principal>
+      <Dependent Role="Ciudades">
+        <PropertyRef Name="PaisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReglaTipoDocumento_TipoDocumentoRegla">
+    <End Role="TipoRegla" Type="CamaraComunModel.Store.TipoRegla" Multiplicity="1" />
+    <End Role="TipoReglaDocumento" Type="CamaraComunModel.Store.TipoReglaDocumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoRegla">
+        <PropertyRef Name="TipoReglaId" />
+      </Principal>
+      <Dependent Role="TipoReglaDocumento">
+        <PropertyRef Name="TipoReglaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sectores_Ciudades">
+    <End Role="Ciudades" Type="CamaraComunModel.Store.Ciudades" Multiplicity="1" />
+    <End Role="Sectores" Type="CamaraComunModel.Store.Sectores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudades">
+        <PropertyRef Name="CiudadId" />
+      </Principal>
+      <Dependent Role="Sectores">
+        <PropertyRef Name="CiudadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioDocumentoRequerido_TipoSociedad">
+    <End Role="TipoSociedad" Type="CamaraComunModel.Store.TipoSociedad" Multiplicity="1" />
+    <End Role="ServicioDocumentoRequerido" Type="CamaraComunModel.Store.ServicioDocumentoRequerido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSociedad">
+        <PropertyRef Name="TipoSociedadId" />
+      </Principal>
+      <Dependent Role="ServicioDocumentoRequerido">
+        <PropertyRef Name="TipoSociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiciosEnCamara_Camaras">
+    <End Role="Camaras" Type="CamaraComunModel.Store.Camaras" Multiplicity="0..1" />
+    <End Role="ServiciosEnCamara" Type="CamaraComunModel.Store.ServiciosEnCamara" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Camaras">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ServiciosEnCamara">
+        <PropertyRef Name="CamaraID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoSociedadServicioCargo_Cargos">
+    <End Role="Cargos" Type="CamaraComunModel.Store.Cargos" Multiplicity="0..1" />
+    <End Role="TipoSociedadServicioCargo" Type="CamaraComunModel.Store.TipoSociedadServicioCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargos">
+        <PropertyRef Name="CargoId" />
+      </Principal>
+      <Dependent Role="TipoSociedadServicioCargo">
+        <PropertyRef Name="CargoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoSociedadServicioCargo_Servicio">
+    <End Role="Servicio" Type="CamaraComunModel.Store.Servicio" Multiplicity="0..1" />
+    <End Role="TipoSociedadServicioCargo" Type="CamaraComunModel.Store.TipoSociedadServicioCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio">
+        <PropertyRef Name="ServicioId" />
+      </Principal>
+      <Dependent Role="TipoSociedadServicioCargo">
+        <PropertyRef Name="ServicioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoSociedadServicioCargo_TipoSociedad">
+    <End Role="TipoSociedad" Type="CamaraComunModel.Store.TipoSociedad" Multiplicity="0..1" />
+    <End Role="TipoSociedadServicioCargo" Type="CamaraComunModel.Store.TipoSociedadServicioCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSociedad">
+        <PropertyRef Name="TipoSociedadId" />
+      </Principal>
+      <Dependent Role="TipoSociedadServicioCargo">
+        <PropertyRef Name="TipoSociedadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoSociedadSocio_TipoSociedad">
+    <End Role="TipoSociedad" Type="CamaraComunModel.Store.TipoSociedad" Multiplicity="1" />
+    <End Role="TipoSociedadSocio" Type="CamaraComunModel.Store.TipoSociedadSocio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSociedad">
+        <PropertyRef Name="TipoSociedadId" />
+      </Principal>
+      <Dependent Role="TipoSociedadSocio">
+        <PropertyRef Name="TipoSociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoSociedadSocio_TipoSocio">
+    <End Role="TipoSocio" Type="CamaraComunModel.Store.TipoSocio" Multiplicity="1" />
+    <End Role="TipoSociedadSocio" Type="CamaraComunModel.Store.TipoSociedadSocio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSocio">
+        <PropertyRef Name="TipoSocioId" />
+      </Principal>
+      <Dependent Role="TipoSociedadSocio">
+        <PropertyRef Name="TipoSocioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TiposServicios_TiposTransacciones">
+    <End Role="TipoServicio" Type="CamaraComunModel.Store.TipoServicio" Multiplicity="1" />
+    <End Role="Servicio" Type="CamaraComunModel.Store.Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoServicio">
+        <PropertyRef Name="TipoServicioId" />
+      </Principal>
+      <Dependent Role="Servicio">
+        <PropertyRef Name="TipoServicioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TiposSociedadesSufijos_TiposSociedades">
+    <End Role="TipoSociedad" Type="CamaraComunModel.Store.TipoSociedad" Multiplicity="1" />
+    <End Role="TipoSociedadSufijo" Type="CamaraComunModel.Store.TipoSociedadSufijo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSociedad">
+        <PropertyRef Name="TipoSociedadId" />
+      </Principal>
+      <Dependent Role="TipoSociedadSufijo">
+        <PropertyRef Name="TipoSociedadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransaccionDocumentosRequisitos_TiposServicios">
+    <End Role="Servicio" Type="CamaraComunModel.Store.Servicio" Multiplicity="1" />
+    <End Role="ServicioDocumentoRequerido" Type="CamaraComunModel.Store.ServicioDocumentoRequerido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio">
+        <PropertyRef Name="ServicioId" />
+      </Principal>
+      <Dependent Role="ServicioDocumentoRequerido">
+        <PropertyRef Name="ServicioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
